@@ -1,4 +1,4 @@
-function Em = node_embeddings_vec(varargin)
+function [Em, ccr_val, nmi_val] = node_embeddings_vec(varargin)                                   
 % Implements the node embeddings 'vec' algorithm of Ding et al. including a
 % non-backtracking random walks option, different varieties of SGD (not yet
 % fully implemented). Plots work with 2D data.
@@ -9,28 +9,31 @@ function Em = node_embeddings_vec(varargin)
 % 
 % Creation 7/1/2017, Brian Rappaport
 % Modified 7/11/2017, Brian Rappaport - added aliasing method
+% Modified 7/13/2017, Anu Gamage - added tsne visualization, metrics
 
-k = 2; % number of clusters
-rw_reps = 20; % number of random walks per data point
-length = 15; % length of random walk
+rw_reps = 10; % number of random walks per data point                       
+length = 60; % length of random walk                                        
 dim = 50; % dimension vectors are embedded into
-win_size = 10; % size of window
+win_size = 8; % size of window
 neg_samples = 5; % number of negative samples
-mb_size = 40; % size of mini-batches
+mb_size = 50; % size of mini-batches
 gamma = .2; % momentum term
 max_reps = 1000; % maximum number of SGD iterations
+do_plot = 0; % if want to plot intermediate results
 
-do_plot = 1; % if want to plot intermediate results
-do_non_backtracking = 1; % if want non-backtracking in random walks
-
-n = 1000;
 % create graph
 if nargin == 1
     N = varargin{1};
     n = size(N,1);
+    k = 2; % default number of clusters  
     G = make_graph(N,'k',20); % 'full'; 'k' or 'knear' with k; 'eps' with eps
 else
-    G = make_SBM(n,k,'const',.001,.9); % alternate graph making method    
+    n = varargin{1};
+    k = varargin{2};
+    c = varargin{3};
+    lambda = varargin{4};
+    do_non_backtracking = varargin{5};
+    [G, labels] = make_SBM(n,k,'const',c,lambda); % alternate graph making method    
     [v,~] = eigs(diag(sum(G))-G,3);
     N = v(:,[2 3]);
 end
@@ -105,7 +108,7 @@ for rep = 1:max_reps
     end
 end
 Em = kmeans(U,k);
-if do_plot && size(N,1) == 2
+if do_plot && size(N,1) == 2  % Plot results for 2D data
     figure;
     hold on;
     for i = 1:k
@@ -116,6 +119,66 @@ if do_plot && size(N,1) == 2
     plot(cost(10:10:end));
     title('Cost over time');
 end
+
+% Use tsne to visualize  higher dimensional results
+if do_plot && dim > 2
+    mappedX = tsne(U, labels, 2, dim, 30);
+    % Plot results
+    for i=1:k
+        cluster = mappedX(Em == i, :);
+        scatter(cluster(:,1), cluster(:,2), 'o')
+        hold on
+        pause(1)
+    end
+    title('Clusters Visualized using TSNE')
+end
+
+% Relabelling with the correct labels
+true_label = zeros(k,1);
+for i=1:k
+    %fprintf('Label_pred: %d\n', i);
+    x = labels(Em==i);
+    freq = zeros(1, k);
+    for p = 1:k
+        freq(p) = sum(x==p);
+    end
+    for j=1:k
+        [~, max_c] = max(freq);
+        if(~ismember(max_c, true_label))
+            true_label(i) = max_c;
+            break;
+        else 
+            freq(max_c) = 0;            
+        end
+    end
+    
+    %fprintf('Label_true:%d\n\n', true_label(i))
+end
+
+Em_true = zeros(1,n);
+for i = 1:k
+    Em_true(Em==i) = true_label(i);
+end
+
+% Confusion matrix
+targets = zeros(k,n);
+for i=1:k
+   targets(i, (labels == i)) = 1; 
+end
+
+outputs = zeros(k,n);
+for i=1:n
+    outputs(Em_true(i),i) = 1; 
+end
+
+if do_plot
+    figure
+    plotconfusion(targets, outputs)
+end
+
+ccr_val = (1 - confusion(targets, outputs))*100;
+nmi_val = nmi(labels, Em_true);
+
 end
 
 function d = cost_fn(U,nzP_X,nzP_Y,nzM_X,nzM_Y)
@@ -198,7 +261,7 @@ for i = 1:length
 end
 end
 
-function G = make_graph(N,type,varargin)
+function G = make_graph(N,type,varargin)                              
 % Creates the similarity graph. 
 % Copyright (c) 2012, Ingo Bork
 % Copyright (c) 2003, Jochen Lenz
@@ -246,7 +309,7 @@ switch type
 end
 end
 
-function G = make_SBM(n,k,scaling_type,c,lambda)
+function [G, labels] = make_SBM(n,k,scaling_type,c,lambda)                  % modified to return labels
 % n is the number of nodes
 % k is the number of communities
 % scaling_type is either constant or logarithmic
@@ -257,6 +320,7 @@ function G = make_SBM(n,k,scaling_type,c,lambda)
 % We're using equal partitions
 P = repmat(1:k,ceil(n/k),1);
 P = P(1:n);
+labels = P';
 % get connections
 if strcmp(scaling_type,'const')
     % odds if in same community is c, else is c(1-lambda)
