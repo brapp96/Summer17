@@ -11,7 +11,7 @@ diary off  % change to 'on' if writing results to text file
 % Graph parameters
 n = 400;
 k = 2;
-c = 20/n;             % enter as c/n
+c = 20;
 lambda = 0.99;
 
 CCR = zeros(1,reps);                        

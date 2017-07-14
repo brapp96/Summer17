@@ -170,6 +170,8 @@ end
 
 ccr_val = (1 - confusion(targets, outputs))*100;
 nmi_val = nmi(labels, Em_true);
+
+profile viewer;
 end
 
 function d = cost_fn(U,nzP_X,nzP_Y,nzM_X,nzM_Y)
