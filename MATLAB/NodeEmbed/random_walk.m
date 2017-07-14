@@ -7,7 +7,7 @@ s = zeros(1,length);
 prev = -1;
 for i = 1:length
     s(i) = curr;
-    alias = P{i};
+    alias = P{s(i)};
     if isempty(alias)
         s(i+1:end) = [];
         break

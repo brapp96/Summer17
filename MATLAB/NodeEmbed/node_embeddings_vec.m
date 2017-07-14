@@ -20,6 +20,7 @@ mb_size = 50; % size of mini-batches
 gamma = .2; % momentum term
 max_reps = 1000; % maximum number of SGD iterations
 do_plot = 1; % if want to plot intermediate results
+tic
 
 % create graph
 if nargin == 1
@@ -37,28 +38,34 @@ else
     [v,~] = eigs(diag(sum(G))-G,3);
     N = v(:,[2 3]);
 end
+toc
 
 % create random walk matrix
 P = create_aliases(G);
-D_plus = cell(n,rw_reps);
+NN = cell(1,n);
 parfor i = 1:n
+    R = cell(1,rw_reps);
     for j = 1:rw_reps
-        S = spalloc(n,n,n);
+        W = cell(1,win_size);
         rw = random_walk(i,length,P,do_non_backtracking);
         for w = 1:win_size
-            S = S + sparse(rw(1:end-w),rw(w+1:end),ones(numel(rw)-w,1),n,n,length-w);
+            W{w} = sparse(rw(1:end-w),rw(w+1:end),ones(numel(rw)-w,1),n,n,length-w);
         end
-        D_plus{i,j} = S;
+        R{j} = combine_cells(W,win_size);
     end
+    NN{i} = combine_cells(R,rw_reps);
 end
+D_plus = combine_cells(NN,n);
+toc
 
 % create negative samples
-D_minus = sparse([],[],false,n,n,ceil(neg_samples*n*n*.1));
+MM = cell(1,n);
 num_elems = sum(D_plus,1);
 parfor i = 1:n
     num = neg_samples * num_elems(i);
-    D_minus = D_minus + sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
+    MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
 end
+D_minus = combine_cells(MM,n);
 toc
 
 % begin SGD
@@ -111,17 +118,15 @@ Em = kmeans(U,k);
 
 % Plot results
 if do_plot && 0
+    figure(101);
+    hold on;
     if size(N,1) == 2  % Plot results for 2D data
-        figure(101);
-        hold on;
         for i = 1:k
             gplot(G(Em==i,Em==i),N(Em==i,:),'-o');
         end
-        title(sprintf('%d data points, %d clusters',n,k));
+        title(sprintf('%d data points in %d clusters',n,k));
     elseif size(N,1) > 2 % Use tsne to visualize higher dimensional results
         mappedX = tsne(U, labels, 2, dim, 30);
-        figure(101);
-        hold on;
         for i = 1:k
             scatter(mappedX(Em==i,1),mappedX(Em==i,2),'o');
         end
@@ -170,6 +175,20 @@ end
 
 ccr_val = (1 - confusion(targets, outputs))*100;
 nmi_val = nmi(labels, Em_true);
+end
+
+function C = combine_cells(R,i)
+    while i ~= 1
+        if rem(i,2) == 1
+            R{i-1} = R{i-1} + R{i};
+            i = i-1;
+        end
+        for ii = 1:i/2
+            R{ii} = R{ii} + R{ii+i/2};
+        end
+        i = i/2;
+    end
+    C = R{1};
 end
 
 function d = cost_fn(U,nzP_X,nzP_Y,nzM_X,nzM_Y)

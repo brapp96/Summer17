@@ -1,5 +1,4 @@
-
-function [G, labels] = make_SBM(n,k,scaling_type,c,lambda)                  % modified to return labels
+function [G, P] = make_SBM(n,k,scaling_type,c,lambda)
 % n is the number of nodes
 % k is the number of communities
 % scaling_type is either constant or logarithmic
@@ -7,11 +6,8 @@ function [G, labels] = make_SBM(n,k,scaling_type,c,lambda)                  % mo
 % lambda is the reduction percentage
 % Brian Rappaport, 7/6/17
 
-% We're using equal partitions
 P = repmat(1:k,ceil(n/k),1);
-P = P(1:n);
-labels = P';
-% get connections
+P = P(1:n)';
 if strcmp(scaling_type,'const')
     % odds if in same community is c/n, else is c(1-lambda)/n
     q = c*(1-lambda)/n;
@@ -21,7 +17,8 @@ elseif strcmp(scaling_type,'log')
 else
     error('scaling type must be ''const'' or ''log''');
 end
-% build graph
+
+% Build graph
 indI = [];
 indJ = [];
 for i = 1:n
