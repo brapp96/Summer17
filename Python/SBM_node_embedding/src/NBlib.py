@@ -30,13 +30,17 @@ def alias_draw(J, q):
     else:
         return J[kk]
         
-def create_rand_walks_NB(S, num_paths, length_path, filename):
+def create_random_walks(S, num_paths, length_path, filename, inMem=False, NBT=False):
     """
     S = from the build_node_alias
     filename - where to write results
     using exp(rating) as edge weight
     """
-    fwrite = open(filename,'w')
+    if inMem:
+        fwrite = open(filename,'w')
+    else:
+        sentence = []
+
     nodes = S.keys()
     for nd in nodes:
         for i in range(num_paths):
@@ -50,7 +54,7 @@ def create_rand_walks_NB(S, num_paths, length_path, filename):
                     break
                 J = S[cur]['J']
                 q = S[cur]['q']
-                if prev in next_nds:
+                if NBT and prev in next_nds:
                     if len(next_nds)==1:
                         break
                     ind = next_nds.index(prev)
@@ -61,40 +65,10 @@ def create_rand_walks_NB(S, num_paths, length_path, filename):
                 nextnd = next_nds[rd]
                 walk.append(nextnd)
             walk = [str(x) for x in walk]
-            fwrite.write(" ".join(walk) + '\n')
-    fwrite.close()
-    return 1
-
-def create_rand_walks_inmem_NB(S, num_paths, length_path):
-    """
-    S = from the build_node_alias
-    filename - where to write results
-    using exp(rating) as edge weight
-    """
-    sentence = []
-    nodes = S.keys()
-    for nd in nodes:
-        for i in range(num_paths):
-            walk = [nd] # start as nd
-            cur = -1
-            for j in range(length_path):
-                prev = cur
-                cur = walk[-1]
-                next_nds = list(S[cur]['names'])
-                if len(next_nds)<1:
-                    break
-                J = S[cur]['J']
-                q = S[cur]['q']
-                if prev in next_nds:
-                    if len(next_nds)==1:
-                        break
-                    ind = next_nds.index(prev)
-                    del next_nds[ind]
-                    J = np.delete(J,ind)
-                    q = np.delete(q,ind)
-                rd = alias_draw(J,q)
-                nextnd = next_nds[rd]
-                walk.append(nextnd)
-            walk = [str(x) for x in walk]
-            sentence.append(walk)
+            if inMem:
+                sentence.append(walk)
+            else:            
+                fwrite.write(" ".join(walk) + '\n')
+    if ~inMem:
+        fwrite.close()
     return sentence
