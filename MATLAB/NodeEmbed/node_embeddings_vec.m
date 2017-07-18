@@ -12,6 +12,7 @@ function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embeddin
 % Modified 7/13/2017, Anu Gamage - added tsne visualization, metrics
 
 % create graph
+tic
 if nargin == 1
     N = varargin{1};
     n = size(N,1);
@@ -146,10 +147,10 @@ do_plot = 0; % if want to plot intermediate results
     
     
     % Relabelling with the correct labels
-    true_label = zeros(k,1);
+    true_label = gpuArray.zeros(k,1);
     for i = 1:k
         x = labels(Em==i);
-        freq = zeros(1, k);
+        freq = gpuArray.zeros(1, k);
         for p = 1:k
             freq(p) = sum(x==p);
         end
@@ -163,18 +164,18 @@ do_plot = 0; % if want to plot intermediate results
             end
         end
     end
-    Em_true = zeros(1,n);
+    Em_true = gpuArray.zeros(1,n);
     for i = 1:k
         Em_true(Em==i) = true_label(i);
     end
     
     % Confusion matrix
-    targets = zeros(k,n);
+    targets = gpuArray.zeros(k,n);
     for i=1:k
        targets(i, (labels == i)) = 1; 
     end
     
-    outputs = zeros(k,n);
+    outputs = gpuArray.zeros(k,n);
     for i=1:n
         outputs(Em_true(i),i) = 1; 
     end
@@ -184,8 +185,10 @@ do_plot = 0; % if want to plot intermediate results
         plotconfusion(targets, outputs)
     end
     
-    ccr_val = (1 - confusion(targets, outputs))*100;
-    nmi_val = nmi(labels, Em_true);
+    
+    ccr_val = (sum(Em_true == labels')/n)*100
+    nmi_val = nmi(labels', Em_true)
+    toc    
 end
 
 function C = combine_cells(R,i)

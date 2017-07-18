@@ -4,33 +4,35 @@
 % Anu Gamage 7/12/2017
 
 clear;clc;close all 
-reps = 20;           
-diary 'vec_results.txt' 
+reps = 1; 
 diary off  % change to 'on' if writing results to text file
 
-tic
 
+tic
 % Graph parameters
-n = 500;
+n = 200;
 k = 2;
 c = 15;
 lambda = 0.9;
 
-CCR = zeros(1,reps);                        
-NMI = zeros(1,reps);
-CCR_nbrw = zeros(1,reps);                        
-NMI_nbrw = zeros(1,reps);
+CCR = gpuArray.zeros(1,reps);                        
+NMI = gpuArray.zeros(1,reps);
+CCR_nbrw = gpuArray.zeros(1,reps);                        
+NMI_nbrw = gpuArray.zeros(1,reps);
 
 % Run node embedding
 for i=1:reps
-    [~, CCR(i), NMI(i), ~, CCR_nbrw(i), NMI_nbrw(i)] = node_embeddings_vec(n, k, c, lambda);
+   % [~, CCR(i), NMI(i), ~, CCR_nbrw(i), NMI_nbrw(i)] = node_embeddings_vec(n, k, c, lambda);
+    node_embeddings_vec(n, k, c, lambda);
 end   
 
 % Display and write results to file
 fprintf('N : %i\n', n)
 fprintf('k : %i\n', k)
 fprintf('c : %i\n', c)
-fprintf('lambda : %f\n\n', lambda)
+fprintf('lambda : %f\n', lambda)
+fprintf('Reps : %i\n\n', reps)
+
 
 disp('Backtracking RW:')
 % disp(CCR)
@@ -43,8 +45,8 @@ disp('Non-backtracking RW:')
 % disp(NMI_nbrw)
 fprintf('Avg CCR : %.3f%%\n', mean(CCR_nbrw))
 fprintf('Avg NMI : %.3f%%\n\n\n', mean(NMI_nbrw))
-toc
 
+toc
 diary off
 
 % Plot results

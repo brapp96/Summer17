@@ -6,7 +6,8 @@ function [G, P] = make_SBM(n,k,scaling_type,c,lambda)
 % lambda is the reduction percentage
 % Brian Rappaport, 7/6/17
 
-P = repmat(1:k,ceil(n/k),1);
+cluster_seq = gpuArray(1:k);
+P = repmat(cluster_seq, ceil(n/k),1);
 P = P(1:n)';
 if strcmp(scaling_type,'const')
     % odds if in same community is c/n, else is c(1-lambda)/n
@@ -29,6 +30,9 @@ for i = 1:n
     indI(end+1:end+numel(f)) = f;
     indJ(end+1:end+numel(f)) = i;
 end
-G = sparse(indI,indJ,ones(numel(indI),1),n,n,numel(indI));
+G = sparse(indI,indJ,ones(numel(indI),1),n,n);
 G = max(G,G');
+
+
 end
+
