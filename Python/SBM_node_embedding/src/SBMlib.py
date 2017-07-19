@@ -22,14 +22,9 @@ import numpy.random as npr
 
 def alias_setup(probs):
     """
-    This function is to help draw random samples from discrete distribution with specific weights,
-    the code were adapted from the following source:
+    Set up the framework for the aliasing method.
+    Code was adapted from the following source:
     https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/
-
-    arguments:
-    probs: the discrete probability
-    return:
-    J, q: temporary lists to assist drawing random samples
     """
     K = len(probs)
     q = np.zeros(K)
@@ -62,18 +57,12 @@ def alias_setup(probs):
 
 def alias_draw(J, q):
     """
-    This function is to help draw random samples from discrete distribution with specific weights,
-    the code were adapted from the following source:
+    Draw random samples from a discrete distribution with specific nonuniform weights.
+    Code was adapted from the following source:
     https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/
-
-    arguments:
-    J, q: generated from alias_setup(prob)
-    return:
-    a random number ranging from 0 to len(prob)
     """
-    K = len(J)
     # Draw from the overall uniform mixture.
-    kk = int(np.floor(npr.rand()*K))
+    kk = int(npr.rand()*len(J))
     # Draw from the binary mixture, either keeping the
     # small one, or choosing the associated larger one.
     if npr.rand() < q[kk]:
@@ -84,11 +73,11 @@ def alias_draw(J, q):
 #%%
 def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     """
-    create SBM model parameters
+    Create SBM model parameters.
     dataType determines the type of scaling done on the SBM
     community weights default to be balanced (p = [1/k,...1/k]) but can be
     given as an optional argument (which doesn't need to be normalized but
-    does need to have k indices)
+    does need to have k indices).
     """
     SBM_params = {}
     SBM_params['K'] = K
@@ -110,10 +99,10 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     return SBM_params
 
 #%%
-def SBM_simulate(model):
+def SBM_simulate(model, quiet=True):
     """
-    simulate SBM graph
-    model is returned by SBM_param_init() function
+    Simulates the SBM graph.
+    The model is returned by the SBM_param_init() function.
     """
     G = nx.Graph()
     b = model['a']
@@ -135,10 +124,13 @@ def SBM_simulate(model):
             if s[0] == 1:
                 G.add_edge(i, j, weight=1.0)
                 totaledges += 1
-    print 'the graph has', totaledges, 'edges in total'
+    if not quiet: print 'the graph has', totaledges, 'edges in total'
     return G
 
-def SBM_simulate_fast(model):
+def SBM_simulate_fast(model, quiet=True):
+    """
+    Simulates the SBM graph, fast version.
+    """
     G = nx.Graph()
     b = model['a']
     J, q = alias_setup(b)
@@ -169,12 +161,21 @@ def SBM_simulate_fast(model):
                 nd2 = grp2[z[1]-L1]
                 G.add_edge(nd1, nd2, weight=1.0)
                 totaledges += 1
-    print 'the graph has', totaledges, 'edges in total'
+    if not quiet: print 'the graph has', totaledges, 'edges in total'
     return G
+
+def get_label_list(G):
+    """
+    Gets the ground-truth for simulated graphs.
+    """
+    nodeslist = G.nodes()
+    ln = [G.node[i]['community'] for i in nodeslist]
+    nodeslist = [str(x) for x in nodeslist]
+    return ln, nodeslist
 
 def SBM_savemat(G, edgefilename, nodefilename):
     """
-    writing down G graph by its nodes attributes and
+    Saves a copy of G as an adjacency list.
     """
     nx.write_edgelist(G, edgefilename, data=False)
     nodeslist = G.nodes()
@@ -182,19 +183,3 @@ def SBM_savemat(G, edgefilename, nodefilename):
         for key in nodeslist:
             fwrite.write(str(key)+' '+str(G.node[key]['community'])+'\n')
     return 1
-
-def SBM_SNR(model):
-    """
-    help to define the SNR and lambda1
-    """
-    Q = model['B0']*model['alpha']*float(model['N'])
-    P = np.diag(model['a'])
-    Z = np.dot(P, Q)
-    u, _ = np.linalg.eig(Z)
-    ua = sorted(u, reverse=True)
-    print 'lambda1:', ua[0]
-    print 'lambda2:', ua[1]
-    SNR = ua[1]*ua[1]/ua[0]
-    return SNR, ua[0], ua[1]
-
-

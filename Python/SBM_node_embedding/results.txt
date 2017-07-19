@@ -1,0 +1,4473 @@
+K: 2 N: 100 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 40 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00624716969083
+the CCR is: 0.55
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0107153491522
+the CCR is: 0.57
+Beginning iteration 2 of 5 ...
+the graph has 46 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0261194874674
+the CCR is: 0.6
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.150420017538
+the CCR is: 0.57
+Beginning iteration 3 of 5 ...
+the graph has 54 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0240305694319
+the CCR is: 0.6
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.156057515293
+the CCR is: 0.69
+Beginning iteration 4 of 5 ...
+the graph has 69 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000341124251211
+the CCR is: 0.51
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0352100033004
+the CCR is: 0.59
+Beginning iteration 5 of 5 ...
+the graph has 43 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00123592932836
+the CCR is: 0.53
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0146742433116
+the CCR is: 0.56
+K: 2 N: 100 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 78 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0692402367341
+the CCR is: 0.65
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0348504074727
+the CCR is: 0.58
+Beginning iteration 2 of 5 ...
+the graph has 87 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.38644445088
+the CCR is: 0.84
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000289978146342
+the CCR is: 0.51
+Beginning iteration 3 of 5 ...
+the graph has 95 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.507160560024
+the CCR is: 0.85
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.469079495787
+the CCR is: 0.83
+Beginning iteration 4 of 5 ...
+the graph has 92 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.240638789291
+the CCR is: 0.76
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.31908213839
+the CCR is: 0.78
+Beginning iteration 5 of 5 ...
+the graph has 96 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.138096927077
+the CCR is: 0.73
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.135315168465
+the CCR is: 0.73
+K: 2 N: 100 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 109 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.415855836677
+the CCR is: 0.85
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.373934006646
+the CCR is: 0.82
+Beginning iteration 2 of 5 ...
+the graph has 116 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.276174496655
+the CCR is: 0.77
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.54239931275
+the CCR is: 0.89
+Beginning iteration 3 of 5 ...
+the graph has 119 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.186076811947
+the CCR is: 0.72
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.227808932411
+the CCR is: 0.74
+Beginning iteration 4 of 5 ...
+the graph has 115 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.400363843748
+the CCR is: 0.82
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.374756740988
+the CCR is: 0.83
+Beginning iteration 5 of 5 ...
+the graph has 116 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.283138975673
+the CCR is: 0.79
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.251104243229
+the CCR is: 0.77
+K: 2 N: 100 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 135 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.397093905452
+the CCR is: 0.79
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.331549639618
+the CCR is: 0.78
+Beginning iteration 2 of 5 ...
+the graph has 146 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.527571970838
+the CCR is: 0.89
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.370530830824
+the CCR is: 0.8
+Beginning iteration 3 of 5 ...
+the graph has 115 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.494883900021
+the CCR is: 0.88
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.447794373766
+the CCR is: 0.86
+Beginning iteration 4 of 5 ...
+the graph has 143 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.522147355099
+the CCR is: 0.88
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.523833983415
+the CCR is: 0.89
+Beginning iteration 5 of 5 ...
+the graph has 138 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.133749603951
+the CCR is: 0.71
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0801231918262
+the CCR is: 0.67
+K: 2 N: 100 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 159 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.504781436977
+the CCR is: 0.88
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.699064716728
+the CCR is: 0.93
+Beginning iteration 2 of 5 ...
+the graph has 157 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.412581570514
+the CCR is: 0.84
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.525450494045
+the CCR is: 0.86
+Beginning iteration 3 of 5 ...
+the graph has 149 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.525297565141
+the CCR is: 0.89
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.479309166483
+the CCR is: 0.86
+Beginning iteration 4 of 5 ...
+the graph has 156 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.159455894817
+the CCR is: 0.73
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0823734505546
+the CCR is: 0.66
+Beginning iteration 5 of 5 ...
+the graph has 165 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.569739386482
+the CCR is: 0.91
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.569739386482
+the CCR is: 0.91
+K: 2 N: 100 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 208 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.712913928864
+the CCR is: 0.95
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.712089894051
+the CCR is: 0.95
+Beginning iteration 2 of 5 ...
+the graph has 230 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.807682135099
+the CCR is: 0.97
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.807682135099
+the CCR is: 0.97
+Beginning iteration 3 of 5 ...
+the graph has 209 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.929019838956
+the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.929019838956
+the CCR is: 0.99
+Beginning iteration 4 of 5 ...
+the graph has 221 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.764002110338
+the CCR is: 0.96
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.764002110338
+the CCR is: 0.96
+Beginning iteration 5 of 5 ...
+the graph has 213 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.692043747133
+the CCR is: 0.94
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.714542779645
+the CCR is: 0.95
+K: 2 N: 100 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 254 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.877170691812
+the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.877170691812
+the CCR is: 0.98
+Beginning iteration 2 of 5 ...
+the graph has 279 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.929125233528
+the CCR is: 0.99
+Beginning iteration 3 of 5 ...
+the graph has 284 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.877170691812
+the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.928594011575
+the CCR is: 0.99
+Beginning iteration 4 of 5 ...
+the graph has 259 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.724259740901
+the CCR is: 0.94
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.724259740901
+the CCR is: 0.94
+Beginning iteration 5 of 5 ...
+the graph has 295 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 100 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 443 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 2 of 5 ...
+the graph has 378 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 3 of 5 ...
+the graph has 398 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 4 of 5 ...
+the graph has 395 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.928772271792
+the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 5 of 5 ...
+the graph has 437 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 100 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 543 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 2 of 5 ...
+the graph has 512 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.928594011575
+the CCR is: 0.99
+Beginning iteration 3 of 5 ...
+the graph has 541 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 4 of 5 ...
+the graph has 556 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 5 of 5 ...
+the graph has 515 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 200 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 114 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00740106317416
+the CCR is: 0.555
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00240215113066
+the CCR is: 0.53
+Beginning iteration 2 of 5 ...
+the graph has 98 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0032065217081
+the CCR is: 0.53
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0189278113705
+the CCR is: 0.58
+Beginning iteration 3 of 5 ...
+the graph has 109 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000158114378752
+the CCR is: 0.5
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0116188644719
+the CCR is: 0.565
+Beginning iteration 4 of 5 ...
+the graph has 122 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000654777549415
+the CCR is: 0.515
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 9.6323469477e-05
+the CCR is: 0.505
+Beginning iteration 5 of 5 ...
+the graph has 100 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00432182993935
+the CCR is: 0.545
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00695171197733
+the CCR is: 0.54
+K: 2 N: 200 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 167 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00376446123103
+the CCR is: 0.535
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0406696853424
+the CCR is: 0.61
+Beginning iteration 2 of 5 ...
+the graph has 203 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.177024516114
+the CCR is: 0.74
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.298246317908
+the CCR is: 0.81
+Beginning iteration 3 of 5 ...
+the graph has 167 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00125016949666
+the CCR is: 0.515
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0143431075496
+the CCR is: 0.57
+Beginning iteration 4 of 5 ...
+the graph has 150 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.100957955133
+the CCR is: 0.685
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0144723386951
+the CCR is: 0.57
+Beginning iteration 5 of 5 ...
+the graph has 170 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0110748259959
+the CCR is: 0.555
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.228882740346
+the CCR is: 0.745
+K: 2 N: 200 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 222 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.192145339018
+the CCR is: 0.745
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.187624367732
+the CCR is: 0.735
+Beginning iteration 2 of 5 ...
+the graph has 216 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.380034682224
+the CCR is: 0.835
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.311706244133
+the CCR is: 0.8
+Beginning iteration 3 of 5 ...
+the graph has 229 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.521268884523
+the CCR is: 0.895
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.547870868927
+the CCR is: 0.9
+Beginning iteration 4 of 5 ...
+the graph has 227 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.157474013855
+the CCR is: 0.725
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.190069597006
+the CCR is: 0.74
+Beginning iteration 5 of 5 ...
+the graph has 223 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.369262849117
+the CCR is: 0.835
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.155509023638
+the CCR is: 0.71
+K: 2 N: 200 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 264 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.610965353483
+the CCR is: 0.92
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.689470327292
+the CCR is: 0.94
+Beginning iteration 2 of 5 ...
+the graph has 296 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.398660021362
+the CCR is: 0.855
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.372735264983
+the CCR is: 0.845
+Beginning iteration 3 of 5 ...
+the graph has 262 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.435593260835
+the CCR is: 0.86
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.342125910533
+the CCR is: 0.82
+Beginning iteration 4 of 5 ...
+the graph has 290 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.616414247579
+the CCR is: 0.925
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.690262963989
+the CCR is: 0.94
+Beginning iteration 5 of 5 ...
+the graph has 286 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.507387995705
+the CCR is: 0.89
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.562052729186
+the CCR is: 0.9
+K: 2 N: 200 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 334 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.630850162156
+the CCR is: 0.93
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.630484939984
+the CCR is: 0.93
+Beginning iteration 2 of 5 ...
+the graph has 344 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.550364662469
+the CCR is: 0.89
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.527571970838
+the CCR is: 0.89
+Beginning iteration 3 of 5 ...
+the graph has 328 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.594440187555
+the CCR is: 0.915
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.64321144302
+the CCR is: 0.92
+Beginning iteration 4 of 5 ...
+the graph has 316 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.45427996694
+the CCR is: 0.875
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.471026572905
+the CCR is: 0.88
+Beginning iteration 5 of 5 ...
+the graph has 358 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.814857293738
+the CCR is: 0.965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.774958017756
+the CCR is: 0.96
+K: 2 N: 200 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 449 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.697895685138
+the CCR is: 0.945
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.733870194464
+the CCR is: 0.955
+Beginning iteration 2 of 5 ...
+the graph has 449 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.764886325531
+the CCR is: 0.96
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.794867299032
+the CCR is: 0.965
+Beginning iteration 3 of 5 ...
+the graph has 432 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.794794127548
+the CCR is: 0.965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.83204167446
+the CCR is: 0.975
+Beginning iteration 4 of 5 ...
+the graph has 480 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.861217289699
+the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.861217289699
+the CCR is: 0.98
+Beginning iteration 5 of 5 ...
+the graph has 446 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.747536862542
+the CCR is: 0.955
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.690586421575
+the CCR is: 0.945
+K: 2 N: 200 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 554 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.807553651833
+the CCR is: 0.97
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.807553651833
+the CCR is: 0.97
+Beginning iteration 2 of 5 ...
+the graph has 575 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.83204167446
+the CCR is: 0.975
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.807926776464
+the CCR is: 0.97
+Beginning iteration 3 of 5 ...
+the graph has 556 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.88880154485
+the CCR is: 0.985
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.919186459815
+the CCR is: 0.99
+Beginning iteration 4 of 5 ...
+the graph has 536 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.796024952201
+the CCR is: 0.96
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.796024952201
+the CCR is: 0.96
+Beginning iteration 5 of 5 ...
+the graph has 600 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.764550551047
+the CCR is: 0.96
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.764550551047
+the CCR is: 0.96
+K: 2 N: 200 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 774 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959489101657
+the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959489101657
+the CCR is: 0.995
+Beginning iteration 2 of 5 ...
+the graph has 788 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 3 of 5 ...
+the graph has 819 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.831836007045
+the CCR is: 0.975
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.831836007045
+the CCR is: 0.975
+Beginning iteration 4 of 5 ...
+the graph has 844 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959550576373
+the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959550576373
+the CCR is: 0.995
+Beginning iteration 5 of 5 ...
+the graph has 809 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 200 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1050 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 2 of 5 ...
+the graph has 1014 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.91895596293
+the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959422222921
+the CCR is: 0.995
+Beginning iteration 3 of 5 ...
+the graph has 1075 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959535230957
+the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.959535230957
+the CCR is: 0.995
+Beginning iteration 4 of 5 ...
+the graph has 1110 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 5 of 5 ...
+the graph has 1124 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 500 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 285 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.71102823273e-06
+the CCR is: 0.51
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000382728938423
+the CCR is: 0.514
+Beginning iteration 2 of 5 ...
+the graph has 277 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00319088500825
+the CCR is: 0.536
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.79753594235e-05
+the CCR is: 0.502
+Beginning iteration 3 of 5 ...
+the graph has 267 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000538700269651
+the CCR is: 0.518
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000489615366624
+the CCR is: 0.51
+Beginning iteration 4 of 5 ...
+the graph has 270 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00204119145379
+the CCR is: 0.52
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00240176704576
+the CCR is: 0.532
+Beginning iteration 5 of 5 ...
+the graph has 242 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00519512227019
+the CCR is: 0.544
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0796020139041
+the CCR is: 0.622
+K: 2 N: 500 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 412 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 5.06747541628e-05
+the CCR is: 0.514
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0176741402869
+the CCR is: 0.578
+Beginning iteration 2 of 5 ...
+the graph has 440 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0370075017338
+the CCR is: 0.604
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0175004197033
+the CCR is: 0.58
+Beginning iteration 3 of 5 ...
+the graph has 397 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00436968591663
+the CCR is: 0.534
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00174032235729
+the CCR is: 0.526
+Beginning iteration 4 of 5 ...
+the graph has 393 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00181077654734
+the CCR is: 0.528
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.248807197674
+the CCR is: 0.75
+Beginning iteration 5 of 5 ...
+the graph has 359 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00122344888222
+the CCR is: 0.526
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00106989110673
+the CCR is: 0.522
+K: 2 N: 500 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 544 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0819247039069
+the CCR is: 0.668
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0976176761965
+the CCR is: 0.658
+Beginning iteration 2 of 5 ...
+the graph has 536 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.138679635948
+the CCR is: 0.716
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.185382559176
+the CCR is: 0.748
+Beginning iteration 3 of 5 ...
+the graph has 531 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.08280003397
+the CCR is: 0.668
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.149750842554
+the CCR is: 0.72
+Beginning iteration 4 of 5 ...
+the graph has 550 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.274101904067
+the CCR is: 0.796
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.284328312686
+the CCR is: 0.786
+Beginning iteration 5 of 5 ...
+the graph has 521 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00308194078067
+the CCR is: 0.522
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0863762228132
+the CCR is: 0.676
+K: 2 N: 500 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 682 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.334866897469
+the CCR is: 0.822
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.41609857545
+the CCR is: 0.842
+Beginning iteration 2 of 5 ...
+the graph has 662 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.362155909058
+the CCR is: 0.836
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.382587346055
+the CCR is: 0.836
+Beginning iteration 3 of 5 ...
+the graph has 632 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.37214386089
+the CCR is: 0.842
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.449464444737
+the CCR is: 0.864
+Beginning iteration 4 of 5 ...
+the graph has 695 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.225426489489
+the CCR is: 0.756
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.332328579168
+the CCR is: 0.81
+Beginning iteration 5 of 5 ...
+the graph has 661 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.434896547443
+the CCR is: 0.86
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.491790584773
+the CCR is: 0.878
+K: 2 N: 500 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 848 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.568336707837
+the CCR is: 0.91
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.598456629917
+the CCR is: 0.918
+Beginning iteration 2 of 5 ...
+the graph has 806 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.529529527766
+the CCR is: 0.894
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.466935737815
+the CCR is: 0.872
+Beginning iteration 3 of 5 ...
+the graph has 825 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.598422201009
+the CCR is: 0.92
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.569529997616
+the CCR is: 0.906
+Beginning iteration 4 of 5 ...
+the graph has 865 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.561326134132
+the CCR is: 0.906
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.544467942111
+the CCR is: 0.9
+Beginning iteration 5 of 5 ...
+the graph has 816 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.593509496335
+the CCR is: 0.918
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.603513597769
+the CCR is: 0.918
+K: 2 N: 500 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1135 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.836628828135
+the CCR is: 0.976
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.836628828135
+the CCR is: 0.976
+Beginning iteration 2 of 5 ...
+the graph has 1090 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.750226684238
+the CCR is: 0.958
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.779138974189
+the CCR is: 0.964
+Beginning iteration 3 of 5 ...
+the graph has 1087 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.792740944516
+the CCR is: 0.966
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.838504848728
+the CCR is: 0.976
+Beginning iteration 4 of 5 ...
+the graph has 1128 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.684689146903
+the CCR is: 0.938
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.723188060514
+the CCR is: 0.948
+Beginning iteration 5 of 5 ...
+the graph has 1070 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.745755766101
+the CCR is: 0.956
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.713895553656
+the CCR is: 0.95
+K: 2 N: 500 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1417 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.874014477142
+the CCR is: 0.982
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.895519889421
+the CCR is: 0.986
+Beginning iteration 2 of 5 ...
+the graph has 1406 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.854158963197
+the CCR is: 0.978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.854158963197
+the CCR is: 0.978
+Beginning iteration 3 of 5 ...
+the graph has 1402 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.849978450474
+the CCR is: 0.978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.827918046558
+the CCR is: 0.974
+Beginning iteration 4 of 5 ...
+the graph has 1356 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.847085207077
+the CCR is: 0.978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.858104904448
+the CCR is: 0.98
+Beginning iteration 5 of 5 ...
+the graph has 1375 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.838403580223
+the CCR is: 0.976
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.881574514487
+the CCR is: 0.984
+K: 2 N: 500 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2018 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947367463355
+the CCR is: 0.994
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.966241724799
+the CCR is: 0.996
+Beginning iteration 2 of 5 ...
+the graph has 2020 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.909895146572
+the CCR is: 0.988
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.940414794042
+the CCR is: 0.992
+Beginning iteration 3 of 5 ...
+the graph has 2115 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.907186203325
+the CCR is: 0.988
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.94756876133
+the CCR is: 0.994
+Beginning iteration 4 of 5 ...
+the graph has 2143 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.962170972985
+the CCR is: 0.996
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.962170972985
+the CCR is: 0.996
+Beginning iteration 5 of 5 ...
+the graph has 2065 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.921902885933
+the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.921902885933
+the CCR is: 0.99
+K: 2 N: 500 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2832 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 2 of 5 ...
+the graph has 2761 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981182552396
+the CCR is: 0.998
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981182552396
+the CCR is: 0.998
+Beginning iteration 3 of 5 ...
+the graph has 2779 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981161565063
+the CCR is: 0.998
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981161565063
+the CCR is: 0.998
+Beginning iteration 4 of 5 ...
+the graph has 2806 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981177117144
+the CCR is: 0.998
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 5 of 5 ...
+the graph has 2848 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981172066424
+the CCR is: 0.998
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981172066424
+the CCR is: 0.998
+K: 2 N: 1000 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 567 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000514959566191
+the CCR is: 0.52
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000286355540739
+the CCR is: 0.514
+Beginning iteration 2 of 5 ...
+the graph has 547 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.28611994719e-06
+the CCR is: 0.502
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00276746332343
+the CCR is: 0.532
+Beginning iteration 3 of 5 ...
+the graph has 561 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00525585804756
+the CCR is: 0.552
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00510304906075
+the CCR is: 0.527
+Beginning iteration 4 of 5 ...
+the graph has 535 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000183641009326
+the CCR is: 0.509
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00521490650241
+the CCR is: 0.54
+Beginning iteration 5 of 5 ...
+the graph has 573 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 5.71133505601e-06
+the CCR is: 0.502
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00629010827078
+the CCR is: 0.545
+K: 2 N: 1000 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 837 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000667606234677
+the CCR is: 0.517
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 7.50952724507e-05
+the CCR is: 0.508
+Beginning iteration 2 of 5 ...
+the graph has 846 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.39315028488e-06
+the CCR is: 0.525
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00611552085864
+the CCR is: 0.556
+Beginning iteration 3 of 5 ...
+the graph has 821 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.04300256513e-06
+the CCR is: 0.512
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 5.72565304302e-05
+the CCR is: 0.511
+Beginning iteration 4 of 5 ...
+the graph has 791 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00248373825808
+the CCR is: 0.519
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000914282718704
+the CCR is: 0.516
+Beginning iteration 5 of 5 ...
+the graph has 775 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000144435994467
+the CCR is: 0.51
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00263875695459
+the CCR is: 0.531
+K: 2 N: 1000 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1053 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.214003694538
+the CCR is: 0.763
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.179059334032
+the CCR is: 0.734
+Beginning iteration 2 of 5 ...
+the graph has 1086 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.0713075039732
+the CCR is: 0.656
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.129554316562
+the CCR is: 0.707
+Beginning iteration 3 of 5 ...
+the graph has 1102 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.199051951515
+the CCR is: 0.756
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.245549677518
+the CCR is: 0.777
+Beginning iteration 4 of 5 ...
+the graph has 1088 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.254781595622
+the CCR is: 0.788
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.251575915996
+the CCR is: 0.786
+Beginning iteration 5 of 5 ...
+the graph has 1083 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.180563109481
+the CCR is: 0.742
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.262929778878
+the CCR is: 0.774
+K: 2 N: 1000 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1402 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.400029238597
+the CCR is: 0.851
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.402916579418
+the CCR is: 0.849
+Beginning iteration 2 of 5 ...
+the graph has 1390 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.412279180886
+the CCR is: 0.859
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.408854969667
+the CCR is: 0.857
+Beginning iteration 3 of 5 ...
+the graph has 1414 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.439966169807
+the CCR is: 0.868
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.454581680561
+the CCR is: 0.87
+Beginning iteration 4 of 5 ...
+the graph has 1445 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.514127174216
+the CCR is: 0.894
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.444885956468
+the CCR is: 0.863
+Beginning iteration 5 of 5 ...
+the graph has 1395 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.43967346746
+the CCR is: 0.869
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.480123564914
+the CCR is: 0.883
+K: 2 N: 1000 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1694 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.563128312495
+the CCR is: 0.908
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.568387815745
+the CCR is: 0.903
+Beginning iteration 2 of 5 ...
+the graph has 1672 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.519481478976
+the CCR is: 0.892
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.536668101949
+the CCR is: 0.897
+Beginning iteration 3 of 5 ...
+the graph has 1627 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.512017499523
+the CCR is: 0.891
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.496063053725
+the CCR is: 0.886
+Beginning iteration 4 of 5 ...
+the graph has 1695 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.582006719994
+the CCR is: 0.915
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.613914903445
+the CCR is: 0.923
+Beginning iteration 5 of 5 ...
+the graph has 1611 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.496470864388
+the CCR is: 0.887
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.496063053725
+the CCR is: 0.886
+K: 2 N: 1000 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2122 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.664343694501
+the CCR is: 0.935
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.675928009492
+the CCR is: 0.938
+Beginning iteration 2 of 5 ...
+the graph has 2204 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.738625142125
+the CCR is: 0.955
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.714144438279
+the CCR is: 0.949
+Beginning iteration 3 of 5 ...
+the graph has 2320 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.72755842692
+the CCR is: 0.952
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.716741646023
+the CCR is: 0.95
+Beginning iteration 4 of 5 ...
+the graph has 2177 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.705363340756
+the CCR is: 0.948
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.697035948133
+the CCR is: 0.946
+Beginning iteration 5 of 5 ...
+the graph has 2199 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.739720720026
+the CCR is: 0.956
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.735246160256
+the CCR is: 0.955
+K: 2 N: 1000 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2694 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.826188884456
+the CCR is: 0.974
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.859848488136
+the CCR is: 0.98
+Beginning iteration 2 of 5 ...
+the graph has 2661 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.842236421386
+the CCR is: 0.977
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.843459803502
+the CCR is: 0.977
+Beginning iteration 3 of 5 ...
+the graph has 2815 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.800453954145
+the CCR is: 0.969
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.810516292647
+the CCR is: 0.971
+Beginning iteration 4 of 5 ...
+the graph has 2697 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.842054767334
+the CCR is: 0.977
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.855500091332
+the CCR is: 0.979
+Beginning iteration 5 of 5 ...
+the graph has 2692 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.815794286664
+the CCR is: 0.972
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.831546361979
+the CCR is: 0.975
+K: 2 N: 1000 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 4171 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.934271770765
+the CCR is: 0.992
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.939928322206
+the CCR is: 0.993
+Beginning iteration 2 of 5 ...
+the graph has 4202 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970751523872
+the CCR is: 0.997
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.954690011894
+the CCR is: 0.995
+Beginning iteration 3 of 5 ...
+the graph has 4058 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.94912089647
+the CCR is: 0.994
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.932723090903
+the CCR is: 0.992
+Beginning iteration 4 of 5 ...
+the graph has 4118 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.933139735263
+the CCR is: 0.992
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947571974129
+the CCR is: 0.994
+Beginning iteration 5 of 5 ...
+the graph has 3998 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.925988862038
+the CCR is: 0.991
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.919203600339
+the CCR is: 0.99
+K: 2 N: 1000 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 5492 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 2 of 5 ...
+the graph has 5573 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.962909411082
+the CCR is: 0.996
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970608365887
+the CCR is: 0.997
+Beginning iteration 3 of 5 ...
+the graph has 5444 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.98958727004
+the CCR is: 0.999
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+Beginning iteration 4 of 5 ...
+the graph has 5488 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970774852839
+the CCR is: 0.997
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970774852839
+the CCR is: 0.997
+Beginning iteration 5 of 5 ...
+the graph has 5486 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.0
+the CCR is: 1.0
+K: 2 N: 2000 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1109 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 9.43772008773e-05
+the CCR is: 0.501
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.62521259807e-05
+the CCR is: 0.506
+Beginning iteration 2 of 5 ...
+the graph has 1097 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 2.04254551666e-05
+the CCR is: 0.502
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00102232518207
+the CCR is: 0.5185
+Beginning iteration 3 of 5 ...
+the graph has 1111 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000362465293333
+the CCR is: 0.508
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00125630530011
+the CCR is: 0.5215
+Beginning iteration 4 of 5 ...
+the graph has 1070 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000223857268454
+the CCR is: 0.5125
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000896303862261
+the CCR is: 0.514
+Beginning iteration 5 of 5 ...
+the graph has 1131 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00218911658087
+the CCR is: 0.525
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.38201306356e-05
+the CCR is: 0.502
+K: 2 N: 2000 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 1603 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 4.89221713462e-06
+the CCR is: 0.5095
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000992721653944
+the CCR is: 0.5145
+Beginning iteration 2 of 5 ...
+the graph has 1669 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00136269994663
+the CCR is: 0.5245
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000293035627232
+the CCR is: 0.505
+Beginning iteration 3 of 5 ...
+the graph has 1576 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000183245357745
+the CCR is: 0.5095
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 9.01376263541e-07
+the CCR is: 0.502
+Beginning iteration 4 of 5 ...
+the graph has 1656 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000280982330602
+the CCR is: 0.5025
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 2.0108540156e-05
+the CCR is: 0.508
+Beginning iteration 5 of 5 ...
+the graph has 1598 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000420949104297
+the CCR is: 0.5155
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00200858656681
+the CCR is: 0.528
+K: 2 N: 2000 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2172 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000283976282444
+the CCR is: 0.509
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00150583297387
+the CCR is: 0.5185
+Beginning iteration 2 of 5 ...
+the graph has 2259 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.153132810342
+the CCR is: 0.725
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.189979232098
+the CCR is: 0.75
+Beginning iteration 3 of 5 ...
+the graph has 2217 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.238070112421
+the CCR is: 0.779
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.297876901864
+the CCR is: 0.8055
+Beginning iteration 4 of 5 ...
+the graph has 2166 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.183098182539
+the CCR is: 0.7425
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.261457313546
+the CCR is: 0.7855
+Beginning iteration 5 of 5 ...
+the graph has 2160 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00219548780742
+the CCR is: 0.529
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00490371393794
+the CCR is: 0.54
+K: 2 N: 2000 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2765 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.344314950423
+the CCR is: 0.831
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.370696014993
+the CCR is: 0.8355
+Beginning iteration 2 of 5 ...
+the graph has 2627 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.324794483546
+the CCR is: 0.8225
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.393975207201
+the CCR is: 0.8455
+Beginning iteration 3 of 5 ...
+the graph has 2668 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.362130715721
+the CCR is: 0.8385
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.350378710977
+the CCR is: 0.8305
+Beginning iteration 4 of 5 ...
+the graph has 2779 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.473171326706
+the CCR is: 0.8775
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.509996015669
+the CCR is: 0.8865
+Beginning iteration 5 of 5 ...
+the graph has 2665 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.421893742061
+the CCR is: 0.8595
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.45739651648
+the CCR is: 0.8665
+K: 2 N: 2000 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 3257 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.508336718812
+the CCR is: 0.892
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.50207895557
+the CCR is: 0.889
+Beginning iteration 2 of 5 ...
+the graph has 3317 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.501572994886
+the CCR is: 0.887
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.500853328486
+the CCR is: 0.885
+Beginning iteration 3 of 5 ...
+the graph has 3231 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.485156585594
+the CCR is: 0.884
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.502027121528
+the CCR is: 0.888
+Beginning iteration 4 of 5 ...
+the graph has 3407 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.560682811847
+the CCR is: 0.9075
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.581307296768
+the CCR is: 0.9125
+Beginning iteration 5 of 5 ...
+the graph has 3274 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.56772330011
+the CCR is: 0.9095
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.570671192924
+the CCR is: 0.909
+K: 2 N: 2000 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 4359 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.714258380661
+the CCR is: 0.949
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.733316467881
+the CCR is: 0.9525
+Beginning iteration 2 of 5 ...
+the graph has 4419 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.746681466324
+the CCR is: 0.957
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.726620620317
+the CCR is: 0.952
+Beginning iteration 3 of 5 ...
+the graph has 4321 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.718702102459
+the CCR is: 0.9495
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.710592862097
+the CCR is: 0.9475
+Beginning iteration 4 of 5 ...
+the graph has 4452 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.730961195868
+the CCR is: 0.954
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.739099418655
+the CCR is: 0.9555
+Beginning iteration 5 of 5 ...
+the graph has 4389 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.745258683681
+the CCR is: 0.957
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.75125185066
+the CCR is: 0.9585
+K: 2 N: 2000 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 5378 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.798522986989
+the CCR is: 0.9675
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.811901091443
+the CCR is: 0.9705
+Beginning iteration 2 of 5 ...
+the graph has 5485 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.826219198817
+the CCR is: 0.9735
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.830502619179
+the CCR is: 0.9745
+Beginning iteration 3 of 5 ...
+the graph has 5551 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.852976526247
+the CCR is: 0.979
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.844930846429
+the CCR is: 0.9775
+Beginning iteration 4 of 5 ...
+the graph has 5473 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.850618143775
+the CCR is: 0.9785
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.848274253604
+the CCR is: 0.978
+Beginning iteration 5 of 5 ...
+the graph has 5350 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.81631151097
+the CCR is: 0.972
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.829487939566
+the CCR is: 0.9745
+K: 2 N: 2000 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 8158 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.939817745875
+the CCR is: 0.993
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947076260899
+the CCR is: 0.994
+Beginning iteration 2 of 5 ...
+the graph has 8249 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.944135320889
+the CCR is: 0.9935
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947572107984
+the CCR is: 0.994
+Beginning iteration 3 of 5 ...
+the graph has 8129 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.923013362907
+the CCR is: 0.9905
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.936302136989
+the CCR is: 0.9925
+Beginning iteration 4 of 5 ...
+the graph has 8410 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970758440553
+the CCR is: 0.997
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.962531256062
+the CCR is: 0.996
+Beginning iteration 5 of 5 ...
+the graph has 8397 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.954701879711
+the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.951068196218
+the CCR is: 0.9945
+K: 2 N: 2000 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 10815 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.967826172953
+the CCR is: 0.9965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.967826172953
+the CCR is: 0.9965
+Beginning iteration 2 of 5 ...
+the graph has 10936 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.966863714535
+the CCR is: 0.9965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.974845373169
+the CCR is: 0.9975
+Beginning iteration 3 of 5 ...
+the graph has 11157 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.966880385192
+the CCR is: 0.9965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.966880385192
+the CCR is: 0.9965
+Beginning iteration 4 of 5 ...
+the graph has 10795 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.988589531438
+the CCR is: 0.999
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.98388511389
+the CCR is: 0.9985
+Beginning iteration 5 of 5 ...
+the graph has 11016 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970743654478
+the CCR is: 0.997
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.970743654478
+the CCR is: 0.997
+K: 2 N: 5000 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 2733 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000654546856481
+the CCR is: 0.5148
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000531860787645
+the CCR is: 0.5122
+Beginning iteration 2 of 5 ...
+the graph has 2865 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000508325136085
+the CCR is: 0.5134
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000990321396705
+the CCR is: 0.5176
+Beginning iteration 3 of 5 ...
+the graph has 2810 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.59122112855e-05
+the CCR is: 0.5064
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000719789059078
+the CCR is: 0.513
+Beginning iteration 4 of 5 ...
+the graph has 2754 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000256955021939
+the CCR is: 0.5088
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00273304828124
+the CCR is: 0.53
+Beginning iteration 5 of 5 ...
+the graph has 2657 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000172751644926
+the CCR is: 0.5112
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00173826808286
+the CCR is: 0.5208
+K: 2 N: 5000 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 4125 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 8.87581019143e-07
+the CCR is: 0.5004
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.59540675341e-05
+the CCR is: 0.5022
+Beginning iteration 2 of 5 ...
+the graph has 4173 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.03566083096e-05
+the CCR is: 0.5012
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00022160949907
+the CCR is: 0.5082
+Beginning iteration 3 of 5 ...
+the graph has 4106 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000160477167165
+the CCR is: 0.5092
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000421278578351
+the CCR is: 0.5132
+Beginning iteration 4 of 5 ...
+the graph has 4110 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 9.96263264176e-05
+the CCR is: 0.5062
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00191454262855
+the CCR is: 0.5252
+Beginning iteration 5 of 5 ...
+the graph has 4068 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000158060422955
+the CCR is: 0.5072
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.81992126079e-05
+the CCR is: 0.5054
+K: 2 N: 5000 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 5380 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.3833097838e-06
+the CCR is: 0.5042
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.23910577633e-05
+the CCR is: 0.5018
+Beginning iteration 2 of 5 ...
+the graph has 5498 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00133217248472
+the CCR is: 0.5248
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00272871278133
+the CCR is: 0.5314
+Beginning iteration 3 of 5 ...
+the graph has 5462 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 2.93334745872e-05
+the CCR is: 0.5068
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000269041782629
+the CCR is: 0.5018
+Beginning iteration 4 of 5 ...
+the graph has 5478 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 5.63694022181e-05
+the CCR is: 0.5106
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.136567574725
+the CCR is: 0.714
+Beginning iteration 5 of 5 ...
+the graph has 5546 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 8.89526353162e-05
+the CCR is: 0.5104
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000924690559801
+the CCR is: 0.5182
+K: 2 N: 5000 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 6756 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.321485420896
+the CCR is: 0.8206
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.346444839192
+the CCR is: 0.8278
+Beginning iteration 2 of 5 ...
+the graph has 6886 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.404478827641
+the CCR is: 0.8556
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.423542500696
+the CCR is: 0.859
+Beginning iteration 3 of 5 ...
+the graph has 6803 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.366612063603
+the CCR is: 0.84
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.388906520778
+the CCR is: 0.8452
+Beginning iteration 4 of 5 ...
+the graph has 6906 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.40681075767
+the CCR is: 0.856
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.424319815804
+the CCR is: 0.8598
+Beginning iteration 5 of 5 ...
+the graph has 6937 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.40992260661
+the CCR is: 0.8574
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.43209370748
+the CCR is: 0.8608
+K: 2 N: 5000 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 8183 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.543299731701
+the CCR is: 0.9
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.540867338813
+the CCR is: 0.8992
+Beginning iteration 2 of 5 ...
+the graph has 8220 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.546723273788
+the CCR is: 0.9038
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.540737125404
+the CCR is: 0.9004
+Beginning iteration 3 of 5 ...
+the graph has 8275 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.5401659996
+the CCR is: 0.9018
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.551336071547
+the CCR is: 0.9044
+Beginning iteration 4 of 5 ...
+the graph has 8277 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.559613923592
+the CCR is: 0.9086
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.560316076272
+the CCR is: 0.9074
+Beginning iteration 5 of 5 ...
+the graph has 8313 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.557823108256
+the CCR is: 0.9066
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.559855603849
+the CCR is: 0.9064
+K: 2 N: 5000 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 11055 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.748087471252
+the CCR is: 0.9578
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.749167084023
+the CCR is: 0.958
+Beginning iteration 2 of 5 ...
+the graph has 11029 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.721400497451
+the CCR is: 0.9516
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.717783535949
+the CCR is: 0.9506
+Beginning iteration 3 of 5 ...
+the graph has 11093 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.706706789321
+the CCR is: 0.9482
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.72684142801
+the CCR is: 0.953
+Beginning iteration 4 of 5 ...
+the graph has 11139 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.737317182993
+the CCR is: 0.955
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.743363089156
+the CCR is: 0.9566
+Beginning iteration 5 of 5 ...
+the graph has 11002 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.731220970365
+the CCR is: 0.9538
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.732272582698
+the CCR is: 0.954
+K: 2 N: 5000 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 13718 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.835546370221
+the CCR is: 0.9756
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.835411504557
+the CCR is: 0.9756
+Beginning iteration 2 of 5 ...
+the graph has 13633 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.816127256526
+the CCR is: 0.972
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.817884049329
+the CCR is: 0.9724
+Beginning iteration 3 of 5 ...
+the graph has 13767 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.817826625846
+the CCR is: 0.9724
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.824204437834
+the CCR is: 0.9736
+Beginning iteration 4 of 5 ...
+the graph has 13694 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.827414823403
+the CCR is: 0.9742
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.842543836459
+the CCR is: 0.977
+Beginning iteration 5 of 5 ...
+the graph has 13696 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.817823590553
+the CCR is: 0.9724
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.812684333441
+the CCR is: 0.9714
+K: 2 N: 5000 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 20467 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947103507501
+the CCR is: 0.994
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.942707372343
+the CCR is: 0.9934
+Beginning iteration 2 of 5 ...
+the graph has 20457 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.954580530403
+the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.960845817405
+the CCR is: 0.9958
+Beginning iteration 3 of 5 ...
+the graph has 20521 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.939903118848
+the CCR is: 0.993
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.94737178516
+the CCR is: 0.994
+Beginning iteration 4 of 5 ...
+the graph has 20847 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.956214209291
+the CCR is: 0.9952
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.950239002493
+the CCR is: 0.9944
+Beginning iteration 5 of 5 ...
+the graph has 20606 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947256742543
+the CCR is: 0.994
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947392953039
+the CCR is: 0.994
+K: 2 N: 5000 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 27570 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.983130788919
+the CCR is: 0.9984
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981005396042
+the CCR is: 0.9982
+Beginning iteration 2 of 5 ...
+the graph has 27389 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.977420450563
+the CCR is: 0.9978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981140260828
+the CCR is: 0.9982
+Beginning iteration 3 of 5 ...
+the graph has 27252 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.990766120864
+the CCR is: 0.9992
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.990615302627
+the CCR is: 0.9992
+Beginning iteration 4 of 5 ...
+the graph has 27680 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.982905467232
+the CCR is: 0.9984
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981885449938
+the CCR is: 0.9982
+Beginning iteration 5 of 5 ...
+the graph has 27450 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.990766806112
+the CCR is: 0.9992
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.984900176209
+the CCR is: 0.9986
+K: 2 N: 10000 c: 2.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 5481 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 8.66506554958e-05
+the CCR is: 0.5045
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000853998783825
+the CCR is: 0.5171
+Beginning iteration 2 of 5 ...
+the graph has 5394 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000114666069565
+the CCR is: 0.5062
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.00162101770776
+the CCR is: 0.5223
+Beginning iteration 3 of 5 ...
+the graph has 5513 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.5471991758e-06
+the CCR is: 0.5034
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000322573371796
+the CCR is: 0.5088
+Beginning iteration 4 of 5 ...
+the graph has 5546 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 5.61858221922e-05
+the CCR is: 0.5053
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000216645924909
+the CCR is: 0.5075
+Beginning iteration 5 of 5 ...
+the graph has 5663 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.15638224441e-07
+the CCR is: 0.5024
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000394301671632
+the CCR is: 0.5127
+K: 2 N: 10000 c: 3.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 8263 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 7.63972345497e-05
+the CCR is: 0.5035
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 2.12267321358e-08
+the CCR is: 0.5002
+Beginning iteration 2 of 5 ...
+the graph has 8262 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.28700296565e-07
+the CCR is: 0.5017
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000650348269989
+the CCR is: 0.5129
+Beginning iteration 3 of 5 ...
+the graph has 8166 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.11108748785e-06
+the CCR is: 0.5025
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 4.81944821895e-05
+the CCR is: 0.5053
+Beginning iteration 4 of 5 ...
+the graph has 8305 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.83638668202e-07
+the CCR is: 0.5024
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.09059482697e-05
+the CCR is: 0.5005
+Beginning iteration 5 of 5 ...
+the graph has 8284 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000110031086311
+the CCR is: 0.5084
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000279703915362
+the CCR is: 0.5112
+K: 2 N: 10000 c: 4.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 11089 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 2.07469353252e-05
+the CCR is: 0.5008
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.08849012132e-05
+the CCR is: 0.5018
+Beginning iteration 2 of 5 ...
+the graph has 11193 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.22934543404e-05
+the CCR is: 0.5017
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000419431189315
+the CCR is: 0.5082
+Beginning iteration 3 of 5 ...
+the graph has 11041 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 3.9116122881e-05
+the CCR is: 0.5067
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 6.66914173532e-05
+the CCR is: 0.5073
+Beginning iteration 4 of 5 ...
+the graph has 11203 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 1.858124452e-05
+the CCR is: 0.5007
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.225001309681
+the CCR is: 0.7698
+Beginning iteration 5 of 5 ...
+the graph has 11071 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000307380841884
+the CCR is: 0.5079
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.000385542272921
+the CCR is: 0.5096
+K: 2 N: 10000 c: 5.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 13619 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.412670403922
+the CCR is: 0.8571
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.415113620788
+the CCR is: 0.8574
+Beginning iteration 2 of 5 ...
+the graph has 13804 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.393664479494
+the CCR is: 0.8509
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.41644685689
+the CCR is: 0.8574
+Beginning iteration 3 of 5 ...
+the graph has 13930 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.390824142392
+the CCR is: 0.8501
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.382038641629
+the CCR is: 0.844
+Beginning iteration 4 of 5 ...
+the graph has 13759 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.365588818873
+the CCR is: 0.8395
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.392325061949
+the CCR is: 0.8471
+Beginning iteration 5 of 5 ...
+the graph has 13821 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.410618074167
+the CCR is: 0.8572
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.425003741553
+the CCR is: 0.8602
+K: 2 N: 10000 c: 6.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 16446 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.536694911219
+the CCR is: 0.9011
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.545796477491
+the CCR is: 0.9028
+Beginning iteration 2 of 5 ...
+the graph has 16447 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.53908456329
+the CCR is: 0.9018
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.540378132042
+the CCR is: 0.901
+Beginning iteration 3 of 5 ...
+the graph has 16333 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.538784359877
+the CCR is: 0.901
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.543560325247
+the CCR is: 0.9012
+Beginning iteration 4 of 5 ...
+the graph has 16421 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.557070534376
+the CCR is: 0.9072
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.564311461416
+the CCR is: 0.9085
+Beginning iteration 5 of 5 ...
+the graph has 16348 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.543706734353
+the CCR is: 0.9031
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.553781611618
+the CCR is: 0.9053
+K: 2 N: 10000 c: 8.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 22404 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.734949556706
+the CCR is: 0.9547
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.737042106827
+the CCR is: 0.9552
+Beginning iteration 2 of 5 ...
+the graph has 22325 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.7302490825
+the CCR is: 0.9537
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.729896231228
+the CCR is: 0.9535
+Beginning iteration 3 of 5 ...
+the graph has 21972 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.73979705061
+the CCR is: 0.9558
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.747303533336
+the CCR is: 0.9575
+Beginning iteration 4 of 5 ...
+the graph has 22054 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.720191438406
+the CCR is: 0.9511
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.717982043542
+the CCR is: 0.9507
+Beginning iteration 5 of 5 ...
+the graph has 22067 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.720515862613
+the CCR is: 0.951
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.725722570502
+the CCR is: 0.9525
+K: 2 N: 10000 c: 10.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 27354 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.842145194671
+the CCR is: 0.977
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.838820140717
+the CCR is: 0.9763
+Beginning iteration 2 of 5 ...
+the graph has 27612 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.831166076729
+the CCR is: 0.9749
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.833471533767
+the CCR is: 0.9754
+Beginning iteration 3 of 5 ...
+the graph has 27671 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.818184223001
+the CCR is: 0.9724
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.817379920353
+the CCR is: 0.9722
+Beginning iteration 4 of 5 ...
+the graph has 27572 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.827600676343
+the CCR is: 0.9742
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.828801550658
+the CCR is: 0.9744
+Beginning iteration 5 of 5 ...
+the graph has 27031 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.827198249836
+the CCR is: 0.9741
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.832485699264
+the CCR is: 0.9751
+K: 2 N: 10000 c: 15.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 41263 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.949522115543
+the CCR is: 0.9943
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.945301061867
+the CCR is: 0.9937
+Beginning iteration 2 of 5 ...
+the graph has 40961 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.938596109
+the CCR is: 0.9928
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.937044121205
+the CCR is: 0.9926
+Beginning iteration 3 of 5 ...
+the graph has 41379 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.942707560869
+the CCR is: 0.9934
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.947257819344
+the CCR is: 0.994
+Beginning iteration 4 of 5 ...
+the graph has 41242 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.955386421582
+the CCR is: 0.9951
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.956123996806
+the CCR is: 0.9952
+Beginning iteration 5 of 5 ...
+the graph has 41197 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.940668316374
+the CCR is: 0.9931
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.941365853727
+the CCR is: 0.9932
+K: 2 N: 10000 c: 20.0 lambda: 0.9
+Beginning iteration 1 of 5 ...
+the graph has 55139 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.978296599401
+the CCR is: 0.9979
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.973971402689
+the CCR is: 0.9974
+Beginning iteration 2 of 5 ...
+the graph has 55412 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.980118920013
+the CCR is: 0.9981
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.979242610451
+the CCR is: 0.998
+Beginning iteration 3 of 5 ...
+the graph has 54758 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.98011955807
+the CCR is: 0.9981
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.978323515191
+the CCR is: 0.9979
+Beginning iteration 4 of 5 ...
+the graph has 55420 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.981009463736
+the CCR is: 0.9982
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.978464309872
+the CCR is: 0.9979
+Beginning iteration 5 of 5 ...
+the graph has 54964 edges in total
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.979200336744
+the CCR is: 0.998
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.979185909126
+the CCR is: 0.998
