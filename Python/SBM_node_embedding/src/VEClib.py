@@ -26,9 +26,6 @@ import numpy as np
 import scipy
 from . import SBMlib as SBM
 
-if __name__ == '__main__':
-    exec('/home/brian/Documents/summer17/Python/SBM_node_embeddings/NBtest.py')
-
 def build_node_alias(G):
     """
     build dictionary S that is easier to generate random walks on G
@@ -62,9 +59,9 @@ def alias_draw(J, q):
     return:
     a random number ranging from 0 to len(prob)
     """
-    K = len(J)
+    
     # Draw from the overall uniform mixture.
-    kk = int(np.floor(np.random.rand()*K))
+    kk = int(np.random.rand()*len(J))
     # Draw from the binary mixture, either keeping the
     # small one, or choosing the associated larger one.
     if np.random.rand() < q[kk]:
@@ -99,8 +96,8 @@ def create_random_walks(S, num_paths, length_path, filename, inMem=False, NBT=Fa
                         break
                     ind = next_nds.index(prev)
                     del next_nds[ind]
-                    J = np.delete(J, ind)
-                    q = np.delete(q, ind)
+                    J = J[range(0,ind)+range(ind+1,len(J))]
+                    q = q[range(0,ind)+range(ind+1,len(q))]
                 rd = alias_draw(J, q)
                 nextnd = next_nds[rd]
                 walk.append(nextnd)
@@ -115,7 +112,7 @@ def create_random_walks(S, num_paths, length_path, filename, inMem=False, NBT=Fa
 
 #%%
 def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_paths=10, length_path=60, emb_dim=50,
-                       winsize=8, neg_samples=5, NBT=False, speedup=True, inMem=False, save=False):
+                       winsize=8, neg_samples=5, NBT=False, speedup=True, inMem=False, save=False, quiet=True):
     """
     learning SBM model through deepwalk, using gensim package
     Inputs:
@@ -131,24 +128,25 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_paths=10, length_path=6
     inMem: whether to work in memory or not (possible only for smaller datasets)
     save: whether to save the word2vec results to disk
     """
-    print '1 building alias auxiliary functions'
+    if not quiet: print '1 building alias auxiliary functions'
     S = build_node_alias(G)
-    print '2 creating random walks'
+    if not quiet: print '2 creating random walks'
     sentence = create_random_walks(S, num_paths, length_path, rw_filename, inMem, NBT)
-    print '3 learning word2vec models'
+    if not quiet: print '3 learning word2vec models'
     if speedup:
         import os
+        from gensim.models.keyedvectors import KeyedVectors
         comman = './word2vec -train '+rw_filename+' -output '+emb_filename+' -size '+str(emb_dim) \
-            +' -window '+str(winsize)+' -negative '+str(neg_samples)+' -cbow 0 -min-count 0 -iter 5 -sample 1e-1'
+            +' -window '+str(winsize)+' -negative '+str(neg_samples)+' -cbow 0 -iter 3 -sample 1e-4'
         os.system(comman)
-        model_w2v = w2v.load_word2vec_format(emb_filename, binary=False)
+        model_w2v = KeyedVectors.load_word2vec_format(emb_filename, binary=False)
     else:
         if ~inMem:
             sentence = w2v.LineSentence(rw_filename)
         model_w2v = w2v.Word2Vec(sentence, size=emb_dim, window=winsize, min_count=0,
                                  sg=1, negative=neg_samples, sample=1e-1, workers=5, iter=3)
     if save:
-        print '4 saving learned embeddings'
+        if not quiet: print '4 saving learned embeddings'
         model_w2v.save_word2vec_format(emb_filename)
     return model_w2v
 
@@ -220,70 +218,17 @@ def update_a_res(arry, acc, alg, param, value, i):
     arry[alg][key][i] = acc
     return arry
 
-def summary_res(nmi_arry, ccr_arry, ars_arry, truelabel, label, alg, param, value, i):
+def summary_res(nmi_arry, ccr_arry, ars_arry, truelabel, label, alg, param, value, i, quiet=True):
     # alg: 'deep'/'sc'/'abp',
     # param: 'c'/'N',
     # value: the value of param,
     # i: the random iter
     nmi, ccr, ars = cal_metrics_3(truelabel, label)
-    print 'the NMI is:', nmi
-    print 'the CCR is:', ccr
+    if not quiet: print 'the NMI is:', nmi, '\nthe CCR is:', ccr
     nmi_arry = update_a_res(nmi_arry, nmi, alg, param, value, i)
     ccr_arry = update_a_res(ccr_arry, ccr, alg, param, value, i)
     ars_arry = update_a_res(ars_arry, ars, alg, param, value, i)
     return nmi_arry, ccr_arry, ars_arry
-
-def plot_res_3(res):
-    import matplotlib.pyplot as plt
-    nmi = res[0]
-    ccr = res[1]
-#    ars = res[2]
-    tm = nmi['deep'].keys()
-    param = tm[0].split('-')[0]
-    x_array = [float(z.split('-')[1].strip()) for z in tm]
-    x_array = sorted(x_array)
-    tm = [param + '- ' + str(v) for v in x_array]
-    # get nmi for three algs, mean and std
-    nmi_deep_mean = [np.mean(nmi['deep'][z].values()) for z in tm]
-    nmi_sc_mean = [np.mean(nmi['sc'][z].values()) for z in tm]
-    nmi_abp_mean = [np.mean(nmi['abp'][z].values()) for z in tm]
-    nmi_deep_std = [np.std(nmi['deep'][z].values()) for z in tm]
-    nmi_sc_std = [np.std(nmi['sc'][z].values()) for z in tm]
-    nmi_abp_std = [np.std(nmi['abp'][z].values()) for z in tm]
-    # get ccr for three algs
-    ccr_deep_mean = [np.mean(ccr['deep'][z].values()) for z in tm]
-    ccr_sc_mean = [np.mean(ccr['sc'][z].values()) for z in tm]
-    ccr_abp_mean = [np.mean(ccr['abp'][z].values()) for z in tm]
-    ccr_deep_std = [np.std(ccr['deep'][z].values()) for z in tm]
-    ccr_sc_std = [np.std(ccr['sc'][z].values()) for z in tm]
-    ccr_abp_std = [np.std(ccr['abp'][z].values()) for z in tm]
-    # plot
-    # x - ccr, o - nmi
-    # b- - deep, r-- - sc, g-. - adp
-    plt.figure(1)
-    plt.errorbar(x_array, nmi_deep_mean, yerr=nmi_deep_std, fmt='bo-')
-    plt.errorbar(x_array, nmi_sc_mean, yerr=nmi_sc_std, fmt='ro--')
-    plt.errorbar(x_array, nmi_abp_mean, yerr=nmi_abp_std, fmt='go-.')
-
-    plt.errorbar(x_array, ccr_deep_mean, yerr=ccr_deep_std, fmt='bx-')
-    plt.errorbar(x_array, ccr_sc_mean, yerr=ccr_sc_std, fmt='rx--')
-    plt.errorbar(x_array, ccr_abp_mean, yerr=ccr_abp_std, fmt='gx-.')
-
-    plt.legend(['NMI-New', 'NMI-SC', 'NMI-ABP', 'CCR-New', 'CCR-SC', 'CCR-ABP'], loc=0)
-    plt.xlabel('Performance as function of '+param)
-
-    plt.show()
-    return x_array
-
-def plot_res(res):
-    # res can be nmi/ccr data structure,
-    # mt is the name of metric
-    for alg in res:
-        for para in res[alg]:
-            u = res[alg][para].values()
-            res[alg][para]['mean'] = np.mean(u)
-            res[alg][para]['std'] = np.std(u)
-    return res
 
 #%%
 
@@ -332,7 +277,7 @@ def get_label_list(G):
     nodeslist = [str(x) for x in nodeslist]
     return ln, nodeslist
 
-def plot_res(N, params):
+def plot_res(N, params, fignum):
     import matplotlib.pyplot as plt
     fstring = "exp1%d" % N
     res = pickle.load(open("%s.pkl" % fstring, 'rb'))
@@ -345,24 +290,31 @@ def plot_res(N, params):
     tm = [param + '- ' + str(v) for v in x_array]
     
     # get nmi and ccr for all algos 
-    nmi_mean = np.array((1,size(z)))
+    nmi_mean = {}
+    nmi_std = {}
+    ccr_mean = {}
+    ccr_std = {}
     for p in params:
         nmi_mean[p] = [np.mean(nmi[p][z].values()) for z in tm]
         nmi_std[p] = [np.std(nmi[p][z].values()) for z in tm]
         ccr_mean[p] = [np.mean(ccr[p][z].values()) for z in tm]
         ccr_std[p] = [np.std(ccr[p][z].values()) for z in tm]
     
-    plt.figure(1, figsize=(10, 6))
+    fig = plt.figure(fignum, figsize=(10, 6))
+    i = 0
+    cmap = plt.get_cmap('cubehelix')
     for p in params:
-        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p], markersize=8, linewidth=1.5)
-        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p], markersize=8, linewidth=1.5)
+        color = cmap(float(i)/len(params))
+        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p], color=color, markersize=8)
+        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p], color=color, markersize=8)
+        i += 1
 
     legend = ["nmi-%s" % p for p in params]
-    legend = ["ccr-%s" % p for p in params]
+    legend.extend(["ccr-%s" % p for p in params])
     plt.legend(legend, loc=0)
     plt.xlabel(param)
     plt.xlim(x_array[0]-0.1, x_array[-1]+0.1)
     plt.ylim(-0.05, 1.05)
-    plt.show()
     plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
     plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
+    return fig

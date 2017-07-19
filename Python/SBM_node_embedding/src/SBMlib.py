@@ -71,9 +71,8 @@ def alias_draw(J, q):
     return:
     a random number ranging from 0 to len(prob)
     """
-    K = len(J)
     # Draw from the overall uniform mixture.
-    kk = int(np.floor(npr.rand()*K))
+    kk = int(npr.rand()*len(J))
     # Draw from the binary mixture, either keeping the
     # small one, or choosing the associated larger one.
     if npr.rand() < q[kk]:
@@ -110,7 +109,7 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     return SBM_params
 
 #%%
-def SBM_simulate(model):
+def SBM_simulate(model, quiet=True):
     """
     simulate SBM graph
     model is returned by SBM_param_init() function
@@ -135,10 +134,10 @@ def SBM_simulate(model):
             if s[0] == 1:
                 G.add_edge(i, j, weight=1.0)
                 totaledges += 1
-    print 'the graph has', totaledges, 'edges in total'
+    if not quiet: print 'the graph has', totaledges, 'edges in total'
     return G
 
-def SBM_simulate_fast(model):
+def SBM_simulate_fast(model, quiet=True):
     G = nx.Graph()
     b = model['a']
     J, q = alias_setup(b)
@@ -169,7 +168,7 @@ def SBM_simulate_fast(model):
                 nd2 = grp2[z[1]-L1]
                 G.add_edge(nd1, nd2, weight=1.0)
                 totaledges += 1
-    print 'the graph has', totaledges, 'edges in total'
+    if not quiet: print 'the graph has', totaledges, 'edges in total'
     return G
 
 def SBM_savemat(G, edgefilename, nodefilename):
@@ -183,7 +182,7 @@ def SBM_savemat(G, edgefilename, nodefilename):
             fwrite.write(str(key)+' '+str(G.node[key]['community'])+'\n')
     return 1
 
-def SBM_SNR(model):
+def SBM_SNR(model, quiet=True):
     """
     help to define the SNR and lambda1
     """
@@ -192,8 +191,7 @@ def SBM_SNR(model):
     Z = np.dot(P, Q)
     u, _ = np.linalg.eig(Z)
     ua = sorted(u, reverse=True)
-    print 'lambda1:', ua[0]
-    print 'lambda2:', ua[1]
+    if not quiet: print 'lambda1:', ua[0], '\nlambda2:', ua[1]
     SNR = ua[1]*ua[1]/ua[0]
     return SNR, ua[0], ua[1]
 
