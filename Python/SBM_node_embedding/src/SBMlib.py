@@ -20,6 +20,8 @@ import networkx as nx
 import numpy as np
 import numpy.random as npr
 
+DEBUG = True
+
 def alias_setup(probs):
     """
     Set up the framework for the aliasing method.
@@ -99,7 +101,7 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     return SBM_params
 
 #%%
-def SBM_simulate(model, quiet=True):
+def SBM_simulate(model):
     """
     Simulates the SBM graph.
     The model is returned by the SBM_param_init() function.
@@ -124,10 +126,10 @@ def SBM_simulate(model, quiet=True):
             if s[0] == 1:
                 G.add_edge(i, j, weight=1.0)
                 totaledges += 1
-    if not quiet: print 'the graph has', totaledges, 'edges in total'
+    if DEBUG: print 'the graph has', totaledges, 'edges in total'
     return G
 
-def SBM_simulate_fast(model, quiet=True):
+def SBM_simulate_fast(model):
     """
     Simulates the SBM graph, fast version.
     """
@@ -161,7 +163,7 @@ def SBM_simulate_fast(model, quiet=True):
                 nd2 = grp2[z[1]-L1]
                 G.add_edge(nd1, nd2, weight=1.0)
                 totaledges += 1
-    if not quiet: print 'the graph has', totaledges, 'edges in total'
+    if DEBUG: print 'the graph has', totaledges, 'edges in total'
     return G
 
 def get_label_list(G):

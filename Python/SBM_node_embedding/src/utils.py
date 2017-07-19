@@ -218,3 +218,83 @@ def maxfinding_embs_noramlized(mat, K, option =1):
 #    k_means2.fit(mat)
 #    y_hat = k_means2.labels_
     return y_hat  
+
+#%% Unsure of the purpose of the following functions:
+def cal_modularity(G, nodelist, y):
+    m = G.size()
+    m = float(m)
+    Q = 0.0
+    n = len(nodelist)
+    k = []
+    for e in nodelist:
+        k.append(float(len(G[e])))
+    for i in range(n):
+        for j in range(i+1, n):
+            if y[i] == y[j]:
+                if G.has_edge(nodelist[i], nodelist[j]):
+                    A = 1.0 - k[i]*k[j]/m
+                else:
+                    A = -1*k[i]*k[j]/m
+                Q += A
+    return 2*Q/m
+
+def save_clusters_in_parallel(y, y_est, filename):
+    """
+    helper function to save the learned clustering results
+    y - ground truth labels
+    y_est - learned labels
+    filename - to save results
+    """
+    f = open(filename, 'w')
+    for i in y:
+        f.write(str(y[i]) + ','+str(y_est[i])+'\n')
+    f.close()
+    return 1
+
+def SBM_visual_tsne(labels, X):
+    from . import tsne
+    import pylab as Plot
+    Y = tsne.tsne(X, 2)
+    Plot.figure()
+    Plot.scatter(Y[:, 0], Y[:, 1], 20, labels)
+    Plot.show()
+    return Y
+
+def parse_txt_data(edgename, nodename):
+    """
+    additional helper fucntion for parsing graph data
+    in txt files by Christy
+    edgename: edge files,  each line: u,v  (node ids of a edge)
+    nodename: node file, each line: nodeid, node-labels
+    """
+    model_params = {}
+    G = nx.Graph()
+    # add edges
+    f = open(edgename, 'r')
+    for l in f:
+        c = l.split()
+        G.add_edge(c[0], c[1], weight=1.0)
+    f.close()
+    # add nodes
+    g = open(nodename, 'r')
+    for l in g:
+        c = l.split()
+        G.node[c[0]]['community'] = c[1]
+    g.close()
+    # get overall graph info
+    nds = G.nodes()
+    model_params['N'] = len(nds)
+    labels = [G.node[i]['community'] for i in nds]
+    uK = set(labels)
+    model_params['K'] = len(uK)
+    return G, model_params
+
+def get_true_labels(G):
+    """
+    only for Christy's format
+    """
+    nodeslist = G.nodes()
+    labels = [G.node[i]['community'] for i in nodeslist]
+    ln = [int(t) for t in labels]
+    return ln
+
