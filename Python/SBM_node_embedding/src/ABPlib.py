@@ -12,13 +12,14 @@ get algorithm parameters for ABP
 
 """
 
-import math
 import networkx as nx
 from sklearn.cluster import KMeans
 import numpy as np
-from . import SBMlib as SBM
 
 def SBM_ABP(G, r, lambda1, m, mp):
+    """
+    Runs the ABP algorithm for comparison with VEC
+    """
     # step 1: initialize Y(v,v')(0)
     t = 1
     elist = G.edges()
@@ -73,7 +74,8 @@ def SBM_ABP(G, r, lambda1, m, mp):
                     if mu < 1:
                         Y[e][t] = sum(wts)
                     else:
-                        wts2 = [Y[(v, vpp)][mu] for vpp in G[v] if vpp not in [vp] and vpp not in [vppp]]
+                        wts2 = [Y[(v, vpp)][mu] for vpp in G[v] if vpp not in [vp]
+                                and vpp not in [vppp]]
                         Y[e][t] = sum(wts) - sum(wts2)
     # step 4: get the Y matrix
     Ymat = {}
@@ -100,10 +102,12 @@ def SBM_ABP(G, r, lambda1, m, mp):
     return labels_est
 
 def check_cycle(G, u, v, r):
+    """
+    Checks to see if G contains a cycle including u and v of length less than r
+    """
     # u,v is path of cycle <=r <=> u,v has shortest path<=r-1 after removing (u,v)
-    if r == 1:
-        ispartcycle = False
-    else:
+    ispartcycle = False
+    if r != 1:
         # save a copy of current edge
         edgetmp = {}
         entry = G[u][v]
@@ -114,17 +118,11 @@ def check_cycle(G, u, v, r):
         # check if shortest path <= r-1
         if nx.has_path(G, u, v):
             z = nx.shortest_path(G, u, v)
-            if len(z)-1 <= r-1:
-                ispartcycle = True
-            else:
-                ispartcycle = False
-        else:
-            ispartcycle = False
+            ispartcycle = len(z) <= r
         # add edge back to graph
         G.add_edge(u, v)
         for key in edgetmp:
             G[u][v][key] = edgetmp[key]
-    # now return
     if ispartcycle:
         return ispartcycle, z
     else:
@@ -132,22 +130,23 @@ def check_cycle(G, u, v, r):
 
 def abp_params(md):
     """
-    this is only good for simulated data
+    Creates the parameters for the ABP algorithm.
+    Note that this only works for simulated data
     """
-    snr, lambda1, lambda2 = SBM.SBM_SNR(md)
+    snr, lambda1, lambda2 = SBM_SNR(md)
     n = md['N']
-    m = 2.0*math.log(float(n))/math.log(snr)
-    m = int(math.ceil(m)) + 1
-    if m < 0:
-        m = 2
-    mp = m*math.log(lambda1*lambda1/lambda2/lambda2)/math.log(float(n))
-    mp = int(math.ceil(mp)) +1
-    if mp < 0:
-        mp = 2
+    m = 2.0*np.log(float(n))/np.log(snr)
+    m = int(np.ceil(m)) + 1
+    if m < 0: m = 2
+    mp = m*np.log(lambda1*lambda1/lambda2/lambda2)/np.log(float(n))
+    mp = int(np.ceil(mp)) + 1
+    if mp < 0: mp = 2
     return m, mp, lambda1
 
-
 def multi_abp(G, r, lambda1, m, mp, dim, K):
+    """
+    Performs ABP on multiple length paths from 1 to dim
+    """
     N = len(G.nodes())
     mt = np.zeros((N, dim))
     for k in range(dim):
@@ -158,4 +157,16 @@ def multi_abp(G, r, lambda1, m, mp, dim, K):
     k_means.fit(mt)
     y = k_means.labels_
     return y
-    
+
+def SBM_SNR(model, quiet=True):
+    """
+    help to define the SNR and lambda1
+    """
+    Q = model['B0']*model['alpha']*float(model['N'])
+    P = np.diag(model['a'])
+    Z = np.dot(P, Q)
+    u, _ = np.linalg.eig(Z)
+    ua = sorted(u, reverse=True)
+    if not quiet: print 'lambda1:', ua[0], '\nlambda2:', ua[1]
+    SNR = ua[1]*ua[1]/ua[0]
+    return SNR, ua[0], ua[1]

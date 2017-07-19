@@ -44,7 +44,7 @@ if __name__ == '__main__':
                 strsub1 = 'K'+str(K)+'N'+str(N)+'c'+str(c)+'la'+str(lambda_n)+'rd'+str(rand) # for saving results
                 # simulate graph
                 G = SBM.SBM_simulate_fast(model_sbm1)
-                ln, nodeslist = algs.get_label_list(G)
+                ln, nodeslist = SBM.get_label_list(G)
 
                 # algo1: proposed deepwalk algorithm
                 if not quiet: print 'starting normal VEC algorithm...'
@@ -63,17 +63,16 @@ if __name__ == '__main__':
                 k_means.fit(X)
                 y_nbt = k_means.labels_
                 nmi_arry, ccr_arry, ars_arry = algs.summary_res(nmi_arry, ccr_arry, ars_arry, ln, y_nbt, 'nbt', 'c', c, rand)
-            
 
-                # algo2: spectral clustering
+                # algo3: spectral clustering
                 A = nx.to_scipy_sparse_matrix(G)
                 if not quiet: print 'starting spectral clustering...'
                 sc = SpectralClustering(n_clusters=K, affinity='precomputed', eigen_solver='arpack')
                 sc.fit(A)
                 y_sc = sc.labels_
                 nmi_arry, ccr_arry, ars_arry = algs.summary_res(nmi_arry, ccr_arry, ars_arry, ln, y_sc, 'sc', 'c', c, rand)
-                
-                # algo3: belief propogation
+
+                # algo4: belief propogation
                 if not quiet: print 'starting ABP algorithm...'
                 r = 3
                 m, mp, lambda1 = ABP.abp_params(model_sbm1)
