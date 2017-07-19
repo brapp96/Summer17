@@ -29,7 +29,6 @@ from . import SBMlib as SBM
 if __name__ == '__main__':
     exec('/home/brian/Documents/summer17/Python/SBM_node_embeddings/NBtest.py')
 
-#############################
 def build_node_alias(G):
     """
     build dictionary S that is easier to generate random walks on G
@@ -135,15 +134,14 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_paths=10, length_path=6
     print '1 building alias auxiliary functions'
     S = build_node_alias(G)
     print '2 creating random walks'
-    sentence = create_random_walks(S, num_paths, length_path, rw_filename, NBT, inMem)
+    sentence = create_random_walks(S, num_paths, length_path, rw_filename, inMem, NBT)
     print '3 learning word2vec models'
     if speedup:
         import os
-        from gensim.models.keyedvectors import KeyedVectors as KV
         comman = './word2vec -train '+rw_filename+' -output '+emb_filename+' -size '+str(emb_dim) \
             +' -window '+str(winsize)+' -negative '+str(neg_samples)+' -cbow 0 -min-count 0 -iter 5 -sample 1e-1'
         os.system(comman)
-        model_w2v = KV.load_word2vec_format(emb_filename, binary=False)
+        model_w2v = w2v.load_word2vec_format(emb_filename, binary=False)
     else:
         if ~inMem:
             sentence = w2v.LineSentence(rw_filename)
@@ -334,62 +332,37 @@ def get_label_list(G):
     nodeslist = [str(x) for x in nodeslist]
     return ln, nodeslist
 
-def plot_res_3_new(res, thr_wk, thr_hd):
-    fname = 'exp1.pkl'
-    res = pickle.load(open(fname, 'rb'))
-#    nmi_arry = res[0]
-#    ccr_arry = res[1]
-#    ars_arry = res[2]
-    thr_wk = 0.395
-    thr_pr = 1.574
-    thr_hd = 4.28
+def plot_res(N, params):
     import matplotlib.pyplot as plt
+    fstring = "exp1%d" % N
+    res = pickle.load(open("%s.pkl" % fstring, 'rb'))
     nmi = res[0]
     ccr = res[1]
-#    ars = res[2]
-    tm = nmi['deep'].keys()
+    tm = nmi[params[0]].keys()
     param = tm[0].split('-')[0]
     x_array = [float(z.split('-')[1].strip()) for z in tm]
     x_array = sorted(x_array)
     tm = [param + '- ' + str(v) for v in x_array]
-    # get nmi for three algs, mean and std
-    nmi_deep_mean = [np.mean(nmi['deep'][z].values()) for z in tm]
-    nmi_sc_mean = [np.mean(nmi['sc'][z].values()) for z in tm]
-    nmi_abp_mean = [np.mean(nmi['abp'][z].values()) for z in tm]
-    nmi_deep_std = [np.std(nmi['deep'][z].values()) for z in tm]
-    nmi_sc_std = [np.std(nmi['sc'][z].values()) for z in tm]
-    nmi_abp_std = [np.std(nmi['abp'][z].values()) for z in tm]
-    # get ccr for three algs
-    ccr_deep_mean = [np.mean(ccr['deep'][z].values()) for z in tm]
-    ccr_sc_mean = [np.mean(ccr['sc'][z].values()) for z in tm]
-    ccr_abp_mean = [np.mean(ccr['abp'][z].values()) for z in tm]
-    ccr_deep_std = [np.std(ccr['deep'][z].values()) for z in tm]
-    ccr_sc_std = [np.std(ccr['sc'][z].values()) for z in tm]
-    ccr_abp_std = [np.std(ccr['abp'][z].values()) for z in tm]
-    # plot
-    # x - ccr, o - nmi
-    # b- - deep, r-- - sc, g-. - adp
+    
+    # get nmi and ccr for all algos 
+    nmi_mean = np.array((1,size(z)))
+    for p in params:
+        nmi_mean[p] = [np.mean(nmi[p][z].values()) for z in tm]
+        nmi_std[p] = [np.std(nmi[p][z].values()) for z in tm]
+        ccr_mean[p] = [np.mean(ccr[p][z].values()) for z in tm]
+        ccr_std[p] = [np.std(ccr[p][z].values()) for z in tm]
+    
     plt.figure(1, figsize=(10, 6))
+    for p in params:
+        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p], markersize=8, linewidth=1.5)
+        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p], markersize=8, linewidth=1.5)
 
-    plt.errorbar(x_array, nmi_deep_mean, yerr=nmi_deep_std, fmt='bo-.', markersize=8, linewidth=1.5)
-    plt.errorbar(x_array, nmi_sc_mean, yerr=nmi_sc_std, fmt='rs-.', markersize=8, linewidth=1.5)
-    plt.errorbar(x_array, nmi_abp_mean, yerr=nmi_abp_std, fmt='g<-.', markersize=8, linewidth=1.5)
-
-    plt.errorbar(x_array, ccr_deep_mean, yerr=ccr_deep_std, fmt='bo-', markersize=8, linewidth=1.5)
-    plt.errorbar(x_array, ccr_sc_mean, yerr=ccr_sc_std, fmt='rs-', markersize=8, linewidth=1.5)
-    plt.errorbar(x_array, ccr_abp_mean, yerr=ccr_abp_std, fmt='g<-', markersize=8, linewidth=1.5)
-
-    plt.legend(['NMI-New', 'NMI-SC', 'NMI-ABP', 'CCR-New', 'CCR-SC', 'CCR-ABP'], loc=0)
+    legend = ["nmi-%s" % p for p in params]
+    legend = ["ccr-%s" % p for p in params]
+    plt.legend(legend, loc=0)
     plt.xlabel(param)
     plt.xlim(x_array[0]-0.1, x_array[-1]+0.1)
     plt.ylim(-0.05, 1.05)
-    plt.plot([thr_wk, thr_wk], [0, 1], 'k--', linewidth=2.5)
-    plt.plot([thr_pr, thr_pr], [0, 1], 'k--', linewidth=2.5)
-    plt.plot([thr_hd, thr_hd], [0, 1], 'k--', linewidth=2.5)
-    #    plt.plot(x_array, [1./float(K)]*len(x_array), 'r--')
-    #    plt.plot(x_array, [1.0]*len(x_array), 'r--')
     plt.show()
-    figurename = 'exp1'
-    plt.savefig(figurename+'.eps', bbox_inches='tight', format='eps')
-    plt.savefig(figurename+'.png', bbox_inches='tight', format='png')
-    #    return x_array
+    plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
+    plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
