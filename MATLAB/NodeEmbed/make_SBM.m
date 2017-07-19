@@ -20,18 +20,18 @@ else
 end
 
 % Build graph
-indI = [];
-indJ = [];
+indI = gpuArray.zeros(1,0);
+indJ = gpuArray.zeros(1,0);
 for i = 1:n
-    I = rand(1,n);
-    ind = P(i)==P;
+    I = rand([1,n], 'gpuArray');
+    ind = P(i)== P;
     I(ind) = I(ind)*(1-lambda);
     f = find(I<q);
-    indI(end+1:end+numel(f)) = f;
-    indJ(end+1:end+numel(f)) = i;
+    indI = [indI, f];
+    indJ = [indJ, i*ones(1,numel(f))];
 end
-G = sparse(indI,indJ,ones(numel(indI),1),n,n);
-G = max(G,G');
+G = sparse(indI,indJ,ones(numel(indI),1), n, n);
+% G = max(G,G');
 
 
 end

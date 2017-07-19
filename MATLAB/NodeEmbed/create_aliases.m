@@ -3,11 +3,15 @@ function P = create_aliases(G)
 % distribution
 n = size(G,1);
 P = cell(1,n);
+
+[gi, gj, gv] = find(G);
+
 for i = 1:n
-    [~,Ginds,I] = find(G(i,:));
+    Ginds = gj(gi == i);
+    I = gv(gi == i);
     k = numel(I);
     if k == 0, continue; end
-    list = zeros(k,3);
+    list = gpuArray.zeros(k,3);
     [I,inds] = sort(I/sum(I)*k);
     loc = find(I>1,1);
     if isempty(loc), loc = 1; end
@@ -23,6 +27,6 @@ for i = 1:n
         list(f,1) = Ginds(inds(f));
         list(f,3) = I(f);
     end
-    P{i} = list;
+ P{i} = list;
 end
 end

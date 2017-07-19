@@ -3,14 +3,13 @@ function s = random_walk(curr,length,P,doNBT)
 % 'curr'. If doNBT is set to 1, the function will ensure the random walk
 % doesn't backtrack either. P contains the aliasing array to make
 % generation of next step faster
-s = zeros(1,length);
+s = gpuArray.zeros(1,length);
 prev = -1;
 for i = 1:length
     s(i) = curr;
     alias = P{s(i)};
     if isempty(alias)
         s(i+1:end) = [];
-        break
     end
     if doNBT
         x = find(prev==alias(:,1),1);

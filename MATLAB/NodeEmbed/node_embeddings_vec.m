@@ -12,7 +12,8 @@ function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embeddin
 % Modified 7/13/2017, Anu Gamage - added tsne visualization, metrics
 
 % create graph
-tic
+disp('Create graph..')
+
 if nargin == 1
     N = varargin{1};
     n = size(N,1);
@@ -31,7 +32,11 @@ end
 
 % create random walk matrix using BRW/NBRW
 P = create_aliases(G);
+tic
+disp('Use backtracking RW..')
 [Em_brw, ccr_brw, nmi_brw] = run_node_embedding(P, labels, n, k, c, lambda, 0);
+tic
+disp('Use non-backtracking RW..')
 [Em_nbrw, ccr_nbrw, nmi_nbrw] = run_node_embedding(P, labels, n, k, c, lambda, 1);
 
 
@@ -49,6 +54,7 @@ gamma = .2; % momentum term
 max_reps = 1000; % maximum number of SGD iterations
 do_plot = 0; % if want to plot intermediate results
 
+disp('Create D_plus..')
     NN = cell(1,n);
     parfor i = 1:n
         R = cell(1,rw_reps);
@@ -56,7 +62,7 @@ do_plot = 0; % if want to plot intermediate results
             W = cell(1,win_size);
             rw = random_walk(i,length,P,do_non_backtracking);
             for w = 1:win_size
-                W{w} = sparse(rw(1:end-w),rw(w+1:end),ones(numel(rw)-w,1),n,n,length-w);
+                W{w} = sparse(rw(1:end-w),rw(w+1:end),ones(numel(rw)-w,1),n,n);
             end
             R{j} = combine_cells(W,win_size);
         end
@@ -65,17 +71,24 @@ do_plot = 0; % if want to plot intermediate results
     D_plus = combine_cells(NN,n);
     
     % create negative samples
-    MM = cell(1,n);
-    num_elems = sum(D_plus,1);
-    parfor i = 1:n
-        num = neg_samples * num_elems(i);
-        MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
-    end
-    D_minus = combine_cells(MM,n);
+    %MM = cell(1,n);
+    %num_elems = full(sum(D_plus,1));
+    %parfor i = 1:n
+    %    num = neg_samples * num_elems(i);
+    %    MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
+    %end
+disp('Create D_minus..')
+    ival = repmat(gpuArray.linspace(1, n, n)',neg_samples, 1);
+    jval = randi(n, [n*neg_samples,1], 'gpuArray');
+    val =  repmat(gpuArray.linspace(1, 1, n)',neg_samples, 1);
+    D_minus = spconvert([ival, jval, val]);
+    %MM = arrayfun(@sparse, ival, jval, val);
+    %D_minus = combine_cells(MM,n);
     
     
     % begin SGD
-    U = rand(n,dim);
+    disp('Begin SGD..')
+    U = rand(n,dim, 'gpuArray');
     [nzP_X,nzP_Y] = find(D_plus);
     [nzM_X,nzM_Y] = find(D_minus);
     nnzP = numel(nzP_X);
@@ -86,13 +99,31 @@ do_plot = 0; % if want to plot intermediate results
     gradP = 0;
     gradM = 0;
     for rep = 1:max_reps
+       % disp(rep)
         mu = sqrt(log(max_reps)/(2*rep));
-        i = randi(nnzP,mb_size,1);
+        i = gpuArray.randperm(nnzP);
+        [~, ui] = unique(nzP_X(i));     %> nzP_X(i(ui(1)))
+        i = i(ui);
+        i = i(1:mb_size);
         gradP = gamma*gradP + mu*gradTermP(nzP_X(i),nzP_Y(i),U);
-        j = randi(nnzM,mb_size,1);
+        
+        j = gpuArray.randperm(nnzM);
+        [~, uj] = unique(nzM_X(j));
+        j = j(uj);
+        j = j(1:mb_size);
         gradM = gamma*gradM + mu*gradTermM(nzM_X(j),nzM_Y(j),U);
+        
+      %  for z = 1:mb_size
+      %      U(nzP_X(i(z)),:) = U(nzP_X(i(z)),:) - gradP(z);
+      %      U(nzM_X(j(z)),:) = U(nzM_X(j(z)),:) - gradM(z); 
+      %  end
+      
         U(nzP_X(i),:) = U(nzP_X(i),:) - gradP;
         U(nzM_X(j),:) = U(nzM_X(j),:) - gradM; 
+        if rem(rep,10) == 0
+            disp(rep)
+        end
+
     %     if rep > 10
     %         if 1-real(cost(rep-10)/cost(rep)) < .015 && real(cost(rep-1)/cost(rep)) <= 1
     %             patience = patience + 1;
@@ -119,7 +150,7 @@ do_plot = 0; % if want to plot intermediate results
     %         end
     %     end
     end
-    
+    disp('Do kmeans..')
     Em = kmeans(U,k);
     
     % Plot results
@@ -172,7 +203,7 @@ do_plot = 0; % if want to plot intermediate results
     % Confusion matrix
     targets = gpuArray.zeros(k,n);
     for i=1:k
-       targets(i, (labels == i)) = 1; 
+       targets(i, (labels == i)') = 1; 
     end
     
     outputs = gpuArray.zeros(k,n);
@@ -186,8 +217,8 @@ do_plot = 0; % if want to plot intermediate results
     end
     
     
-    ccr_val = (sum(Em_true == labels')/n)*100
-    nmi_val = nmi(labels', Em_true)
+    ccr_val = (sum(Em_true == labels')/n)*100;
+    nmi_val = nmi(labels', Em_true);
     toc    
 end
 
@@ -209,12 +240,12 @@ function d = cost_fn(U,nzP_X,nzP_Y,nzM_X,nzM_Y)
     % Calculates cost function. If any given cost overflows it is
     % represented as 1i for lack of a better way of dealing with it
     d = 0;
-    parfor i = 1:numel(nzP_X)
+    for i = 1:numel(nzP_X)
         e = log(1+exp(-U(nzP_X(i),:)*U(nzP_Y(i),:)'));
         if e==inf, e=1i; end
         d = d + e;
     end
-    parfor i = 1:numel(nzM_X)
+    for i = 1:numel(nzM_X)
         e = log(1+exp(U(nzM_X(i),:)*U(nzM_Y(i),:)'));
         if e==inf, e=1i; end
         d = d + e;
