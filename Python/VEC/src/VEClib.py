@@ -129,15 +129,15 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
 
 #%%
 
-def summary_res(nmi_arry, ccr_arry, ars_arry, gt, label, alg, param, value, it):
+def summary_res(nmi_arry, ccr_arry, ars_arry, gt, label, alg, param_str):
     """
     Top level metrics function: calculates various metrics and updates
     the metric arrays.
     """
     nmi, ccr, ars = cal_metrics(gt, label)
     globVars.printDebug('the NMI is: '+str(nmi)+'; the CCR is: '+str(ccr))
-    for (metric, array) in [[nmi, nmi_arry], [ccr, ccr_arry], [ars, ars_arry]]:
-        array = update_a_res(array, metric, alg, param, value, it)
+    for (val, array) in [[nmi, nmi_arry], [ccr, ccr_arry], [ars, ars_arry]]:
+        array = update_metric_arrays(array, val, alg, param_str)
     return nmi_arry, ccr_arry, ars_arry
 
 def cal_metrics(labels, y_est_full):
@@ -152,25 +152,23 @@ def cal_metrics(labels, y_est_full):
     acc_ccr = float(Conf[r, c].sum())/float(N)
     return acc_nmi, acc_ccr, acc_ars
 
-def update_a_res(arry, acc, alg, param, value, i):
+def update_metric_arrays(arry, acc, alg, param_str):
     """
     Updates the metric arrays as they are added to.
-    TODO: would like to make this cleaner
     """
     if alg not in arry:
         arry[alg] = {}
-    key = param + '- ' + str(value)
-    if key not in arry[alg]:
-        arry[alg][key] = {}
-    arry[alg][key][i] = acc
+    key = param_str
+    arry[alg][key] = acc
     return arry
 
 def plot_res(N, params, fignum):
     """
     Plots the metrics for each type and for the parameter that is varied.
+    TODO: this won't work right now; need to fix
     """
     import matplotlib.pyplot as plt
-    fstring = "%sexp1%d" % (globVars.FILEPATH, N)
+    fstring = 'N'+str(N)+';K'+str(K)+';c'+str(c)+';la'+str(lambda_n)+';iter'
     res = pickle.load(open("%s.pkl" % fstring, 'rb'))
     nmi = res[0]
     ccr = res[1]

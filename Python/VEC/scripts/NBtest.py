@@ -56,15 +56,15 @@ def main(argv):
         logfile.close()
 
     # generating multiple graphs for the same parameter setting
-    rand_tests = 5
+    rand_tests = 3
     # setting storage space for results
     nmi = {}
     ccr = {}
     ars = {}
     # parameter setting
     c_array = [3.0, 4.0, 5.0, 7.0, 10.0, 15.0, 20.0]
-    K_array = [2]  # number of communities
-    N_array = [100, 200, 500, 1000] # number of nodes
+    K_array = [2, 3]  # number of communities
+    N_array = [100, 200] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     # scanning through parameters
     for c, K, N, lambda_n in itertools.product(c_array, K_array,
@@ -75,8 +75,8 @@ def main(argv):
         for rand in range(rand_tests):
             globVars.printDebug('\nBeginning iteration %d of %d...' % 
                                 (rand+1, rand_tests))
-#            strsub1 = 'K'+str(K)+'N'+str(N)+'c'+str(c)+'la'+str(lambda_n)\
-#                       +'rd'+str(rand)
+            exp_str = 'N'+str(N)+';K'+str(K)+';c'+str(c)+';la'+str(lambda_n)\
+                      +';iter'+str(rand)
             # simulate graph
             G = SBM.SBM_simulate_fast(model_sbm1)
             ln, nodeslist = SBM.get_label_list(G)
@@ -89,9 +89,7 @@ def main(argv):
             X = model_w2v[nodeslist]
             k_means = KMeans(n_clusters=K, max_iter=100, precompute_distances=False)
             k_means.fit(X)
-            y_our = k_means.labels_
-            nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln,
-                                             y_our, 'deep', 'c', c, rand)
+            y_deep = k_means.labels_
 
             # algo2: nonbacktracking algorithm
             globVars.printDebug('starting NBRW VEC algorithm...')
@@ -104,8 +102,6 @@ def main(argv):
                              precompute_distances=False)
             k_means.fit(X)
             y_nbt = k_means.labels_
-            nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln,
-                                             y_nbt, 'nbt', 'c', c, rand)
 
             # algo3: spectral clustering
             A = nx.to_scipy_sparse_matrix(G)
@@ -114,19 +110,19 @@ def main(argv):
                                     eigen_solver='arpack')
             sc.fit(A)
             y_sc = sc.labels_
-            nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln,
-                                             y_sc, 'sc', 'c', c, rand)
 
             # algo4: belief propogation
             globVars.printDebug('starting ABP algorithm...')
             r = 3
             m, mp, lambda1 = ABP.abp_params(model_sbm1)
             y_abp = ABP.SBM_ABP(G, r, lambda1, m, mp)
-            nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln,
-                                             y_abp, 'abp', 'c', c, rand)
-    savename = "%sexp1.pkl" % globVars.FILEPATH
-    res = [nmi, ccr, ars]
-    pickle.dump(res, open(savename, 'wb'), protocol=2)
+            
+            # save results
+            for name, res in [['deep', y_deep], ['nbt', y_nbt], ['sc', y_sc], ['abp', y_abp]]:
+                nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln, res, name, exp_str)    
+        savename = "%s%s%s.pkl" % (globVars.FILEPATH, 'pkls/', exp_str)
+        res = [nmi, ccr, ars]
+        pickle.dump(res, open(savename, 'wb'), protocol=2)
 
 if __name__ == '__main__':
     main(sys.argv[1:])
