@@ -1,0 +1,2786 @@
+2017-07-20 18:34:13.575542
+Logging details of run:
+
+
+K: 2, N: 100, c: 3.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 70 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 48800
+the NMI is: 0.0679742937083; the CCR is: 0.65
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 4833
+the NMI is: 0.00710092968267; the CCR is: 0.55
+starting spectral clustering...
+the NMI is: 0.0138468767025; the CCR is: 0.56
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.010690193338; the CCR is: 0.54
+
+Beginning iteration 2 of 5...
+the graph has 79 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 51200
+the NMI is: 0.0155973639375; the CCR is: 0.55
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 5373
+the NMI is: 0.000559599446569; the CCR is: 0.51
+starting spectral clustering...
+the NMI is: 0.103432000338; the CCR is: 0.54
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00992701603604; the CCR is: 0.56
+
+Beginning iteration 3 of 5...
+the graph has 75 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 47600
+the NMI is: 0.00341930183938; the CCR is: 0.51
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 5791
+the NMI is: 0.0125815676232; the CCR is: 0.56
+starting spectral clustering...
+the NMI is: 0.102841980027; the CCR is: 0.57
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00127728876171; the CCR is: 0.51
+
+Beginning iteration 4 of 5...
+the graph has 82 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 50000
+the NMI is: 0.181755483315; the CCR is: 0.73
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 6994
+the NMI is: 0.0111042601866; the CCR is: 0.56
+starting spectral clustering...
+the NMI is: 0.0781944213533; the CCR is: 0.57
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00364128151235; the CCR is: 0.52
+
+Beginning iteration 5 of 5...
+the graph has 96 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 53000
+the NMI is: 0.170298218795; the CCR is: 0.73
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 7242
+the NMI is: 0.00909953224128; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.00644242636354; the CCR is: 0.56
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.0188731622669; the CCR is: 0.59
+
+
+K: 2, N: 200, c: 3.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 169 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 106600
+the NMI is: 0.00988151309968; the CCR is: 0.545
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 12811
+the NMI is: 0.00457777597885; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.00539596430158; the CCR is: 0.505
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00882877007041; the CCR is: 0.55
+
+Beginning iteration 2 of 5...
+the graph has 176 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 106600
+the NMI is: 0.0701494809087; the CCR is: 0.66
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 14413
+the NMI is: 0.00363938232212; the CCR is: 0.53
+starting spectral clustering...
+the NMI is: 0.0402845079153; the CCR is: 0.575
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.0009289455738; the CCR is: 0.53
+
+Beginning iteration 3 of 5...
+the graph has 159 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 101200
+the NMI is: 0.0265371187052; the CCR is: 0.6
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 11848
+the NMI is: 0.000436100723129; the CCR is: 0.515
+starting spectral clustering...
+the NMI is: 0.0696820301941; the CCR is: 0.565
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.0150819397953; the CCR is: 0.545
+
+Beginning iteration 4 of 5...
+the graph has 174 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 104800
+the NMI is: 0.00697481968959; the CCR is: 0.56
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 13656
+the NMI is: 0.000811627702432; the CCR is: 0.51
+starting spectral clustering...
+the NMI is: 0.0161199774046; the CCR is: 0.515
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00190167472357; the CCR is: 0.505
+
+Beginning iteration 5 of 5...
+the graph has 171 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 103000
+the NMI is: 0.0499480176204; the CCR is: 0.595
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 13901
+the NMI is: 0.00987886721913; the CCR is: 0.56
+starting spectral clustering...
+the NMI is: 0.00289065320471; the CCR is: 0.515
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00123115039979; the CCR is: 0.525
+
+
+K: 2, N: 500, c: 3.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 373 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 242800
+the NMI is: 0.0507338482476; the CCR is: 0.634
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 27712
+the NMI is: 0.0373259006378; the CCR is: 0.588
+starting spectral clustering...
+the NMI is: 0.000304108832313; the CCR is: 0.53
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.0146450454047; the CCR is: 0.542
+
+Beginning iteration 2 of 5...
+the graph has 446 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 259000
+the NMI is: 0.0962506654441; the CCR is: 0.676
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 36051
+the NMI is: 0.00470639984292; the CCR is: 0.536
+starting spectral clustering...
+the NMI is: 0.000228190138918; the CCR is: 0.52
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.000227856919275; the CCR is: 0.502
+
+Beginning iteration 3 of 5...
+the graph has 373 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 239200
+the NMI is: 0.000991194459684; the CCR is: 0.5
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 26918
+the NMI is: 6.25630147932e-05; the CCR is: 0.514
+starting spectral clustering...
+the NMI is: 0.0346746030433; the CCR is: 0.55
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00537209255377; the CCR is: 0.53
+
+Beginning iteration 4 of 5...
+the graph has 401 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 251800
+the NMI is: 0.0834164229435; the CCR is: 0.674
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 28665
+the NMI is: 0.0136389965483; the CCR is: 0.544
+starting spectral clustering...
+the NMI is: 0.0303102799503; the CCR is: 0.544
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00458135584215; the CCR is: 0.514
+
+Beginning iteration 5 of 5...
+the graph has 417 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 256600
+the NMI is: 0.00103628551808; the CCR is: 0.502
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 29657
+the NMI is: 0.00335216004027; the CCR is: 0.528
+starting spectral clustering...
+the NMI is: 0.0129541299096; the CCR is: 0.522
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 5.758214865e-05; the CCR is: 0.512
+
+
+K: 2, N: 1000, c: 3.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 838 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 501800
+the NMI is: 0.00245551696183; the CCR is: 0.528
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 63976
+the NMI is: 0.00202525893409; the CCR is: 0.527
+starting spectral clustering...
+the NMI is: 0.00907678415223; the CCR is: 0.51
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.000361353583416; the CCR is: 0.507
+
+Beginning iteration 2 of 5...
+the graph has 848 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 512000
+the NMI is: 9.18195626081e-06; the CCR is: 0.511
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 64358
+the NMI is: 0.000421461475015; the CCR is: 0.52
+starting spectral clustering...
+the NMI is: 1.53856218663e-05; the CCR is: 0.518
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.000325080165035; the CCR is: 0.503
+
+Beginning iteration 3 of 5...
+the graph has 769 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 502400
+the NMI is: 0.00462402561762; the CCR is: 0.531
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 55894
+the NMI is: 0.000725550389588; the CCR is: 0.516
+starting spectral clustering...
+the NMI is: 0.00384312366037; the CCR is: 0.508
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00431878898246; the CCR is: 0.532
+
+Beginning iteration 4 of 5...
+the graph has 821 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 504200
+the NMI is: 0.000468047882789; the CCR is: 0.5
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 64930
+the NMI is: 2.10670181943e-05; the CCR is: 0.506
+starting spectral clustering...
+the NMI is: 0.013294834667; the CCR is: 0.513
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 4.77793471948e-07; the CCR is: 0.505
+
+Beginning iteration 5 of 5...
+the graph has 870 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 519200
+the NMI is: 0.000847223648415; the CCR is: 0.518
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 65109
+the NMI is: 0.000560436621785; the CCR is: 0.515
+starting spectral clustering...
+the NMI is: 0.00184335046616; the CCR is: 0.511
+starting ABP algorithm...
+lambda1: 1.65; lambda2: 1.35
+the NMI is: 0.00153983485071; the CCR is: 0.52
+
+
+K: 2, N: 100, c: 4.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 91 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 52400
+the NMI is: 0.0177467798016; the CCR is: 0.54
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 8259
+the NMI is: 0.00671115519829; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.0168412647659; the CCR is: 0.58
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00447658289653; the CCR is: 0.52
+
+Beginning iteration 2 of 5...
+the graph has 116 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 58400
+the NMI is: 0.243666133344; the CCR is: 0.78
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 9144
+the NMI is: 0.0227135072421; the CCR is: 0.58
+starting spectral clustering...
+the NMI is: 0.165002226312; the CCR is: 0.69
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00560270068313; the CCR is: 0.54
+
+Beginning iteration 3 of 5...
+the graph has 99 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 53600
+the NMI is: 0.0394735189423; the CCR is: 0.54
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 11431
+the NMI is: 0.0189219284686; the CCR is: 0.58
+starting spectral clustering...
+the NMI is: 0.000769177136702; the CCR is: 0.54
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.000764307246395; the CCR is: 0.51
+
+Beginning iteration 4 of 5...
+the graph has 109 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 53600
+the NMI is: 0.429579001431; the CCR is: 0.83
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 8879
+the NMI is: 0.00613907689913; the CCR is: 0.55
+starting spectral clustering...
+the NMI is: 0.0494669329071; the CCR is: 0.51
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.000547217433707; the CCR is: 0.51
+
+Beginning iteration 5 of 5...
+the graph has 100 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 53000
+the NMI is: 0.249779343657; the CCR is: 0.78
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 8190
+the NMI is: 0.0540450942422; the CCR is: 0.63
+starting spectral clustering...
+the NMI is: 0.0555524637704; the CCR is: 0.53
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00143574634689; the CCR is: 0.52
+
+
+K: 2, N: 200, c: 4.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 232 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 109600
+the NMI is: 0.282110871124; the CCR is: 0.78
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 22763
+the NMI is: 0.000852388259927; the CCR is: 0.525
+starting spectral clustering...
+the NMI is: 0.0606369918113; the CCR is: 0.56
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.0907218004378; the CCR is: 0.675
+
+Beginning iteration 2 of 5...
+the graph has 222 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 115600
+the NMI is: 0.00562413227255; the CCR is: 0.525
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 18308
+the NMI is: 0.0189219284686; the CCR is: 0.58
+starting spectral clustering...
+the NMI is: 0.0452406577582; the CCR is: 0.515
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00117750068724; the CCR is: 0.52
+
+Beginning iteration 3 of 5...
+the graph has 208 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 108400
+the NMI is: 0.449285159253; the CCR is: 0.865
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 22833
+the NMI is: 0.0144802546908; the CCR is: 0.575
+starting spectral clustering...
+the NMI is: 0.0414768784882; the CCR is: 0.515
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.000600604612449; the CCR is: 0.52
+
+Beginning iteration 4 of 5...
+the graph has 230 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 109600
+the NMI is: 0.0635304381968; the CCR is: 0.565
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 27477
+the NMI is: 0.0401980987995; the CCR is: 0.6
+starting spectral clustering...
+the NMI is: 0.0657179527334; the CCR is: 0.545
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00531203586283; the CCR is: 0.54
+
+Beginning iteration 5 of 5...
+the graph has 201 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 109600
+the NMI is: 0.00267086665446; the CCR is: 0.555
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 16529
+the NMI is: 0.0776905807666; the CCR is: 0.645
+starting spectral clustering...
+the NMI is: 0.0306644035633; the CCR is: 0.54
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00239455819657; the CCR is: 0.525
+
+
+K: 2, N: 500, c: 4.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 554 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 280000
+the NMI is: 0.187953920745; the CCR is: 0.746
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 47007
+the NMI is: 0.000295338110635; the CCR is: 0.524
+starting spectral clustering...
+the NMI is: 0.00158254710617; the CCR is: 0.522
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00321882988877; the CCR is: 0.53
+
+Beginning iteration 2 of 5...
+the graph has 566 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 280600
+the NMI is: 0.000650593160795; the CCR is: 0.52
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 58515
+the NMI is: 0.000316738004326; the CCR is: 0.518
+starting spectral clustering...
+the NMI is: 0.0371191900615; the CCR is: 0.526
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 7.33346596015e-06; the CCR is: 0.504
+
+Beginning iteration 3 of 5...
+the graph has 550 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 276400
+the NMI is: 0.377051628856; the CCR is: 0.838
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 50764
+the NMI is: 0.00859598055697; the CCR is: 0.548
+starting spectral clustering...
+the NMI is: 0.0542258686328; the CCR is: 0.542
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00851116802035; the CCR is: 0.552
+
+Beginning iteration 4 of 5...
+the graph has 539 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 277000
+the NMI is: 0.00914209120059; the CCR is: 0.54
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 49050
+the NMI is: 7.52519829776e-05; the CCR is: 0.51
+starting spectral clustering...
+the NMI is: 0.00632673966633; the CCR is: 0.514
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 5.33212104757e-05; the CCR is: 0.502
+
+Beginning iteration 5 of 5...
+the graph has 563 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 277000
+the NMI is: 0.220590504853; the CCR is: 0.768
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 53296
+the NMI is: 0.000449349776302; the CCR is: 0.508
+starting spectral clustering...
+the NMI is: 0.000663326182986; the CCR is: 0.518
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.000120818083485; the CCR is: 0.504
+
+
+K: 2, N: 1000, c: 4.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 1041 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 546200
+the NMI is: 0.280873009988; the CCR is: 0.799
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 86207
+the NMI is: 5.59159053386e-07; the CCR is: 0.504
+starting spectral clustering...
+the NMI is: 0.00198632302679; the CCR is: 0.501
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00470316390154; the CCR is: 0.539
+
+Beginning iteration 2 of 5...
+the graph has 1087 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 560000
+the NMI is: 0.262171214091; the CCR is: 0.781
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 97014
+the NMI is: 0.256672547399; the CCR is: 0.783
+starting spectral clustering...
+the NMI is: 0.000161540566188; the CCR is: 0.51
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.000710803653961; the CCR is: 0.514
+
+Beginning iteration 3 of 5...
+the graph has 1154 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 555800
+the NMI is: 0.276605427151; the CCR is: 0.784
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 113865
+the NMI is: 0.208320263855; the CCR is: 0.733
+starting spectral clustering...
+the NMI is: 0.0017553722279; the CCR is: 0.508
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00140864214109; the CCR is: 0.51
+
+Beginning iteration 4 of 5...
+the graph has 1146 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 566000
+the NMI is: 0.325861468147; the CCR is: 0.823
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 101801
+the NMI is: 0.203122611777; the CCR is: 0.691
+starting spectral clustering...
+the NMI is: 0.0244424798693; the CCR is: 0.518
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.00018570858446; the CCR is: 0.505
+
+Beginning iteration 5 of 5...
+the graph has 1083 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 546800
+the NMI is: 0.278164329764; the CCR is: 0.798
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 95113
+the NMI is: 0.00149428690055; the CCR is: 0.515
+starting spectral clustering...
+the NMI is: 0.00933126166759; the CCR is: 0.507
+starting ABP algorithm...
+lambda1: 2.2; lambda2: 1.8
+the NMI is: 0.0015640878178; the CCR is: 0.523
+
+
+K: 2, N: 100, c: 5.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 127 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 56600
+the NMI is: 0.397016305903; the CCR is: 0.85
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 12216
+the NMI is: 0.0296649430496; the CCR is: 0.6
+starting spectral clustering...
+the NMI is: 0.273892769611; the CCR is: 0.78
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0412558580872; the CCR is: 0.62
+
+Beginning iteration 2 of 5...
+the graph has 144 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 59000
+the NMI is: 0.30105123951; the CCR is: 0.73
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 25301
+the NMI is: 0.0614941119339; the CCR is: 0.59
+starting spectral clustering...
+the NMI is: 0.0606369918113; the CCR is: 0.56
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00158164813632; the CCR is: 0.52
+
+Beginning iteration 3 of 5...
+the graph has 137 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 60200
+the NMI is: 0.638631968647; the CCR is: 0.91
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 16244
+the NMI is: 0.0188731622669; the CCR is: 0.59
+starting spectral clustering...
+the NMI is: 0.40703545245; the CCR is: 0.8
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00116639172696; the CCR is: 0.54
+
+Beginning iteration 4 of 5...
+the graph has 141 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 59000
+the NMI is: 0.444211395951; the CCR is: 0.87
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 16468
+the NMI is: 0.00267901124428; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.0494669329071; the CCR is: 0.51
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.156998831653; the CCR is: 0.73
+
+Beginning iteration 5 of 5...
+the graph has 150 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 60200
+the NMI is: 0.0480951716027; the CCR is: 0.58
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 25465
+the NMI is: 0.0614941119339; the CCR is: 0.59
+starting spectral clustering...
+the NMI is: 0.0480951716027; the CCR is: 0.58
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00277144690205; the CCR is: 0.52
+
+
+K: 2, N: 200, c: 5.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 274 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 116200
+the NMI is: 0.259391072948; the CCR is: 0.79
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 30128
+the NMI is: 0.00382084739765; the CCR is: 0.505
+starting spectral clustering...
+the NMI is: 0.0555524637704; the CCR is: 0.53
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.000232751454572; the CCR is: 0.505
+
+Beginning iteration 2 of 5...
+the graph has 242 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 112000
+the NMI is: 0.218854874397; the CCR is: 0.71
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 22451
+the NMI is: 0.00247833412038; the CCR is: 0.525
+starting spectral clustering...
+the NMI is: 0.0370116381433; the CCR is: 0.525
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00305611704298; the CCR is: 0.535
+
+Beginning iteration 3 of 5...
+the graph has 275 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 116200
+the NMI is: 0.304185714198; the CCR is: 0.8
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 41334
+the NMI is: 0.000467149288134; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.000478684946649; the CCR is: 0.555
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 2.63899695299e-05; the CCR is: 0.515
+
+Beginning iteration 4 of 5...
+the graph has 263 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 113800
+the NMI is: 0.0251415396345; the CCR is: 0.585
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 30205
+the NMI is: 0.00034806671048; the CCR is: 0.545
+starting spectral clustering...
+the NMI is: 0.0652830409526; the CCR is: 0.585
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00373624302668; the CCR is: 0.54
+
+Beginning iteration 5 of 5...
+the graph has 288 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 118000
+the NMI is: 0.0506900195843; the CCR is: 0.59
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 33638
+the NMI is: 0.0394061346245; the CCR is: 0.6
+starting spectral clustering...
+the NMI is: 0.00685761831671; the CCR is: 0.565
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0354069118284; the CCR is: 0.6
+
+
+K: 2, N: 500, c: 5.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 745 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 301000
+the NMI is: 0.485210716732; the CCR is: 0.884
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 92033
+the NMI is: 0.329230465858; the CCR is: 0.822
+starting spectral clustering...
+the NMI is: 0.0358953264214; the CCR is: 0.558
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0160208768804; the CCR is: 0.586
+
+Beginning iteration 2 of 5...
+the graph has 681 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 292000
+the NMI is: 0.378934746194; the CCR is: 0.844
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 82793
+the NMI is: 0.000128925841872; the CCR is: 0.52
+starting spectral clustering...
+the NMI is: 0.00204638247123; the CCR is: 0.514
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.000220069230245; the CCR is: 0.518
+
+Beginning iteration 3 of 5...
+the graph has 677 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 287800
+the NMI is: 0.511089830346; the CCR is: 0.884
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 82238
+the NMI is: 0.409839283502; the CCR is: 0.848
+starting spectral clustering...
+the NMI is: 0.0332707715327; the CCR is: 0.532
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0766230939026; the CCR is: 0.652
+
+Beginning iteration 4 of 5...
+the graph has 672 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 286000
+the NMI is: 0.45256970993; the CCR is: 0.858
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 88590
+the NMI is: 0.00172598000063; the CCR is: 0.524
+starting spectral clustering...
+the NMI is: 0.0216616147217; the CCR is: 0.52
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 6.95610603535e-05; the CCR is: 0.504
+
+Beginning iteration 5 of 5...
+the graph has 688 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 290200
+the NMI is: 0.468265038556; the CCR is: 0.878
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 71957
+the NMI is: 0.00622544299241; the CCR is: 0.542
+starting spectral clustering...
+the NMI is: 0.0224290947156; the CCR is: 0.532
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00950458631784; the CCR is: 0.558
+
+
+K: 2, N: 1000, c: 5.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 1392 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 588200
+the NMI is: 0.41754999491; the CCR is: 0.849
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 174994
+the NMI is: 0.41578143274; the CCR is: 0.853
+starting spectral clustering...
+the NMI is: 1.49368714616e-06; the CCR is: 0.505
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0713541743151; the CCR is: 0.653
+
+Beginning iteration 2 of 5...
+the graph has 1326 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 578600
+the NMI is: 0.403974609033; the CCR is: 0.854
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 154430
+the NMI is: 0.353591402191; the CCR is: 0.824
+starting spectral clustering...
+the NMI is: 0.0127685719408; the CCR is: 0.527
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00424403363991; the CCR is: 0.522
+
+Beginning iteration 3 of 5...
+the graph has 1391 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 581000
+the NMI is: 0.407491083732; the CCR is: 0.855
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 154463
+the NMI is: 0.00526429375567; the CCR is: 0.537
+starting spectral clustering...
+the NMI is: 3.44801217259e-05; the CCR is: 0.524
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.0137324372944; the CCR is: 0.566
+
+Beginning iteration 4 of 5...
+the graph has 1421 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 585800
+the NMI is: 0.455845407948; the CCR is: 0.869
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 188826
+the NMI is: 0.411629403652; the CCR is: 0.848
+starting spectral clustering...
+the NMI is: 0.0138428366966; the CCR is: 0.501
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00945761360971; the CCR is: 0.53
+
+Beginning iteration 5 of 5...
+the graph has 1387 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 584600
+the NMI is: 0.305109808348; the CCR is: 0.806
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 155385
+the NMI is: 0.278467819981; the CCR is: 0.797
+starting spectral clustering...
+the NMI is: 0.000986509273508; the CCR is: 0.528
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+the NMI is: 0.00752619801311; the CCR is: 0.548
+
+
+K: 2, N: 100, c: 7.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 186 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 61400
+the NMI is: 0.712089894051; the CCR is: 0.95
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 27158
+the NMI is: 0.0297860110425; the CCR is: 0.55
+starting spectral clustering...
+the NMI is: 0.832631999198; the CCR is: 0.97
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0168412647659; the CCR is: 0.58
+
+Beginning iteration 2 of 5...
+the graph has 190 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.636748836186; the CCR is: 0.93
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 32426
+the NMI is: 0.0326923481486; the CCR is: 0.6
+starting spectral clustering...
+the NMI is: 0.636748836186; the CCR is: 0.93
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.00708571629671; the CCR is: 0.53
+
+Beginning iteration 3 of 5...
+the graph has 205 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.794612860217; the CCR is: 0.96
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 37789
+the NMI is: 0.49842277841; the CCR is: 0.89
+starting spectral clustering...
+the NMI is: 0.759061816461; the CCR is: 0.95
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.421823661728; the CCR is: 0.84
+
+Beginning iteration 4 of 5...
+the graph has 182 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 60800
+the NMI is: 0.672478993266; the CCR is: 0.94
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 32845
+the NMI is: 1.56629234405e-05; the CCR is: 0.51
+starting spectral clustering...
+the NMI is: 0.642756268877; the CCR is: 0.93
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 1.56629234405e-05; the CCR is: 0.51
+
+Beginning iteration 5 of 5...
+the graph has 208 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 59600
+the NMI is: 0.24914093901; the CCR is: 0.77
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 45663
+the NMI is: 0.0861878008349; the CCR is: 0.55
+starting spectral clustering...
+the NMI is: 0.398346085056; the CCR is: 0.84
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0861878008349; the CCR is: 0.55
+
+
+K: 2, N: 200, c: 7.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 393 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 121600
+the NMI is: 0.743694963982; the CCR is: 0.945
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 88050
+the NMI is: 0.699913150815; the CCR is: 0.945
+starting spectral clustering...
+the NMI is: 0.67281406009; the CCR is: 0.93
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0366465827921; the CCR is: 0.53
+
+Beginning iteration 2 of 5...
+the graph has 373 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 121600
+the NMI is: 0.600859532759; the CCR is: 0.92
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 68559
+the NMI is: 0.0106276108475; the CCR is: 0.515
+starting spectral clustering...
+the NMI is: 0.659549606017; the CCR is: 0.93
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0106276108475; the CCR is: 0.515
+
+Beginning iteration 3 of 5...
+the graph has 391 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 120400
+the NMI is: 0.64037513813; the CCR is: 0.925
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 71758
+the NMI is: 0.00965897374698; the CCR is: 0.56
+starting spectral clustering...
+the NMI is: 0.0409909582559; the CCR is: 0.56
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.357224105911; the CCR is: 0.77
+
+Beginning iteration 4 of 5...
+the graph has 367 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 119200
+the NMI is: 0.504597837784; the CCR is: 0.885
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 61911
+the NMI is: 0.00591827474908; the CCR is: 0.54
+starting spectral clustering...
+the NMI is: 0.676775925312; the CCR is: 0.94
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0175977651916; the CCR is: 0.58
+
+Beginning iteration 5 of 5...
+the graph has 369 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 120400
+the NMI is: 0.659409972172; the CCR is: 0.935
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 63344
+the NMI is: 0.0057280521765; the CCR is: 0.51
+starting spectral clustering...
+the NMI is: 0.617593859255; the CCR is: 0.925
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0711386195411; the CCR is: 0.555
+
+
+K: 2, N: 500, c: 7.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 971 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 304600
+the NMI is: 0.633093124295; the CCR is: 0.928
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 165845
+the NMI is: 0.614830429456; the CCR is: 0.924
+starting spectral clustering...
+the NMI is: 0.640888601816; the CCR is: 0.928
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.339426893361; the CCR is: 0.828
+
+Beginning iteration 2 of 5...
+the graph has 981 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 300400
+the NMI is: 0.704884172104; the CCR is: 0.946
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 186436
+the NMI is: 0.749303114575; the CCR is: 0.954
+starting spectral clustering...
+the NMI is: 0.733976507157; the CCR is: 0.948
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0131044734146; the CCR is: 0.518
+
+Beginning iteration 3 of 5...
+the graph has 978 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 304000
+the NMI is: 0.629098424781; the CCR is: 0.928
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 191829
+the NMI is: 0.583157605222; the CCR is: 0.916
+starting spectral clustering...
+the NMI is: 0.0224290947156; the CCR is: 0.532
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.160519011861; the CCR is: 0.732
+
+Beginning iteration 4 of 5...
+the graph has 930 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 302200
+the NMI is: 0.692604885601; the CCR is: 0.944
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 176657
+the NMI is: 0.722518705084; the CCR is: 0.948
+starting spectral clustering...
+the NMI is: 0.753900823161; the CCR is: 0.958
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: -4.99600361081e-06; the CCR is: 0.526
+
+Beginning iteration 5 of 5...
+the graph has 985 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 301600
+the NMI is: 0.660020208336; the CCR is: 0.93
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 166149
+the NMI is: 0.626346149818; the CCR is: 0.924
+starting spectral clustering...
+the NMI is: 0.659081772878; the CCR is: 0.928
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0670744825394; the CCR is: 0.59
+
+
+K: 2, N: 1000, c: 7.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 1799 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 603200
+the NMI is: 0.609845098709; the CCR is: 0.92
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 301360
+the NMI is: 0.614203252035; the CCR is: 0.92
+starting spectral clustering...
+the NMI is: 0.0170660907779; the CCR is: 0.506
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: -4.4408920985e-06; the CCR is: 0.509
+
+Beginning iteration 2 of 5...
+the graph has 1988 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 606800
+the NMI is: 0.651456675765; the CCR is: 0.932
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 367065
+the NMI is: 0.679465500174; the CCR is: 0.941
+starting spectral clustering...
+the NMI is: 0.0126950721327; the CCR is: 0.529
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: -3.88578058619e-06; the CCR is: 0.531
+
+Beginning iteration 3 of 5...
+the graph has 1910 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 610400
+the NMI is: 0.696830031004; the CCR is: 0.944
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 346797
+the NMI is: 0.680074536155; the CCR is: 0.94
+starting spectral clustering...
+the NMI is: 0.627479772554; the CCR is: 0.924
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0994664048725; the CCR is: 0.571
+
+Beginning iteration 4 of 5...
+the graph has 1939 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 605600
+the NMI is: 0.626117513729; the CCR is: 0.927
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 339987
+the NMI is: 0.6663096683; the CCR is: 0.937
+starting spectral clustering...
+the NMI is: 0.0138029366395; the CCR is: 0.5
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.0; the CCR is: 0.502
+
+Beginning iteration 5 of 5...
+the graph has 1919 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 607400
+the NMI is: 0.58403699548; the CCR is: 0.913
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 384279
+the NMI is: 0.605095784915; the CCR is: 0.921
+starting spectral clustering...
+the NMI is: 0.013294834667; the CCR is: 0.513
+starting ABP algorithm...
+lambda1: 3.85; lambda2: 3.15
+the NMI is: 0.292988949259; the CCR is: 0.735
+
+
+K: 2, N: 100, c: 10.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 263 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.929019838956; the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 58805
+the NMI is: 0.807682135099; the CCR is: 0.97
+starting spectral clustering...
+the NMI is: 0.929019838956; the CCR is: 0.99
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.691973060208; the CCR is: 0.94
+
+Beginning iteration 2 of 5...
+the graph has 264 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 1.0; the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.928914022211; the CCR is: 0.99
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.402634285597; the CCR is: 0.84
+
+Beginning iteration 3 of 5...
+the graph has 273 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.928914022211; the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 58989
+the NMI is: 0.807025603674; the CCR is: 0.97
+starting spectral clustering...
+the NMI is: 0.857997711046; the CCR is: 0.98
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0692402367341; the CCR is: 0.65
+
+Beginning iteration 4 of 5...
+the graph has 300 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.877971855092; the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.676400263908; the CCR is: 0.94
+starting spectral clustering...
+the NMI is: 0.834608968403; the CCR is: 0.97
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.695718182855; the CCR is: 0.93
+
+Beginning iteration 5 of 5...
+the graph has 266 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.714137944146; the CCR is: 0.95
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 58729
+the NMI is: 0.609113228081; the CCR is: 0.92
+starting spectral clustering...
+the NMI is: 0.79513812807; the CCR is: 0.96
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 2.64570688365e-05; the CCR is: 0.5
+
+
+K: 2, N: 200, c: 10.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 513 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 0.83204167446; the CCR is: 0.975
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 111151
+the NMI is: 0.735609823383; the CCR is: 0.955
+starting spectral clustering...
+the NMI is: 0.902447792745; the CCR is: 0.985
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0752839494306; the CCR is: 0.59
+
+Beginning iteration 2 of 5...
+the graph has 528 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 0.781456225833; the CCR is: 0.965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 101774
+the NMI is: 0.781456225833; the CCR is: 0.965
+starting spectral clustering...
+the NMI is: 0.831918355613; the CCR is: 0.975
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.744902521909; the CCR is: 0.945
+
+Beginning iteration 3 of 5...
+the graph has 541 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 123400
+the NMI is: 0.793984502813; the CCR is: 0.965
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 113408
+the NMI is: 0.737175729103; the CCR is: 0.95
+starting spectral clustering...
+the NMI is: 0.834061899708; the CCR is: 0.97
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.617032589619; the CCR is: 0.92
+
+Beginning iteration 4 of 5...
+the graph has 498 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 123400
+the NMI is: 0.838080158499; the CCR is: 0.975
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 105135
+the NMI is: 0.78568705871; the CCR is: 0.965
+starting spectral clustering...
+the NMI is: 0.83204167446; the CCR is: 0.975
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0773792928009; the CCR is: 0.56
+
+Beginning iteration 5 of 5...
+the graph has 525 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 123400
+the NMI is: 0.718904997174; the CCR is: 0.95
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 109696
+the NMI is: 0.659135397289; the CCR is: 0.935
+starting spectral clustering...
+the NMI is: 0.77791522979; the CCR is: 0.955
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0228770751819; the CCR is: 0.505
+
+
+K: 2, N: 500, c: 10.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 1404 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 309400
+the NMI is: 0.817355025421; the CCR is: 0.972
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 283852
+the NMI is: 0.8591217164; the CCR is: 0.98
+starting spectral clustering...
+the NMI is: 0.826774019087; the CCR is: 0.972
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.107829538678; the CCR is: 0.574
+
+Beginning iteration 2 of 5...
+the graph has 1371 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 308800
+the NMI is: 0.847435141885; the CCR is: 0.978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 268858
+the NMI is: 0.815881164727; the CCR is: 0.972
+starting spectral clustering...
+the NMI is: 0.847402050981; the CCR is: 0.978
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0352900837528; the CCR is: 0.506
+
+Beginning iteration 3 of 5...
+the graph has 1419 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 309400
+the NMI is: 0.739867962224; the CCR is: 0.956
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 269949
+the NMI is: 0.730871980236; the CCR is: 0.954
+starting spectral clustering...
+the NMI is: 0.731371606402; the CCR is: 0.954
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0141255266845; the CCR is: 0.508
+
+Beginning iteration 4 of 5...
+the graph has 1395 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 310000
+the NMI is: 0.85387317987; the CCR is: 0.978
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 286279
+the NMI is: 0.813121390559; the CCR is: 0.97
+starting spectral clustering...
+the NMI is: 0.822035463215; the CCR is: 0.972
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.594862136072; the CCR is: 0.912
+
+Beginning iteration 5 of 5...
+the graph has 1422 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 309400
+the NMI is: 0.836243091332; the CCR is: 0.976
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 284428
+the NMI is: 0.836661158904; the CCR is: 0.976
+starting spectral clustering...
+the NMI is: 0.905980066101; the CCR is: 0.988
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0558324445692; the CCR is: 0.506
+
+
+K: 2, N: 1000, c: 10.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 2858 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 618200
+the NMI is: 0.838294207767; the CCR is: 0.976
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 576870
+the NMI is: 0.853610901203; the CCR is: 0.979
+starting spectral clustering...
+the NMI is: 0.848405367675; the CCR is: 0.978
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.00998483387641; the CCR is: 0.523
+
+Beginning iteration 2 of 5...
+the graph has 2831 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 619400
+the NMI is: 0.887442121539; the CCR is: 0.985
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 550418
+the NMI is: 0.88745846061; the CCR is: 0.985
+starting spectral clustering...
+the NMI is: 0.887856265167; the CCR is: 0.985
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.324988240826; the CCR is: 0.748
+
+Beginning iteration 3 of 5...
+the graph has 2693 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 616400
+the NMI is: 0.75345277115; the CCR is: 0.959
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 539731
+the NMI is: 0.772438909798; the CCR is: 0.963
+starting spectral clustering...
+the NMI is: 0.794277072578; the CCR is: 0.967
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.0322397284246; the CCR is: 0.502
+
+Beginning iteration 4 of 5...
+the graph has 2666 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 614600
+the NMI is: 0.811817803262; the CCR is: 0.971
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 526431
+the NMI is: 0.822996696237; the CCR is: 0.973
+starting spectral clustering...
+the NMI is: 0.832044138345; the CCR is: 0.975
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.791291071842; the CCR is: 0.967
+
+Beginning iteration 5 of 5...
+the graph has 2844 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 618800
+the NMI is: 0.876761012774; the CCR is: 0.983
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 591656
+the NMI is: 0.858480822944; the CCR is: 0.98
+starting spectral clustering...
+the NMI is: 0.870035385692; the CCR is: 0.982
+starting ABP algorithm...
+lambda1: 5.5; lambda2: 4.5
+the NMI is: 0.322876210757; the CCR is: 0.821
+
+
+K: 2, N: 100, c: 15.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 383 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.858524523296; the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 60002
+the NMI is: 0.929125233528; the CCR is: 0.99
+starting spectral clustering...
+the NMI is: 0.929125233528; the CCR is: 0.99
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.301414204961; the CCR is: 0.8
+
+Beginning iteration 2 of 5...
+the graph has 399 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.929019838956; the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 60259
+the NMI is: 0.807868605107; the CCR is: 0.97
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.221308564863; the CCR is: 0.77
+
+Beginning iteration 3 of 5...
+the graph has 405 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 61400
+the NMI is: 0.043486248588; the CCR is: 0.58
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 61400
+the NMI is: 0.043486248588; the CCR is: 0.58
+starting spectral clustering...
+the NMI is: 0.928378509697; the CCR is: 0.99
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.00177970411535; the CCR is: 0.53
+
+Beginning iteration 4 of 5...
+the graph has 410 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.878206516752; the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.929125233528; the CCR is: 0.99
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.204978535824; the CCR is: 0.75
+
+Beginning iteration 5 of 5...
+the graph has 385 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 1.0; the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+the NMI is: 0.876324556337; the CCR is: 0.98
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.0759615184177; the CCR is: 0.67
+
+
+K: 2, N: 200, c: 15.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 784 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 1.0; the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 122038
+the NMI is: 0.901800806351; the CCR is: 0.985
+starting spectral clustering...
+the NMI is: 0.959334321607; the CCR is: 0.995
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.49166859216; the CCR is: 0.845
+
+Beginning iteration 2 of 5...
+the graph has 845 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 0.918790986209; the CCR is: 0.99
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 0.928687747413; the CCR is: 0.99
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.807225550032; the CCR is: 0.97
+
+Beginning iteration 3 of 5...
+the graph has 758 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 1.0; the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 121695
+the NMI is: 0.959282377917; the CCR is: 0.995
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.100799918154; the CCR is: 0.615
+
+Beginning iteration 4 of 5...
+the graph has 844 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 123400
+the NMI is: 0.878118662705; the CCR is: 0.98
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 123400
+the NMI is: 0.837981744434; the CCR is: 0.975
+starting spectral clustering...
+the NMI is: 0.837981744434; the CCR is: 0.975
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.695290648178; the CCR is: 0.945
+
+Beginning iteration 5 of 5...
+the graph has 792 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 124000
+the NMI is: 0.959422222921; the CCR is: 0.995
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 201
+Words in train file: 121799
+the NMI is: 0.91895596293; the CCR is: 0.99
+starting spectral clustering...
+the NMI is: 1.0; the CCR is: 1.0
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.247772327813; the CCR is: 0.69
+
+
+K: 2, N: 500, c: 15.0, lambda: 0.9
+
+Beginning iteration 1 of 5...
+the graph has 2081 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 310000
+the NMI is: 0.934259288579; the CCR is: 0.992
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 307901
+the NMI is: 0.893885097195; the CCR is: 0.986
+starting spectral clustering...
+the NMI is: 0.932753863795; the CCR is: 0.992
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.543153676997; the CCR is: 0.902
+
+Beginning iteration 2 of 5...
+the graph has 2086 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 310000
+the NMI is: 1.0; the CCR is: 1.0
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 305850
+the NMI is: 0.934034534906; the CCR is: 0.992
+starting spectral clustering...
+the NMI is: 0.952895446753; the CCR is: 0.994
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.537523415516; the CCR is: 0.9
+
+Beginning iteration 3 of 5...
+the graph has 2072 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Vocab size: 501
+Words in train file: 310000
+the NMI is: 0.966298544016; the CCR is: 0.996
+starting NBRW VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+the NMI is: 0.966298544016; the CCR is: 0.996
+starting spectral clustering...
+the NMI is: 0.981142077335; the CCR is: 0.998
+starting ABP algorithm...
+lambda1: 8.25; lambda2: 6.75
+the NMI is: 0.694678811544; the CCR is: 0.942
+
+Beginning iteration 4 of 5...
+the graph has 2063 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks

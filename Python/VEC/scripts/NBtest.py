@@ -8,7 +8,10 @@ import pickle
 import itertools
 import networkx as nx
 from sklearn.cluster import KMeans, SpectralClustering
-from .. import globVars, SBMlib as SBM, VEClib as algs, ABPlib as ABP
+parent_dir_name = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+if parent_dir_name not in sys.path:
+    sys.path.append(parent_dir_name)
+from src import globVars, SBMlib as SBM, VEClib as algs, ABPlib as ABP
 
 def main(argv):
     "Main function"
@@ -22,7 +25,7 @@ def main(argv):
 
     # setting global variables
     globVars.init()
-    globVars.FILEPATH = os.path.relpath('results', os.path.dirname(__file__))+'/'
+    globVars.FILEPATH = parent_dir_name+'/results/'
     globVars.DEBUG = True
     usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>]
                     [-d <dimension>] [-r <num_paths>] [-l <length>]'''
@@ -47,13 +50,13 @@ def main(argv):
             length = arg
 
     if globVars.DEBUG:       
-        logfile = open(globVars.FILEPATH+'/test.log', 'w')
+        logfile = open(globVars.FILEPATH+'test.log', 'w')
         logfile.write(str(datetime.datetime.utcnow()))
         logfile.write('\nLogging details of run:\n')
         logfile.close()
 
     # generating multiple graphs for the same parameter setting
-    rand_tests = 1
+    rand_tests = 5
     # setting storage space for results
     nmi = {}
     ccr = {}
@@ -61,7 +64,7 @@ def main(argv):
     # parameter setting
     c_array = [3.0, 4.0, 5.0, 7.0, 10.0, 15.0, 20.0]
     K_array = [2]  # number of communities
-    N_array = [100, 200, 500] # number of nodes
+    N_array = [100, 200, 500, 1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     # scanning through parameters
     for c, K, N, lambda_n in itertools.product(c_array, K_array,
@@ -84,8 +87,7 @@ def main(argv):
                                                 num_reps=num_reps, dim=emb_dim,
                                                 length=length, winsize=winsize)
             X = model_w2v[nodeslist]
-            k_means = KMeans(n_clusters=K, max_iter=100,
-                             precompute_distances=False)
+            k_means = KMeans(n_clusters=K, max_iter=100, precompute_distances=False)
             k_means.fit(X)
             y_our = k_means.labels_
             nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln,
