@@ -4,7 +4,7 @@
 % Anu Gamage 7/12/2017
 
 clear;clc;close all 
-reps = 3;           
+reps = 10;           
 %diary 'vec_results.txt' 
 diary off  % change to 'on' if writing results to text file
 
@@ -13,7 +13,7 @@ tic
 % Graph parameters
 n = 200;
 k = 2;
-c = 20;
+c = 5;
 lambda = 0.99;
 
 CCR = zeros(1,reps);                        
