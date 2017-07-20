@@ -3,7 +3,7 @@ This file contains all the functions for simulating SBM models
 
 ## setting SBM model parameters
 - alias_setup(probs): sets up the aliasing parameters
-- alias_draw(J,q): chooses an element from a discrete distribution
+- alias_draw(J, q): chooses an element from a discrete distribution
 - SBM_param_init(K, N, lambda_n, alpha_n, dataType='const'): 1/n scaling scheme default
 
 ## simulate random graph with a SBM model
@@ -13,14 +13,11 @@ This file contains all the functions for simulating SBM models
 - SBM_savemat(G, edgefilename, nodefilename): save SBM graphs in edge and node file
 - SBM_SNR(model): calculate the SNR defined in Abbe et al., 2016
 
-"""
 
-import math
+"""
 import networkx as nx
 import numpy as np
-import numpy.random as npr
-
-DEBUG = True
+from . import globVars
 
 def alias_setup(probs):
     """
@@ -59,15 +56,15 @@ def alias_setup(probs):
 
 def alias_draw(J, q):
     """
-    Draw random samples from a discrete distribution with specific nonuniform weights.
-    Code was adapted from the following source:
+    Draw random samples from a discrete distribution with specific nonuniform 
+    weights. Code was adapted from the following source:
     https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/
     """
     # Draw from the overall uniform mixture.
-    kk = int(npr.rand()*len(J))
+    kk = int(np.random.rand()*len(J))
     # Draw from the binary mixture, either keeping the
     # small one, or choosing the associated larger one.
-    if npr.rand() < q[kk]:
+    if np.random.rand() < q[kk]:
         return kk
     else:
         return J[kk]
@@ -77,7 +74,7 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     """
     Create SBM model parameters.
     dataType determines the type of scaling done on the SBM
-    community weights default to be balanced (p = [1/k,...1/k]) but can be
+    community weights default to be balanced (p = [1/k, ...1/k]) but can be
     given as an optional argument (which doesn't need to be normalized but
     does need to have k indices).
     """
@@ -88,7 +85,7 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     if dataType == 'const':
         SBM_params['alpha'] = alpha_n/float(N)
     elif dataType == 'log':
-        SBM_params['alpha'] = alpha_n*math.log(N)/float(N)
+        SBM_params['alpha'] = alpha_n*np.log(N)/float(N)
     else:
         raise NameError('dataType must be "const" or "log"')
     SBM_params['B0'] = lambda_n * np.eye(K) + (1-lambda_n)*np.ones((K, K))
@@ -126,7 +123,7 @@ def SBM_simulate(model):
             if s[0] == 1:
                 G.add_edge(i, j, weight=1.0)
                 totaledges += 1
-    if DEBUG: print 'the graph has', totaledges, 'edges in total'
+    globVars.printDebug('the graph has '+str(totaledges)+' total edges.')
     return G
 
 def SBM_simulate_fast(model):
@@ -163,7 +160,7 @@ def SBM_simulate_fast(model):
                 nd2 = grp2[z[1]-L1]
                 G.add_edge(nd1, nd2, weight=1.0)
                 totaledges += 1
-    if DEBUG: print 'the graph has', totaledges, 'edges in total'
+    globVars.printDebug('the graph has '+str(totaledges)+' total edges.')
     return G
 
 def get_label_list(G):
@@ -178,6 +175,7 @@ def get_label_list(G):
 def SBM_savemat(G, edgefilename, nodefilename):
     """
     Saves a copy of G as an adjacency list.
+    TODO: Fix filepath here as well
     """
     nx.write_edgelist(G, edgefilename, data=False)
     nodeslist = G.nodes()

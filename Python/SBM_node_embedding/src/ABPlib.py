@@ -5,7 +5,7 @@ ABP Library
 Functions for the ABP algorithm in Abbe et al., 2015, 2016
 - SBM_ABP(G, r, lambda1, m, mp)
 abp for two communities
-- multi_abp(G,r,lambda1, m, mp, dim, K)
+- multi_abp(G, r, lambda1, m, mp, dim, K)
 abp for mutiple communities
 - abp_params(md)
 get algorithm parameters for ABP
@@ -15,12 +15,11 @@ get algorithm parameters for ABP
 import networkx as nx
 from sklearn.cluster import KMeans
 import numpy as np
+from . import globVars
 
 def SBM_ABP(G, r, lambda1, m, mp):
-    """
-    Runs the ABP algorithm for comparison with VEC
-    """
-    # step 1: initialize Y(v,v')(0)
+    "Runs the ABP algorithm for comparison with VEC."
+    # step 1: initialize Y(v, v')(0)
     t = 1
     elist = G.edges()
     cstr = 'cycles<='+str(r)
@@ -30,10 +29,10 @@ def SBM_ABP(G, r, lambda1, m, mp):
         vp = e[1]
         erev = (vp, v)
         Y[e] = {}
-        Y[e][t] = np.random.normal(0, 1)  # y(v,v')(1)
+        Y[e][t] = np.random.normal(0, 1)  # y(v, v')(1)
         Y[erev] = {}
-        Y[erev][t] = np.random.normal(0, 1) # y(v',v)(1)
-    # step 2: check if v,v' is part of a cycle <=r
+        Y[erev][t] = np.random.normal(0, 1) # y(v', v)(1)
+    # step 2: check if v, v' is part of a cycle <=r
     for e in elist:
         v = e[0]
         vp = e[1]
@@ -47,7 +46,7 @@ def SBM_ABP(G, r, lambda1, m, mp):
         Y[erev][cstr]['bin'] = iscycle
         if iscycle:
             Y[erev][cstr]['path'] = z
-    # step 3: iterations to calculate y(v,v')(t), 1<t<=m
+    # step 3: iterations to calculate y(v, v')(t), 1<t<=m
     elist = Y.keys()
     for t in range(2, m+1):
         for e in elist:
@@ -102,9 +101,7 @@ def SBM_ABP(G, r, lambda1, m, mp):
     return labels_est
 
 def check_cycle(G, u, v, r):
-    """
-    Checks to see if G contains a cycle including u and v of length less than r
-    """
+    "Checks if G contains a cycle including u and v of length less than r."
     # u,v is path of cycle <=r <=> u,v has shortest path<=r-1 after removing (u,v)
     ispartcycle = False
     if r != 1:
@@ -131,7 +128,7 @@ def check_cycle(G, u, v, r):
 def abp_params(md):
     """
     Creates the parameters for the ABP algorithm.
-    Note that this only works for simulated data
+    Note that this only works for simulated data.
     """
     snr, lambda1, lambda2 = SBM_SNR(md)
     n = md['N']
@@ -144,9 +141,7 @@ def abp_params(md):
     return m, mp, lambda1
 
 def multi_abp(G, r, lambda1, m, mp, dim, K):
-    """
-    Performs ABP on multiple length paths from 1 to dim
-    """
+    "Performs ABP on multiple length paths from 1 to dim"
     N = len(G.nodes())
     mt = np.zeros((N, dim))
     for k in range(dim):
@@ -158,15 +153,13 @@ def multi_abp(G, r, lambda1, m, mp, dim, K):
     y = k_means.labels_
     return y
 
-def SBM_SNR(model, quiet=True):
-    """
-    help to define the SNR and lambda1
-    """
+def SBM_SNR(model):
+    "Defines the SNR and first and second eigenvalues of the model"
     Q = model['B0']*model['alpha']*float(model['N'])
     P = np.diag(model['a'])
     Z = np.dot(P, Q)
     u, _ = np.linalg.eig(Z)
     ua = sorted(u, reverse=True)
-    if not quiet: print 'lambda1:', ua[0], '\nlambda2:', ua[1]
+    globVars.printDebug('lambda1: '+str(ua[0])+'; lambda2: '+str(ua[1]))
     SNR = ua[1]*ua[1]/ua[0]
     return SNR, ua[0], ua[1]

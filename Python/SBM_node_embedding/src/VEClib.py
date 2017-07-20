@@ -1,19 +1,18 @@
 """
-This file contains all the functions for node embedding
+This file contains all the functions for the node embedding algorithm.
 """
 
+import os
 import pickle
 from sklearn import metrics
-import gensim.models.word2vec as w2v
+from gensim.models import word2vec as w2v, keyedvectors as kv
 import numpy as np
 import scipy
-from . import SBMlib as SBM
-
-DEBUG = False
+from . import SBMlib as SBM, globVars
 
 def build_node_alias(G):
     """
-    Builds a dictionary that can be used more easily to generate random walks on G.
+    Builds a dictionary that can be used to generate random walks on G.
     """
     nodes = G.nodes()
     nodes_rw = {}
@@ -33,8 +32,8 @@ def build_node_alias(G):
 
 def alias_draw(J, q):
     """
-    Draw random samples from a discrete distribution with specific nonuniform weights.
-    Code was adapted from the following source:
+    Draw random samples from a discrete distribution with specific nonuniform
+    weights. Code was adapted from the following source:
     https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/
    """
 
@@ -46,14 +45,16 @@ def alias_draw(J, q):
     else:
         return J[kk]
 
-def create_random_walks(S, num_paths, length_path, filename, inMem=False, NBT=False):
+def create_random_walks(S, num_paths, length_path, filename,
+                        inMem=False, NBT=False):
     """
     Create the list of random walk "sentences" on the graph using the adjacency
     list S from build_node_alias().
     """
     sentence = []
     if ~inMem:
-        fwrite = open(filename, 'w')
+        #FILEPATH gives results directory, which is where these text files are stored
+        fp = open(globVars.FILEPATH+filename, 'w')
     nodes = S.keys()
     for nd in nodes:
         for _ in range(num_paths):
@@ -81,15 +82,16 @@ def create_random_walks(S, num_paths, length_path, filename, inMem=False, NBT=Fa
             if inMem:
                 sentence.append(walk)
             else:
-                fwrite.write(" ".join(walk) + '\n')
+                fp.write(" ".join(walk) + '\n')
     if ~inMem:
-        fwrite.close()
+        fp.close()
     return sentence
 
-def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_paths=10, length=60, dim=50, winsize=8,
-                       neg_samples=5, NBT=False, speedup=True, inMem=False, save=False):
+def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
+                       dim=50, winsize=8, NBT=False, useC=True, inMem=False):
     """
-    Learn SBM model through random walks, using gensim package and original C code.
+    Learn SBM model through random walks, using gensim package and original C
+    code.
     num_paths: number of random walks starting from each node
     length_path: length of each random walk
     rw_filename: file name to store the created corpus of sentences from graph G
@@ -101,31 +103,47 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_paths=10, length=60, di
     inMem: whether to work in memory or not (possible only for smaller datasets)
     save: whether to save the word2vec results to disk
     """
-    if DEBUG: print '1 building alias auxiliary functions'
+    w2vpath = globVars.FILEPATH+'../src/'
+    globVars.printDebug('1 building alias auxiliary functions')
     S = build_node_alias(G)
-    if DEBUG: print '2 creating random walks'
-    sentence = create_random_walks(S, num_paths, length, rw_filename, inMem, NBT)
-    if DEBUG: print '3 learning word2vec models'
-    if speedup:
-        import os
-        from gensim.models.keyedvectors import KeyedVectors
-        comman = './word2vec -train '+rw_filename+' -output '+emb_filename+' -size '+str(dim) \
-            +' -window '+str(winsize)+' -negative '+str(neg_samples)+' -cbow 0 -iter 3 -sample 1e-4'
-        os.system(comman)
-        model_w2v = KeyedVectors.load_word2vec_format(emb_filename, binary=False)
+    globVars.printDebug('2 creating random walks')
+    sentence = create_random_walks(S, num_reps, length, rw_filename, inMem, NBT)
+    globVars.printDebug('3 learning word2vec models')
+    if useC:
+        dbStatus = int(globVars.DEBUG)
+        command = w2vpath+'word2vec -train '+globVars.FILEPATH+rw_filename\
+                  +' -output '+globVars.FILEPATH+emb_filename+' -size '\
+                  +str(dim)+' -window '+str(winsize)+' -negative 5 -cbow 0 '\
+                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 4'\
+                  +' >> '+globVars.FILEPATH+'test.log'
+        os.system(command)
     else:
         if ~inMem:
             sentence = w2v.LineSentence(rw_filename)
-        model_w2v = w2v.Word2Vec(sentence, size=dim, window=winsize, min_count=0,
-                                 sg=1, negative=neg_samples, sample=1e-1, workers=5, iter=3)
-    if save:
-        if DEBUG: print '4 saving learned embeddings'
-        model_w2v.save_word2vec_format(emb_filename)
+        model_w2v_calc = w2v.Word2Vec(sentence, size=dim, window=winsize,
+                                      min_count=0, sg=1, negative=5,
+                                      sample=1e-1, workers=5, iter=3)
+        model_w2v_calc.save_word2vec_format(globVars.FILEPATH+emb_filename)
+    model_w2v = kv.KeyedVectors.load_word2vec_format(globVars.FILEPATH+emb_filename)
     return model_w2v
 
 #%%
 
+def summary_res(nmi_arry, ccr_arry, ars_arry, gt, label, alg, param, value, it):
+    """
+    Top level metrics function: calculates various metrics and updates
+    the metric arrays.
+    """
+    nmi, ccr, ars = cal_metrics(gt, label)
+    globVars.printDebug('the NMI is: '+str(nmi)+'; the CCR is: '+str(ccr))
+    for (metric, array) in [[nmi, nmi_arry], [ccr, ccr_arry], [ars, ars_arry]]:
+        array = update_a_res(array, metric, alg, param, value, it)
+    return nmi_arry, ccr_arry, ars_arry
+
 def cal_metrics(labels, y_est_full):
+    """
+    Calculates nmi, ccr, and ars for given predicted results and ground truth.
+    """
     N = len(labels)
     acc_nmi = metrics.normalized_mutual_info_score(labels, y_est_full)
     acc_ars = metrics.adjusted_rand_score(labels, y_est_full)
@@ -135,6 +153,10 @@ def cal_metrics(labels, y_est_full):
     return acc_nmi, acc_ccr, acc_ars
 
 def update_a_res(arry, acc, alg, param, value, i):
+    """
+    Updates the metric arrays as they are added to.
+    TODO: would like to make this cleaner
+    """
     if alg not in arry:
         arry[alg] = {}
     key = param + '- ' + str(value)
@@ -143,21 +165,12 @@ def update_a_res(arry, acc, alg, param, value, i):
     arry[alg][key][i] = acc
     return arry
 
-def summary_res(nmi_arry, ccr_arry, ars_arry, truelabel, label, alg, param, value, i, quiet=True):
-    # alg: 'deep'/'sc'/'abp'
-    # param: 'c'/'N'
-    # value: the value of param
-    # i: the random iter
-    nmi, ccr, ars = cal_metrics(truelabel, label)
-    if DEBUG: print 'the NMI is:', nmi, '\nthe CCR is:', ccr
-    for (metric, array) in [[nmi, nmi_arry], [ccr, ccr_arry], [ars, ars_arry]]:
-        array = update_a_res(array, metric, alg, param, value, i)
-    return nmi_arry, ccr_arry, ars_arry
-
-#%%
 def plot_res(N, params, fignum):
+    """
+    Plots the metrics for each type and for the parameter that is varied.
+    """
     import matplotlib.pyplot as plt
-    fstring = "exp1%d" % N
+    fstring = "%sexp1%d" % (globVars.FILEPATH, N)
     res = pickle.load(open("%s.pkl" % fstring, 'rb'))
     nmi = res[0]
     ccr = res[1]
@@ -181,8 +194,10 @@ def plot_res(N, params, fignum):
     cmap = plt.get_cmap('cubehelix')
     for p in params:
         color = cmap(float(i)/len(params))
-        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p], color=color, markersize=8)
-        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p], color=color, markersize=8)
+        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p],
+                     color=color, markersize=8)
+        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p],
+                     color=color, markersize=8)
         i += 1
     legend = ["nmi-%s" % p for p in params]
     legend.extend(["ccr-%s" % p for p in params])
