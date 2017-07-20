@@ -87,6 +87,7 @@ do_plot = 0; % if want to plot intermediate results
     U = rand(n,dim, 'gpuArray');
     [nzP_X,nzP_Y] = find(D_plus);
     [nzM_X,nzM_Y] = find(D_minus);
+       
     nnzP = numel(nzP_X);
     nnzM = numel(nzM_X);
     gradTermP = @(i1,i2,U) bsxfun(@rdivide,-U(i2,:),diag(1+exp(U(i1,:)*U(i2,:)')));
@@ -97,26 +98,29 @@ do_plot = 0; % if want to plot intermediate results
     for rep = 1:max_reps
        % disp(rep)
         mu = sqrt(log(max_reps)/(2*rep));
-        i = gpuArray.randperm(nnzP);
+        i = randperm(nnzP, mb_size);
         [~, ui] = unique(nzP_X(i));     %> nzP_X(i(ui(1)))
         i = i(ui);
-        i = i(1:mb_size);
+    
+        px = gpuArray(nzP_X(i));
+        py = gpuArray(nzP_Y(i));
         
-        gradP = gamma*gradP + mu*gradTermP(nzP_X(i),nzP_Y(i),U);
+        delta_p = [mu*gradTermP(px,py,U)]; %gpuArray.zeros(mb_size - size(i,2), mb_size)];
+        gradP = gamma*gradP + delta_p ;
         
-        j = gpuArray.randperm(nnzM);
+        j = randperm(nnzM, mb_size);
         [~, uj] = unique(nzM_X(j));
         j = j(uj);
-        j = j(1:mb_size);
-        gradM = gamma*gradM + mu*gradTermM(nzM_X(j),nzM_Y(j),U);
+
+        mx = gpuArray(nzM_X(j));
+        my = gpuArray(nzM_Y(j));
         
-      %  for z = 1:mb_size
-      %      U(nzP_X(i(z)),:) = U(nzP_X(i(z)),:) - gradP(z);
-      %      U(nzM_X(j(z)),:) = U(nzM_X(j(z)),:) - gradM(z); 
-      %  end
-      
-        U(nzP_X(i),:) = U(nzP_X(i),:) - gradP;
-        U(nzM_X(j),:) = U(nzM_X(j),:) - gradM; 
+        delta_m = [mu*gradTermM(mx,my,U)]; %gpuArray.zeros(mb_size - size(j,2), mb_size)];
+        gradM = gamma*gradM + delta_m;
+        
+  
+        U(px,:) = U(px,:) - gradP;
+        U(mx,:) = U(mx,:) - gradM; 
 %        if rem(rep,10) == 0
 %            disp(rep)
 %        end
