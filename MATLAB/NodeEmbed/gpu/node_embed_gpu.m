@@ -13,7 +13,6 @@ function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embed_gp
 % Modified 7/19/2017, Anu Gamage  - parallelized code to run on CPUs/GPUs
 
 % create graph
-
 if nargin == 1
     N = varargin{1};
     n = size(N,1);
@@ -33,10 +32,8 @@ end
 % create random walk matrix using BRW/NBRW
 P = create_aliases(G);
 
-disp('Use backtracking RW..')
-[Em_brw, ccr_brw, nmi_brw] = run_node_embedding(P, labels, n, k, 0);
 
-disp('Use non-backtracking RW..')
+[Em_brw, ccr_brw, nmi_brw] = run_node_embedding(P, labels, n, k, 0);
 [Em_nbrw, ccr_nbrw, nmi_nbrw] = run_node_embedding(P, labels, n, k, 1);
 
 
@@ -70,19 +67,20 @@ do_plot = 0; % if want to plot intermediate results
     end
     D_plus = combine_cells(NN,n);
     
-    % create negativesamples
-    %MM = cell(1,n);
+    % create negative samples
+    MM = cell(1,n);
     %num_elems = full(sum(D_plus,1));
-    %parfor i = 1:n
-    %    num = neg_samples * num_elems(i);
-    %    MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
-    %end
-    ival = repmat(gpuArray.linspace(1, n, n)',neg_samples, 1);
-    jval = randi(n, [n*neg_samples,1], 'gpuArray');
-    val =  repmat(gpuArray.linspace(1, 1, n)',neg_samples, 1);
-    D_minus = spconvert([ival, jval, val]);
+    parfor i = 1:n
+       %num = neg_samples * num_elems(i);
+       num = neg_samples;
+       MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
+    end
+%     ival = repmat(gpuArray.linspace(1, n, n)',neg_samples, 1);
+%     jval = randi(n, [n*neg_samples,1], 'gpuArray');
+%     val =  repmat(gpuArray.linspace(1, 1, n)',neg_samples, 1);
+%     D_minus = spconvert([ival, jval, val]);
     %MM = arrayfun(@sparse, ival, jval, val);
-    %D_minus = combine_cells(MM,n);
+    D_minus = combine_cells(MM,n);
     
     
     % begin SGD
@@ -103,6 +101,7 @@ do_plot = 0; % if want to plot intermediate results
         [~, ui] = unique(nzP_X(i));     %> nzP_X(i(ui(1)))
         i = i(ui);
         i = i(1:mb_size);
+        
         gradP = gamma*gradP + mu*gradTermP(nzP_X(i),nzP_Y(i),U);
         
         j = gpuArray.randperm(nnzM);
@@ -216,7 +215,7 @@ do_plot = 0; % if want to plot intermediate results
     
     ccr_val = (sum(Em_true == labels')/n)*100;
     nmi_val = nmi(labels', Em_true);
-    toc    
+       
 end
 
 function C = combine_cells(R,i)

@@ -4,7 +4,7 @@
 % Anu Gamage 7/12/2017
 
 clear;clc;close all 
-reps = 1; 
+reps = 10; 
 diary off  % change to 'on' if writing results to text file
 
 
@@ -44,8 +44,8 @@ disp('Non-backtracking RW:')
 % disp(NMI_nbrw)
 fprintf('Avg CCR : %.3f%%\n', mean(CCR_nbrw))
 fprintf('Avg NMI : %.3f%%\n\n\n', mean(NMI_nbrw))
-
 toc
+
 diary off
 
 % Plot results
