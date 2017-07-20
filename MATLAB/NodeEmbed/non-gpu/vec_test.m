@@ -4,17 +4,17 @@
 % Anu Gamage 7/12/2017
 
 clear;clc;close all 
-reps = 20;           
-diary 'vec_results.txt' 
+reps = 3;           
+%diary 'vec_results.txt' 
 diary off  % change to 'on' if writing results to text file
 
 tic
 
 % Graph parameters
-n = 500;
+n = 200;
 k = 2;
-c = 15;
-lambda = 0.9;
+c = 20;
+lambda = 0.99;
 
 CCR = zeros(1,reps);                        
 NMI = zeros(1,reps);
@@ -30,8 +30,8 @@ end
 fprintf('N : %i\n', n)
 fprintf('k : %i\n', k)
 fprintf('c : %i\n', c)
-fprintf('lambda : %f\n\n', lambda)
-
+fprintf('lambda : %f\n', lambda)
+fprintf('reps : %d\n\n', reps)
 disp('Backtracking RW:')
 % disp(CCR)
 % disp(NMI)

@@ -67,8 +67,9 @@ do_plot = 0; % if want to plot intermediate results
     MM = cell(1,n);
     num_elems = sum(D_plus,1);
     parfor i = 1:n
-        num = neg_samples * num_elems(i);
-        MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
+ %       num = neg_samples * num_elems(i);
+      num = neg_samples;
+      MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
     end
     D_minus = combine_cells(MM,n);
     

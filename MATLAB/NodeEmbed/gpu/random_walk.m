@@ -10,6 +10,7 @@ for i = 1:length
     alias = P{s(i)};
     if isempty(alias)
         s(i+1:end) = [];
+        return;
     end
     if doNBT
         x = find(prev==alias(:,1),1);

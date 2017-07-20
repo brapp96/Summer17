@@ -10,9 +10,9 @@ diary off  % change to 'on' if writing results to text file
 
 tic
 % Graph parameters
-n = 50;
+n = 200;
 k = 2;
-c = 10;
+c = 5;
 lambda = 0.99;
 
 CCR = gpuArray.zeros(1,reps);                        
@@ -22,7 +22,7 @@ NMI_nbrw = gpuArray.zeros(1,reps);
 
 % Run node embedding
 for i=1:reps
-    [~, CCR(i), NMI(i), ~, CCR_nbrw(i), NMI_nbrw(i)] = node_embeddings_vec(n, k, c, lambda);
+    [~, CCR(i), NMI(i), ~, CCR_nbrw(i), NMI_nbrw(i)] = node_embed_gpu(n, k, c, lambda);
 end   
 
 % Display and write results to file

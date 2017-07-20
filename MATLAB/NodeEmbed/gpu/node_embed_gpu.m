@@ -1,4 +1,4 @@
-function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embeddings_vec(varargin)                                   
+function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embed_gpu(varargin)                                   
 % Implements the node embeddings 'vec' algorithm of Ding et al. including a
 % non-backtracking random walks option, different varieties of SGD (not yet
 % fully implemented). Plots work with 2D data.
@@ -10,9 +10,9 @@ function [Em_brw, ccr_brw, nmi_brw, Em_nbrw, ccr_nbrw, nmi_nbrw] = node_embeddin
 % Creation 7/1/2017, Brian Rappaport
 % Modified 7/11/2017, Brian Rappaport - added aliasing method
 % Modified 7/13/2017, Anu Gamage - added tsne visualization, metrics
+% Modified 7/19/2017, Anu Gamage  - parallelized code to run on CPUs/GPUs
 
 % create graph
-disp('Create graph..')
 
 if nargin == 1
     N = varargin{1};
@@ -32,17 +32,17 @@ end
 
 % create random walk matrix using BRW/NBRW
 P = create_aliases(G);
-tic
+
 disp('Use backtracking RW..')
-[Em_brw, ccr_brw, nmi_brw] = run_node_embedding(P, labels, n, k, c, lambda, 0);
-tic
+[Em_brw, ccr_brw, nmi_brw] = run_node_embedding(P, labels, n, k, 0);
+
 disp('Use non-backtracking RW..')
-[Em_nbrw, ccr_nbrw, nmi_nbrw] = run_node_embedding(P, labels, n, k, c, lambda, 1);
+[Em_nbrw, ccr_nbrw, nmi_nbrw] = run_node_embedding(P, labels, n, k, 1);
 
 
 end
 
-function [Em_true, ccr_val, nmi_val] = run_node_embedding(P, labels, n, k, c, lambda, do_non_backtracking)
+function [Em_true, ccr_val, nmi_val] = run_node_embedding(P, labels, n, k,do_non_backtracking)
 
 rw_reps = 10; % number of random walks per data point                       
 length = 60; % length of random walk                                        
@@ -54,7 +54,7 @@ gamma = .2; % momentum term
 max_reps = 1000; % maximum number of SGD iterations
 do_plot = 0; % if want to plot intermediate results
 
-disp('Create D_plus..')
+
     NN = cell(1,n);
     parfor i = 1:n
         R = cell(1,rw_reps);
@@ -70,14 +70,13 @@ disp('Create D_plus..')
     end
     D_plus = combine_cells(NN,n);
     
-    % create negative samples
+    % create negativesamples
     %MM = cell(1,n);
     %num_elems = full(sum(D_plus,1));
     %parfor i = 1:n
     %    num = neg_samples * num_elems(i);
     %    MM{i} = sparse(linspace(i,i,num),randi(n,1,num),linspace(1,1,num),n,n,num);
     %end
-disp('Create D_minus..')
     ival = repmat(gpuArray.linspace(1, n, n)',neg_samples, 1);
     jval = randi(n, [n*neg_samples,1], 'gpuArray');
     val =  repmat(gpuArray.linspace(1, 1, n)',neg_samples, 1);
@@ -87,7 +86,6 @@ disp('Create D_minus..')
     
     
     % begin SGD
-    disp('Begin SGD..')
     U = rand(n,dim, 'gpuArray');
     [nzP_X,nzP_Y] = find(D_plus);
     [nzM_X,nzM_Y] = find(D_minus);
@@ -120,9 +118,9 @@ disp('Create D_minus..')
       
         U(nzP_X(i),:) = U(nzP_X(i),:) - gradP;
         U(nzM_X(j),:) = U(nzM_X(j),:) - gradM; 
-        if rem(rep,10) == 0
-            disp(rep)
-        end
+%        if rem(rep,10) == 0
+%            disp(rep)
+%        end
 
     %     if rep > 10
     %         if 1-real(cost(rep-10)/cost(rep)) < .015 && real(cost(rep-1)/cost(rep)) <= 1
@@ -150,7 +148,6 @@ disp('Create D_minus..')
     %         end
     %     end
     end
-    disp('Do kmeans..')
     Em = kmeans(U,k);
     
     % Plot results
