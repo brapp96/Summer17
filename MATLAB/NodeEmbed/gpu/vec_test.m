@@ -4,13 +4,13 @@
 % Anu Gamage 7/12/2017
 
 clear;clc;close all 
-reps = 10; 
+reps = 1; 
 diary off  % change to 'on' if writing results to text file
 
 
 tic
 % Graph parameters
-n = 200;
+n = 10000;
 k = 2;
 c = 5;
 lambda = 0.99;
