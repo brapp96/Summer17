@@ -56,7 +56,7 @@ def main(argv):
         logfile.close()
 
     # generating multiple graphs for the same parameter setting
-    rand_tests = 3
+    rand_tests = 5
     # setting storage space for results
     nmi = {}
     ccr = {}
@@ -64,7 +64,7 @@ def main(argv):
     # parameter setting
     c_array = [3.0, 4.0, 5.0, 7.0, 10.0, 15.0, 20.0]
     K_array = [2, 3]  # number of communities
-    N_array = [100, 200] # number of nodes
+    N_array = [100, 200, 500, 1000, 2000, 5000, 10000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     # scanning through parameters
     for c, K, N, lambda_n in itertools.product(c_array, K_array,
@@ -103,22 +103,24 @@ def main(argv):
             k_means.fit(X)
             y_nbt = k_means.labels_
 
-            # algo3: spectral clustering
-            A = nx.to_scipy_sparse_matrix(G)
-            globVars.printDebug('starting spectral clustering...')
-            sc = SpectralClustering(n_clusters=K, affinity='precomputed',
+            if N <= 2000:
+                # algo3: spectral clustering
+                A = nx.to_scipy_sparse_matrix(G)
+                globVars.printDebug('starting spectral clustering...')
+                sc = SpectralClustering(n_clusters=K, affinity='precomputed',
                                     eigen_solver='arpack')
-            sc.fit(A)
-            y_sc = sc.labels_
+                sc.fit(A)
+                y_sc = sc.labels_
 
-            # algo4: belief propogation
-            globVars.printDebug('starting ABP algorithm...')
-            r = 3
-            m, mp, lambda1 = ABP.abp_params(model_sbm1)
-            y_abp = ABP.SBM_ABP(G, r, lambda1, m, mp)
+                # algo4: belief propogation
+                globVars.printDebug('starting ABP algorithm...')
+                r = 3
+                m, mp, lambda1 = ABP.abp_params(model_sbm1)
+                y_abp = ABP.SBM_ABP(G, r, lambda1, m, mp)
             
             # save results
             for name, res in [['deep', y_deep], ['nbt', y_nbt], ['sc', y_sc], ['abp', y_abp]]:
+                if N > 2000 and (name == 'sc' or name == 'abp'): continue
                 nmi, ccr, ars = algs.summary_res(nmi, ccr, ars, ln, res, name, exp_str)    
         savename = "%s%s%s.pkl" % (globVars.FILEPATH, 'pkls/', exp_str)
         res = [nmi, ccr, ars]
