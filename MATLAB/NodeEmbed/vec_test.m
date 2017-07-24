@@ -3,37 +3,37 @@
 % Experimental results of Vec with and without NBRW
 % Anu Gamage 7/12/2017
 
-function vec_test(n, k, c, lambda, reps)
+%clear;clc;close all 
+reps = 1;           
+%diary 'vec_results.txt' 
+diary off  % change to 'on' if writing results to text file
 
-diary 'vec_test.txt'
-diary on  % change to 'on' if writing results to text file
-%% Graph parameters
-%n = 1000;
-%k = 2;
-%c = 5;
-%lambda = 0.99;
-%reps = 10;
-clc
 tic
 
-CCR = gpuArray.zeros(1,reps);                        
-NMI = gpuArray.zeros(1,reps);
-CCR_nbrw = gpuArray.zeros(1,reps);                        
-NMI_nbrw = gpuArray.zeros(1,reps);
+% Graph parameters
+n = 500;
+k = 2;
+c = 1;
+lambda = 0.99;
+
+CCR = zeros(1,reps);                        
+NMI = zeros(1,reps);
+CCR_nbrw = zeros(1,reps);                        
+NMI_nbrw = zeros(1,reps);
 
 % Run node embedding
 for i=1:reps
-    [~, CCR(i), NMI(i), ~, CCR_nbrw(i), NMI_nbrw(i)] = node_embed_gpu(n, k, c, lambda);
-end   
+    [G, labels] = make_SBM(n,k,'const',c,lambda);
+    [~, CCR(i), NMI(i)] = node_embed_cpu(G,labels,0);
+    [~, CCR_nbrw(i), NMI_nbrw(i)] = node_embed_cpu(G,labels,1);
+end
 
 % Display and write results to file
 fprintf('N : %i\n', n)
 fprintf('k : %i\n', k)
 fprintf('c : %i\n', c)
 fprintf('lambda : %f\n', lambda)
-fprintf('Reps : %i\n\n', reps)
-
-
+fprintf('reps : %d\n\n', reps)
 disp('Backtracking RW:')
 % disp(CCR)
 % disp(NMI)
@@ -50,6 +50,4 @@ toc
 diary off
 
 % Plot results
-plot_metrics(CCR, CCR_nbrw, NMI, NMI_nbrw)
-
-end
+%plot_metrics(CCR, CCR_nbrw, NMI, NMI_nbrw)
