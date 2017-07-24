@@ -10,7 +10,7 @@ diary off  % change to 'on' if writing results to text file
 
 tic
 % Graph parameters
-n = 200;
+n = 10000;
 k = 2;
 c = 5;
 lambda = 0.99;
@@ -44,8 +44,8 @@ disp('Non-backtracking RW:')
 % disp(NMI_nbrw)
 fprintf('Avg CCR : %.3f%%\n', mean(CCR_nbrw))
 fprintf('Avg NMI : %.3f%%\n\n\n', mean(NMI_nbrw))
-
 toc
+
 diary off
 
 % Plot results

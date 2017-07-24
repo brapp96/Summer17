@@ -114,7 +114,7 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
         command = w2vpath+'word2vec -train '+globVars.FILEPATH+rw_filename\
                   +' -output '+globVars.FILEPATH+emb_filename+' -size '\
                   +str(dim)+' -window '+str(winsize)+' -negative 5 -cbow 0 '\
-                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 4'\
+                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 50'\
                   +' >> '+globVars.FILEPATH+'test.log'
         os.system(command)
     else:
@@ -122,7 +122,7 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
             sentence = w2v.LineSentence(rw_filename)
         model_w2v_calc = w2v.Word2Vec(sentence, size=dim, window=winsize,
                                       min_count=0, sg=1, negative=5,
-                                      sample=1e-1, workers=5, iter=3)
+                                      sample=1e-1, workers=50, iter=3)
         model_w2v_calc.save_word2vec_format(globVars.FILEPATH+emb_filename)
     model_w2v = kv.KeyedVectors.load_word2vec_format(globVars.FILEPATH+emb_filename)
     return model_w2v

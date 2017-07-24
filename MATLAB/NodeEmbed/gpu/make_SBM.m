@@ -6,7 +6,7 @@ function [G, P] = make_SBM(n,k,scaling_type,c,lambda)
 % lambda is the reduction percentage
 % Brian Rappaport, 7/6/17
 
-cluster_seq = gpuArray(1:k);
+cluster_seq = (1:k);
 P = repmat(cluster_seq, ceil(n/k),1);
 P = P(1:n)';
 if strcmp(scaling_type,'const')
@@ -20,10 +20,10 @@ else
 end
 
 % Build graph
-indI = gpuArray.zeros(1,0);
-indJ = gpuArray.zeros(1,0);
+indI = zeros(1,0);
+indJ = zeros(1,0);
 for i = 1:n
-    I = rand([1,n], 'gpuArray');
+    I = rand([1,n]);
     ind = P(i)== P;
     I(ind) = I(ind)*(1-lambda);
     f = find(I<q);
@@ -31,7 +31,7 @@ for i = 1:n
     indJ = [indJ, i*ones(1,numel(f))];
 end
 G = sparse(indI,indJ,ones(numel(indI),1), n, n);
-% G = max(G,G');
+G = max(G,G');
 
 
 end

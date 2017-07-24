@@ -119,22 +119,24 @@ if __name__ == '__main__':
                         k_means.fit(X)
                         y['nbt'] = k_means.labels_
 
-                        # algo3: spectral clustering
-                        globVars.printDebug('starting spectral clustering...')
-                        A = nx.to_scipy_sparse_matrix(G)
-                        sc = SpectralClustering(n_clusters=K, affinity='precomputed',
-                                                eigen_solver='arpack')
-                        sc.fit(A)
-                        y['sc'] = sc.labels_
+                        if N <= 2000:
+                            # algo3: spectral clustering
+                            A = nx.to_scipy_sparse_matrix(G)
+                            globVars.printDebug('starting spectral clustering...')
+                            sc = SpectralClustering(n_clusters=K, affinity='precomputed',
+                                                    eigen_solver='arpack')
+                            sc.fit(A)
+                            y['sc'] = sc.labels_
 
-                        # algo4: belief propogation
-                        globVars.printDebug('starting ABP algorithm...')
-                        r = 3
-                        m, mp, lambda1 = ABP.abp_params(model_sbm1)
-                        y['abp'] = ABP.SBM_ABP(G, r, lambda1, m, mp)
+                            # algo4: belief propogation
+                            globVars.printDebug('starting ABP algorithm...')
+                            r = 3
+                            m, mp, lambda1 = ABP.abp_params(model_sbm1)
+                            y['abp'] = ABP.SBM_ABP(G, r, lambda1, m, mp)
 
                         # save results
                         for name in algos:
+                            if N > 2000 and (name == 'sc' or name == 'abp'): continue
                             m = {}
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
                             for met in metrics:

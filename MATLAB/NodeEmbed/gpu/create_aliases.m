@@ -11,7 +11,7 @@ for i = 1:n
     I = gv(gi == i);
     k = numel(I);
     if k == 0, continue; end
-    list = gpuArray.zeros(k,3);
+    list = zeros(k,3);
     [I,inds] = sort(I/sum(I)*k);
     loc = find(I>1,1);
     if isempty(loc), loc = 1; end
