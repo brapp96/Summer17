@@ -3,17 +3,18 @@
 % Experimental results of Vec with and without NBRW
 % Anu Gamage 7/12/2017
 
-clear;clc;close all 
-reps = 1; 
-diary off  % change to 'on' if writing results to text file
+function vec_test(n, k, c, lambda, reps)
 
-
+diary 'vec_test.txt'
+diary on  % change to 'on' if writing results to text file
+%% Graph parameters
+%n = 1000;
+%k = 2;
+%c = 5;
+%lambda = 0.99;
+%reps = 10;
+clc
 tic
-% Graph parameters
-n = 10000;
-k = 2;
-c = 5;
-lambda = 0.99;
 
 CCR = gpuArray.zeros(1,reps);                        
 NMI = gpuArray.zeros(1,reps);
@@ -49,4 +50,6 @@ toc
 diary off
 
 % Plot results
-%plot_metrics(CCR, CCR_nbrw, NMI, NMI_nbrw)
+plot_metrics(CCR, CCR_nbrw, NMI, NMI_nbrw)
+
+end

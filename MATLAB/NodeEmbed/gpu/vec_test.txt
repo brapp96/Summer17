@@ -1,0 +1,65 @@
+N : 200
+k : 2
+c : 5
+lambda : 0.990000
+Reps : 1
+
+Backtracking RW:
+Avg CCR : 92.000%
+Avg NMI : 0.598%
+
+Non-backtracking RW:
+Avg CCR : 95.500%
+Avg NMI : 0.756%
+
+
+Elapsed time is 6.493541 seconds.
+
+N : 200
+k : 2
+c : 5
+lambda : 0.990000
+Reps : 1
+
+Backtracking RW:
+Avg CCR : 80.000%
+Avg NMI : 0.288%
+
+Non-backtracking RW:
+Avg CCR : 51.500%
+Avg NMI : 0.001%
+
+
+Elapsed time is 22.106991 seconds.
+N : 200
+k : 2
+c : 5
+lambda : 0.990000
+Reps : 1
+
+Backtracking RW:
+Avg CCR : 87.500%
+Avg NMI : 0.457%
+
+Non-backtracking RW:
+Avg CCR : 59.500%
+Avg NMI : 0.030%
+
+
+Elapsed time is 6.648832 seconds.
+N : 200
+k : 2
+c : 5
+lambda : 0.990000
+Reps : 10
+
+Backtracking RW:
+Avg CCR : 73.450%
+Avg NMI : 0.310%
+
+Non-backtracking RW:
+Avg CCR : 68.500%
+Avg NMI : 0.238%
+
+
+Elapsed time is 62.756888 seconds.
