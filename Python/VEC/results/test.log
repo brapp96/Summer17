@@ -1,128 +1,174 @@
-2017-07-21 16:01:57.173034
+2017-07-24 19:06:58.885137
 Logging details of run:
 
 
-K: 2, N: 100, c: 3.0, lambda: 0.9
+K: 2, N: 100, c: 5.0, lambda: 0.99
 
-Beginning iteration 1 of 3...
-the graph has 93 total edges.
+Beginning iteration 1 of 2...
+the graph has 133 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 51200
+Words in train file: 59000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 7165
+Words in train file: 15602
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 1.65; lambda2: 1.35
+lambda1: 2.525; lambda2: 2.475
 
-Beginning iteration 2 of 3...
-the graph has 69 total edges.
+Beginning iteration 2 of 2...
+the graph has 142 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 45800
+Words in train file: 59000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 5283
+Words in train file: 20731
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 1.65; lambda2: 1.35
+lambda1: 2.525; lambda2: 2.475
 
-Beginning iteration 3 of 3...
-the graph has 79 total edges.
+
+K: 2, N: 100, c: 10.0, lambda: 0.99
+
+Beginning iteration 1 of 2...
+the graph has 260 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 48800
+Words in train file: 62000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 5102
+Words in train file: 49346
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 1.65; lambda2: 1.35
+lambda1: 5.05; lambda2: 4.95
 
-
-K: 2, N: 100, c: 4.0, lambda: 0.9
-
-Beginning iteration 1 of 3...
-the graph has 102 total edges.
+Beginning iteration 2 of 2...
+the graph has 275 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 53000
+Words in train file: 62000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 8562
+Words in train file: 50142
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 2.2; lambda2: 1.8
+lambda1: 5.05; lambda2: 4.95
 
-Beginning iteration 2 of 3...
-the graph has 118 total edges.
+
+K: 2, N: 100, c: 15.0, lambda: 0.99
+
+Beginning iteration 1 of 2...
+the graph has 416 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 57200
+Words in train file: 61400
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 11602
+Words in train file: 61400
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 2.2; lambda2: 1.8
+lambda1: 7.575; lambda2: 7.425
 
-Beginning iteration 3 of 3...
-the graph has 105 total edges.
+Beginning iteration 2 of 2...
+the graph has 389 total edges.
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 54200
+Words in train file: 62000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
-Starting training using file /home/brian/Documents/summer17/Python/VEC/results/sentences.txt
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
 Vocab size: 101
-Words in train file: 7910
+Words in train file: 59746
 starting spectral clustering...
 starting ABP algorithm...
-lambda1: 2.2; lambda2: 1.8
+lambda1: 7.575; lambda2: 7.425
+
+
+K: 2, N: 100, c: 20.0, lambda: 0.99
+
+Beginning iteration 1 of 2...
+the graph has 489 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+starting nonbacktracking VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+starting spectral clustering...
+starting ABP algorithm...
+lambda1: 10.1; lambda2: 9.9
+
+Beginning iteration 2 of 2...
+the graph has 478 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+starting nonbacktracking VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 101
+Words in train file: 62000
+starting spectral clustering...
+starting ABP algorithm...
+lambda1: 10.1; lambda2: 9.9
