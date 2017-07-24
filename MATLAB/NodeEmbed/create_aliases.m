@@ -3,9 +3,7 @@ function P = create_aliases(G)
 % distribution
 n = size(G,1);
 P = cell(1,n);
-
 [gi, gj, gv] = find(G);
-
 for i = 1:n
     Ginds = gj(gi == i);
     I = gv(gi == i);
