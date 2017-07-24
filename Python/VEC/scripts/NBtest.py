@@ -28,11 +28,11 @@ if __name__ == '__main__':
     length = 60
     dim = 50
     winsize = 8
-    c_array = [3.0, 4.0]
+    c_array = [5.0, 10.0, 15.0, 20.0]
     K_array = [2]  # number of communities
     N_array = [100] # number of nodes
-    lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
-    rand_tests = 3
+    lambda_array = [0.99] # B0 = lambda*I + (1-lambda)*ones(1, 1)
+    rand_tests = 2
     algos = ['deep', 'nbt', 'sc', 'abp']
     metrics = ['nmi', 'ccr', 'ars']
 
@@ -141,5 +141,13 @@ if __name__ == '__main__':
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
                             for met in metrics:
                                 results[name][met][indc, indK, indN, indll, rand] = m[met]
+    
+    # Write results to file
+    params = {'n': N_array, 'k': K_array, 'c': c_array, 'l': lambda_array,
+            'iter': rand_tests, 'algorithms': algos, 'metrics': metrics}
     savename = "%spkls/fulltest.pkl" % globVars.FILEPATH
+    savename2 = "%spkls/fulltestparams.pkl" % globVars.FILEPATH
     pickle.dump(results, open(savename, 'wb'), protocol=2)
+    pickle.dump(params, open(savename2, 'wb'), protocol=2)
+    
+
