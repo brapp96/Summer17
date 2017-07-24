@@ -162,48 +162,74 @@ def update_metric_arrays(arry, acc, alg, param_str):
     arry[alg][key] = acc
     return arry
 
-def plot_res(N, params, fignum):
+def plot_res(data_path, param_path):
     """
     Plots the metrics for each type and for the parameter that is varied.
-    TODO: this won't work right now; need to fix
+    Inputs : data_path - file path of the vec results .pkl file
+             param_path - file path of the .pkl file containing parameters used
     """
     import matplotlib.pyplot as plt
-    fstring = 'N'+str(N)+';K'+str(K)+';c'+str(c)+';la'+str(lambda_n)+';iter'
-    res = pickle.load(open("%s.pkl" % fstring, 'rb'))
-    nmi = res[0]
-    ccr = res[1]
-    tm = nmi[params[0]].keys()
-    param = tm[0].split('-')[0]
-    x_array = [float(z.split('-')[1].strip()) for z in tm]
-    x_array = sorted(x_array)
-    tm = [param + '- ' + str(v) for v in x_array]
+  
+    res = pickle.load(open(data_path, 'rb'))
+    params = pickle.load(open(param_path, 'rb'))
+    x_array = params['c']                   # parameter varied during experiment
+    algos = params['algorithms']            # algorithms used : deep, nbt etc. 
+    
     # get nmi and ccr for all algos
     nmi_mean = {}
     nmi_std = {}
     ccr_mean = {}
     ccr_std = {}
-    for p in params:
-        nmi_mean[p] = [np.mean(nmi[p][z].values()) for z in tm]
-        nmi_std[p] = [np.std(nmi[p][z].values()) for z in tm]
-        ccr_mean[p] = [np.mean(ccr[p][z].values()) for z in tm]
-        ccr_std[p] = [np.std(ccr[p][z].values()) for z in tm]
-    fig = plt.figure(fignum, figsize=(10, 6))
+    
+    for a in algos:
+        nm = np.zeros((len(x_array),))
+        nstd = np.zeros((len(x_array),))
+        cm = np.zeros((len(x_array),))
+        cstd = np.zeros((len(x_array),))
+
+        for x in range(len(x_array)):
+            nm[x]  = np.mean(res[a]['nmi'][x])
+            nstd[x] = np.std(res[a]['nmi'][x])
+            cm[x] = np.mean(res[a]['ccr'][x])
+            cstd[x] = np.std(res[a]['ccr'][x])
+        nmi_mean[a] = nm
+        nmi_std[a] = nstd
+        ccr_mean[a] = cm
+        ccr_std[a] = cstd
+    
+    # Plot NMI
+    fig = plt.figure(1, figsize=(10, 6))    
+    cmap = plt.get_cmap('jet')
     i = 0
-    cmap = plt.get_cmap('cubehelix')
-    for p in params:
-        color = cmap(float(i)/len(params))
-        plt.errorbar(x_array, nmi_mean[p], yerr=nmi_std[p],
-                     color=color, markersize=8)
-        plt.errorbar(x_array, ccr_mean[p], yerr=ccr_std[p],
-                     color=color, markersize=8)
+    for a in algos:
+        color = cmap(float(i)/len(algos))
+        plt.errorbar(x_array, nmi_mean[a], yerr=nmi_std[a],
+                     color=color, marker = 'o', markersize=8)
         i += 1
-    legend = ["nmi-%s" % p for p in params]
-    legend.extend(["ccr-%s" % p for p in params])
+    legend = ["nmi-%s" % a for a in algos]
     plt.legend(legend, loc=0)
-    plt.xlabel(param)
-    plt.xlim(x_array[0]-0.1, x_array[-1]+0.1)
+    plt.xlabel('c')
     plt.ylim(-0.05, 1.05)
-    plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
-    plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
-    return fig
+    plt.title('CCR vs c')
+    plt.show()
+
+    # Plot CCR
+    fig = plt.figure(2, figsize=(10, 6))
+    i = 0
+    for a in algos:
+        color = cmap(float(i)/len(algos))
+        plt.errorbar(x_array, ccr_mean[a], yerr=ccr_std[a],
+                    color=color, marker = 'o', markersize=8)
+        i += 1
+    legend = ["ccr-%s" % a for a in algos]
+    plt.legend(legend, loc=0)
+    plt.xlabel('c')
+    plt.ylim(-0.05, 1.05)
+    plt.title('NMI vs c')
+    plt.show()
+   
+    # Save plots
+#    plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
+#    plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
+    return 
 
