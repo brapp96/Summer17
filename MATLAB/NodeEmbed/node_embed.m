@@ -7,14 +7,13 @@ function [Em, ccr, nmi] = node_embed(G, labels, doNBT)
 % Can input N, an nxd vector of data points, to create the graph using the
 % given vectors in R^d, or leave it blank, which will run SBM.
 %
-% Creation 7/1/2017, Brian Rappaport
+% Brian Rappaport, 7/1/2017
 % Modified 7/11/2017, Brian Rappaport - added aliasing method
 % Modified 7/13/2017, Anu Gamage - added tsne visualization, metrics
 % Modified 7/19/2017, Anu Gamage  - parallelized code to run on CPUs/GPUs
 % Modified 7/24/2017, Brian Rappaport - standaradized codebase to combine
 %                                       CPU and GPU usage
 
-% create random walk matrix using BRW/NBRW
 n = numel(labels);
 k = max(labels);
 P = create_aliases(G);
@@ -26,7 +25,9 @@ end
 [Em, ccr, nmi] = run_node_embedding(P, labels, n, k, doNBT, useGPU);
 end
 
-function [Em_true, ccr_val, nmi_val] = run_node_embedding(P, labels, n, k, doNBT, useGPU)
+function [Em_true, ccr, nmi] = run_node_embedding(P, labels, n, k, doNBT, useGPU)
+% Runs the node embedding algorithm using the given parameters.
+
 % define variables
 rw_reps = 10; % number of random walks per data point
 length = 60; % length of random walk
@@ -105,8 +106,8 @@ Em = kmeans(U,k);
 % relabel nodes
 Em_true = get_true_emb(Em,labels);
 
-ccr_val = sum(Em_true == labels')*100/n;
-nmi_val = nmi(labels', Em_true);
+ccr = sum(Em_true == labels')*100/n;
+nmi = get_nmi(labels', Em_true);
 
 % plot results
 if do_plot
@@ -127,6 +128,8 @@ end
 end
 
 function C = combine_cells(R,i)
+% A helper function to reduce the time and space required for making the 
+% random walks matrix.
 while i ~= 1
     if rem(i,2) == 1
         R{i-1} = R{i-1} + R{i};
@@ -142,7 +145,7 @@ end
 
 function d = cost_fn(U,nzP_X,nzP_Y,nzM_X,nzM_Y)
 % Calculates cost function. If any given cost overflows it is
-% represented as 1i for lack of a better way of dealing with it
+% represented as 1i for lack of a better way of dealing with it.
 d = 0;
 parfor i = 1:numel(nzP_X)
     e = log(1+exp(-U(nzP_X(i),:)*U(nzP_Y(i),:)'));
@@ -157,6 +160,7 @@ end
 end
 
 function plot_results(N, G, Em)
+% Plots the results of the algorithm. This may be outdated.
 figure(101);
    hold on;
    if size(N,1) == 2  % Plot results for 2D data

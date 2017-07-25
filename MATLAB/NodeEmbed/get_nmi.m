@@ -1,4 +1,4 @@
-function z = nmi(x, y)
+function z = get_nmi(x, y)
 % Compute normalized mutual information I(x,y)/sqrt(H(x)*H(y)) of two discrete variables x and y.
 % Input:
 %   x, y: two integer vector of the same length 

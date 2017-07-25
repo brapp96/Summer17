@@ -3,7 +3,7 @@
 % Experimental results of Vec with and without NBRW
 % Anu Gamage 7/12/2017
 
-function vec_test(n, k, c, lambda, reps)
+function vec_test_gpu(n, k, c, lambda, reps)
 
 diary 'vec_test.txt'
 diary on  % change to 'on' if writing results to text file
