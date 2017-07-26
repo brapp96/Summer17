@@ -1,0 +1,17 @@
+%%% this is an connected graph with 12 nodes and 13 edges
+%%% with 3 components
+%%% the largest component has 5 nodes {A, B, C, D, E} and
+%%% 7 edges
+A C 0.2135
+A D 0.45
+A E 0.13 
+B C 0.56 
+B E 0.1
+C D 0.6
+D E 0.123
+F G 0.6 
+F H 0.2
+G H 0.56
+H J 0.42
+I K 0.17
+K L 0.51

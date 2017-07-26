@@ -12,36 +12,23 @@ import pdb
 import collections
 import calcDSD
 
+num_rw = 5      # Number of random walks
+quiet = False   # True is less output needed
 
-num_rw = 50
-quiet = False
-
-graphAdj = np.loadtxt('graph')
-true_labels = np.loadtxt('graph_labels', dtype=int)
+# Load graph from file
+graphAdj = np.loadtxt('smallPPIgraph.txt')
+true_labels = np.loadtxt('smallPPIlabels.txt', dtype=str)
 N = np.size(graphAdj[0])
-
-# remedy isolated nodes
-for i in range(N):
-    if ~np.any(graphAdj[i, :]):
-        cluster = true_labels[i]
-        neighbors = np.where(true_labels == cluster)
-        pdb.set_trace()
-
-
-names = {}
-for i in xrange(1, N+1):
-    names[('Pro%04d' % i)] = i-1
-names = collections.OrderedDict(sorted(names.items(),
-                                           key=lambda x: x[1]))
-
+    
+#Calculate DSD and reset isolated node distances
 DSD = calcDSD.calculator(graphAdj, num_rw, quiet)
+inf_marker = np.max(DSD)
+DSD[np.where(DSD == -1)] = inf_marker
 
-# compute Gaussian kernel     
+# Compute Gaussian kernel as similarity graph for spectral clustering  
 sigma = 1 
-data = np.exp(-DSD**2 / (2.*(sigma**2)))
+DSD_sim = np.exp(-DSD**2 / (2.*(sigma**2)))
 
-# apply spectral clustering and reorder labels
-spectral = sc.SpectralClustering(n_clusters = 2, affinity='precomputed')
-spectral.fit(data)
-labels = spectral.fit_predict(data) 
+# Apply spectral clustering and reorder labels \\\TO DO
+labels = sc.spectral_clustering(DSD_sim)
 pdb.set_trace()
