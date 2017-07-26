@@ -1,86 +1,15 @@
 #!/usr/bin/env python2.7
 """
-
-DSDmain.py -- the main function to calculate DSD from input
-
-DSD version 0.5, Copyright (C) 2013, Tufts University
-@author -- Mengfei Cao, mcao01@cs.tufts.edu
-161 College Ave., Medford, MA 02155, USA
-
-This program is a free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation version 2.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-MA 02110-1301, USA
-
- The program calculates DSD from input file and outputs DSD in
- specified format. If there are at most 3 nodes or the PPI network
- is too sparse (#edges/#nodes < 0.5), it won't work
-
-usage: DSDmain.py [-h] [-n NRW] [-o OUTFILE] [-q] [-f] [-m {1,2,3}]
-                  [--outformat {matrix,list,top}] [-k NTOP] [-t THRESHOLD]
-                  infile
-
-parses PPIs from infile and calculates DSD
-
-positional arguments:
-  infile                read PPIs from infile, either a .csv or .tab file that
-                        contains a tab/comma/space delimited table with both
-                        IDs at first row and first column, or a .list file
-                        that contains for each line one interacting pair
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -c, --converge        calculate the converged DSD, ignore the length of
-                        random walks
-  -n NRW, --nRW NRW     length of random walks, 5 by default
-  -o OUTFILE, --outfile OUTFILE
-                        output DSD file name, tab delimited tables, stdout by
-                        default
-  -q, --quiet           turn off status message
-  -f, --force           calculate DSD for the whole graph despite it is not
-                        connected if it is turned on; otherwise, calculate DSD
-                        for the largest component
-  -m {1,2,3}, --outFMT {1,2,3}
-                        the format of output DSD file: type 1 for matrix; type
-                        2 for pairs at each line; type 3 for top K proteins
-                        with lowest DSD. Type 1 by default
-  --outformat {matrix,list,top}
-                        the format of output DSD file: 'matrix' for matrix,
-                        type 1; 'list' for pairs at each line, type 2; 'top'
-                        for top K proteins with lowest DSD, type 3. 'matrix'
-                        by default
-  -k NTOP, --nTop NTOP  if chosen to output lowest DSD nodes, output at most K
-                        nodes with lowest DSD, 10 by default
-  -t THRESHOLD, --threshold THRESHOLD
-                        threshold for PPIs' confidence score, if applied
-
-
-Note: *when -f is turned on, any DSDs w.r.t. nodes with 0 degree will be
-      invalid: entries in DSD matrix will be output as NA
-
-      *when the largest connected component(LCC) is extracted, we only
-      calculate pairwise DSDs between nodes in LCC; the output will
-      also only cover those in LCC; for "list" output, if either node is
-      not in LCC, the DSD entry will be "NotConnected"
+Main DSD run file
 
 """
 
 import PPIparser
 import calcDSD
 import mygraph
-
+import collections
 import sys
 import numpy as np
-#from optparse import OptionParser
 import argparse
 
 temp = "parses PPIs from infile and calculates DSD"
@@ -173,10 +102,20 @@ if not options.quiet:
 
 ### Parse input file
 ### get the adjacency matrix and names of files
-(ppbAdj, names) = PPIparser.GetAdj(options.infile,
-                                   options.threshold)
+#(ppbAdj, names) = PPIparser.GetAdj(options.infile,
+#                                   options.threshold)
+
+ppbAdj = np.loadtxt('graph')
 M = int(sum(sum(ppbAdj))/2)
 N = np.size(ppbAdj[0])
+
+names = {}
+for i in xrange(1, N+1):
+    names[('Pro%04d' % i)] = i-1
+
+names = collections.OrderedDict(sorted(names.items(),
+                                           key=lambda x: x[1]))
+
 if not options.quiet:
     print 'Done with parsing, there are', N, 'different nodes'
     print '    and', M, 'different PPIs originally'
@@ -216,48 +155,23 @@ if M < N*0.5:
 if not options.quiet:
     print 'Start calculating DSD...'
 
-DSD = calcDSD.calculator(ppbAdj, options.nRW, options.quiet)
-#print DSD
-if options.outfile is not None:
-    ofile = open(options.outfile, 'w')
-else:
-    ofile = sys.stdout
+DSD = calcDSD.calculator(ppbAdj,50 , options.quiet)
+import sklearn.cluster as sc
+# compute Gaussian kernel     
+sigma = 5 
+data = np.exp(-DSD**2 / (2.*(sigma**2)))
+#data = DSD
+for i in range(1000):
+    for j in range(1000):
+            if data[i,j] == -1:
+                data[i,j] = 12 
+ 
+import pdb
 
-if not options.quiet:
-    if options.outfile is not None:
-        print 'Finish calculating DSD, start writing into', options.outfile
-    else:
-        print 'Finish calculating DSD, start writing into stdout'
+# apply spectral clustering and reorder labels
+spectral = sc.SpectralClustering(n_clusters = 2, affinity='precomputed')
+spectral.fit(data)
+labels = spectral.fit_predict(data) 
 
-if N <= options.nTop and options.outFMT == 3:
-    options.nTop = N/2
-    print >> sys.stderr, sStar
-    temp = 'Warning: The specified k is larger than the maximum'
-    print >> sys.stderr, temp
-    temp = 'number of nodes and thus is reset as', N/2, 'by default'
-    print >> sys.stderr, temp
-    print >> sys.stderr, sStar
-
-if options.outFMT == 1:
-    if calcDSD.writeoutMatrix(DSD, names, ofile):
-        if not options.quiet:
-            print 'The DSD matrix is written!'
-    else:
-        print >> sys.stderr, "Can't write DSD into file!"
-
-if options.outFMT == 2:
-    if calcDSD.writeoutList(DSD, names, options.infile, ofile):
-        if not options.quiet:        
-            print 'The DSD values between interacting nodes are written!'
-    else:
-        print >> sys.stderr, "Can't write DSD into file!"
-
-if options.outFMT == 3:
-    if calcDSD.writeoutToplist(DSD, names, ofile, options.nTop):
-        if not options.quiet:
-            print 'The DSD values between nodes and those with top k'
-            print '    lowest DSDs each row are written!'
-    else:
-        print >> sys.stderr, "Can't write DSD into file!"
-
-ofile.close()
+gtlabels = np.loadtxt('graph_labels')
+pdb.set_trace()
