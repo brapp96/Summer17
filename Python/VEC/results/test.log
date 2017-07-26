@@ -1,0 +1,45 @@
+2017-07-25 20:50:45.885858
+Logging details of run:
+
+
+K: 2, N: 1000, c: 5.0, lambda: 0.9
+
+Beginning iteration 1 of 2...
+the graph has 1375 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 588200
+starting nonbacktracking VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 172332
+starting spectral clustering...
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25
+
+Beginning iteration 2 of 2...
+the graph has 1385 total edges.
+starting normal VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 584000
+starting nonbacktracking VEC algorithm...
+1 building alias auxiliary functions
+2 creating random walks
+3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 1001
+Words in train file: 192135
+starting spectral clustering...
+starting ABP algorithm...
+lambda1: 2.75; lambda2: 2.25

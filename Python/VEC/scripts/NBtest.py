@@ -28,13 +28,13 @@ if __name__ == '__main__':
     length = 60
     dim = 50
     winsize = 8
-    c_array = [5.0, 10.0, 15.0, 20.0]
+    c_array = [5.0]
     K_array = [2]  # number of communities
-    N_array = [100] # number of nodes
-    lambda_array = [0.99] # B0 = lambda*I + (1-lambda)*ones(1, 1)
+    N_array = [1000] # number of nodes
+    lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     rand_tests = 2
-    algos = ['deep', 'nbt', 'sc', 'abp']
-    metrics = ['nmi', 'ccr', 'ars']
+    algos = ['deep', 'nbt']
+    metrics = ['nmi', 'ccr']
 
     # parsing arguments to file
     usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>]
@@ -96,8 +96,15 @@ if __name__ == '__main__':
                         # simulate graph
                         G = SBM.SBM_simulate_fast(model_sbm1)
                         ln, names = SBM.get_label_list(G)
+                            
+                        # write graph to file 
+                        m = nx.to_numpy_matrix(G, dtype=int) 
+                        np.savetxt('graph.txt', m, fmt='%d')
+                        
+                        lbls = np.array(ln)
+                        np.savetxt('graph_lbls.txt', lbls, fmt='%d')
 
-                        # algo1: proposed deepwalk algorithm
+                       # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
                         model_w2v = algs.SBM_learn_deepwalk(G, rw_filename, emb_filename,
                                                             num_reps=num_reps, dim=dim,

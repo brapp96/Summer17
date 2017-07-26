@@ -210,7 +210,7 @@ def plot_res(data_path, param_path):
     plt.legend(legend, loc=0)
     plt.xlabel('c')
     plt.ylim(-0.05, 1.05)
-    plt.title('CCR vs c')
+    plt.title('NMI vs c')
     plt.show()
 
     # Plot CCR
@@ -225,9 +225,15 @@ def plot_res(data_path, param_path):
     plt.legend(legend, loc=0)
     plt.xlabel('c')
     plt.ylim(-0.05, 1.05)
-    plt.title('NMI vs c')
+    plt.title('CCR vs c')
     plt.show()
    
+    print('Deep\n')
+    print('Average CCR:{}\n'.format(ccr_mean['deep']))
+    print('Average NMI:{}\n\n'.format(nmi_mean['deep']))
+    print('NBT\n')
+    print('Average CCR:{}\n'.format(ccr_mean['nbt']))
+    print('Average NMI:{}\n\n'.format(nmi_mean['nbt']))
     # Save plots
 #    plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
 #    plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
