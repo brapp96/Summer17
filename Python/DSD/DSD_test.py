@@ -12,9 +12,21 @@ import pdb
 import collections
 import calcDSD
 
-ppbAdj = np.loadtxt('graph')
-M = int(sum(sum(ppbAdj))/2)
-N = np.size(ppbAdj[0])
+
+num_rw = 50
+quiet = False
+
+graphAdj = np.loadtxt('graph')
+true_labels = np.loadtxt('graph_labels', dtype=int)
+N = np.size(graphAdj[0])
+
+# remedy isolated nodes
+for i in range(N):
+    if ~np.any(graphAdj[i, :]):
+        cluster = true_labels[i]
+        neighbors = np.where(true_labels == cluster)
+        pdb.set_trace()
+
 
 names = {}
 for i in xrange(1, N+1):
@@ -22,7 +34,7 @@ for i in xrange(1, N+1):
 names = collections.OrderedDict(sorted(names.items(),
                                            key=lambda x: x[1]))
 
-DSD = calcDSD.calculator(ppbAdj,50 , False)
+DSD = calcDSD.calculator(graphAdj, num_rw, quiet)
 
 # compute Gaussian kernel     
 sigma = 1 
@@ -32,5 +44,4 @@ data = np.exp(-DSD**2 / (2.*(sigma**2)))
 spectral = sc.SpectralClustering(n_clusters = 2, affinity='precomputed')
 spectral.fit(data)
 labels = spectral.fit_predict(data) 
-gtlabels = np.loadtxt('graph_labels')
 pdb.set_trace()
