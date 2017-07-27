@@ -32,7 +32,7 @@ if __name__ == '__main__':
     K_array = [2]  # number of communities
     N_array = [1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
-    rand_tests = 2
+    rand_tests = 1 
     algos = ['deep', 'nbt']
     metrics = ['nmi', 'ccr']
 
@@ -143,9 +143,14 @@ if __name__ == '__main__':
 
                         # save results
                         for name in algos:
+                            print(name)
                             if N > 2000 and (name == 'sc' or name == 'abp'): continue
                             m = {}
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
+                            print('NMI')
+                            print(m['nmi'])
+                            print('CCR')
+                            print(m['ccr'])
                             for met in metrics:
                                 results[name][met][indc, indK, indN, indll, rand] = m[met]
     

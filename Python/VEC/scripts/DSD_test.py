@@ -19,8 +19,8 @@ quiet = False   # True is less output needed
 
 # Load graph from file
 print('Loading graph from file...')
-graphAdj = np.loadtxt('graph')
-true_labels = np.loadtxt('graph_labels')
+graphAdj = np.loadtxt('graph.txt')
+true_labels = np.loadtxt('graph_lbls.txt')
 N = np.size(graphAdj[0])
     
 #Calculate DSD and reset isolated node distances
