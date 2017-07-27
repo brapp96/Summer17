@@ -97,12 +97,11 @@ if __name__ == '__main__':
                         G = SBM.SBM_simulate_fast(model_sbm1)
                         ln, names = SBM.get_label_list(G)
                             
-                        # write graph to file 
+                        # write graph and labels to file 
                         m = nx.to_numpy_matrix(G, dtype=int) 
-                        np.savetxt('graph.txt', m, fmt='%d')
-                        
+                        np.savetxt('graph', m, fmt='%d')
                         lbls = np.array(ln)
-                        np.savetxt('graph_lbls.txt', lbls, fmt='%d')
+                        np.savetxt('graph_labels', lbls, fmt='%d')
 
                        # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
@@ -143,17 +142,24 @@ if __name__ == '__main__':
 
                         # save results
                         for name in algos:
-                            print(name)
                             if N > 2000 and (name == 'sc' or name == 'abp'): continue
                             m = {}
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
-                            print('NMI')
-                            print(m['nmi'])
-                            print('CCR')
-                            print(m['ccr'])
                             for met in metrics:
                                 results[name][met][indc, indK, indN, indll, rand] = m[met]
     
+    # Print out results
+    print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N_array,
+        K_array, c_array, lambda_array))
+    print('Backtracking RW:\n')    
+    print('CCR : {}'.format(results['deep']['ccr']))
+    print('NMI : {}\n'.format(results['deep']['nmi']))
+
+    print('Non-backtracking RW:\n')
+    print('CCR : {}'.format(results['nbt']['ccr']))
+    print('NMI : {}\n\n'.format(results['nbt']['nmi']))
+
+
     # Write results to file
     params = {'n': N_array, 'k': K_array, 'c': c_array, 'l': lambda_array,
             'iter': rand_tests, 'algorithms': algos, 'metrics': metrics}
