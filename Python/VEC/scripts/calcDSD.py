@@ -25,7 +25,7 @@ MA 02110-1301, USA
 
 import numpy as np
 import re
-
+import pdb
 
 def calculator(adjacency,true_labels, nRW, quiet=False):
     """
@@ -61,7 +61,6 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
     for j in xrange(0,n):
          p[j] = adjacency[j]/degree[j]
     
-    
     if nRW >= 0:
         #### c for visit count matrix
         #### for example, c(2,3) is the number of times
@@ -95,7 +94,7 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
         if(not quiet) and ((i % 100 == 0) or (i == n-1)):
             print('    finish calculating DSD for %d/%d nodes' % (i+1, n))
 
-    return DSD, degree
+    return DSD
 
 
 def writeoutMatrix(DSD, names, ofile):

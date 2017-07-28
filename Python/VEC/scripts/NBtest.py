@@ -30,13 +30,13 @@ if __name__ == '__main__':
     winsize = 6
     read_graphs = False    
     
-    c_array = [2.0, 3.0, 4.0, 6.0, 8.0, 10.0]
+    c_array = [10.0]
     K_array = [2]  # number of communities
     N_array = [1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
-    rand_tests = 5
-    algos = ['deep', 'nbt', 'sc', 'abp']
-    metrics = ['nmi', 'ccr', 'ars']
+    rand_tests = 1
+    algos = ['deep', 'nbt']
+    metrics = ['nmi', 'ccr']
 
     # parsing arguments to file
     usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>] 
@@ -111,10 +111,10 @@ if __name__ == '__main__':
                             
                             # write graph to file 
                             m = nx.to_numpy_matrix(G, dtype=int) 
-                            np.savetxt('graph.txt', m, fmt='%d')
+                            np.savetxt('graph', m, fmt='%d')
                         
                             lbls = np.array(ln)
-                            np.savetxt('graph_lbls.txt', lbls, fmt='%d')
+                            np.savetxt('graph_labels', lbls, fmt='%d')
 
                         # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
@@ -173,12 +173,12 @@ if __name__ == '__main__':
     print('NMI : {}\n\n'.format(results['nbt']['nmi']))
 
 
-    # Write results to file
-    params = {'n': N_array, 'k': K_array, 'c': c_array, 'l': lambda_array,
-            'iter': rand_tests, 'algorithms': algos, 'metrics': metrics}
-    savename = "%spkls/fulltest.pkl" % globVars.FILEPATH
-    savename2 = "%spkls/fulltestparams.pkl" % globVars.FILEPATH
-    pickle.dump(results, open(savename, 'wb'), protocol=2)
-    pickle.dump(params, open(savename2, 'wb'), protocol=2)
+#    # Write results to file
+#    params = {'n': N_array, 'k': K_array, 'c': c_array, 'l': lambda_array,
+#            'iter': rand_tests, 'algorithms': algos, 'metrics': metrics}
+#    savename = "%spkls/fulltest.pkl" % globVars.FILEPATH
+#    savename2 = "%spkls/fulltestparams.pkl" % globVars.FILEPATH
+#    pickle.dump(results, open(savename, 'wb'), protocol=2)
+#    pickle.dump(params, open(savename2, 'wb'), protocol=2)
     
 
