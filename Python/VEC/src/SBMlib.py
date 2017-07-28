@@ -91,10 +91,10 @@ def SBM_param_init(K, N, lambda_n, alpha_n, dataType='const', **prob_weight):
     SBM_params['B0'] = lambda_n * np.eye(K) + (1-lambda_n)*np.ones((K, K))
     if 'p' in prob_weight:
         z = prob_weight['p']
-        SBM_params['a'] = z/sum(z)
+        SBM_params['p'] = z/sum(z)
     else:
         z = np.ones((1, K))
-        SBM_params['a'] = z[0]/float(K)
+        SBM_params['p'] = z[0]/float(K)
     return SBM_params
 
 #%%
@@ -104,7 +104,7 @@ def SBM_simulate(model):
     The model is returned by the SBM_param_init() function.
     """
     G = nx.Graph()
-    b = model['a']
+    b = model['p']
     J, q = alias_setup(b)
     n = model['N']
     B = model['B0']*model['alpha']
@@ -119,11 +119,9 @@ def SBM_simulate(model):
         for j in range(i+1, n):
             com2 = G.node[j]['community']
             prob = B[com1, com2]
-            s = np.random.binomial(1, prob, 1)
-            if s[0] == 1:
+            if np.random.rand() < prob:
                 G.add_edge(i, j, weight=1.0)
                 totaledges += 1
-    globVars.printDebug('the graph has '+str(totaledges)+' total edges.')
     return G
 
 def SBM_simulate_fast(model):
@@ -131,7 +129,7 @@ def SBM_simulate_fast(model):
     Simulates the SBM graph, fast version.
     """
     G = nx.Graph()
-    b = model['a']
+    b = model['p']
     J, q = alias_setup(b)
     n = model['N']
     k = model['K']
@@ -151,7 +149,7 @@ def SBM_simulate_fast(model):
         for j in range(i, k):
             grp2 = grps[j]
             L2 = len(grp2)
-            if i == j:
+            if i == j:  
                 Gsub = nx.fast_gnp_random_graph(L1, B[i, i])
             else:
                 Gsub = nx.algorithms.bipartite.random_graph(L1, L2, B[i, j])
@@ -160,7 +158,6 @@ def SBM_simulate_fast(model):
                 nd2 = grp2[z[1]-L1]
                 G.add_edge(nd1, nd2, weight=1.0)
                 totaledges += 1
-    globVars.printDebug('the graph has '+str(totaledges)+' total edges.')
     return G
 
 def get_label_list(G):

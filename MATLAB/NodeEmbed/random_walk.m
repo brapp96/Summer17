@@ -1,34 +1,26 @@
-function s = random_walk(curr,length,P,doNBT)
+function s = random_walk(curr,length,G,doNBT)
 % Runs a random walk on positive values of G of length 'length' starting at
 % 'curr'. If doNBT is set to 1, the function will ensure the random walk
-% doesn't backtrack either. P contains the aliasing array to make
-% generation of next step faster
+% doesn't backtrack. This version only works for unweighted graphs but is
+% correspondingly faster. Also note that here we've set the walks to be
+% reluctantly backtracking ones, not entirely non-backtracking.
+
 s = zeros(1,length);
 prev = -1;
+if isempty(find(G(:,curr),1))
+    s = [];
+    return
+end
 for i = 1:length
     s(i) = curr;
-    alias = P{s(i)};
-    if isempty(alias)
-        s(i+1:end) = [];
-        return
-    end
+    next = find(G(:,s(i)));
     if doNBT
-        x = find(prev==alias(:,1),1);
-        if ~isempty(x)
-            alias = alias([1:x-1,x+1:end],:);
-            if isempty(alias)
-                s(i+1:end) = [];
-                return
-            end
+        next(next==prev) = [];
+        if isempty(next)
+            next = prev;
         end
         prev = curr;
     end
-    x = ceil(rand()*size(alias,1));
-    prob = alias(x,3);
-    if rand() > prob
-        curr = alias(x,2);
-    else
-        curr = alias(x,1);        
-    end
+    curr = next(ceil(rand()*numel(next)));
 end
 end

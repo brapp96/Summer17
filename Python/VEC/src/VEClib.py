@@ -21,7 +21,7 @@ def build_node_alias(G):
         entry = {}
         entry['names'] = [key for key in d]
  #       weights = [math.exp(d[key]['weight']) for key in d]
-        weights = [d[key]['weight'] for key in d]
+        weights = [1.0 for key in d] #[d[key]['weight'] for key in d]
         sumw = sum(weights)
         entry['weights'] = [i/sumw for i in weights]
         J, q = SBM.alias_setup(entry['weights'])
@@ -35,8 +35,7 @@ def alias_draw(J, q):
     Draw random samples from a discrete distribution with specific nonuniform
     weights. Code was adapted from the following source:
     https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/
-   """
-
+    """
     # Draw from the overall uniform mixture.
     kk = int(np.random.rand()*len(J))
     # Draw from the binary mixture.
@@ -45,8 +44,7 @@ def alias_draw(J, q):
     else:
         return J[kk]
 
-def create_random_walks(S, num_paths, length_path, filename,
-                        inMem=False, NBT=False):
+def create_random_walks(S, num_reps, length, filename, inMem=False, NBT=False):
     """
     Create the list of random walk "sentences" on the graph using the adjacency
     list S from build_node_alias().
@@ -57,10 +55,10 @@ def create_random_walks(S, num_paths, length_path, filename,
         fp = open(globVars.FILEPATH+filename, 'w')
     nodes = S.keys()
     for nd in nodes:
-        for _ in range(num_paths):
+        for _ in range(num_reps):
             walk = [nd] # start at current node
             cur = -1
-            for _ in range(length_path):
+            for _ in range(length):
                 prev = cur
                 cur = walk[-1]
                 next_nds = list(S[cur]['names']) # need full copy to pass value
@@ -86,6 +84,13 @@ def create_random_walks(S, num_paths, length_path, filename,
     if ~inMem:
         fp.close()
     return sentence
+
+def SBM_only_walks(G, rw_filename, num_reps=10, length=60, NBT=False):
+    "Prints the random walks of a graph to file without running embedding."
+    globVars.printDebug('1 building alias auxiliary functions')
+    S = build_node_alias(G)
+    globVars.printDebug('2 creating random walks')
+    create_random_walks(S, num_reps, length, rw_filename, NBT)
 
 def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
                        dim=50, winsize=8, NBT=False, useC=True, inMem=False):
@@ -114,8 +119,11 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
         command = w2vpath+'word2vec -train '+globVars.FILEPATH+rw_filename\
                   +' -output '+globVars.FILEPATH+emb_filename+' -size '\
                   +str(dim)+' -window '+str(winsize)+' -negative 5 -cbow 0 '\
-                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 50'\
-                  +' >> '+globVars.FILEPATH+'test.log'
+                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 50'
+        if globVars.DEBUG:
+            command = command+' | tee -a '+globVars.FILEPATH+'test.log'
+        else:
+            command = command+' >> '+globVars.FILEPATH+'test.log'
         os.system(command)
     else:
         if ~inMem:
@@ -169,18 +177,18 @@ def plot_res(data_path, param_path):
              param_path - file path of the .pkl file containing parameters used
     """
     import matplotlib.pyplot as plt
-  
+
     res = pickle.load(open(data_path, 'rb'))
     params = pickle.load(open(param_path, 'rb'))
     x_array = params['c']                   # parameter varied during experiment
-    algos = params['algorithms']            # algorithms used : deep, nbt etc. 
-    
+    algos = params['algorithms']            # algorithms used : deep, nbt etc.
+
     # get nmi and ccr for all algos
     nmi_mean = {}
     nmi_std = {}
     ccr_mean = {}
     ccr_std = {}
-    
+
     for a in algos:
         nm = np.zeros((len(x_array),))
         nstd = np.zeros((len(x_array),))
@@ -188,7 +196,7 @@ def plot_res(data_path, param_path):
         cstd = np.zeros((len(x_array),))
 
         for x in range(len(x_array)):
-            nm[x]  = np.mean(res[a]['nmi'][x])
+            nm[x] = np.mean(res[a]['nmi'][x])
             nstd[x] = np.std(res[a]['nmi'][x])
             cm[x] = np.mean(res[a]['ccr'][x])
             cstd[x] = np.std(res[a]['ccr'][x])
@@ -196,15 +204,15 @@ def plot_res(data_path, param_path):
         nmi_std[a] = nstd
         ccr_mean[a] = cm
         ccr_std[a] = cstd
-    
+
     # Plot NMI
-    fig = plt.figure(1, figsize=(10, 6))    
+    #fig = plt.figure(1, figsize=(10, 6))
     cmap = plt.get_cmap('jet')
     i = 0
     for a in algos:
         color = cmap(float(i)/len(algos))
         plt.errorbar(x_array, nmi_mean[a], yerr=nmi_std[a],
-                     color=color, marker = 'o', markersize=8)
+                     color=color, marker='o', markersize=8)
         i += 1
     legend = ["nmi-%s" % a for a in algos]
     plt.legend(legend, loc=0)
@@ -214,12 +222,12 @@ def plot_res(data_path, param_path):
     plt.show()
 
     # Plot CCR
-    fig = plt.figure(2, figsize=(10, 6))
+    #fig = plt.figure(2, figsize=(10, 6))
     i = 0
     for a in algos:
         color = cmap(float(i)/len(algos))
         plt.errorbar(x_array, ccr_mean[a], yerr=ccr_std[a],
-                    color=color, marker = 'o', markersize=8)
+                     color=color, marker='o', markersize=8)
         i += 1
     legend = ["ccr-%s" % a for a in algos]
     plt.legend(legend, loc=0)
@@ -227,15 +235,15 @@ def plot_res(data_path, param_path):
     plt.ylim(-0.05, 1.05)
     plt.title('CCR vs c')
     plt.show()
-   
-    print('Deep\n')
-    print('Average CCR:{}\n'.format(ccr_mean['deep']))
-    print('Average NMI:{}\n\n'.format(nmi_mean['deep']))
-    print('NBT\n')
-    print('Average CCR:{}\n'.format(ccr_mean['nbt']))
-    print('Average NMI:{}\n\n'.format(nmi_mean['nbt']))
+
+    print 'Deep\n'
+    print 'Average CCR:{}\n'.format(ccr_mean['deep'])
+    print 'Average NMI:{}\n\n'.format(nmi_mean['deep'])
+    print 'NBT\n'
+    print 'Average CCR:{}\n'.format(ccr_mean['nbt'])
+    print 'Average NMI:{}\n\n'.format(nmi_mean['nbt'])
     # Save plots
 #    plt.savefig(fstring+'.eps', bbox_inches='tight', format='eps')
 #    plt.savefig(fstring+'.png', bbox_inches='tight', format='png')
-    return 
+    return
 

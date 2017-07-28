@@ -17,67 +17,61 @@ function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT)
 % Brian Rappaport, 7/24/17
 
 % set vars
-n = numel(L); % number of points
+if size(L,2) ~= 1, L = L'; end % ensure L is a column vector
 k = max(L); % number of communities
-len = 60; % length of random walk
-rw_reps = 10; % number of random walks per data point
+len = 15; % length of random walk
+rw_reps = 20; % number of random walks per data point
 dim = 50; % embedded dimension
-winsize = 8; % window size
+winsize = 5; % window size
 read_fp = 'sentences.txt';
 write_fp = 'embeddings.txt';
-numWorkers = 4; % honestly not really sure what this does but it's probably important
+numWorkers = 8; % honestly not really sure what this does but it's probably important
 
 % write random walks to file
-disp('creating random walks...');
+%disp('creating random walks...');
 nodes2file(G,read_fp,rw_reps,len,doNBT);
 % run word2vec with external C code
-disp('running embedding...');
 command = ['./word2vec -train ' read_fp ' -output ' write_fp ...
           ' -size ' int2str(dim) ' -window ' int2str(winsize) ...
-          ' -negative 5 -cbow 0 -sample 1e-4 -debug 2 -workers ' int2str(numWorkers)];
+          ' -negative 5 -cbow 0 -sample 1e-4 -debug 0 -workers ' ...
+          int2str(numWorkers)];
 system(command);
 % get embeddings from word2vec
-U = file2embs(write_fp);
+[U,labels] = file2embs(write_fp);
+L = L(labels);
 % run kmeans
 Em = kmeans(U,k);
 Em_true = get_true_emb(Em,L);
-ccr = sum(Em_true == L)*100/n;
+ccr = sum(Em_true == L)*100/numel(L);
 nmi = get_nmi(Em_true, L);
-disp(ccr);
-disp(nmi);
 end
 
-function U = file2embs(filename)
+function [U,labels] = file2embs(filename)
 % Reads a file from word2vec and returns it as an array in memory.
-fp = fopen(filename,'rb');
-dims = fscanf(fp,'%d %d');
-dims(1) = dims(1) - 1; % word2vec finds '</s>' as a word
-U = zeros(dims');
-fgets(fp);
-for i = 1:dims(1)
-    line = fgets(fp);
-    [node,line] = strtok(line); %#ok<STTOK>
-    U(str2double(node),:) = eval(['[' line ']']);
-end
-fclose(fp);
+U = dlmread(filename,' ',2,0);
+labels = U(:,1);
+U = U(:,2:end-1);
 end
 
 function nodes2file(G,filename,rw_reps,len,doNBT)
-% Runs random walks on G and writes to a file.
+% Runs random walks on G and writes to a file. Note that all walks must be
+% exactly len nodes long or this will have fairly catastrophic off-by-one
+% errors.
 
-% set variables
 n = size(G,1);
-P = create_aliases(G);
+rw = zeros(len,rw_reps,n);
 fp = fopen(filename,'wb');
-% create walks
 parfor i = 1:n
+    if isempty(find(G(i,:),1))
+        continue
+    end
     for j = 1:rw_reps
-        rw = random_walk(i,len,P,doNBT);
-        for k = 1:numel(rw)
-            fprintf(fp,'%d ',rw(k));
-        end
-        fprintf(fp,'\n');
+        rw(:,j,i) = random_walk(i,len,G,doNBT);
     end
 end
+rw(rw==0) = [];
+fmtstr = repmat('%d ',1,len);
+fmtstr = [fmtstr(1:end-1) '\n'];
+fprintf(fp,fmtstr,rw);
 fclose(fp);
 end

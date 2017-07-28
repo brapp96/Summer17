@@ -156,7 +156,7 @@ def multi_abp(G, r, lambda1, m, mp, dim, K):
 def SBM_SNR(model):
     "Defines the SNR and first and second eigenvalues of the model"
     Q = model['B0']*model['alpha']*float(model['N'])
-    P = np.diag(model['a'])
+    P = np.diag(model['p'])
     Z = np.dot(P, Q)
     u, _ = np.linalg.eig(Z)
     ua = sorted(u, reverse=True)

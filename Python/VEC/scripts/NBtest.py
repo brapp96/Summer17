@@ -25,20 +25,22 @@ if __name__ == '__main__':
     rw_filename = 'sentences.txt'
     emb_filename = 'emb.txt'
     num_reps = 10
-    length = 60
+    length = 15
     dim = 50
-    winsize = 8
-    c_array = [5.0]
+    winsize = 6
+    read_graphs = False    
+    
+    c_array = [2.0, 3.0, 4.0, 6.0, 8.0, 10.0]
     K_array = [2]  # number of communities
     N_array = [1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
-    rand_tests = 1 
-    algos = ['deep', 'nbt']
-    metrics = ['nmi', 'ccr']
+    rand_tests = 5
+    algos = ['deep', 'nbt', 'sc', 'abp']
+    metrics = ['nmi', 'ccr', 'ars']
 
     # parsing arguments to file
-    usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>]
-                   [-d <dimension>] [-r <num_paths>] [-l <length>]'''
+    usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>] 
+                [-d <dimension>] [-r <num_paths>] [-l <length>]'''
     try:
         opts, _ = getopt.getopt(sys.argv[1:], "hqd:w:r:l:i:o:")
     except getopt.GetoptError:
@@ -65,10 +67,12 @@ if __name__ == '__main__':
 
     # initialize log file
     if globVars.DEBUG:
-        logfile = open(globVars.FILEPATH+'test.log', 'w')
-        logfile.write(str(datetime.datetime.utcnow()))
-        logfile.write('\nLogging details of run:\n')
-        logfile.close()
+        print str(datetime.datetime.utcnow())
+        print str('Logging details of run:')
+    logfile = open(globVars.FILEPATH+'test.log', 'w')
+    logfile.write(str(datetime.datetime.utcnow()))
+    logfile.write('\nLogging details of run:')
+    logfile.close()
 
     # initialize results
     results = {}
@@ -86,24 +90,33 @@ if __name__ == '__main__':
                 for indll, ll in enumerate(lambda_array):
                     globVars.printDebug('\n\nK: '+str(K)+', N: '+str(N)+', c: '
                                         +str(c)+', lambda: '+str(ll))
-                    model_sbm1 = SBM.SBM_param_init(K, N, ll, c)
+                    model_sbm = SBM.SBM_param_init(K, N, ll, c)
                     for rand in range(rand_tests):
                         y = {}
                         globVars.printDebug('\nBeginning iteration %d of %d...'
                                             % (rand+1, rand_tests))
                         exp_str = 'N'+str(N)+'-K'+str(K)+'-c'+str(c)+'-la'+str(ll)+'-iter'+str(rand)
-
-                        # simulate graph
-                        G = SBM.SBM_simulate_fast(model_sbm1)
-                        ln, names = SBM.get_label_list(G)
+                        
+                        if read_graphs:
+                            with open('../graphs/'+exp_str+'.txt') as fp:
+                                Gstr = fp.readlines()
+                            G = nx.read_adjlist(Gstr[:-1])
+                            labels = Gstr[-1][1:-1].split(',')
+                            ln = [int(ch) for ch in labels]
+                            names = [str(i) for i in range(N)]
+                        else:
+                            # simulate graph
+                            G = SBM.SBM_simulate_fast(model_sbm)
+                            ln, names = SBM.get_label_list(G)
                             
-                        # write graph and labels to file 
-                        m = nx.to_numpy_matrix(G, dtype=int) 
-                        np.savetxt('graph', m, fmt='%d')
-                        lbls = np.array(ln)
-                        np.savetxt('graph_labels', lbls, fmt='%d')
+                            # write graph to file 
+                            m = nx.to_numpy_matrix(G, dtype=int) 
+                            np.savetxt('graph.txt', m, fmt='%d')
+                        
+                            lbls = np.array(ln)
+                            np.savetxt('graph_lbls.txt', lbls, fmt='%d')
 
-                       # algo1: proposed deepwalk algorithm
+                        # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
                         model_w2v = algs.SBM_learn_deepwalk(G, rw_filename, emb_filename,
                                                             num_reps=num_reps, dim=dim,
@@ -137,7 +150,7 @@ if __name__ == '__main__':
                             # algo4: belief propogation
                             globVars.printDebug('starting ABP algorithm...')
                             r = 3
-                            m, mp, lambda1 = ABP.abp_params(model_sbm1)
+                            m, mp, lambda1 = ABP.abp_params(model_sbm)
                             y['abp'] = ABP.SBM_ABP(G, r, lambda1, m, mp)
 
                         # save results

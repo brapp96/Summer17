@@ -41,6 +41,6 @@ for i = 1:n
     indJ(end+1:end+numel(f)) = i;
 end
 G = sparse(indI,indJ,ones(numel(indI),1),n,n,numel(indI));
-G = max(G,G');
+G = triu(G)+triu(G)';
 % G = [G(2:2:end,1:2:end) G(1:2:end,1:2:end);G(2:2:end,2:2:end) G(1:2:end,2:2:end)];
 end

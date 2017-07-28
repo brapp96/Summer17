@@ -30,5 +30,5 @@ for i = 1:n
     indJ(end+1:end+numel(f)) = i;
 end
 G = sparse(indI,indJ,ones(numel(indI),1),n,n,numel(indI));
-G = max(G,G');
+G = triu(G) + triu(G)';
 end

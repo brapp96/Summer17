@@ -10,11 +10,12 @@ def init():
     global FILEPATH
     global DEBUG
     FILEPATH = '' # dummy initialization - unsure if necessary or not
-    DEBUG = 0
+    DEBUG = False
 
 def printDebug(string):
     "Print a string only if DEBUG flag is set"
     if DEBUG:
-        logfile = open(FILEPATH+'/test.log', 'a')
-        logfile.write(string+'\n')
-        logfile.close()     
+        print string
+    logfile = open(FILEPATH+'/test.log', 'a')
+    logfile.write(string+'\n')
+    logfile.close()     
