@@ -47,8 +47,7 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
     # print 'there are {0:.0f} nodes'.format(n)
     for j in xrange(0, n):
         degree[j] = sum(adjacency[j])
-        p[j] = adjacency[j]/degree[j]
- 
+     
     for i in np.where(degree==0):                       #add fake neighbor
         cluster  = true_labels[i]
         j = np.random.randint(0,n)
@@ -56,7 +55,12 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
             j = np.random.randint(0,n)
         degree[i] = degree[i] + 1
         degree[j] = degree[j] + 1
-       
+        adjacency[i,j] = 1
+        adjacency[j,i] = 1
+     
+    for j in xrange(0,n):
+         p[j] = adjacency[j]/degree[j]
+    
     
     if nRW >= 0:
         #### c for visit count matrix
@@ -77,7 +81,7 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
         c = c - p
         pi = (degree.conj().T)/sum(degree)
         c = c + np.tile(pi, (n, 1))
-        c = np.linalg.inv(c)                    # c is non-invertible??
+        c = np.linalg.inv(c)            
 
     DSD = np.zeros((n, n))
     for i in xrange(0, n):

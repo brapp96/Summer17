@@ -33,22 +33,14 @@ N = np.size(graphAdj[0])
 print('Calculate DSD...')
 DSD = calcDSD.calculator(graphAdj, true_labels, len_rw, quiet)
 
-
-
-
-
-pdb.set_trace()
-#inf_marker = np.max(DSD)
-#DSD[np.where(DSD == -1)] = inf_marker
-
 # Compute Gaussian kernel as similarity graph for spectral clustering  
 sigma = 100 
 DSD_sim = np.exp(-DSD**2 / (2.*(sigma**2)))
-#pdb.set_trace()
+pdb.set_trace()
 
 # Apply spectral clustering and reorder labels \\\TO DO
 print('Applying spectral clustering...')
-labels = sc.spectral_clustering(DSD, n_clusters=2)
+labels = sc.spectral_clustering(DSD_sim, n_clusters=2)
 pdb.set_trace()
 
 # Get metrics
@@ -60,5 +52,5 @@ acc_ccr = float(Conf[r, c].sum())/float(N)
 
 print('CCR: {}\n'.format(acc_ccr))
 print('NMI: {}\n\n'.format(acc_nmi))
-#pdb.set_trace()
+pdb.set_trace()
 
