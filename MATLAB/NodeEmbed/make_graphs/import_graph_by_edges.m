@@ -1,5 +1,5 @@
 function [G,L] = import_graph_by_edges(N,K,c,lambda,iter)
-filename = sprintf('N%d-K%d-c%.1f-la%.1f-iter%d.txt',N,K,c,lambda,iter);
+filename = sprintf('graphs/N%d-K%d-c%.1f-la%.1f-iter%d.txt',N,K,c,lambda,iter);
 fp = fopen(filename,'rb');
 for i = 1:3 % strip comments
     fgets(fp);

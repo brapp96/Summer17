@@ -25,7 +25,7 @@ dim = 64; % embedded dimension
 winsize = 8; % window size
 read_fp = 'sentences.txt';
 write_fp = 'embeddings.txt';
-numWorkers = 4; % honestly not really sure what this does but it's probably important
+numWorkers = 55;
 
 % write random walks to file
 %disp('creating random walks...');
