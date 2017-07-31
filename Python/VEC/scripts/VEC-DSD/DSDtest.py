@@ -16,12 +16,12 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import time 
 
-len_rw = -1     # Length of random walks
+len_rw = 15     # Length of random walks
 quiet = True   # True if less output needed
-N =  1000
+N =  100
 K = 2
-#c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
-c_array = [4.0,5.0, 6.0, 8.0, 10.0,12.0, 15.0, 20.0]
+c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
+#c_array = [4.0,5.0, 6.0, 8.0, 10.0,12.0, 15.0, 20.0]
 ll = 0.9
 rand = 0 
 
@@ -80,5 +80,11 @@ print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N, K, c_array, 
 print('CCR: {}\n'.format(acc_ccr))
 print('NMI: {}\n\n'.format(acc_nmi))
     #pdb.set_trace()
-       
+
+f = open('results', 'a')
+f.write(str(acc_ccr)+ '\n')
+f.write(str(acc_nmi))
+f.close()
+
 print('Time elapsed: {}\n'.format(time.time() - start))
+

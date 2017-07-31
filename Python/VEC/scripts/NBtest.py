@@ -32,7 +32,7 @@ if __name__ == '__main__':
     
     c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
     K_array = [2]  # number of communities
-    N_array = [1000] # number of nodes
+    N_array = [100] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     rand_tests = 1
     algos = ['deep', 'nbt']
@@ -159,17 +159,31 @@ if __name__ == '__main__':
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
                             for met in metrics:
                                 results[name][met][indc, indK, indN, indll, rand] = m[met]
-    
-    # Print out results
-    print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N_array,
-        K_array, c_array, lambda_array))
-    print('Backtracking RW:\n')    
-    print('CCR : {}'.format(results['deep']['ccr'][:,0,0,0,0]))
-    print('NMI : {}\n'.format(results['deep']['nmi'][:,0,0,0,0]))
 
-    print('Non-backtracking RW:\n')
-    print('CCR : {}'.format(results['nbt']['ccr'][:,0,0,0,0]))
-    print('NMI : {}\n\n'.format(results['nbt']['nmi'][:,0,0,0,0]))
+
+# Print out results
+print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N_array,
+    K_array, c_array, lambda_array))
+print('Backtracking RW:\n')    
+print('CCR : {}'.format(results['deep']['ccr'][:,0,0,0,0]))
+print('NMI : {}\n'.format(results['deep']['nmi'][:,0,0,0,0]))
+
+print('Non-backtracking RW:\n')
+print('CCR : {}'.format(results['nbt']['ccr'][:,0,0,0,0]))
+print('NMI : {}\n\n'.format(results['nbt']['nmi'][:,0,0,0,0]))
+
+
+# print metrics to file
+f = open('VEC-DSD/results', 'a')
+import pdb
+pdb.set_trace()
+f.write(str(results['deep']['ccr'][:,0,0,0,0])+ '\n')
+f.write(str(results['deep']['nmi'][:,0,0,0,0])+ '\n')
+f.write(str(results['nbt']['ccr'][:,0,0,0,0])+ '\n')
+f.write(str(results['nbt']['nmi'][:,0,0,0,0])+ '\n')
+
+f.close()
+
 
 
 #    # Write results to file
