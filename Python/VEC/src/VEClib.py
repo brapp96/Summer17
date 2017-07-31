@@ -67,16 +67,16 @@ def create_random_walks(S, num_reps, length, filename, inMem=False, NBT=False):
                 J = S[cur]['J']
                 q = S[cur]['q']
                 if NBT and prev in next_nds:
-                    if len(next_nds) == 1:
-                        break
-                    ind = next_nds.index(prev)
-                    del next_nds[ind]
-                    J = J[range(0, ind)+range(ind+1, len(J))]
-                    q = q[range(0, ind)+range(ind+1, len(q))]
+                    if len(next_nds) != 1:
+                        ind = next_nds.index(prev)
+                        del next_nds[ind]
+                        J = J[range(0, ind)+range(ind+1, len(J))]
+                        q = q[range(0, ind)+range(ind+1, len(q))]        
                 rd = alias_draw(J, q)
                 nextnd = next_nds[rd]
                 walk.append(nextnd)
             walk = [str(x) for x in walk]
+    #        print(len(walk))
             if inMem:
                 sentence.append(walk)
             else:

@@ -1,7 +1,7 @@
-2017-07-31 20:13:20.081763
+2017-07-31 22:13:40.014104
 Logging details of run:
 
-K: 2, N: 100, c: 2.0, lambda: 0.9
+K: 2, N: 10000, c: 2.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -9,21 +9,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 47600
+Vocab size: 10001
+Words in train file: 4188800
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 4998
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 1.1; lambda2: 0.9
+Vocab size: 10001
+Words in train file: 4188800
 
 
-K: 2, N: 100, c: 3.0, lambda: 0.9
+K: 2, N: 10000, c: 3.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -31,21 +28,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 53000
+Vocab size: 10001
+Words in train file: 5091800
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 7660
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 1.65; lambda2: 1.35
+Vocab size: 10001
+Words in train file: 5091800
 
 
-K: 2, N: 100, c: 4.0, lambda: 0.9
+K: 2, N: 10000, c: 4.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -53,21 +47,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 54800
+Vocab size: 10001
+Words in train file: 5553800
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 16921
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 2.2; lambda2: 1.8
+Vocab size: 10001
+Words in train file: 5553800
 
 
-K: 2, N: 100, c: 5.0, lambda: 0.9
+K: 2, N: 10000, c: 5.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -75,21 +66,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 58400
+Vocab size: 10001
+Words in train file: 5805200
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 16434
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 2.75; lambda2: 2.25
+Vocab size: 10001
+Words in train file: 5805200
 
 
-K: 2, N: 100, c: 6.0, lambda: 0.9
+K: 2, N: 10000, c: 6.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -97,21 +85,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 60200
+Vocab size: 10001
+Words in train file: 5958200
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 19610
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 3.3; lambda2: 2.7
+Vocab size: 10001
+Words in train file: 5958200
 
 
-K: 2, N: 100, c: 8.0, lambda: 0.9
+K: 2, N: 10000, c: 8.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -119,21 +104,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 61400
+Vocab size: 10001
+Words in train file: 6124400
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 39445
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 4.4; lambda2: 3.6
+Vocab size: 10001
+Words in train file: 6124400
 
 
-K: 2, N: 100, c: 10.0, lambda: 0.9
+K: 2, N: 10000, c: 10.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -141,21 +123,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 62000
+Vocab size: 10001
+Words in train file: 6175400
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 59473
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 5.5; lambda2: 4.5
+Vocab size: 10001
+Words in train file: 6175400
 
 
-K: 2, N: 100, c: 12.0, lambda: 0.9
+K: 2, N: 10000, c: 12.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -163,21 +142,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 62000
+Vocab size: 10001
+Words in train file: 6192200
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 54843
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 6.6; lambda2: 5.4
+Vocab size: 10001
+Words in train file: 6192200
 
 
-K: 2, N: 100, c: 15.0, lambda: 0.9
+K: 2, N: 10000, c: 15.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -185,21 +161,18 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 61400
+Vocab size: 10001
+Words in train file: 6198200
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 61400
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 8.25; lambda2: 6.75
+Vocab size: 10001
+Words in train file: 6198200
 
 
-K: 2, N: 100, c: 20.0, lambda: 0.9
+K: 2, N: 10000, c: 20.0, lambda: 0.9
 
 Beginning iteration 1 of 1...
 starting normal VEC algorithm...
@@ -207,15 +180,12 @@ starting normal VEC algorithm...
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 62000
+Vocab size: 10001
+Words in train file: 6200000
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 101
-Words in train file: 62000
-starting spectral clustering...
-starting ABP algorithm...
-lambda1: 11.0; lambda2: 9.0
+Vocab size: 10001
+Words in train file: 6200000
