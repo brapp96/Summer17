@@ -82,8 +82,8 @@ print('NMI: {}\n\n'.format(acc_nmi))
     #pdb.set_trace()
 
 f = open('results', 'a')
-f.write(str(acc_ccr)+ '\n')
-f.write(str(acc_nmi))
+f.write(str(acc_ccr.tolist())[1:-1]+ '\n')
+f.write(str(acc_nmi.tolist())[1:-1]+ '\n')
 f.close()
 
 print('Time elapsed: {}\n'.format(time.time() - start))

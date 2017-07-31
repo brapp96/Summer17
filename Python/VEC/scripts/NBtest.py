@@ -14,6 +14,7 @@ parent_dir_name = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 if parent_dir_name not in sys.path:
     sys.path.append(parent_dir_name)
 from src import globVars, SBMlib as SBM, VEClib as algs, ABPlib as ABP
+import pdb
 
 if __name__ == '__main__':
      # setting global variables
@@ -175,12 +176,10 @@ print('NMI : {}\n\n'.format(results['nbt']['nmi'][:,0,0,0,0]))
 
 # print metrics to file
 f = open('VEC-DSD/results', 'a')
-import pdb
-pdb.set_trace()
-f.write(str(results['deep']['ccr'][:,0,0,0,0])+ '\n')
-f.write(str(results['deep']['nmi'][:,0,0,0,0])+ '\n')
-f.write(str(results['nbt']['ccr'][:,0,0,0,0])+ '\n')
-f.write(str(results['nbt']['nmi'][:,0,0,0,0])+ '\n')
+f.write(str(results['deep']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
+f.write(str(results['deep']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
+f.write(str(results['nbt']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
+f.write(str(results['nbt']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
 
 f.close()
 

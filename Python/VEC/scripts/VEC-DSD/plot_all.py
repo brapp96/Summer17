@@ -2,9 +2,10 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pdb
 
 #SBM parameters: 
-N=[1000]
+N=[100]
 k=[2]
 x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]  # Variable c
 ll=[0.9]
@@ -51,8 +52,7 @@ f = open('results', 'r')
 for a in algos:
     for m in metrics:
         line = f.readline().strip()
-        line = np.asarray(line.split(), dtype = float)        
-        res[a][m] = line
+        res[a][m] = np.array(line.split(', '), dtype=float)
 
 # get nmi and ccr for all algos
 nmi_mean = {}
