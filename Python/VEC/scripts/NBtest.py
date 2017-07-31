@@ -26,12 +26,13 @@ if __name__ == '__main__':
     rw_filename = 'sentences.txt'
     emb_filename = 'emb.txt'
     num_reps = 10
-    length = 60
+    length = 60 
     dim = 50
     winsize = 8
     read_graphs = True    
     
-    c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
+    #c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
+    c_array = [10.0]
     K_array = [2]  # number of communities
     N_array = [100] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
