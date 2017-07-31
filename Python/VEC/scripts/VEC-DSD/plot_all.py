@@ -5,7 +5,7 @@ import numpy as np
 import pdb
 
 #SBM parameters: 
-N=[100]
+N=[1000]
 k=[2]
 x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]  # Variable c
 ll=[0.9]

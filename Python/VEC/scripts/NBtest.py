@@ -31,10 +31,10 @@ if __name__ == '__main__':
     winsize = 8
     read_graphs = True    
     
-    #c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
-    c_array = [10.0]
+    c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
+ #   c_array = [10.0]
     K_array = [2]  # number of communities
-    N_array = [100] # number of nodes
+    N_array = [10000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     rand_tests = 1
     algos = ['deep', 'nbt']
@@ -175,14 +175,14 @@ print('CCR : {}'.format(results['nbt']['ccr'][:,0,0,0,0]))
 print('NMI : {}\n\n'.format(results['nbt']['nmi'][:,0,0,0,0]))
 
 
-# print metrics to file
-f = open('VEC-DSD/results', 'a')
-f.write(str(results['deep']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
-f.write(str(results['deep']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
-f.write(str(results['nbt']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
-f.write(str(results['nbt']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
-
-f.close()
+## print metrics to file
+#f = open('VEC-DSD/results', 'a')
+#f.write(str(results['deep']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
+#f.write(str(results['deep']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
+#f.write(str(results['nbt']['ccr'][:,0,0,0,0].tolist())[1:-1] + '\n')
+#f.write(str(results['nbt']['nmi'][:,0,0,0,0].tolist())[1:-1] + '\n')
+#
+#f.close()
 
 
 

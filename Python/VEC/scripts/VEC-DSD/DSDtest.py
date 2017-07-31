@@ -18,7 +18,7 @@ import time
 
 len_rw = 15     # Length of random walks
 quiet = True   # True if less output needed
-N =  100
+N =  1000
 K = 2
 c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 #c_array = [4.0,5.0, 6.0, 8.0, 10.0,12.0, 15.0, 20.0]
