@@ -25,12 +25,12 @@ if __name__ == '__main__':
     rw_filename = 'sentences.txt'
     emb_filename = 'emb.txt'
     num_reps = 10
-    length = 15
+    length = 60
     dim = 50
-    winsize = 6
-    read_graphs = False    
+    winsize = 8
+    read_graphs = True    
     
-    c_array = [10.0]
+    c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
     K_array = [2]  # number of communities
     N_array = [1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
@@ -115,7 +115,6 @@ if __name__ == '__main__':
                         
                             lbls = np.array(ln)
                             np.savetxt('graph_labels', lbls, fmt='%d')
-
                         # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
                         model_w2v = algs.SBM_learn_deepwalk(G, rw_filename, emb_filename,
@@ -165,12 +164,12 @@ if __name__ == '__main__':
     print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N_array,
         K_array, c_array, lambda_array))
     print('Backtracking RW:\n')    
-    print('CCR : {}'.format(results['deep']['ccr']))
-    print('NMI : {}\n'.format(results['deep']['nmi']))
+    print('CCR : {}'.format(results['deep']['ccr'][:,0,0,0,0]))
+    print('NMI : {}\n'.format(results['deep']['nmi'][:,0,0,0,0]))
 
     print('Non-backtracking RW:\n')
-    print('CCR : {}'.format(results['nbt']['ccr']))
-    print('NMI : {}\n\n'.format(results['nbt']['nmi']))
+    print('CCR : {}'.format(results['nbt']['ccr'][:,0,0,0,0]))
+    print('NMI : {}\n\n'.format(results['nbt']['nmi'][:,0,0,0,0]))
 
 
 #    # Write results to file

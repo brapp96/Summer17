@@ -47,20 +47,20 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
     # print 'there are {0:.0f} nodes'.format(n)
     for j in xrange(0, n):
         degree[j] = sum(adjacency[j])
-     
-    for i in np.where(degree==0):                       #add fake neighbor
+
+    isol, col = np.where(degree==0)      #find isolated nodes
+    
+    for i in isol:                       #add fake neighbor
         cluster  = true_labels[i]
         j = np.random.randint(0,n)
-        while np.all([true_labels[j] != cluster, i==j]):
+        while np.any([true_labels[j] != cluster, i==j]):
             j = np.random.randint(0,n)
         degree[i] = degree[i] + 1
         degree[j] = degree[j] + 1
         adjacency[i,j] = 1
         adjacency[j,i] = 1
-     
     for j in xrange(0,n):
          p[j] = adjacency[j]/degree[j]
-    
     if nRW >= 0:
         #### c for visit count matrix
         #### for example, c(2,3) is the number of times
@@ -91,9 +91,10 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
             else:
                 DSD[i, j] = -1
                 DSD[j, i] = -1
+    #        pdb.set_trace()
         if(not quiet) and ((i % 100 == 0) or (i == n-1)):
             print('    finish calculating DSD for %d/%d nodes' % (i+1, n))
-
+    #pdb.set_trace()
     return DSD
 
 

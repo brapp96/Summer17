@@ -1,0 +1,56 @@
+Calculate DSD...
+Applying spectral clustering...
+Calculating metrics...
+
+SBM parameters: N=10000, k=2, c=15.0, lambda=0.9
+
+
+CCR: 0.9939
+
+NMI: 0.94635479606
+
+
+Time elapsed: 1623.77663398
+
+Calculate DSD...
+Applying spectral clustering...
+Calculating metrics...
+
+SBM parameters: N=1000, k=2, c=15.0, lambda=0.9
+
+
+CCR: 0.993
+
+NMI: 0.939852615722
+
+
+Time elapsed: 7.50974011421
+
+__________________________________________________________
+
+SBM parameters: N=1000, k=2, c=[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0], lambda=0.9
+
+
+CCR: [ 0.504  0.501  0.522  0.893  0.923  0.976  0.97   0.989  0.993  0.995]
+
+NMI: [ 0.02020976  0.02050361  0.02473462  0.51620573  0.60874932  0.83674586
+  0.80778708  0.91270631  0.93985262  0.95593033]
+
+
+Time elapsed: 71.563986063
+
+
+Calculate DSD...
+Applying spectral clustering...
+Calculating metrics...
+
+SBM parameters: N=1000, k=2, c=[10.0], lambda=0.9
+
+
+CCR: [ 0.971]
+
+NMI: [ 0.81344098]
+
+
+Time elapsed: 9.08126211166
+
