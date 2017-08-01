@@ -119,7 +119,7 @@ def SBM_learn_deepwalk(G, rw_filename, emb_filename, num_reps=10, length=60,
         command = w2vpath+'word2vec -train '+globVars.FILEPATH+rw_filename\
                   +' -output '+globVars.FILEPATH+emb_filename+' -size '\
                   +str(dim)+' -window '+str(winsize)+' -negative 5 -cbow 0 '\
-                  +'-iter 3 -sample 1e-4 -debug '+str(dbStatus) +' -workers 50'
+                  +'-iter 5  -sample 1e-4 -debug '+str(dbStatus) +' -workers 50'
         if globVars.DEBUG:
             command = command+' | tee -a '+globVars.FILEPATH+'test.log'
         else:

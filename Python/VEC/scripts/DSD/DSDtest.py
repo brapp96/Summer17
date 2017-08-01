@@ -16,17 +16,17 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import time 
 
-len_rw = [5,10,15, -1]     # Length of random walks
+len_rw = [5, -1]     # Length of random walks
 quiet = True   # True if less output needed
-N =  1000
+N =  10000
 K = 2
 #c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 c_array = [5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 ll = 0.9
-rand_tests = 1
+rand_tests = 5
 
 start = time.time()
-f = open('dsd_len.txt', 'a')
+f = open('dsd_data/N10000vsC.txt', 'a')
 
 for r in range(rand_tests): 
     for dsd_type in len_rw:

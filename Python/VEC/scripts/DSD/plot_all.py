@@ -8,12 +8,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pdb
 
-# SBM parameter changed (out of N, K, c, lambda(
-x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
+# SBM parameter changed (out of N, K, c, lambda)
+#x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
+x_array =[5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
 
 # Load data 
 res = {}
-algos = ['deep', 'nbt']
+#algos = ['deep', 'nbt']
+algos = ['dsd-rw', 'dsd-inf']
 metrics = ['ccr', 'nmi']
 rand_tests = 5
 
@@ -24,7 +26,9 @@ for r in range(rand_tests):
         for met in metrics:
             res[r][name][met] = np.empty((len(x_array)))
 
-f = open('../N1000vsC.txt', 'r')
+f = open('dsd_data/N1000vsC.txt', 'r')
+#f = open('../vec_data/shortN10000vsC.txt', 'r')
+
 for r in range(rand_tests):
     for a in algos:
         for m in metrics:
@@ -74,7 +78,10 @@ plt.xlabel('c')
 plt.ylim(-0.05, 1.05)
 plt.xticks(np.arange(np.max(x_array)+1))
 plt.title('CCR vs c')
+plt.savefig('dsd_figs/N1000vsC-CCR.png')
+#plt.savefig('../vec_figs/shortN10000vsC-CCR.png')
 plt.show()
+
 
 # Plot NMI
 fig = plt.figure(2, figsize=(10, 6))
@@ -90,6 +97,8 @@ plt.xlabel('c')
 plt.ylim(-0.05, 1.05)
 plt.xticks(np.arange(np.max(x_array)+1))
 plt.title('NMI vs c')
+plt.savefig('dsd_figs/N1000vsC-NMI.png')
+#plt.savefig('../vec_figs/shortN10000vsC-NMI.png')
 plt.show()
 
 
