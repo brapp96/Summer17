@@ -1,4 +1,4 @@
-mainPath = '/home/brappa01/summer17/MATLAB';
+mainPath = '/home/brian/Documents/summer17/MATLAB';
 addpath(genpath(mainPath));
 cd(mainPath);
 cd NodeEmbed

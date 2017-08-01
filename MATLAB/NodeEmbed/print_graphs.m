@@ -1,19 +1,48 @@
-N = [100,200,500,1000,2000,5000,10000];
-c = [2,3,4,5,6,8,10,12,15,20];
-
-for nn = 2:numel(N)
-    figure;
-    hold on
-    yyaxis left
-    axis([-inf inf 0 1]);
-    errorbar(c,mean(nbt(nn,:,:),3),std(nbt(nn,:,:),0,3))
-    errorbar(c,mean(nnbt(nn,:,:),3),std(nnbt(nn,:,:),0,3))
-    yyaxis right
-    axis([-inf inf 50 100]);
-    errorbar(c,mean(cbt(nn,:,:),3),std(cbt(nn,:,:),0,3))
-    errorbar(c,mean(cnbt(nn,:,:),3),std(cnbt(nn,:,:),0,3))
-    legend({'NMI BT','NMI NBT', 'CCR BT', 'CCR NBT'});
-    title(['N = ' num2str(N(nn))]);
-    saveas(gcf,sprintf('N%dvariedc1.fig',N(nn)));
-    saveas(gcf,sprintf('N%dvariedc1.png',N(nn)));
+function print_graphs(filename,var) %#ok<*NODEF>
+% For printing data from any set of comparable RW and NBRW runs
+load(filename);
+switch var
+    case {'c','C'}
+        if numel(c) == 1
+            error('c should be greater than 1');
+        end
+        for nn = 1:numel(N)
+            figure;
+            hold on
+            yyaxis left
+            axis([-inf inf 0 1]);
+            errorbar(c,mean(nmi_bt(nn,:,:),3),std(nmi_bt(nn,:,:),0,3))
+            errorbar(c,mean(nmi_nbt(nn,:,:),3),std(nmi_nbt(nn,:,:),0,3))
+            yyaxis right
+            axis([-inf inf 50 100]);
+            errorbar(c,mean(ccr_bt(nn,:,:),3),std(ccr_bt(nn,:,:),0,3))
+            errorbar(c,mean(ccr_nbt(nn,:,:),3),std(ccr_nbt(nn,:,:),0,3))
+            legend({'NMI BT','NMI NBT', 'CCR BT', 'CCR NBT'});
+            title(['N = ' num2str(N(nn))]);
+            saveas(gcf,sprintf('N%dvariedc.fig',N(nn)));
+            saveas(gcf,sprintf('N%dvariedc.png',N(nn)));
+        end
+    case {'n','N'}
+        if numel(N) == 1
+            error('N should be greater than 1');
+        end
+        for cc = 1:numel(c)
+            figure;
+            hold on
+            yyaxis left
+            axis([-inf inf 0 1]);
+            errorbar(N,mean(nmi_bt(:,cc,:),3),std(nmi_bt(:,cc,:),0,3))
+            errorbar(N,mean(nmi_nbt(:,cc,:),3),std(nmi_nbt(:,cc,:),0,3))
+            yyaxis right
+            axis([-inf inf 50 100]);
+            errorbar(N,mean(ccr_bt(:,cc,:),3),std(ccr_bt(:,cc,:),0,3))
+            errorbar(N,mean(ccr_nbt(:,cc,:),3),std(ccr_nbt(:,cc,:),0,3))
+            legend({'NMI BT','NMI NBT', 'CCR BT', 'CCR NBT'});
+            title(['c = ' num2str(c(cc))]);
+            saveas(gcf,sprintf('c%dvariedN.fig',c(cc)));
+            saveas(gcf,sprintf('c%dvariedN.png',c(cc)));
+        end
+    otherwise
+        error('Must be one of "N","n","C","c".');
+end
 end

@@ -17,7 +17,9 @@ for i = 1:length
     if doNBT
         next(next==prev) = [];
         if isempty(next)
+            %s(i+1:end) = [];
             next = prev;
+            %return;
         end
         prev = curr;
     end
