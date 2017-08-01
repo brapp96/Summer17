@@ -1,4 +1,4 @@
-function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT)
+function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT,len)
 % Implements the node embeddings 'vec' algorithm of Ding et al. including a
 % non-backtracking random walks option. This version works with file I/O
 % and the use of the compiled "word2vec" code of Mikolov et al. 
@@ -19,10 +19,10 @@ function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT)
 % set vars
 if size(L,2) ~= 1, L = L'; end % ensure L is a column vector
 k = max(L); % number of communities
-len = 5; % length of random walk
-rw_reps = 15; % number of random walks per data point
+%len = 5; % length of random walk (BECAME PARAMETER)
+rw_reps = 20; % number of random walks per data point
 dim = 50; % embedded dimension
-winsize = 4; % window size
+winsize = 5; % window size
 read_fp = 'sentences.txt';
 write_fp = 'embeddings.txt';
 numWorkers = 4;
