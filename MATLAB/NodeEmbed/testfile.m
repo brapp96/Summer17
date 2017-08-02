@@ -1,5 +1,6 @@
 N = [1000,2000,3000,5000];
 c = [1,2,3,4,5,6,8,10];
+K = 2;
 num_reps = 5;
 quiet = 0;
 len = 10;
@@ -11,7 +12,7 @@ nmi_nbt = zeros(numel(N),numel(c),num_reps);
 for i = 1:numel(N)
     for j = 1:numel(c)
         %[G,L] = import_graph_by_edges(N(i),2,c(j),.9,iter);
-        [G,L] = sbm_gen(N(i),2,c(j),c(j)/10,45);
+        [G,L] = sbm_gen(N(i),K,c(j),c(j)/10,45);
         if ~quiet 
                 fprintf('N = %d, c = %d\n',N(i),c(j));
         end
@@ -21,7 +22,7 @@ for i = 1:numel(N)
         end
     end
 end
-save(['figs/nmi_ccr_' datestr(clock,'mm-dd-yy_HH:MM:SS') '.mat'],'nmi_bt','nmi_nbt','ccr_bt','ccr_nbt','N','c','len');
+save(['figs/nmi_ccr_' datestr(clock,'mm-dd-yy_HH:MM:SS') '.mat'],'nmi_bt','nmi_nbt','ccr_bt','ccr_nbt','N','K','c','len');
 for nn = 1:numel(N)
     figure;
     hold on
