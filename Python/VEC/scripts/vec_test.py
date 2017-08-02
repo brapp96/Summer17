@@ -33,15 +33,17 @@ if __name__ == '__main__':
     dim = 50
     winsize = 5 
     read_graphs = True    
-    
+   
     c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
-   # c_array = [5.0, 10.0]
-    K_array = [3]  # number of communities
-    N_array = [100] # number of nodes
+    K_array = [2]  # number of communities
+    N_array = [2000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     rand_tests = 5
     algos = ['deep', 'nbt']
     metrics = ['nmi', 'ccr']
+
+    data_const = 'N{}'.format(N_array[0])
+    data_varied = 'C'
 
     # parsing arguments to file
     usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>] 
@@ -106,7 +108,7 @@ if __name__ == '__main__':
                             with open('../graphs/'+exp_str+'.txt') as fp:
                                 Gstr = fp.readlines()
                             G = nx.read_adjlist(Gstr[:-1])
-                            pdb.set_trace()
+                            #pdb.set_trace()
                             labels = Gstr[-1][1:-1].split(',')
                             ln = [int(ch) for ch in labels]
                             names = [str(i) for i in range(N)]
@@ -181,7 +183,8 @@ if __name__ == '__main__':
 
 
 # print metrics to file
-f = open('vec_data/shortK3N100vsC.txt', 'a')
+filename = '../results/vec_data/{}vs{}.txt'.format(data_const, data_varied) 
+f = open(filename, 'a')
 for i in range(rand_tests):
     f.write(str(results['deep']['ccr'][:,0,0,0,i].tolist())[1:-1] + '\n')
     f.write(str(results['deep']['nmi'][:,0,0,0,i].tolist())[1:-1] + '\n')

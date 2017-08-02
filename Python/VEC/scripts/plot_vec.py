@@ -10,6 +10,9 @@ import pdb
 
 # SBM parameter changed (out of N, K, c, lambda)
 x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
+N = 10000
+data_const = 'N{}'.format(N)
+data_varied = 'C'
 
 # Load data 
 res = {}
@@ -24,7 +27,7 @@ for r in range(rand_tests):
         for met in metrics:
             res[r][name][met] = np.empty((len(x_array)))
 
-f = open('../results/vec_data/N10000vsC.txt', 'r')
+f = open('../results/vec_data/{}vs{}.txt'.format(data_const, data_varied), 'r')
 
 for r in range(rand_tests):
     for a in algos:
@@ -72,23 +75,25 @@ for a in algos:
     i+=1
 
 # Plot CCR
-color = cmap(float(1)/len(metrics))
+color = cmap(float(1.5)/len(metrics))       #Red
 for a in algos:
-    plt.errorbar(x_array, ccr_mean[a], yerr=ccr_std[a], color=color, marker='.', linestyle=ls[a])
+    plt.errorbar(x_array, ccr_mean[a], yerr=ccr_std[a], color=color, marker='.',
+            capsize=10, linestyle=ls[a])
     legend = legend + ["ccr: %s" % a]
 
 # Plot NMI
-color = cmap(float(1.5)/len(metrics))
+color = cmap(float(1)/len(metrics))       #Blue
 for a in algos:
-    plt.errorbar(x_array, nmi_mean[a], yerr=nmi_std[a], color=color, marker='.', linestyle=ls[a])
+    plt.errorbar(x_array, nmi_mean[a], yerr=nmi_std[a], color=color, marker='.',
+            capsize=10, linestyle=ls[a])
     legend = legend + ["nmi: %s" % a]
 
 plt.legend(legend, loc=0)
 plt.xlabel('c')
 plt.ylim(-0.05, 1.05)
 plt.xticks(np.arange(np.max(x_array)+1))
-plt.title('N')
-#plt.savefig('testplot.png')
+plt.title('N = {} vs {}'.format(N, data_varied))
+plt.savefig('../results/vec_figs/{}vs{}.png'.format(data_const, data_varied))
 plt.show()
 
 
