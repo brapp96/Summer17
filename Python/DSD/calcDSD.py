@@ -25,15 +25,15 @@ MA 02110-1301, USA
 
 import numpy as np
 import re
+import pdb
 
-
-def calculator(adjacency, nRW, quiet=False):
+def calculator(adjacency,true_labels, nRW, quiet=False):
     """
     adjacency - adjacency matrix represented as a numpy array
                 assumes graph is fully connected.
 
     nRW - the length of random walks used to calculate DSD
-          if nRW = -1, then calculate 
+          if nRW = -1, then calculate using closed form expression instead 
 
     quiet - Whether to print verbose messages.
 
@@ -43,13 +43,24 @@ def calculator(adjacency, nRW, quiet=False):
     n = np.size(adjacency[0])
     p = np.zeros((n, n))
     degree = np.zeros((n, 1))
+
     # print 'there are {0:.0f} nodes'.format(n)
     for j in xrange(0, n):
         degree[j] = sum(adjacency[j])
-        for i in xrange(0, n):
-            if degree[j] != 0:
-                p[j] = adjacency[j]/degree[j]
 
+    isol, col = np.where(degree==0)      #find isolated nodes
+    
+    for i in isol:                       #add fake neighbor
+        cluster  = true_labels[i]
+        j = np.random.randint(0,n)
+        while np.any([true_labels[j] != cluster, i==j]):
+            j = np.random.randint(0,n)
+        degree[i] = degree[i] + 1
+        degree[j] = degree[j] + 1
+        adjacency[i,j] = 1
+        adjacency[j,i] = 1
+    for j in xrange(0,n):
+         p[j] = adjacency[j]/degree[j]
     if nRW >= 0:
         #### c for visit count matrix
         #### for example, c(2,3) is the number of times
@@ -69,7 +80,7 @@ def calculator(adjacency, nRW, quiet=False):
         c = c - p
         pi = (degree.conj().T)/sum(degree)
         c = c + np.tile(pi, (n, 1))
-        c = np.linalg.inv(c)
+        c = np.linalg.inv(c)            
 
     DSD = np.zeros((n, n))
     for i in xrange(0, n):
@@ -80,9 +91,10 @@ def calculator(adjacency, nRW, quiet=False):
             else:
                 DSD[i, j] = -1
                 DSD[j, i] = -1
+    #        pdb.set_trace()
         if(not quiet) and ((i % 100 == 0) or (i == n-1)):
             print('    finish calculating DSD for %d/%d nodes' % (i+1, n))
-
+    #pdb.set_trace()
     return DSD
 
 
