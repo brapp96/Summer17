@@ -25,16 +25,14 @@ dim = 50; % embedded dimension
 winsize = 5; % window size
 read_fp = 'sentences.txt';
 write_fp = 'embeddings.txt';
-numWorkers = 4;
 
 % write random walks to file
-disp 'beginning random walks...'
+%disp 'beginning random walks...'
 nodes2file(G,read_fp,rw_reps,len,doNBT);
 % run word2vec with external C code
 command = ['./word2vec -train ' read_fp ' -output ' write_fp ...
           ' -size ' int2str(dim) ' -window ' int2str(winsize) ...
-          ' -sample 1e-4 -debug 2 -workers ' ...
-          int2str(numWorkers)];
+          ' -sample 1e-4 -debug 0 -workers 55 -threads 55'];
 system(command);
 % get embeddings from word2vec
 [U,labels] = file2embs(write_fp);
