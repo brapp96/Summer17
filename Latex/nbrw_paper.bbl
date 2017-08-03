@@ -41,8 +41,8 @@
     \endentry
     \entry{DSD}{article}{}
       \name{author}{7}{}{%
-        {{hash=bf3327be848f8d83883742ef2a7bbb5d}{%
-           family={Caao},
+        {{hash=bae52f66e883450522e110438c494784}{%
+           family={Cao},
            familyi={C\bibinitperiod},
            given={Mengfei},
            giveni={M\bibinitperiod}}}%
@@ -77,10 +77,10 @@
            given={Benjamin},
            giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{7ff303d351276b972083825d40c8f6c8}
-      \strng{fullhash}{1b2e966e09ac82d9806c820cb5c883ee}
-      \strng{authornamehash}{7ff303d351276b972083825d40c8f6c8}
-      \strng{authorfullhash}{1b2e966e09ac82d9806c820cb5c883ee}
+      \strng{namehash}{dd969236bf16b869ecef2a52eb9a9e3b}
+      \strng{fullhash}{ebc7cfa7e4e62d4a8236968936d288cd}
+      \strng{authornamehash}{dd969236bf16b869ecef2a52eb9a9e3b}
+      \strng{authorfullhash}{ebc7cfa7e4e62d4a8236968936d288cd}
       \field{sortinit}{2}
       \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}

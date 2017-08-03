@@ -3,6 +3,21 @@ Comprehensive test file for Vec-BT and Vec-NBT
 Brian Rappaport, Anuththari Gamage 
 8/2017
 
+
+Parameters being tested:
+    N = [1000, 2000, 5000, 10000]
+    K = [2,3]
+    c = [2,3,4,5,6,8,10,12,15,20]
+    lambda = [0.9]
+    num_rw = [10, 20?]
+    len_rw = [5,10,20]
+    w = [len_rw]
+    doNBT = [0,1]
+    dim = 50
+    neg_samples = 5
+    t = 1e-4
+    rand_tests = 15
+
 """
 
 import os
@@ -36,41 +51,25 @@ if __name__ == '__main__':
    
     c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
     K_array = [2]  # number of communities
-    N_array = [2000] # number of nodes
+    N_array = [5000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
-    rand_tests = 5
+    rand_tests = 15
     algos = ['deep', 'nbt']
     metrics = ['nmi', 'ccr']
 
+   
+   # # parsing arguments to file
+   # usage_str = '''vec_test.py [-N <nodes>]'''
+   # 
+   # try:
+   #     opts, _ = getopt.getopt(sys.argv[1:], "hqd:w:r:l:i:o:")
+   # except getopt.GetoptError:
+   #     print usage_str
+   #     sys.exit(2)
+   # for opt, arg in opts:
+        
     data_const = 'N{}'.format(N_array[0])
     data_varied = 'C'
-
-    # parsing arguments to file
-    usage_str = '''NBtest.py [-q] [-i <infile>] [-o <outfile>] [-w <winsize>] 
-                [-d <dimension>] [-r <num_paths>] [-l <length>]'''
-    try:
-        opts, _ = getopt.getopt(sys.argv[1:], "hqd:w:r:l:i:o:")
-    except getopt.GetoptError:
-        print usage_str
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print usage_str
-            sys.exit(2)
-        elif opt == '-q':
-            globVars.DEBUG = False
-        elif opt == 'd':
-            dim = arg
-        elif opt == 'w':
-            winsize = arg
-        elif opt == 'r':
-            num_reps = arg
-        elif opt == 'l':
-            length = arg
-        elif opt == 'i':
-            rw_filename = arg
-        elif opt == 'o':
-            emb_filename = arg
 
     # initialize log file
     if globVars.DEBUG:
@@ -95,34 +94,43 @@ if __name__ == '__main__':
         for indK, K in enumerate(K_array):
             for indN, N in enumerate(N_array):
                 for indll, ll in enumerate(lambda_array):
-                    globVars.printDebug('\n\nK: '+str(K)+', N: '+str(N)+', c: '
-                                        +str(c)+', lambda: '+str(ll))
-                    model_sbm = SBM.SBM_param_init(K, N, ll, c)
+                    globVars.printDebug('\n\nK: '+str(K)+', N: '+str(N)+', c: '+str(c)+', lambda: '+str(ll))
+                    exp_str = 'N'+str(N)+'-K'+str(K)+'-c'+str(c)
+                        
+                    if read_graphs:
+                        with open('../graphs/'+exp_str+'.txt') as fp:
+                            Gstr = fp.readlines()
+                        G = nx.read_adjlist(Gstr[:-1])
+                        labels = Gstr[-1][1:-1].split(',')
+                        ln = [int(ch) for ch in labels]
+                        names = [str(i) for i in range(N)]
+                        isol = np.zeros(N)
+                        num = 0
+                        # Remove isolated nodes
+                        for i in range(N):
+                            if len(G[str(i)]) == 0:
+                               G.remove_node(str(i))
+                               del ln[i-num]
+                               del names[i-num]
+                               num +=1
+                        Nmod = len(G.nodes())
+                    else:
+                        # simulate graph
+                        model_sbm = SBM.SBM_param_init(K, N, ll, c)
+                        G = SBM.SBM_simulate_fast(model_sbm)
+                        ln, names = SBM.get_label_list(G)
+                        
+                        # write graph to file 
+                        m = nx.to_numpy_matrix(G, dtype=int) 
+                        np.savetxt('graph', m, fmt='%d')
+                    
+                        lbls = np.array(ln)
+                        np.savetxt('graph_labels', lbls, fmt='%d')
+                    
                     for rand in range(rand_tests):
                         y = {}
                         globVars.printDebug('\nBeginning iteration %d of %d...'
                                             % (rand+1, rand_tests))
-                        exp_str = 'N'+str(N)+'-K'+str(K)+'-c'+str(c)+'-la'+str(ll)+'-iter'+str(rand)
-                        
-                        if read_graphs:
-                            with open('../graphs/'+exp_str+'.txt') as fp:
-                                Gstr = fp.readlines()
-                            G = nx.read_adjlist(Gstr[:-1])
-                            #pdb.set_trace()
-                            labels = Gstr[-1][1:-1].split(',')
-                            ln = [int(ch) for ch in labels]
-                            names = [str(i) for i in range(N)]
-                        else:
-                            # simulate graph
-                            G = SBM.SBM_simulate_fast(model_sbm)
-                            ln, names = SBM.get_label_list(G)
-                            
-                            # write graph to file 
-                            m = nx.to_numpy_matrix(G, dtype=int) 
-                            np.savetxt('graph', m, fmt='%d')
-                        
-                            lbls = np.array(ln)
-                            np.savetxt('graph_labels', lbls, fmt='%d')
 
                         # algo1: proposed deepwalk algorithm
                         globVars.printDebug('starting normal VEC algorithm...')
@@ -146,24 +154,8 @@ if __name__ == '__main__':
                         k_means.fit(X)
                         y['nbt'] = k_means.labels_
 
-                       # if N <= 2000:
-                       #     # algo3: spectral clustering
-                       #     A = nx.to_scipy_sparse_matrix(G)
-                       #     globVars.printDebug('starting spectral clustering...')
-                       #     sc = SpectralClustering(n_clusters=K, affinity='precomputed',
-                       #                             eigen_solver='arpack')
-                       #     sc.fit(A)
-                       #     y['sc'] = sc.labels_
-
-                       #     # algo4: belief propogation
-                       #     globVars.printDebug('starting ABP algorithm...')
-                       #     r = 3
-                       #     m, mp, lambda1 = ABP.abp_params(model_sbm)
-                       #     y['abp'] = ABP.SBM_ABP(G, r, lambda1, m, mp)
-
                         # save results
                         for name in algos:
-                            if N > 2000 and (name == 'sc' or name == 'abp'): continue
                             m = {}
                             m['nmi'], m['ccr'], m['ars'] = algs.cal_metrics(ln, y[name])
                             for met in metrics:

@@ -1330,3 +1330,78 @@ starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335
+Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
+Vocab size: 3328
+Words in train file: 349335

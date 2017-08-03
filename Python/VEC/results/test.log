@@ -1,831 +1,205 @@
-2017-08-02 16:20:18.513531
+2017-08-03 21:19:05.720431
 Logging details of run:
 
-K: 2, N: 2000, c: 2.0, lambda: 0.9
+K: 2, N: 5000, c: 2.0, lambda: 0.9
 
-Beginning iteration 1 of 5...
+Beginning iteration 1 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 2 of 5...
+Beginning iteration 2 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 3 of 5...
+Beginning iteration 3 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 4 of 5...
+Beginning iteration 4 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 5 of 5...
+Beginning iteration 5 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 159675
+Vocab size: 3328
+Words in train file: 349335
 
-
-K: 2, N: 2000, c: 3.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
+Beginning iteration 6 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 2 of 5...
+Beginning iteration 7 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 3 of 5...
+Beginning iteration 8 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 4 of 5...
+Beginning iteration 9 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 5 of 5...
+Beginning iteration 10 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 182550
+Vocab size: 3328
+Words in train file: 349335
 
-
-K: 2, N: 2000, c: 4.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
+Beginning iteration 11 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 2 of 5...
+Beginning iteration 12 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
+Vocab size: 3328
+Words in train file: 349335
 starting nonbacktracking VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
+Vocab size: 3328
+Words in train file: 349335
 
-Beginning iteration 3 of 5...
+Beginning iteration 13 of 15...
 starting normal VEC algorithm...
 1 building alias auxiliary functions
 2 creating random walks
 3 learning word2vec models
 Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 192900
-
-
-K: 2, N: 2000, c: 5.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 201075
-
-
-K: 2, N: 2000, c: 6.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 203700
-
-
-K: 2, N: 2000, c: 8.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 208500
-
-
-K: 2, N: 2000, c: 10.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209700
-
-
-K: 2, N: 2000, c: 12.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 209775
-
-
-K: 2, N: 2000, c: 15.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-
-K: 2, N: 2000, c: 20.0, lambda: 0.9
-
-Beginning iteration 1 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 2 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 3 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 4 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-
-Beginning iteration 5 of 5...
-starting normal VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
-starting nonbacktracking VEC algorithm...
-1 building alias auxiliary functions
-2 creating random walks
-3 learning word2vec models
-Starting training using file /home/agamar01/github/Summer17/Python/VEC/results/sentences.txt
-Vocab size: 2001
-Words in train file: 210000
+Vocab size: 3328
+Words in train file: 349335
