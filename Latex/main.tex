@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[sorting=ynt]{biblatex}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{ {figures/} }
+\addbibresource{biblio.bib}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\title{Node Embeddings, DSD, and Random Walks \\ \large{Initial Notes}}
+\author{Brian Rappaport, Anuththari Gamage, Shuchin Aeron }
+\date{July 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In this project we will explore efficient and reliable ways of clustering nodes into groups/communities based on pairwise (noisy with missing links) interactions (modeled as edges on a graph). Recently in \cite{DSD} the authors propose to impose a metric on the nodes, referred to as diffusion state distance, or DSD, derived using random walks on the graph to derive a robust affinity measure between nodes followed by spectral clustering \cite{Luxburg}. On the other hand, in another recent paper \cite{NodeEmbed} the authors generate "sentences" of nodes by random walks on the graph as in word2vec \cite{word2vec} followed by embedding the sentences of nodes using a popular method, namely SGNS, for finding Euclidean word embeddings for NLP tasks \cite{LevyGoldberg}.
+
+\begin{enumerate}
+    
+    \item In the first part of this project we want to numerically explore the connection between these two approaches. While the approach in \cite{DSD} builds upon the limiting DSD, that can be computed in closed form, between nodes it is computationally expensive for large graphs (?? - read the paper). On the other hand the approach in \cite{NodeEmbed} is computationally more attractive it being based on SGNS using SGD like methods that are known to scale well for large problem sizes.
+    
+    \begin{enumerate}
+    
+        \item The connection that we want to explore is to check the clustering performance on SBM using the two methods.   Conjecture: Both should be similar. 
+            
+        \item What happens when we change the RW to NBRW \cite{xx} or other vertex reinforced RW \cite{xx}? 
+        
+    \end{enumerate}
+    
+    \item Can one directly compute the PMI matrix or the co-occurance matrix from the Adjacency matrix of the Graph? Then there is no need to perform random walk for node embedding. 
+    
+    \item Extend DSD for RW to DSD for NBRW - if the numerical results are good. 
+    
+    \item Can we use a tensor approach? From DSD, which is pairwise can we compute a DSD like metric for triples? How will this help? Similarly, can we take the node embedding method and use Eric Bailey's approach that computed Tensor Factorization for embedding \cite{Bailey}. 
+    
+    \item How to combine multiple graphs (DREAM part 2)?
+    
+\end{enumerate}
+
+\section{Sr. Design Proposal}
+
+The goal of this project is to investigate graph clustering algorithms based upon pairwise interaction data among entities. Such scenarios arise in disciplines as varied as natural language processing for machine translation and interpretation, biological systems of protein-protein interactions, or community detection in social networks. Specifically we will investigate several methods from classical Spectral Clustering to cutting-edge methods such as using the Diffusion State Distance metric on networks and embedding the nodes of a graph in Euclidean space via the well-known word2vec deep learning architecture. The final deliverable will be a suite of algorithms in Python and MATLAB that are computationally efficient, reliable, and robust to many types of data, as well as a rich variety of datasets and a detailed, well organized literature survey for bringing in future researchers to this exciting and important work.
+Anyone interested in being a part of this project should have a strong mathematical background, especially in linear algebra, and be prepared to survey recent literature in machine learning and statistics. A background in algorithm design and optimization would also be appreciated. The focus will be mainly on software rather than hardware.
+
+\section{Description}
+
+The Stochastic Block Model is a commonly used graph model for community detection. It builds off of the classical Erdős-Rényi $G(n,p)$ random graph model, wherein each edge of a graph with $n$ nodes is formed with probability $p$. In SBM (technically the planted partition model), $G(n,p)$ is additionally given $k$ clusters, and the probability an edge is formed within the cluster is $a$ while intercluster edges are formed with probability $b$. Clearly, $b$ should be lower than $a$ in order to form an assortive graph. In our work, we have elected to make $b$ proportional to $a$, so $b = \lambda a$ where $\lambda$ is between 0 and 1. Our model is represented as $S(n,k,p,\lambda)$.
+
+[add hubs and spokes model description?]
+
+In order to generate sentences for use in the word2vec stochastic gradient descent algorithm, we need to perform random walks on the graphs. Since the graphs are unweighted, this is simply a matter of choosing at random among the neighbors of each node. We perform a certain number of walks starting from each node to a specific length. Here we also can set the walks to be reluctantly backtracking, where the walk will choose to return to a node immediately after leaving it only if it had no other possible choices. We will also not perform walks on any isolated nodes.
+
+Once the sentences have been formed, we use an existing implementation of word2vec\cite{word2vec}. This takes a corpus of sentences (in this case, the random walks on the graph) and embeds them into $d$-dimensional space by means of stochastic gradient descent. Details on this algorithm can be found in \cite{word2vec}.
+
+\section{Results}
+
+\begin{figure}[ht]
+ 
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=.95\linewidth]{N1000variedc} 
+\caption{1000 data points}
+\label{fig:subim1}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=.95\linewidth]{N2000variedc}
+\caption{2000 data points}
+\label{fig:subim2}
+\end{subfigure}
+\caption{Accuracy of these algorithms, measured with two different metrics, correct classification rate and normalized mutual information. The x-axis c measures the sparsity of the graph, where an edge is made with probability c/N.}
+\label{fig:image2}
+\end{figure}
+
+\printbibliography
+
+\end{document}

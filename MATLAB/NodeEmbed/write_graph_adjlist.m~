@@ -1,3 +1,4 @@
+
 function write_graph_adjlist(G,L,filename)
     fp = fopen(filename,'wb');
     UG = triu(G);

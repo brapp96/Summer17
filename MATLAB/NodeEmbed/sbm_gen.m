@@ -9,11 +9,11 @@ if(mod(N,q) ~= 0)
     fprintf('Using N = %d, which is a multiple of q\n',q*floor(N/q));
 end
 size = floor(N/q);
-N = q*size;
 conf_true = zeros(N,1);
 for k = 1:q
     conf_true(1+(k-1)*size:(k)*size) = k;
 end
+conf_true(conf_true==0) = 1;
 A = sparse(N,N);
 for i = 1:q
     current_block = sprand(size,size,cin/N);
