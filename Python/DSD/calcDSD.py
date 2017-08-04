@@ -39,20 +39,24 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
 
     returns DSD matrix represented as a numpy array
     """
-    #### p for transition matrix
     n = np.size(adjacency[0])
-    p = np.zeros((n, n))
     degree = np.zeros((n, 1))
 
-    # print 'there are {0:.0f} nodes'.format(n)
     for j in xrange(0, n):
         degree[j] = sum(adjacency[j])
 
-    irow, icol = np.where(degree==0)      #find and remove isolated nodes
-    pdb.set_trace()    
+    isol, col = np.where(degree==0)      #find and remove isolated nodes  
+    adjacency = np.delete(adjacency, isol, 0)
+    adjacency = np.delete(adjacency, isol, 1)
+    true_labels = np.delete(true_labels, isol)
+    degree = np.delete(degree, isol)
 
+    n = np.size(adjacency[0])
+    p = np.zeros((n, n))
+    
     for j in xrange(0,n):
          p[j] = adjacency[j]/degree[j]
+    
     if nRW >= 0:
         #### c for visit count matrix
         #### for example, c(2,3) is the number of times
@@ -73,21 +77,16 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
         pi = (degree.conj().T)/sum(degree)
         c = c + np.tile(pi, (n, 1))
         c = np.linalg.inv(c)            
-
+     
     DSD = np.zeros((n, n))
     for i in xrange(0, n):
         for j in xrange(i+1, n):
-            if degree[i] and degree[j]:
-                DSD[i, j] = np.linalg.norm((c[i, :]-c[j, :]), ord=1)
-                DSD[j, i] = DSD[i, j]
-            else:
-                DSD[i, j] = -1
-                DSD[j, i] = -1
-    #        pdb.set_trace()
+            DSD[i, j] = np.linalg.norm((c[i, :]-c[j, :]), ord=1)
+            DSD[j, i] = DSD[i, j]
         if(not quiet) and ((i % 100 == 0) or (i == n-1)):
             print('    finish calculating DSD for %d/%d nodes' % (i+1, n))
     #pdb.set_trace()
-    return DSD
+    return DSD, true_labels
 
 
 def writeoutMatrix(DSD, names, ofile):

@@ -18,12 +18,12 @@ import time
 
 len_rw = [5, -1]     # Length of random walks
 quiet = True   # True if less output needed
-N =  1000
+N =  10000
 K = 2
 #c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 c_array = [5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 ll = 0.9
-rand_tests = 15
+rand_tests = 1
 
 data_const = 'N{}'.format(N)
 data_varied = 'C'
@@ -57,9 +57,10 @@ for r in range(rand_tests):
             
             #Calculate DSD and obtain similarity matrix for spectral clustering
             print('Calculate DSD...')
-            DSD = calcDSD.calculator(graphAdj, true_labels, dsd_type, quiet) 
-            DSD[DSD == 0] = 1
-            DSD_sim = 1/(DSD)
+            DSD, true_labels = calcDSD.calculator(graphAdj, true_labels, dsd_type, quiet) 
+            irow, icol = np.where(DSD == 0)
+            DSD[irow, icol] = 1
+            DSD_sim = 1/(DSD + np.eye(DSD.shape[0]))
             
             # Apply spectral clustering and reorder labels using Hungarian algorithm
             print('Applying spectral clustering...')
@@ -73,6 +74,7 @@ for r in range(rand_tests):
             acc_nmi[i] = metrics.normalized_mutual_info_score(true_labels,labels)
             acc_ccr[i] = float(Conf[row, col].sum())/float(N)
             
+           
         #print('\nSBM parameters: N={}, k={}, c={}, lambda={}\n\n'.format(N, K, c_array, ll))
         #    
         #print('CCR: {}\n'.format(acc_ccr))
