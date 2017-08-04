@@ -18,15 +18,17 @@ import time
 
 len_rw = [5, -1]     # Length of random walks
 quiet = True   # True if less output needed
-N =  10000
+N =  1000
 K = 2
 #c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 c_array = [5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0]
 ll = 0.9
-rand_tests = 5
+rand_tests = 15
 
-start = time.time()
-f = open('dsd_data/N10000vsC.txt', 'a')
+data_const = 'N{}'.format(N)
+data_varied = 'C'
+
+f = open('results/dsd_data/{}vs{}.txt'.format(data_const, data_varied), 'a')
 
 for r in range(rand_tests): 
     for dsd_type in len_rw:
@@ -35,9 +37,9 @@ for r in range(rand_tests):
                 
         for i in range(len(c_array)):
             c = c_array[i]
-            exp_str = 'N'+str(N)+'-K'+str(K)+'-c'+str(c)+'-la'+str(ll)+'-iter'+str(r)
+            exp_str = 'N'+str(N)+'-K'+str(K)+'-c'+str(c)
             
-            with open('../../graphs/'+exp_str+'.txt') as fp:
+            with open('../VEC/graphs/'+exp_str+'.txt') as fp:
                 Gstr = fp.readlines()
             G = nx.read_adjlist(Gstr[:-1])
             labels = Gstr[-1][1:-1].split(',')
@@ -85,5 +87,5 @@ f.write('DSD parameters: Length of RW={}, RandTests={}'.format(len_rw, rand_test
 f.close()
 
 
-print('Time elapsed: {}\n'.format(time.time() - start))
+
 

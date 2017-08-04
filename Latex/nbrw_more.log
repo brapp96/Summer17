@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.3)  4 AUG 2017 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.3)  4 AUG 2017 11:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,42 +776,43 @@ Package caption Info: End \AtBeginDocument code.
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 115.
+(Font)              <7> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 115.
-
-[2]
-<figures/N1000variedc.png, id=15, 429.2838pt x 338.7054pt>
+(Font)              <5> on input line 81.
+<figures/N1000variedc.png, id=11, 429.2838pt x 338.7054pt>
 File: figures/N1000variedc.png Graphic file (type png)
 <use figures/N1000variedc.png>
-Package pdftex.def Info: figures/N1000variedc.png  used on input line 148. on i
-nput line 148.
+Package pdftex.def Info: figures/N1000variedc.png  used on input line 132. on i
+nput line 132.
 Package pdftex.def Info: Requested size: 223.1329pt x 176.0503pt on input line 
-148.
-<figures/N2000variedc.png, id=16, 429.2838pt x 338.7054pt>
+132.
+<figures/N2000variedc.png, id=12, 429.2838pt x 338.7054pt>
 File: figures/N2000variedc.png Graphic file (type png)
 <use figures/N2000variedc.png>
-Package pdftex.def Info: figures/N2000variedc.png  used on input line 153. on i
-nput line 153.
+Package pdftex.def Info: figures/N2000variedc.png  used on input line 137. on i
+nput line 137.
 Package pdftex.def Info: Requested size: 223.1329pt x 176.0503pt on input line 
-153.
+137.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 147--160
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 131--144
 []$[]$ $[]$ 
  []
 
-[3 <./figures/N1000variedc.png (PNG copy)> <./figures/N2000variedc.png (PNG cop
-y)>] [4] (./nbrw_more.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] [3 <./figures/N1000variedc.png (PNG copy)> <./figures/N2000variedc.png (PNG
+ copy)>] (./nbrw_more.aux)
 Package logreq Info: Writing requests to 'nbrw_more.run.xml'.
 \openout1 = `nbrw_more.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9827 strings out of 494931
- 168701 string characters out of 6180498
+ 9825 strings out of 494931
+ 168678 string characters out of 6180498
  587959 words of memory out of 5000000
- 13045 multiletter control sequences out of 15000+600000
- 6571 words of font info for 24 fonts, out of 8000000 for 9000
+ 13043 multiletter control sequences out of 15000+600000
+ 6264 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,7n,45p,1051b,1160s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -823,10 +824,10 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on nbrw_more.pdf (4 pages, 221079 bytes).
+Output written on nbrw_more.pdf (3 pages, 217149 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

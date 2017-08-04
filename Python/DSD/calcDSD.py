@@ -48,17 +48,9 @@ def calculator(adjacency,true_labels, nRW, quiet=False):
     for j in xrange(0, n):
         degree[j] = sum(adjacency[j])
 
-    isol, col = np.where(degree==0)      #find isolated nodes
-    
-    for i in isol:                       #add fake neighbor
-        cluster  = true_labels[i]
-        j = np.random.randint(0,n)
-        while np.any([true_labels[j] != cluster, i==j]):
-            j = np.random.randint(0,n)
-        degree[i] = degree[i] + 1
-        degree[j] = degree[j] + 1
-        adjacency[i,j] = 1
-        adjacency[j,i] = 1
+    irow, icol = np.where(degree==0)      #find and remove isolated nodes
+    pdb.set_trace()    
+
     for j in xrange(0,n):
          p[j] = adjacency[j]/degree[j]
     if nRW >= 0:

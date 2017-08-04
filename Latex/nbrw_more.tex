@@ -37,15 +37,6 @@ faster mixing rate compared to normal backtracking random walks.
 
 \section{Introduction}
 
-HELLO IT ME
-(Not clear whether we're talking about DSD yet so I'm leaving this be for the
-time being)
-
-Clustering or classification is traditionally one of the main machine learning
-tasks, with applications practically everywhere one would want to use machine
-learning. We consider clustering as a set of elements, using the existence or
-strength of pairwise interactions between elements as the edges of a graph. 
-
 In this project we will explore efficient and reliable ways of clustering nodes
 into groups/communities based on pairwise (noisy with missing links)
 interactions (modeled as edges on a graph). Recently in \cite{DSD} the authors
@@ -65,7 +56,7 @@ hand the approach in \cite{NodeEmbed} is computationally more attractive it
 being based on SGNS using SGD like methods that are known to scale well for
 large problem sizes.
 
-\section{Node Embedding via Random Walks on a Graph}
+\section{Description of Algorithm}
 
 Identifying community structures in a graph requires defining the 'similarity'
 between nodes of a graph, both in a local setting (intra-cluster node
@@ -85,31 +76,6 @@ transforms into Euclidean vectors via the state-of-the-art neural word embedding
 model word2vec \cite{word2vec}. The node clusters are then identified using a
 standard k-Means algorithm, which defines the similarity of nodes using the
 Euclidean distance between their vector representations.
-
-
-
-\subsection{Proposed Algorithm}
-
-\section{Theory}
-
-\subsection{Backtracking Random Walks}
-
-[Should compare mixing rates between BT/NBT and show how VEC-NBT is faster
-because of faster convergence]
-
-[Show why VEC-NBT is more accurate] [really why tho?]\\
-no realli\\
-a m\o\o se once bit my sister 
-
-See the l\o vely l{\"a}kes
-
-\subsection{Non-Backtracking Random Walks}
-
-[section 6 of \cite{Luxburg},
-http://www.cs.yale.edu/homes/spielman/561/2012/lect10-12.pdf, Meila and Shi
-(2001), more...]
-
-\section{Experimental Setup}
 
 The Stochastic Block Model is a commonly used graph model for community
 detection. It builds off of the classical Erdős-Rényi $G(n,p)$ random graph
@@ -140,6 +106,24 @@ of stochastic gradient descent. Details on this algorithm can be found in
 
 
 
+
+\section{Theory}
+
+
+[Should compare mixing rates between BT/NBT and show how VEC-NBT is faster
+because of faster convergence]
+
+[Show why VEC-NBT is more accurate] 
+
+
+[section 6 of \cite{Luxburg},
+http://www.cs.yale.edu/homes/spielman/561/2012/lect10-12.pdf, Meila and Shi
+(2001), more...]
+
+
+
+
+
 \section{Numerical Results}
 
 \begin{figure}[h]
@@ -163,7 +147,6 @@ of stochastic gradient descent. Details on this algorithm can be found in
 
  \section{Discussion}
 
- \section{Conclusion}
 
  \printbibliography
 

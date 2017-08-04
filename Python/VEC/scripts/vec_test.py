@@ -43,7 +43,7 @@ if __name__ == '__main__':
     # setting parameters
     rw_filename = 'sentences.txt'
     emb_filename = 'emb.txt'
-    num_reps = 15
+    num_reps = 20
     length = 5 
     dim = 50
     winsize = 5 
@@ -51,23 +51,27 @@ if __name__ == '__main__':
    
     c_array = [2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0,15.0,20.0]
     K_array = [2]  # number of communities
-    N_array = [5000] # number of nodes
+    N_array = [1000] # number of nodes
     lambda_array = [0.9] # B0 = lambda*I + (1-lambda)*ones(1, 1)
     rand_tests = 15
     algos = ['deep', 'nbt']
     metrics = ['nmi', 'ccr']
 
    
-   # # parsing arguments to file
-   # usage_str = '''vec_test.py [-N <nodes>]'''
-   # 
-   # try:
-   #     opts, _ = getopt.getopt(sys.argv[1:], "hqd:w:r:l:i:o:")
-   # except getopt.GetoptError:
-   #     print usage_str
-   #     sys.exit(2)
-   # for opt, arg in opts:
-        
+   # parsing arguments to file
+    usage_str = '''vec_test.py [-n <nodes>]'''
+    
+    try:
+        opts, _ = getopt.getopt(sys.argv[1:], "hn:")
+    except getopt.GetoptError:
+        print usage_str
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt=='h':
+            print(usage_str)
+        if opt== '-n':
+            N_array[0] = int(arg)
+
     data_const = 'N{}'.format(N_array[0])
     data_varied = 'C'
 

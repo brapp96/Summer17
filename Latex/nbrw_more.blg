@@ -1,15 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'nbrw_more.blg'
-[35] biber:303> INFO - === Fri Aug  4, 2017, 10:47:37
-[54] Biber.pm:359> INFO - Reading 'nbrw_more.bcf'
-[132] Biber.pm:835> INFO - Found 5 citekeys in bib section 0
-[144] Biber.pm:3670> INFO - Processing section 0
-[156] Biber.pm:3840> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[158] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[163] bibtex.pm:1292> INFO - Found BibTeX data source 'biblio.bib'
-[208] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[208] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[208] Biber.pm:3499> INFO - Sorting list 'ynt/global/' of type 'entry' with scheme 'ynt' and locale 'en-US'
-[208] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[214] bbl.pm:608> INFO - Writing 'nbrw_more.bbl' with encoding 'UTF-8'
-[216] bbl.pm:712> INFO - Output to nbrw_more.bbl
+[26] biber:303> INFO - === Fri Aug  4, 2017, 11:28:47
+[41] Biber.pm:359> INFO - Reading 'nbrw_more.bcf'
+[111] Biber.pm:835> INFO - Found 5 citekeys in bib section 0
+[122] Biber.pm:3670> INFO - Processing section 0
+[132] Biber.pm:3840> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[133] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[137] bibtex.pm:1292> INFO - Found BibTeX data source 'biblio.bib'
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[191] Biber.pm:3499> INFO - Sorting list 'ynt/global/' of type 'entry' with scheme 'ynt' and locale 'en-US'
+[191] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[201] bbl.pm:608> INFO - Writing 'nbrw_more.bbl' with encoding 'UTF-8'
+[204] bbl.pm:712> INFO - Output to nbrw_more.bbl

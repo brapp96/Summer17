@@ -2149,9 +2149,9 @@
     <bcf:citekey order="7">NodeEmbed</bcf:citekey>
     <bcf:citekey order="8">NodeEmbed</bcf:citekey>
     <bcf:citekey order="9">word2vec</bcf:citekey>
-    <bcf:citekey order="10">Luxburg</bcf:citekey>
+    <bcf:citekey order="10">word2vec</bcf:citekey>
     <bcf:citekey order="11">word2vec</bcf:citekey>
-    <bcf:citekey order="12">word2vec</bcf:citekey>
+    <bcf:citekey order="12">Luxburg</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="ynt/global/" type="entry" sortscheme="ynt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

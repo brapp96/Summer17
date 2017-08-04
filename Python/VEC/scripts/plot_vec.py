@@ -6,11 +6,28 @@ Plot Vec-BT, Vec-NBT, DSD-RW, DSD
 
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+import getopt
 import pdb
 
 # SBM parameter changed (out of N, K, c, lambda)
 x_array =[2.0, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
-N = 2000
+N = 1000
+
+# parsing arguments to file
+usage_str = '''plot_vec.py [-n <nodes>]'''
+
+try:
+    opts, _ = getopt.getopt(sys.argv[1:], "hn:")
+except getopt.GetoptError:
+    print usage_str
+    sys.exit(2)
+for opt, arg in opts:
+    if opt=='h':
+        print(usage_str)
+    if opt == '-n':
+        N = int(arg)
+
 data_const = 'N{}'.format(N)
 data_varied = 'C'
 
