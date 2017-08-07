@@ -16,7 +16,7 @@ res = {}
 algos = ['vec-bt', 'vec-nbt', 'dsd-rw', 'dsd-inf']
 metrics = ['ccr', 'nmi']
 rand_tests = 1
-N = 5000
+N = 2000
 data_const = 'N{}'.format(N)
 data_varied = 'C'
 
@@ -75,6 +75,7 @@ cmap = plt.get_cmap('Accent')
 legend = []
 #linestyles = ['solid', 'dashed', 'dashdot', 'dotted']
 
+algos = ['vec-nbt', 'dsd-rw']
 ls = {}
 colors = {}
 for i, a in enumerate(algos):
@@ -98,5 +99,5 @@ plt.xlabel('c')
 plt.ylim(-0.05, 1.05)
 plt.xticks(np.arange(np.max(x_array)+1))
 plt.title('N = {} vs {}'.format(N, data_varied))
-#plt.savefig('testplot.png')
+plt.savefig('figs/{}vs{}.png'.format(data_const, data_varied))
 plt.show()

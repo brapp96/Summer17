@@ -12,7 +12,7 @@ import pdb
 
 # SBM parameter changed (out of N, K, c, lambda)
 x_array =[5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0] 
-N = 5000   
+N = 10000   
 # parsing arguments to file
 usage_str = '''plot_dsd.py [-n <nodes>]'''
 
