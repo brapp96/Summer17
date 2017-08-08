@@ -1,20 +1,1477 @@
-N = 200, c = 2, rep 1
-N = 200, c = 2, rep 2
-N = 200, c = 3, rep 1
-N = 200, c = 3, rep 2
-N = 200, c = 4, rep 1
-N = 200, c = 4, rep 2
-N = 200, c = 5, rep 1
-N = 200, c = 5, rep 2
-N = 200, c = 6, rep 1
-N = 200, c = 6, rep 2
-N = 200, c = 8, rep 1
-N = 200, c = 8, rep 2
-N = 200, c = 10, rep 1
-N = 200, c = 10, rep 2
-N = 200, c = 12, rep 1
-N = 200, c = 12, rep 2
-N = 200, c = 15, rep 1
-N = 200, c = 15, rep 2
-N = 200, c = 20, rep 1
-N = 200, c = 20, rep 2
+Logging MATLAB script, starting Fri Aug 4 10:43:44 EDT 2017
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'local' profile ... connected to 56 workers.
+N = 1000, K = 2, c = 2, len = 5
+0.00% done; 0.10s, 2213.32s estimated
+0.01% done; 2.53s, 29067.75s estimated
+0.01% done; 4.20s, 32136.32s estimated
+0.02% done; 5.89s, 33792.80s estimated
+0.02% done; 7.33s, 33657.52s estimated
+0.03% done; 8.91s, 34063.88s estimated
+0.03% done; 10.48s, 34356.96s estimated
+0.03% done; 12.13s, 34792.22s estimated
+0.04% done; 13.60s, 34675.61s estimated
+0.04% done; 15.05s, 34535.04s estimated
+N = 1000, K = 2, c = 2, len = 10
+0.05% done; 16.51s, 34454.31s estimated
+0.05% done; 18.23s, 34865.77s estimated
+0.06% done; 19.92s, 35166.58s estimated
+0.06% done; 21.51s, 35264.31s estimated
+0.07% done; 23.18s, 35465.60s estimated
+0.07% done; 24.87s, 35670.92s estimated
+0.07% done; 26.52s, 35806.28s estimated
+0.08% done; 28.20s, 35958.33s estimated
+0.08% done; 29.84s, 36048.39s estimated
+0.09% done; 31.43s, 36066.48s estimated
+N = 1000, K = 2, c = 2, len = 20
+0.09% done; 33.03s, 36102.28s estimated
+0.10% done; 34.81s, 36312.59s estimated
+0.10% done; 36.68s, 36596.49s estimated
+0.10% done; 38.44s, 36760.54s estimated
+0.11% done; 40.34s, 37033.02s estimated
+0.11% done; 42.20s, 37246.31s estimated
+0.12% done; 44.00s, 37402.87s estimated
+0.12% done; 45.76s, 37503.60s estimated
+0.13% done; 47.74s, 37779.22s estimated
+0.13% done; 49.55s, 37902.83s estimated
+N = 1000, K = 2, c = 3, len = 5
+0.14% done; 51.48s, 37505.89s estimated
+0.14% done; 53.16s, 36968.09s estimated
+0.15% done; 54.74s, 36412.87s estimated
+0.16% done; 56.35s, 35921.58s estimated
+0.16% done; 57.81s, 35382.35s estimated
+0.17% done; 59.38s, 34943.31s estimated
+0.18% done; 60.92s, 34523.57s estimated
+0.18% done; 62.59s, 34202.60s estimated
+0.19% done; 64.08s, 33808.21s estimated
+0.20% done; 65.64s, 33474.68s estimated
+N = 1000, K = 2, c = 3, len = 10
+0.20% done; 67.18s, 33156.00s estimated
+0.21% done; 68.92s, 32952.48s estimated
+0.22% done; 70.57s, 32717.69s estimated
+0.22% done; 72.33s, 32547.97s estimated
+0.23% done; 73.94s, 32324.10s estimated
+0.24% done; 75.57s, 32118.10s estimated
+0.24% done; 77.25s, 31942.46s estimated
+0.25% done; 78.87s, 31754.89s estimated
+0.25% done; 80.60s, 31619.39s estimated
+0.26% done; 82.23s, 31451.29s estimated
+N = 1000, K = 2, c = 3, len = 20
+0.27% done; 83.92s, 31316.04s estimated
+0.27% done; 85.79s, 31252.51s estimated
+0.28% done; 87.79s, 31236.28s estimated
+0.29% done; 89.75s, 31209.79s estimated
+0.29% done; 91.71s, 31181.22s estimated
+0.30% done; 93.65s, 31147.20s estimated
+0.31% done; 95.60s, 31121.99s estimated
+0.31% done; 97.70s, 31142.30s estimated
+0.32% done; 99.62s, 31106.39s estimated
+0.33% done; 101.55s, 31075.48s estimated
+N = 1000, K = 2, c = 4, len = 5
+0.34% done; 103.60s, 30879.65s estimated
+0.34% done; 105.19s, 30557.68s estimated
+0.35% done; 106.80s, 30260.11s estimated
+0.36% done; 108.30s, 29945.87s estimated
+0.37% done; 109.74s, 29629.40s estimated
+0.38% done; 111.22s, 29337.78s estimated
+0.39% done; 112.89s, 29109.37s estimated
+0.40% done; 114.41s, 28853.92s estimated
+0.41% done; 116.00s, 28624.78s estimated
+0.41% done; 117.57s, 28401.33s estimated
+N = 1000, K = 2, c = 4, len = 10
+0.42% done; 119.10s, 28179.77s estimated
+0.43% done; 120.92s, 28031.04s estimated
+0.44% done; 122.67s, 27873.48s estimated
+0.45% done; 124.51s, 27742.60s estimated
+0.46% done; 126.23s, 27591.20s estimated
+0.47% done; 127.95s, 27443.08s estimated
+0.47% done; 129.65s, 27297.46s estimated
+0.48% done; 131.38s, 27163.91s estimated
+0.49% done; 133.02s, 27016.62s estimated
+0.50% done; 134.81s, 26903.21s estimated
+N = 1000, K = 2, c = 4, len = 20
+0.51% done; 136.61s, 26797.37s estimated
+0.52% done; 138.78s, 26764.42s estimated
+0.53% done; 140.89s, 26723.01s estimated
+0.54% done; 143.06s, 26692.28s estimated
+0.54% done; 145.23s, 26663.94s estimated
+0.55% done; 147.30s, 26618.81s estimated
+0.56% done; 149.33s, 26566.06s estimated
+0.57% done; 151.41s, 26526.20s estimated
+0.58% done; 153.51s, 26488.71s estimated
+0.59% done; 155.53s, 26439.80s estimated
+N = 1000, K = 2, c = 5, len = 5
+0.60% done; 157.59s, 26303.57s estimated
+0.61% done; 159.20s, 26097.27s estimated
+0.62% done; 160.66s, 25875.49s estimated
+0.63% done; 162.28s, 25684.23s estimated
+0.64% done; 163.85s, 25494.21s estimated
+0.65% done; 165.44s, 25312.55s estimated
+0.66% done; 167.03s, 25135.92s estimated
+0.68% done; 168.55s, 24956.65s estimated
+0.69% done; 170.19s, 24799.28s estimated
+0.70% done; 171.83s, 24647.37s estimated
+N = 1000, K = 2, c = 5, len = 10
+0.71% done; 173.41s, 24490.21s estimated
+0.72% done; 175.09s, 24353.18s estimated
+0.73% done; 176.91s, 24239.28s estimated
+0.74% done; 178.56s, 24105.71s estimated
+0.75% done; 180.38s, 23998.92s estimated
+0.76% done; 182.15s, 23887.35s estimated
+0.77% done; 183.79s, 23763.78s estimated
+0.78% done; 185.55s, 23657.69s estimated
+0.80% done; 187.26s, 23548.64s estimated
+0.81% done; 189.12s, 23461.53s estimated
+N = 1000, K = 2, c = 5, len = 20
+0.82% done; 191.00s, 23378.91s estimated
+0.83% done; 193.23s, 23340.70s estimated
+0.84% done; 195.22s, 23274.56s estimated
+0.85% done; 197.35s, 23226.01s estimated
+0.86% done; 199.45s, 23176.22s estimated
+0.87% done; 201.53s, 23125.76s estimated
+0.88% done; 203.72s, 23088.65s estimated
+0.89% done; 205.75s, 23034.42s estimated
+0.90% done; 207.84s, 22988.15s estimated
+0.92% done; 209.94s, 22943.52s estimated
+N = 1000, K = 2, c = 6, len = 5
+0.93% done; 212.01s, 22843.12s estimated
+0.94% done; 213.61s, 22696.26s estimated
+0.95% done; 215.23s, 22555.08s estimated
+0.97% done; 216.85s, 22417.18s estimated
+0.98% done; 218.41s, 22278.28s estimated
+0.99% done; 219.97s, 22141.92s estimated
+1.01% done; 221.63s, 22018.88s estimated
+1.02% done; 223.29s, 21899.62s estimated
+1.03% done; 225.04s, 21791.89s estimated
+1.05% done; 226.60s, 21668.63s estimated
+N = 1000, K = 2, c = 6, len = 10
+1.06% done; 228.16s, 21548.33s estimated
+1.07% done; 229.87s, 21445.58s estimated
+1.08% done; 231.56s, 21342.96s estimated
+1.10% done; 233.21s, 21238.91s estimated
+1.11% done; 234.95s, 21145.37s estimated
+1.12% done; 236.65s, 21050.74s estimated
+1.14% done; 238.32s, 20955.61s estimated
+1.15% done; 239.99s, 20862.61s estimated
+1.16% done; 241.70s, 20775.12s estimated
+1.18% done; 243.33s, 20682.65s estimated
+N = 1000, K = 2, c = 6, len = 20
+1.19% done; 244.90s, 20587.64s estimated
+1.20% done; 246.93s, 20533.05s estimated
+1.22% done; 248.90s, 20473.91s estimated
+1.23% done; 250.84s, 20414.41s estimated
+1.24% done; 252.71s, 20350.17s estimated
+1.25% done; 254.70s, 20296.76s estimated
+1.27% done; 256.71s, 20245.68s estimated
+1.28% done; 258.70s, 20194.15s estimated
+1.29% done; 260.68s, 20143.76s estimated
+1.31% done; 262.72s, 20098.29s estimated
+N = 1000, K = 2, c = 8, len = 5
+1.32% done; 264.73s, 19985.55s estimated
+1.34% done; 266.27s, 19840.28s estimated
+1.36% done; 267.83s, 19700.83s estimated
+1.38% done; 269.43s, 19568.04s estimated
+1.39% done; 270.95s, 19432.19s estimated
+1.41% done; 272.47s, 19299.98s estimated
+1.43% done; 273.97s, 19169.66s estimated
+1.45% done; 275.44s, 19040.03s estimated
+1.46% done; 276.98s, 18918.81s estimated
+1.48% done; 278.54s, 18801.69s estimated
+N = 1000, K = 2, c = 8, len = 10
+1.50% done; 280.09s, 18685.99s estimated
+1.52% done; 281.76s, 18581.37s estimated
+1.53% done; 283.47s, 18481.99s estimated
+1.55% done; 285.12s, 18380.79s estimated
+1.57% done; 286.83s, 18285.64s estimated
+1.59% done; 288.57s, 18193.93s estimated
+1.60% done; 290.28s, 18102.93s estimated
+1.62% done; 291.97s, 18012.94s estimated
+1.64% done; 293.68s, 17925.20s estimated
+1.66% done; 295.39s, 17840.05s estimated
+N = 1000, K = 2, c = 8, len = 20
+1.67% done; 297.12s, 17757.85s estimated
+1.69% done; 299.12s, 17692.72s estimated
+1.71% done; 301.08s, 17627.10s estimated
+1.73% done; 303.08s, 17564.91s estimated
+1.74% done; 305.07s, 17503.50s estimated
+1.76% done; 307.05s, 17442.38s estimated
+1.78% done; 309.05s, 17383.79s estimated
+1.80% done; 311.03s, 17325.68s estimated
+1.81% done; 313.05s, 17270.27s estimated
+1.83% done; 315.07s, 17216.58s estimated
+N = 1000, K = 2, c = 10, len = 5
+1.85% done; 317.10s, 17123.64s estimated
+1.87% done; 318.65s, 17007.28s estimated
+1.90% done; 320.22s, 16894.34s estimated
+1.92% done; 321.77s, 16783.23s estimated
+1.94% done; 323.27s, 16671.86s estimated
+1.96% done; 324.90s, 16569.73s estimated
+1.98% done; 326.45s, 16466.20s estimated
+2.00% done; 328.08s, 16368.14s estimated
+2.03% done; 329.65s, 16269.91s estimated
+2.05% done; 331.29s, 16176.68s estimated
+N = 1000, K = 2, c = 10, len = 10
+2.07% done; 332.82s, 16080.66s estimated
+2.09% done; 334.51s, 15993.99s estimated
+2.11% done; 336.19s, 15908.31s estimated
+2.14% done; 337.86s, 15824.40s estimated
+2.16% done; 339.58s, 15744.37s estimated
+2.18% done; 341.32s, 15666.58s estimated
+2.20% done; 342.98s, 15587.08s estimated
+2.22% done; 344.73s, 15512.76s estimated
+2.24% done; 346.40s, 15436.48s estimated
+2.27% done; 348.11s, 15363.59s estimated
+N = 1000, K = 2, c = 10, len = 20
+2.29% done; 349.85s, 15293.23s estimated
+2.31% done; 351.82s, 15234.62s estimated
+2.33% done; 353.88s, 15180.31s estimated
+2.35% done; 355.94s, 15127.41s estimated
+2.37% done; 357.97s, 15074.29s estimated
+2.40% done; 359.96s, 15020.16s estimated
+2.42% done; 361.98s, 14968.40s estimated
+2.44% done; 364.05s, 14919.70s estimated
+2.46% done; 366.02s, 14867.68s estimated
+2.48% done; 368.07s, 14819.74s estimated
+N = 1000, K = 2, c = 12, len = 5
+2.51% done; 370.13s, 14747.19s estimated
+2.54% done; 371.67s, 14656.21s estimated
+2.56% done; 373.25s, 14568.23s estimated
+2.59% done; 374.84s, 14482.60s estimated
+2.61% done; 376.42s, 14398.01s estimated
+2.64% done; 378.11s, 14319.54s estimated
+2.67% done; 379.67s, 14237.61s estimated
+2.69% done; 381.18s, 14155.48s estimated
+2.72% done; 382.69s, 14075.05s estimated
+2.75% done; 384.26s, 13998.14s estimated
+N = 1000, K = 2, c = 12, len = 10
+2.77% done; 385.77s, 13920.37s estimated
+2.80% done; 387.54s, 13853.68s estimated
+2.82% done; 389.26s, 13786.28s estimated
+2.85% done; 391.05s, 13722.70s estimated
+2.88% done; 392.70s, 13655.42s estimated
+2.90% done; 394.41s, 13590.99s estimated
+2.93% done; 396.14s, 13529.01s estimated
+2.95% done; 397.89s, 13468.56s estimated
+2.98% done; 399.63s, 13408.77s estimated
+3.01% done; 401.44s, 13352.17s estimated
+N = 1000, K = 2, c = 12, len = 20
+3.03% done; 403.32s, 13299.24s estimated
+3.06% done; 405.79s, 13266.29s estimated
+3.08% done; 408.02s, 13226.02s estimated
+3.11% done; 410.29s, 13187.87s estimated
+3.14% done; 412.49s, 13148.24s estimated
+3.16% done; 414.75s, 13110.79s estimated
+3.19% done; 417.11s, 13077.54s estimated
+3.22% done; 419.29s, 13038.97s estimated
+3.24% done; 421.69s, 13007.77s estimated
+3.27% done; 423.74s, 12966.47s estimated
+N = 1000, K = 2, c = 15, len = 5
+3.30% done; 426.05s, 12908.06s estimated
+3.33% done; 427.57s, 12826.99s estimated
+3.37% done; 429.19s, 12750.78s estimated
+3.40% done; 430.80s, 12675.51s estimated
+3.43% done; 432.44s, 12602.60s estimated
+3.46% done; 434.01s, 12529.02s estimated
+3.50% done; 435.60s, 12457.25s estimated
+3.53% done; 437.24s, 12388.49s estimated
+3.56% done; 438.79s, 12318.40s estimated
+3.59% done; 440.45s, 12252.53s estimated
+N = 1000, K = 2, c = 15, len = 10
+3.63% done; 442.08s, 12187.19s estimated
+3.66% done; 444.12s, 12134.11s estimated
+3.69% done; 445.97s, 12076.62s estimated
+3.73% done; 447.93s, 12023.26s estimated
+3.76% done; 449.78s, 11967.96s estimated
+3.79% done; 451.63s, 11913.65s estimated
+3.82% done; 453.47s, 11860.08s estimated
+3.86% done; 455.42s, 11810.17s estimated
+3.89% done; 457.34s, 11760.16s estimated
+3.92% done; 459.23s, 11710.27s estimated
+N = 1000, K = 2, c = 15, len = 20
+3.95% done; 461.09s, 11660.74s estimated
+3.99% done; 463.31s, 11620.65s estimated
+4.02% done; 465.49s, 11580.54s estimated
+4.05% done; 467.61s, 11539.39s estimated
+4.08% done; 469.73s, 11499.07s estimated
+4.12% done; 471.94s, 11461.44s estimated
+4.15% done; 474.10s, 11423.29s estimated
+4.18% done; 476.29s, 11386.41s estimated
+4.22% done; 478.53s, 11351.27s estimated
+4.25% done; 480.68s, 11314.48s estimated
+N = 1000, K = 2, c = 20, len = 5
+4.29% done; 482.90s, 11251.27s estimated
+4.34% done; 484.54s, 11176.05s estimated
+4.38% done; 486.25s, 11103.91s estimated
+4.42% done; 487.83s, 11030.22s estimated
+4.47% done; 489.43s, 10958.47s estimated
+4.51% done; 491.12s, 10890.11s estimated
+4.55% done; 492.87s, 10824.38s estimated
+4.60% done; 494.45s, 10756.02s estimated
+4.64% done; 496.04s, 10689.30s estimated
+4.68% done; 497.64s, 10624.06s estimated
+N = 1000, K = 2, c = 20, len = 10
+4.73% done; 499.38s, 10562.94s estimated
+4.77% done; 501.21s, 10504.73s estimated
+4.81% done; 503.20s, 10451.10s estimated
+4.86% done; 505.06s, 10395.65s estimated
+4.90% done; 506.85s, 10339.73s estimated
+4.95% done; 508.64s, 10284.75s estimated
+4.99% done; 510.39s, 10229.99s estimated
+5.03% done; 512.28s, 10179.07s estimated
+5.08% done; 514.16s, 10128.75s estimated
+5.12% done; 516.00s, 10078.51s estimated
+N = 1000, K = 2, c = 20, len = 20
+5.16% done; 517.78s, 10027.95s estimated
+5.21% done; 519.97s, 9985.98s estimated
+5.25% done; 522.21s, 9945.76s estimated
+5.29% done; 524.40s, 9905.25s estimated
+5.34% done; 526.50s, 9863.90s estimated
+5.38% done; 528.58s, 9822.69s estimated
+5.42% done; 530.82s, 9784.94s estimated
+5.47% done; 533.04s, 9747.62s estimated
+5.51% done; 535.25s, 9710.74s estimated
+5.56% done; 537.52s, 9675.44s estimated
+N = 2000, K = 2, c = 2, len = 5
+5.56% done; 540.01s, 9704.93s estimated
+5.57% done; 541.63s, 9718.89s estimated
+5.58% done; 543.35s, 9734.56s estimated
+5.59% done; 545.26s, 9753.41s estimated
+5.60% done; 547.06s, 9770.50s estimated
+5.61% done; 548.84s, 9786.97s estimated
+5.62% done; 550.67s, 9804.33s estimated
+5.63% done; 552.44s, 9820.60s estimated
+5.63% done; 554.23s, 9837.19s estimated
+5.64% done; 556.07s, 9854.68s estimated
+N = 2000, K = 2, c = 2, len = 10
+5.65% done; 557.81s, 9870.29s estimated
+5.66% done; 559.79s, 9890.13s estimated
+5.67% done; 561.76s, 9909.60s estimated
+5.68% done; 563.93s, 9932.66s estimated
+5.69% done; 565.92s, 9952.37s estimated
+5.69% done; 568.02s, 9974.07s estimated
+5.70% done; 570.04s, 9994.17s estimated
+5.71% done; 572.16s, 10016.01s estimated
+5.72% done; 574.23s, 10036.92s estimated
+5.73% done; 576.16s, 10055.42s estimated
+N = 2000, K = 2, c = 2, len = 20
+5.74% done; 578.26s, 10076.70s estimated
+5.75% done; 580.81s, 10105.76s estimated
+5.76% done; 583.38s, 10135.22s estimated
+5.76% done; 586.05s, 10166.09s estimated
+5.77% done; 588.64s, 10195.74s estimated
+5.78% done; 591.24s, 10225.34s estimated
+5.79% done; 593.67s, 10251.80s estimated
+5.80% done; 596.29s, 10281.71s estimated
+5.81% done; 598.74s, 10308.42s estimated
+5.82% done; 601.34s, 10337.63s estimated
+N = 2000, K = 2, c = 3, len = 5
+5.83% done; 603.96s, 10359.45s estimated
+5.84% done; 605.96s, 10370.40s estimated
+5.86% done; 607.90s, 10380.52s estimated
+5.87% done; 609.84s, 10390.35s estimated
+5.88% done; 611.87s, 10401.71s estimated
+5.90% done; 613.77s, 10410.94s estimated
+5.91% done; 615.65s, 10419.73s estimated
+5.92% done; 617.68s, 10431.10s estimated
+5.93% done; 619.57s, 10439.93s estimated
+5.95% done; 621.53s, 10449.94s estimated
+N = 2000, K = 2, c = 3, len = 10
+5.96% done; 623.54s, 10460.78s estimated
+5.97% done; 625.77s, 10475.10s estimated
+5.99% done; 628.01s, 10489.61s estimated
+6.00% done; 630.24s, 10504.01s estimated
+6.01% done; 632.54s, 10519.43s estimated
+6.03% done; 634.91s, 10535.93s estimated
+6.04% done; 637.11s, 10549.63s estimated
+6.05% done; 639.29s, 10562.74s estimated
+6.07% done; 641.67s, 10579.29s estimated
+6.08% done; 644.12s, 10596.73s estimated
+N = 2000, K = 2, c = 3, len = 20
+6.09% done; 646.25s, 10609.04s estimated
+6.10% done; 649.20s, 10634.60s estimated
+6.12% done; 652.05s, 10658.48s estimated
+6.13% done; 654.86s, 10681.68s estimated
+6.14% done; 657.74s, 10705.77s estimated
+6.16% done; 660.78s, 10732.36s estimated
+6.17% done; 663.50s, 10753.70s estimated
+6.18% done; 666.39s, 10777.78s estimated
+6.20% done; 669.37s, 10803.09s estimated
+6.21% done; 672.34s, 10828.28s estimated
+N = 2000, K = 2, c = 4, len = 5
+6.23% done; 675.14s, 10842.92s estimated
+6.24% done; 677.13s, 10844.55s estimated
+6.26% done; 679.31s, 10849.12s estimated
+6.28% done; 681.30s, 10850.61s estimated
+6.30% done; 683.28s, 10852.10s estimated
+6.31% done; 685.39s, 10855.55s estimated
+6.33% done; 687.60s, 10860.61s estimated
+6.35% done; 689.60s, 10862.23s estimated
+6.37% done; 691.48s, 10862.07s estimated
+6.38% done; 693.52s, 10864.43s estimated
+N = 2000, K = 2, c = 4, len = 10
+6.40% done; 695.60s, 10867.28s estimated
+6.42% done; 698.08s, 10876.34s estimated
+6.44% done; 700.56s, 10885.41s estimated
+6.45% done; 702.93s, 10892.79s estimated
+6.47% done; 705.26s, 10899.40s estimated
+6.49% done; 707.50s, 10904.78s estimated
+6.51% done; 710.00s, 10913.86s estimated
+6.52% done; 712.41s, 10921.71s estimated
+6.54% done; 714.76s, 10928.60s estimated
+6.56% done; 717.05s, 10934.36s estimated
+N = 2000, K = 2, c = 4, len = 20
+6.58% done; 719.40s, 10941.10s estimated
+6.59% done; 722.33s, 10956.76s estimated
+6.61% done; 725.56s, 10976.74s estimated
+6.63% done; 728.50s, 10992.23s estimated
+6.64% done; 731.51s, 11008.56s estimated
+6.66% done; 734.57s, 11025.80s estimated
+6.68% done; 737.52s, 11041.18s estimated
+6.70% done; 740.61s, 11058.55s estimated
+6.71% done; 743.81s, 11077.46s estimated
+6.73% done; 746.65s, 11091.07s estimated
+N = 2000, K = 2, c = 5, len = 5
+6.75% done; 749.52s, 11097.70s estimated
+6.78% done; 751.66s, 11093.65s estimated
+6.80% done; 753.70s, 11088.09s estimated
+6.82% done; 755.67s, 11081.51s estimated
+6.84% done; 757.65s, 11075.15s estimated
+6.86% done; 759.63s, 11068.93s estimated
+6.88% done; 761.59s, 11062.39s estimated
+6.91% done; 763.53s, 11055.56s estimated
+6.93% done; 765.57s, 11050.24s estimated
+6.95% done; 767.44s, 11042.47s estimated
+N = 2000, K = 2, c = 5, len = 10
+6.97% done; 769.39s, 11035.94s estimated
+6.99% done; 771.65s, 11033.85s estimated
+7.02% done; 773.87s, 11031.29s estimated
+7.04% done; 776.22s, 11030.44s estimated
+7.06% done; 778.53s, 11029.19s estimated
+7.08% done; 780.80s, 11027.32s estimated
+7.10% done; 783.04s, 11025.05s estimated
+7.12% done; 785.31s, 11023.09s estimated
+7.15% done; 787.58s, 11021.28s estimated
+7.17% done; 789.76s, 11018.27s estimated
+N = 2000, K = 2, c = 5, len = 20
+7.19% done; 792.04s, 11016.57s estimated
+7.21% done; 794.93s, 11023.30s estimated
+7.23% done; 797.79s, 11029.69s estimated
+7.25% done; 800.72s, 11036.98s estimated
+7.28% done; 803.60s, 11043.52s estimated
+7.30% done; 806.48s, 11049.92s estimated
+7.32% done; 809.49s, 11058.23s estimated
+7.34% done; 812.39s, 11064.94s estimated
+7.36% done; 815.26s, 11071.10s estimated
+7.39% done; 818.31s, 11079.78s estimated
+N = 2000, K = 2, c = 6, len = 5
+7.41% done; 821.31s, 11081.14s estimated
+7.44% done; 823.41s, 11070.49s estimated
+7.46% done; 825.47s, 11059.29s estimated
+7.49% done; 827.42s, 11046.68s estimated
+7.52% done; 829.53s, 11036.34s estimated
+7.54% done; 831.57s, 11025.10s estimated
+7.57% done; 833.66s, 11014.73s estimated
+7.59% done; 835.71s, 11003.81s estimated
+7.62% done; 837.71s, 10992.30s estimated
+7.65% done; 839.79s, 10981.89s estimated
+N = 2000, K = 2, c = 6, len = 10
+7.67% done; 841.80s, 10970.69s estimated
+7.70% done; 844.07s, 10962.91s estimated
+7.73% done; 846.34s, 10955.12s estimated
+7.75% done; 848.59s, 10947.22s estimated
+7.78% done; 850.79s, 10938.75s estimated
+7.80% done; 853.08s, 10931.41s estimated
+7.83% done; 855.32s, 10923.54s estimated
+7.86% done; 857.67s, 10917.10s estimated
+7.88% done; 860.09s, 10911.54s estimated
+7.91% done; 862.43s, 10905.15s estimated
+N = 2000, K = 2, c = 6, len = 20
+7.93% done; 864.78s, 10898.81s estimated
+7.96% done; 867.84s, 10901.38s estimated
+7.99% done; 870.89s, 10903.93s estimated
+8.01% done; 873.92s, 10906.22s estimated
+8.04% done; 876.90s, 10907.79s estimated
+8.07% done; 879.89s, 10909.51s estimated
+8.09% done; 882.85s, 10910.84s estimated
+8.12% done; 885.78s, 10911.81s estimated
+8.14% done; 888.69s, 10912.43s estimated
+8.17% done; 891.79s, 10915.52s estimated
+N = 2000, K = 2, c = 8, len = 5
+8.20% done; 894.79s, 10905.66s estimated
+8.24% done; 896.94s, 10885.65s estimated
+8.27% done; 898.88s, 10863.18s estimated
+8.31% done; 900.95s, 10842.61s estimated
+8.34% done; 902.99s, 10821.74s estimated
+8.38% done; 905.11s, 10802.04s estimated
+8.41% done; 907.26s, 10782.76s estimated
+8.45% done; 909.27s, 10762.07s estimated
+8.48% done; 911.38s, 10742.74s estimated
+8.52% done; 913.36s, 10722.05s estimated
+N = 2000, K = 2, c = 8, len = 10
+8.55% done; 915.43s, 10702.54s estimated
+8.59% done; 917.73s, 10685.86s estimated
+8.62% done; 920.12s, 10670.40s estimated
+8.66% done; 922.49s, 10654.77s estimated
+8.69% done; 924.78s, 10638.45s estimated
+8.73% done; 927.06s, 10622.06s estimated
+8.76% done; 929.38s, 10606.35s estimated
+8.80% done; 931.70s, 10590.70s estimated
+8.83% done; 934.00s, 10574.92s estimated
+8.87% done; 936.35s, 10559.83s estimated
+N = 2000, K = 2, c = 8, len = 20
+8.90% done; 938.61s, 10543.82s estimated
+8.94% done; 941.67s, 10536.96s estimated
+8.97% done; 944.80s, 10530.89s estimated
+9.01% done; 947.82s, 10523.65s estimated
+9.04% done; 950.87s, 10516.87s estimated
+9.08% done; 954.08s, 10511.86s estimated
+9.11% done; 957.21s, 10505.94s estimated
+9.15% done; 960.39s, 10500.72s estimated
+9.18% done; 963.84s, 10498.37s estimated
+9.22% done; 967.29s, 10496.09s estimated
+N = 2000, K = 2, c = 10, len = 5
+9.26% done; 970.63s, 10482.82s estimated
+9.30% done; 972.67s, 10455.64s estimated
+9.35% done; 974.78s, 10429.49s estimated
+9.39% done; 976.69s, 10401.45s estimated
+9.43% done; 978.76s, 10375.32s estimated
+9.48% done; 980.70s, 10348.03s estimated
+9.52% done; 982.77s, 10322.45s estimated
+9.56% done; 984.89s, 10297.55s estimated
+9.61% done; 987.16s, 10274.55s estimated
+9.65% done; 989.29s, 10250.22s estimated
+N = 2000, K = 2, c = 10, len = 10
+9.69% done; 991.46s, 10226.53s estimated
+9.74% done; 993.97s, 10206.57s estimated
+9.78% done; 996.55s, 10187.40s estimated
+9.83% done; 999.17s, 10168.97s estimated
+9.87% done; 1001.67s, 10149.34s estimated
+9.91% done; 1004.22s, 10130.45s estimated
+9.96% done; 1006.76s, 10111.65s estimated
+10.00% done; 1009.19s, 10091.94s estimated
+10.04% done; 1011.84s, 10074.50s estimated
+10.09% done; 1014.24s, 10054.81s estimated
+N = 2000, K = 2, c = 10, len = 20
+10.13% done; 1016.96s, 10038.36s estimated
+10.17% done; 1020.66s, 10031.73s estimated
+10.22% done; 1024.26s, 10024.23s estimated
+10.26% done; 1027.58s, 10014.04s estimated
+10.31% done; 1030.91s, 10003.92s estimated
+10.35% done; 1034.03s, 9992.03s estimated
+10.39% done; 1037.30s, 9981.57s estimated
+10.44% done; 1040.62s, 9971.66s estimated
+10.48% done; 1043.83s, 9960.89s estimated
+10.52% done; 1047.01s, 9949.85s estimated
+N = 2000, K = 2, c = 12, len = 5
+10.58% done; 1050.37s, 9932.44s estimated
+10.63% done; 1052.23s, 9901.05s estimated
+10.68% done; 1054.26s, 9871.60s estimated
+10.73% done; 1056.34s, 9842.87s estimated
+10.78% done; 1058.56s, 9815.76s estimated
+10.84% done; 1060.58s, 9787.03s estimated
+10.89% done; 1062.67s, 9759.26s estimated
+10.94% done; 1064.83s, 9732.32s estimated
+10.99% done; 1067.14s, 9707.07s estimated
+11.05% done; 1069.33s, 9680.88s estimated
+N = 2000, K = 2, c = 12, len = 10
+11.10% done; 1071.27s, 9652.77s estimated
+11.15% done; 1073.76s, 9629.83s estimated
+11.20% done; 1076.26s, 9607.25s estimated
+11.25% done; 1078.78s, 9585.02s estimated
+11.31% done; 1081.30s, 9562.97s estimated
+11.36% done; 1083.85s, 9541.37s estimated
+11.41% done; 1086.42s, 9520.15s estimated
+11.46% done; 1089.08s, 9499.92s estimated
+11.52% done; 1091.56s, 9478.40s estimated
+11.57% done; 1094.14s, 9457.81s estimated
+N = 2000, K = 2, c = 12, len = 20
+11.62% done; 1096.62s, 9436.56s estimated
+11.67% done; 1099.87s, 9422.16s estimated
+11.73% done; 1103.18s, 9408.35s estimated
+11.78% done; 1106.53s, 9395.10s estimated
+11.83% done; 1109.72s, 9380.48s estimated
+11.88% done; 1113.20s, 9368.48s estimated
+11.93% done; 1116.55s, 9355.51s estimated
+11.99% done; 1119.82s, 9342.02s estimated
+12.04% done; 1122.97s, 9327.56s estimated
+12.09% done; 1126.39s, 9315.55s estimated
+N = 2000, K = 2, c = 15, len = 5
+12.16% done; 1129.80s, 9293.51s estimated
+12.22% done; 1131.98s, 9261.69s estimated
+12.29% done; 1134.14s, 9229.99s estimated
+12.35% done; 1136.15s, 9197.38s estimated
+12.42% done; 1138.33s, 9166.58s estimated
+12.48% done; 1140.55s, 9136.35s estimated
+12.55% done; 1142.85s, 9107.12s estimated
+12.61% done; 1144.86s, 9075.85s estimated
+12.68% done; 1147.05s, 9046.31s estimated
+12.75% done; 1149.22s, 9016.98s estimated
+N = 2000, K = 2, c = 15, len = 10
+12.81% done; 1151.39s, 8987.91s estimated
+12.88% done; 1153.98s, 8962.42s estimated
+12.94% done; 1156.59s, 8937.28s estimated
+13.01% done; 1159.09s, 8911.58s estimated
+13.07% done; 1161.61s, 8886.30s estimated
+13.14% done; 1164.02s, 8860.45s estimated
+13.20% done; 1166.51s, 8835.45s estimated
+13.27% done; 1168.97s, 8810.44s estimated
+13.33% done; 1171.42s, 8785.66s estimated
+13.40% done; 1173.85s, 8760.93s estimated
+N = 2000, K = 2, c = 15, len = 20
+13.46% done; 1176.36s, 8737.01s estimated
+13.53% done; 1179.64s, 8719.09s estimated
+13.59% done; 1182.83s, 8700.60s estimated
+13.66% done; 1186.19s, 8683.57s estimated
+13.73% done; 1189.42s, 8665.75s estimated
+13.79% done; 1192.73s, 8648.71s estimated
+13.86% done; 1196.06s, 8631.94s estimated
+13.92% done; 1199.39s, 8615.31s estimated
+13.99% done; 1202.62s, 8598.18s estimated
+14.05% done; 1205.92s, 8581.65s estimated
+N = 2000, K = 2, c = 20, len = 5
+14.14% done; 1209.22s, 8552.13s estimated
+14.23% done; 1211.39s, 8514.98s estimated
+14.31% done; 1213.51s, 8477.93s estimated
+14.40% done; 1215.63s, 8441.37s estimated
+14.49% done; 1217.76s, 8405.29s estimated
+14.58% done; 1219.82s, 8369.18s estimated
+14.66% done; 1221.94s, 8333.91s estimated
+14.75% done; 1224.18s, 8299.86s estimated
+14.84% done; 1226.40s, 8266.04s estimated
+14.92% done; 1228.46s, 8231.57s estimated
+N = 2000, K = 2, c = 20, len = 10
+15.01% done; 1230.61s, 8198.12s estimated
+15.10% done; 1233.08s, 8167.13s estimated
+15.19% done; 1235.63s, 8137.05s estimated
+15.27% done; 1238.21s, 8107.56s estimated
+15.36% done; 1240.76s, 8078.16s estimated
+15.45% done; 1243.19s, 8048.31s estimated
+15.53% done; 1245.60s, 8018.67s estimated
+15.62% done; 1248.19s, 7990.49s estimated
+15.71% done; 1250.80s, 7962.78s estimated
+15.80% done; 1253.37s, 7935.10s estimated
+N = 2000, K = 2, c = 20, len = 20
+15.88% done; 1255.88s, 7907.37s estimated
+15.97% done; 1259.22s, 7885.17s estimated
+16.06% done; 1262.43s, 7862.37s estimated
+16.14% done; 1265.55s, 7839.25s estimated
+16.23% done; 1268.82s, 7817.32s estimated
+16.32% done; 1272.10s, 7795.63s estimated
+16.41% done; 1275.54s, 7775.20s estimated
+16.49% done; 1278.83s, 7754.09s estimated
+16.58% done; 1282.17s, 7733.47s estimated
+16.67% done; 1285.47s, 7712.84s estimated
+N = 5000, K = 2, c = 2, len = 5
+16.69% done; 1289.17s, 7724.94s estimated
+16.71% done; 1291.83s, 7730.78s estimated
+16.73% done; 1294.44s, 7736.30s estimated
+16.75% done; 1297.15s, 7742.41s estimated
+16.78% done; 1299.65s, 7747.29s estimated
+16.80% done; 1302.38s, 7753.45s estimated
+16.82% done; 1304.94s, 7758.66s estimated
+16.84% done; 1307.50s, 7763.83s estimated
+16.86% done; 1310.08s, 7769.09s estimated
+16.88% done; 1312.58s, 7773.88s estimated
+N = 5000, K = 2, c = 2, len = 10
+16.91% done; 1315.14s, 7778.97s estimated
+16.93% done; 1318.23s, 7787.22s estimated
+16.95% done; 1321.41s, 7796.00s estimated
+16.97% done; 1324.59s, 7804.69s estimated
+16.99% done; 1327.81s, 7813.64s estimated
+17.02% done; 1330.88s, 7821.70s estimated
+17.04% done; 1333.99s, 7829.94s estimated
+17.06% done; 1337.01s, 7837.65s estimated
+17.08% done; 1340.05s, 7845.44s estimated
+17.10% done; 1343.31s, 7854.52s estimated
+N = 5000, K = 2, c = 2, len = 20
+17.12% done; 1346.44s, 7862.79s estimated
+17.15% done; 1350.95s, 7879.12s estimated
+17.17% done; 1355.42s, 7895.13s estimated
+17.19% done; 1359.68s, 7909.95s estimated
+17.21% done; 1364.05s, 7925.32s estimated
+17.23% done; 1368.30s, 7939.92s estimated
+17.25% done; 1372.61s, 7954.93s estimated
+17.28% done; 1376.91s, 7969.75s estimated
+17.30% done; 1381.22s, 7984.63s estimated
+17.32% done; 1385.66s, 8000.23s estimated
+N = 5000, K = 2, c = 3, len = 5
+17.35% done; 1390.53s, 8013.23s estimated
+17.39% done; 1393.36s, 8014.46s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+17.42% done; 1396.11s, 8015.21s estimated
+17.45% done; 1398.92s, 8016.30s estimated
+17.48% done; 1401.71s, 8017.24s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+17.52% done; 1404.67s, 8019.20s estimated
+17.55% done; 1407.46s, 8020.18s estimated
+17.58% done; 1410.32s, 8021.51s estimated
+17.61% done; 1413.07s, 8022.28s estimated
+17.65% done; 1415.81s, 8022.92s estimated
+N = 5000, K = 2, c = 3, len = 10
+17.68% done; 1418.58s, 8023.78s estimated
+17.71% done; 1422.11s, 8028.88s estimated
+17.75% done; 1425.62s, 8033.91s estimated
+17.78% done; 1429.14s, 8038.90s estimated
+17.81% done; 1432.66s, 8043.94s estimated
+17.84% done; 1436.27s, 8049.45s estimated
+17.88% done; 1440.14s, 8056.36s estimated
+17.91% done; 1443.85s, 8062.38s estimated
+17.94% done; 1447.58s, 8068.47s estimated
+17.97% done; 1451.10s, 8073.41s estimated
+N = 5000, K = 2, c = 3, len = 20
+18.01% done; 1454.53s, 8077.81s estimated
+18.04% done; 1459.68s, 8091.72s estimated
+18.07% done; 1464.86s, 8105.72s estimated
+18.10% done; 1470.23s, 8120.75s estimated
+18.14% done; 1475.51s, 8135.24s estimated
+18.17% done; 1480.76s, 8149.49s estimated
+18.20% done; 1485.85s, 8162.85s estimated
+18.24% done; 1491.14s, 8177.19s estimated
+18.27% done; 1496.47s, 8191.75s estimated
+18.30% done; 1501.79s, 8206.22s estimated
+N = 5000, K = 2, c = 4, len = 5
+18.34% done; 1507.30s, 8216.74s estimated
+18.39% done; 1510.17s, 8212.88s estimated
+18.43% done; 1513.02s, 8208.94s estimated
+18.47% done; 1515.81s, 8204.70s estimated
+18.52% done; 1518.70s, 8200.99s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+18.56% done; 1521.57s, 8197.19s estimated
+18.61% done; 1524.50s, 8193.75s estimated
+18.65% done; 1527.29s, 8189.54s estimated
+18.69% done; 1530.22s, 8186.14s estimated
+18.74% done; 1533.19s, 8182.95s estimated
+N = 5000, K = 2, c = 4, len = 10
+18.78% done; 1536.11s, 8179.53s estimated
+18.82% done; 1539.75s, 8179.93s estimated
+18.87% done; 1543.52s, 8181.01s estimated
+18.91% done; 1547.23s, 8181.76s estimated
+18.95% done; 1551.03s, 8183.05s estimated
+19.00% done; 1554.77s, 8183.95s estimated
+19.04% done; 1558.58s, 8185.21s estimated
+19.08% done; 1562.31s, 8186.08s estimated
+19.13% done; 1566.31s, 8188.36s estimated
+19.17% done; 1570.02s, 8189.11s estimated
+N = 5000, K = 2, c = 4, len = 20
+19.22% done; 1573.67s, 8189.52s estimated
+19.26% done; 1579.48s, 8201.14s estimated
+19.30% done; 1584.93s, 8210.85s estimated
+19.35% done; 1590.41s, 8220.70s estimated
+19.39% done; 1596.05s, 8231.31s estimated
+19.43% done; 1601.74s, 8242.12s estimated
+19.48% done; 1607.38s, 8252.67s estimated
+19.52% done; 1613.08s, 8263.45s estimated
+19.56% done; 1618.70s, 8273.77s estimated
+19.61% done; 1624.92s, 8287.09s estimated
+N = 5000, K = 2, c = 5, len = 5
+19.66% done; 1631.39s, 8297.04s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+19.72% done; 1634.89s, 8291.85s estimated
+19.77% done; 1638.42s, 8286.89s estimated
+19.83% done; 1642.00s, 8282.17s estimated
+19.88% done; 1645.32s, 8276.17s estimated
+19.93% done; 1648.30s, 8268.50s estimated
+19.99% done; 1651.68s, 8262.91s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+20.04% done; 1654.93s, 8256.65s estimated
+20.10% done; 1658.06s, 8249.84s estimated
+20.15% done; 1661.21s, 8243.21s estimated
+N = 5000, K = 2, c = 5, len = 10
+20.21% done; 1664.39s, 8236.72s estimated
+20.26% done; 1668.62s, 8235.44s estimated
+20.32% done; 1672.85s, 8234.17s estimated
+20.37% done; 1677.05s, 8232.78s estimated
+20.42% done; 1681.35s, 8231.90s estimated
+20.48% done; 1685.57s, 8230.61s estimated
+20.53% done; 1689.82s, 8229.47s estimated
+20.59% done; 1693.84s, 8227.23s estimated
+20.64% done; 1698.11s, 8226.22s estimated
+20.70% done; 1702.34s, 8224.97s estimated
+N = 5000, K = 2, c = 5, len = 20
+20.75% done; 1706.85s, 8225.15s estimated
+20.81% done; 1713.19s, 8234.09s estimated
+20.86% done; 1719.54s, 8243.02s estimated
+20.92% done; 1725.78s, 8251.41s estimated
+20.97% done; 1732.03s, 8259.77s estimated
+21.02% done; 1738.31s, 8268.22s estimated
+21.08% done; 1744.71s, 8277.25s estimated
+21.13% done; 1751.01s, 8285.70s estimated
+21.19% done; 1757.02s, 8292.79s estimated
+21.24% done; 1763.86s, 8303.69s estimated
+N = 5000, K = 2, c = 6, len = 5
+21.31% done; 1770.76s, 8310.63s estimated
+21.37% done; 1774.04s, 8300.57s estimated
+21.44% done; 1777.18s, 8289.92s estimated
+21.50% done; 1780.47s, 8279.98s estimated
+21.57% done; 1783.76s, 8270.14s estimated
+21.63% done; 1786.86s, 8259.49s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+21.70% done; 1790.05s, 8249.31s estimated
+21.76% done; 1792.93s, 8237.77s estimated
+21.83% done; 1795.97s, 8227.07s estimated
+21.90% done; 1799.19s, 8217.21s estimated
+N = 5000, K = 2, c = 6, len = 10
+21.96% done; 1802.50s, 8207.82s estimated
+22.03% done; 1807.06s, 8204.15s estimated
+22.09% done; 1811.24s, 8198.82s estimated
+22.16% done; 1815.47s, 8193.72s estimated
+22.22% done; 1819.62s, 8188.28s estimated
+22.29% done; 1823.94s, 8183.68s estimated
+22.35% done; 1828.12s, 8178.42s estimated
+22.42% done; 1832.36s, 8173.50s estimated
+22.48% done; 1836.59s, 8168.55s estimated
+22.55% done; 1840.81s, 8163.58s estimated
+N = 5000, K = 2, c = 6, len = 20
+22.61% done; 1845.12s, 8159.04s estimated
+22.68% done; 1851.58s, 8164.04s estimated
+22.75% done; 1857.83s, 8168.03s estimated
+22.81% done; 1864.05s, 8171.92s estimated
+22.88% done; 1870.42s, 8176.42s estimated
+22.94% done; 1876.67s, 8180.36s estimated
+23.01% done; 1882.86s, 8184.03s estimated
+23.07% done; 1889.36s, 8189.01s estimated
+23.14% done; 1895.80s, 8193.70s estimated
+23.20% done; 1902.12s, 8197.87s estimated
+N = 5000, K = 2, c = 8, len = 5
+23.29% done; 1909.09s, 8197.11s estimated
+23.38% done; 1912.38s, 8180.62s estimated
+23.46% done; 1915.66s, 8164.22s estimated
+23.55% done; 1918.72s, 8147.01s estimated
+23.64% done; 1922.00s, 8130.88s estimated
+23.73% done; 1925.42s, 8115.40s estimated
+23.81% done; 1928.57s, 8098.95s estimated
+23.90% done; 1931.83s, 8083.06s estimated
+23.99% done; 1935.07s, 8067.19s estimated
+24.07% done; 1938.23s, 8051.12s estimated
+N = 5000, K = 2, c = 8, len = 10
+24.16% done; 1941.47s, 8035.47s estimated
+24.25% done; 1945.75s, 8024.26s estimated
+24.34% done; 1950.10s, 8013.38s estimated
+24.42% done; 1954.52s, 8002.90s estimated
+24.51% done; 1958.77s, 7991.80s estimated
+24.60% done; 1963.30s, 7981.88s estimated
+24.68% done; 1967.54s, 7970.88s estimated
+24.77% done; 1971.88s, 7960.36s estimated
+24.86% done; 1976.28s, 7950.16s estimated
+24.95% done; 1980.38s, 7938.80s estimated
+N = 5000, K = 2, c = 8, len = 20
+25.03% done; 1984.34s, 7927.01s estimated
+25.12% done; 1990.78s, 7925.12s estimated
+25.21% done; 1996.98s, 7922.32s estimated
+25.29% done; 2003.27s, 7919.92s estimated
+25.38% done; 2009.50s, 7917.26s estimated
+25.47% done; 2015.68s, 7914.42s estimated
+25.56% done; 2021.75s, 7911.19s estimated
+25.64% done; 2027.90s, 7908.31s estimated
+25.73% done; 2034.07s, 7905.49s estimated
+25.82% done; 2040.22s, 7902.61s estimated
+N = 5000, K = 2, c = 10, len = 5
+25.93% done; 2046.88s, 7895.10s estimated
+26.03% done; 2049.94s, 7873.84s estimated
+26.14% done; 2053.01s, 7852.75s estimated
+26.25% done; 2056.15s, 7832.15s estimated
+26.36% done; 2059.03s, 7810.71s estimated
+26.47% done; 2061.99s, 7789.76s estimated
+26.58% done; 2065.02s, 7769.22s estimated
+26.69% done; 2068.12s, 7749.12s estimated
+26.80% done; 2071.16s, 7728.98s estimated
+26.91% done; 2074.17s, 7708.85s estimated
+N = 5000, K = 2, c = 10, len = 10
+27.02% done; 2077.18s, 7688.93s estimated
+27.12% done; 2081.34s, 7673.37s estimated
+27.23% done; 2085.41s, 7657.63s estimated
+27.34% done; 2089.64s, 7642.60s estimated
+27.45% done; 2093.83s, 7627.51s estimated
+27.56% done; 2097.77s, 7611.66s estimated
+27.67% done; 2101.80s, 7596.27s estimated
+27.78% done; 2106.07s, 7581.85s estimated
+27.89% done; 2110.22s, 7567.13s estimated
+28.00% done; 2114.28s, 7552.17s estimated
+N = 5000, K = 2, c = 10, len = 20
+28.10% done; 2118.35s, 7537.38s estimated
+28.21% done; 2124.66s, 7530.65s estimated
+28.32% done; 2130.91s, 7523.74s estimated
+28.43% done; 2137.30s, 7517.39s estimated
+28.54% done; 2143.55s, 7510.59s estimated
+28.65% done; 2149.86s, 7504.06s estimated
+28.76% done; 2156.24s, 7497.85s estimated
+28.87% done; 2162.40s, 7490.87s estimated
+28.98% done; 2168.67s, 7484.35s estimated
+29.08% done; 2175.17s, 7478.68s estimated
+N = 5000, K = 2, c = 12, len = 5
+29.22% done; 2181.96s, 7468.45s estimated
+29.35% done; 2185.05s, 7445.72s estimated
+29.48% done; 2188.17s, 7423.27s estimated
+29.61% done; 2191.28s, 7401.00s estimated
+29.74% done; 2194.23s, 7378.41s estimated
+29.87% done; 2197.35s, 7356.55s estimated
+30.00% done; 2200.35s, 7334.51s estimated
+30.13% done; 2203.35s, 7312.63s estimated
+30.26% done; 2206.42s, 7291.18s estimated
+30.39% done; 2209.35s, 7269.47s estimated
+N = 5000, K = 2, c = 12, len = 10
+30.52% done; 2212.28s, 7247.95s estimated
+30.65% done; 2216.35s, 7230.32s estimated
+30.78% done; 2220.52s, 7213.16s estimated
+30.92% done; 2224.59s, 7195.83s estimated
+31.05% done; 2228.76s, 7178.95s estimated
+31.18% done; 2232.86s, 7161.99s estimated
+31.31% done; 2236.79s, 7144.66s estimated
+31.44% done; 2240.94s, 7128.16s estimated
+31.57% done; 2244.92s, 7111.25s estimated
+31.70% done; 2248.84s, 7094.28s estimated
+N = 5000, K = 2, c = 12, len = 20
+31.83% done; 2252.92s, 7077.98s estimated
+31.96% done; 2259.04s, 7068.16s estimated
+32.09% done; 2265.33s, 7058.96s estimated
+32.22% done; 2271.30s, 7048.87s estimated
+32.35% done; 2277.47s, 7039.45s estimated
+32.48% done; 2283.83s, 7030.72s estimated
+32.61% done; 2289.89s, 7021.09s estimated
+32.75% done; 2295.83s, 7011.22s estimated
+32.88% done; 2302.00s, 7002.10s estimated
+33.01% done; 2308.17s, 6993.06s estimated
+N = 5000, K = 2, c = 15, len = 5
+33.17% done; 2314.98s, 6979.14s estimated
+33.33% done; 2317.95s, 6953.84s estimated
+33.50% done; 2320.85s, 6928.60s estimated
+33.66% done; 2323.74s, 6903.53s estimated
+33.82% done; 2326.74s, 6879.06s estimated
+33.99% done; 2329.73s, 6854.80s estimated
+34.15% done; 2332.73s, 6830.77s estimated
+34.31% done; 2335.75s, 6807.05s estimated
+34.48% done; 2338.76s, 6783.51s estimated
+34.64% done; 2341.79s, 6760.27s estimated
+N = 5000, K = 2, c = 15, len = 10
+34.80% done; 2344.76s, 6737.06s estimated
+34.97% done; 2348.72s, 6716.90s estimated
+35.13% done; 2352.84s, 6697.39s estimated
+35.29% done; 2356.77s, 6677.52s estimated
+35.46% done; 2360.79s, 6658.08s estimated
+35.62% done; 2364.80s, 6638.78s estimated
+35.78% done; 2368.79s, 6619.64s estimated
+35.95% done; 2372.85s, 6600.84s estimated
+36.11% done; 2376.85s, 6582.05s estimated
+36.27% done; 2380.91s, 6563.59s estimated
+N = 5000, K = 2, c = 15, len = 20
+36.44% done; 2385.00s, 6545.39s estimated
+36.60% done; 2391.29s, 6533.35s estimated
+36.76% done; 2397.51s, 6521.22s estimated
+36.93% done; 2403.63s, 6508.95s estimated
+37.09% done; 2409.86s, 6497.06s estimated
+37.25% done; 2416.03s, 6485.13s estimated
+37.42% done; 2422.24s, 6473.42s estimated
+37.58% done; 2428.36s, 6461.55s estimated
+37.75% done; 2434.38s, 6449.54s estimated
+37.91% done; 2440.58s, 6438.08s estimated
+N = 5000, K = 2, c = 20, len = 5
+38.13% done; 2447.24s, 6418.75s estimated
+38.34% done; 2450.29s, 6390.24s estimated
+38.56% done; 2453.30s, 6361.96s estimated
+38.78% done; 2456.16s, 6333.59s estimated
+39.00% done; 2459.03s, 6305.56s estimated
+39.22% done; 2461.98s, 6278.06s estimated
+39.43% done; 2465.00s, 6251.02s estimated
+39.65% done; 2467.92s, 6224.04s estimated
+39.87% done; 2470.96s, 6197.66s estimated
+40.09% done; 2473.98s, 6171.51s estimated
+N = 5000, K = 2, c = 20, len = 10
+40.31% done; 2476.87s, 6145.31s estimated
+40.52% done; 2480.95s, 6122.34s estimated
+40.74% done; 2484.87s, 6099.22s estimated
+40.96% done; 2488.87s, 6076.55s estimated
+41.18% done; 2492.97s, 6054.35s estimated
+41.39% done; 2497.07s, 6032.39s estimated
+41.61% done; 2501.08s, 6010.46s estimated
+41.83% done; 2504.97s, 5988.45s estimated
+42.05% done; 2509.14s, 5967.33s estimated
+42.27% done; 2513.15s, 5946.06s estimated
+N = 5000, K = 2, c = 20, len = 20
+42.48% done; 2517.25s, 5925.22s estimated
+42.70% done; 2523.43s, 5909.46s estimated
+42.92% done; 2529.43s, 5893.45s estimated
+43.14% done; 2535.59s, 5877.95s estimated
+43.36% done; 2541.77s, 5862.68s estimated
+43.57% done; 2547.92s, 5847.47s estimated
+43.79% done; 2554.21s, 5832.75s estimated
+44.01% done; 2560.24s, 5817.57s estimated
+44.23% done; 2566.36s, 5802.75s estimated
+44.44% done; 2572.56s, 5788.25s estimated
+N = 10000, K = 2, c = 2, len = 5
+44.49% done; 2580.30s, 5799.99s estimated
+44.53% done; 2584.00s, 5802.62s estimated
+44.58% done; 2587.55s, 5804.91s estimated
+44.62% done; 2591.11s, 5807.23s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+44.66% done; 2594.72s, 5809.64s estimated
+44.71% done; 2598.20s, 5811.76s estimated
+44.75% done; 2601.64s, 5813.78s estimated
+44.79% done; 2605.16s, 5816.00s estimated
+44.84% done; 2608.65s, 5818.13s estimated
+44.88% done; 2612.37s, 5820.78s estimated
+N = 10000, K = 2, c = 2, len = 10
+44.92% done; 2615.85s, 5822.87s estimated
+44.97% done; 2620.58s, 5827.75s estimated
+45.01% done; 2625.34s, 5832.68s estimated
+45.05% done; 2630.27s, 5837.97s estimated
+45.10% done; 2634.86s, 5842.51s estimated
+45.14% done; 2639.73s, 5847.68s estimated
+45.19% done; 2644.54s, 5852.66s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+45.23% done; 2649.46s, 5857.90s estimated
+45.27% done; 2654.55s, 5863.52s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+45.32% done; 2659.39s, 5868.55s estimated
+N = 10000, K = 2, c = 2, len = 20
+45.36% done; 2664.36s, 5873.88s estimated
+45.40% done; 2671.59s, 5884.17s estimated
+45.45% done; 2678.99s, 5894.80s estimated
+45.49% done; 2686.21s, 5905.03s estimated
+45.53% done; 2693.64s, 5915.70s estimated
+45.58% done; 2700.96s, 5926.10s estimated
+45.62% done; 2708.24s, 5936.39s estimated
+45.66% done; 2715.72s, 5947.12s estimated
+45.71% done; 2723.22s, 5957.85s estimated
+45.75% done; 2730.55s, 5968.19s estimated
+N = 10000, K = 2, c = 3, len = 5
+45.82% done; 2739.47s, 5979.15s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+45.88% done; 2743.78s, 5980.03s estimated
+45.95% done; 2747.99s, 5980.69s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+46.01% done; 2752.12s, 5981.17s estimated
+46.08% done; 2756.25s, 5981.64s estimated
+46.14% done; 2760.32s, 5982.00s estimated
+46.21% done; 2764.24s, 5982.02s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+46.27% done; 2768.52s, 5982.82s estimated
+46.34% done; 2772.71s, 5983.42s estimated
+46.41% done; 2776.66s, 5983.51s estimated
+N = 10000, K = 2, c = 3, len = 10
+46.47% done; 2780.69s, 5983.77s estimated
+46.54% done; 2786.08s, 5986.95s estimated
+46.60% done; 2791.50s, 5990.18s estimated
+46.67% done; 2797.23s, 5994.07s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+46.73% done; 2802.95s, 5997.92s estimated
+46.80% done; 2808.51s, 6001.43s estimated
+46.86% done; 2814.02s, 6004.80s estimated
+46.93% done; 2819.72s, 6008.60s estimated
+46.99% done; 2825.20s, 6011.91s estimated
+47.06% done; 2830.73s, 6015.29s estimated
+N = 10000, K = 2, c = 3, len = 20
+47.12% done; 2836.20s, 6018.56s estimated
+47.19% done; 2844.61s, 6028.05s estimated
+47.25% done; 2853.57s, 6038.67s estimated
+47.32% done; 2862.32s, 6048.83s estimated
+47.39% done; 2871.06s, 6058.92s estimated
+47.45% done; 2879.48s, 6068.33s estimated
+47.52% done; 2888.41s, 6078.76s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+47.58% done; 2897.11s, 6088.71s estimated
+47.65% done; 2905.64s, 6098.26s estimated
+47.71% done; 2914.46s, 6108.38s estimated
+N = 10000, K = 2, c = 4, len = 5
+47.80% done; 2924.53s, 6118.31s estimated
+47.89% done; 2928.76s, 6116.03s estimated
+47.97% done; 2933.03s, 6113.80s estimated
+48.06% done; 2937.48s, 6111.98s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+48.15% done; 2941.83s, 6109.96s estimated
+48.24% done; 2946.14s, 6107.85s estimated
+48.32% done; 2950.36s, 6105.57s estimated
+48.41% done; 2954.65s, 6103.45s estimated
+48.50% done; 2959.06s, 6101.56s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+48.58% done; 2963.58s, 6099.92s estimated
+N = 10000, K = 2, c = 4, len = 10
+48.67% done; 2967.80s, 6097.67s estimated
+48.76% done; 2973.68s, 6098.84s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+48.85% done; 2979.72s, 6100.31s estimated
+48.93% done; 2985.66s, 6101.60s estimated
+49.02% done; 2991.53s, 6102.71s estimated
+49.11% done; 2997.46s, 6103.97s estimated
+49.19% done; 3003.71s, 6105.86s estimated
+49.28% done; 3009.56s, 6106.93s estimated
+49.37% done; 3015.72s, 6108.63s estimated
+49.46% done; 3021.72s, 6110.01s estimated
+N = 10000, K = 2, c = 4, len = 20
+49.54% done; 3027.67s, 6111.26s estimated
+49.63% done; 3036.96s, 6119.26s estimated
+49.72% done; 3046.51s, 6127.73s estimated
+49.80% done; 3055.86s, 6135.77s estimated
+49.89% done; 3065.32s, 6144.03s estimated
+49.98% done; 3074.77s, 6152.23s estimated
+50.07% done; 3083.97s, 6159.88s estimated
+50.15% done; 3093.49s, 6168.16s estimated
+50.24% done; 3103.37s, 6177.13s estimated
+50.33% done; 3112.88s, 6185.33s estimated
+N = 10000, K = 2, c = 5, len = 5
+50.44% done; 3125.08s, 6196.15s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+50.54% done; 3130.26s, 6193.05s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+50.65% done; 3135.45s, 6189.99s estimated
+50.76% done; 3140.45s, 6186.56s estimated
+50.87% done; 3145.50s, 6183.24s estimated
+50.98% done; 3150.22s, 6179.28s estimated
+51.09% done; 3155.35s, 6176.15s estimated
+51.20% done; 3160.31s, 6172.69s estimated
+51.31% done; 3165.00s, 6168.72s estimated
+51.42% done; 3169.78s, 6164.94s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+N = 10000, K = 2, c = 5, len = 10
+51.53% done; 3174.70s, 6161.46s estimated
+51.63% done; 3181.32s, 6161.29s estimated
+51.74% done; 3187.97s, 6161.17s estimated
+51.85% done; 3194.56s, 6160.95s estimated
+51.96% done; 3201.33s, 6161.05s estimated
+52.07% done; 3208.01s, 6161.00s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 32)] 
+52.18% done; 3214.71s, 6160.97s estimated
+52.29% done; 3221.90s, 6161.88s estimated
+52.40% done; 3228.57s, 6161.81s estimated
+52.51% done; 3235.26s, 6161.77s estimated
+N = 10000, K = 2, c = 5, len = 20
+52.61% done; 3243.22s, 6164.14s estimated
+52.72% done; 3253.68s, 6171.23s estimated
+52.83% done; 3263.89s, 6177.84s estimated
+52.94% done; 3274.08s, 6184.37s estimated
+53.05% done; 3283.76s, 6189.92s estimated
+53.16% done; 3293.59s, 6195.72s estimated
+53.27% done; 3303.82s, 6202.27s estimated
+[Warning: Failed to converge in 100 iterations.] 
+[> In kmeans/loopBody (line 466)
+  In internal.stats.parallel.smartForReduce (line 136)
+  In kmeans (line 335)
+  In node_embed_file (line 41)
+  In testfile (line 31)] 
+53.38% done; 3314.02s, 6208.72s estimated
+53.49% done; 3323.79s, 6214.34s estimated
+53.59% done; 3334.10s, 6220.93s estimated
+N = 10000, K = 2, c = 6, len = 5
+53.73% done; 3346.90s, 6229.63s estimated
+53.86% done; 3351.86s, 6223.72s estimated
+53.99% done; 3356.75s, 6217.71s estimated
+54.12% done; 3361.56s, 6211.58s estimated
+54.25% done; 3366.30s, 6205.36s estimated
+54.38% done; 3370.78s, 6198.68s estimated
+54.51% done; 3375.53s, 6192.51s estimated
+54.64% done; 3380.23s, 6186.30s estimated
+54.77% done; 3384.90s, 6180.08s estimated
+54.90% done; 3389.62s, 6173.95s estimated
+N = 10000, K = 2, c = 6, len = 10
+55.03% done; 3394.20s, 6167.62s estimated
+55.16% done; 3400.91s, 6165.16s estimated
+55.29% done; 3407.52s, 6162.54s estimated
+55.42% done; 3414.31s, 6160.25s estimated
+55.56% done; 3421.05s, 6157.89s estimated
+55.69% done; 3427.77s, 6155.49s estimated
+55.82% done; 3434.63s, 6153.38s estimated
+55.95% done; 3441.25s, 6150.84s estimated
+56.08% done; 3448.09s, 6148.69s estimated
+56.21% done; 3455.23s, 6147.09s estimated
+N = 10000, K = 2, c = 6, len = 20
+56.34% done; 3461.96s, 6144.78s estimated
+56.47% done; 3473.21s, 6150.47s estimated
+56.60% done; 3484.01s, 6155.35s estimated
+56.73% done; 3494.84s, 6160.27s estimated
+56.86% done; 3505.74s, 6165.28s estimated
+56.99% done; 3516.21s, 6169.50s estimated
+57.12% done; 3527.21s, 6174.64s estimated
+57.25% done; 3537.78s, 6179.00s estimated
+57.39% done; 3548.66s, 6183.88s estimated
+57.52% done; 3559.55s, 6188.77s estimated
+N = 10000, K = 2, c = 8, len = 5
+57.69% done; 3572.67s, 6192.81s estimated
+57.86% done; 3577.36s, 6182.26s estimated
+58.04% done; 3582.11s, 6171.87s estimated
+58.21% done; 3586.76s, 6161.39s estimated
+58.39% done; 3591.33s, 6150.83s estimated
+58.56% done; 3596.19s, 6140.81s estimated
+58.74% done; 3600.87s, 6130.57s estimated
+58.91% done; 3605.42s, 6120.14s estimated
+59.08% done; 3610.20s, 6110.18s estimated
+59.26% done; 3614.79s, 6099.96s estimated
+N = 10000, K = 2, c = 8, len = 10
+59.43% done; 3619.36s, 6089.76s estimated
+59.61% done; 3625.99s, 6083.08s estimated
+59.78% done; 3632.77s, 6076.68s estimated
+59.96% done; 3639.57s, 6070.35s estimated
+60.13% done; 3646.42s, 6064.15s estimated
+60.31% done; 3653.07s, 6057.66s estimated
+60.48% done; 3659.85s, 6051.40s estimated
+60.65% done; 3666.66s, 6045.24s estimated
+60.83% done; 3673.21s, 6038.70s estimated
+61.00% done; 3680.09s, 6032.72s estimated
+N = 10000, K = 2, c = 8, len = 20
+61.18% done; 3686.88s, 6026.62s estimated
+61.35% done; 3697.51s, 6026.83s estimated
+61.53% done; 3707.91s, 6026.66s estimated
+61.70% done; 3718.36s, 6026.57s estimated
+61.87% done; 3729.15s, 6027.05s estimated
+62.05% done; 3739.46s, 6026.73s estimated
+62.22% done; 3750.33s, 6027.31s estimated
+62.40% done; 3761.51s, 6028.39s estimated
+62.57% done; 3772.58s, 6029.30s estimated
+62.75% done; 3783.86s, 6030.52s estimated
+N = 10000, K = 2, c = 10, len = 5
+62.96% done; 3797.33s, 6031.06s estimated
+63.18% done; 3802.36s, 6018.22s estimated
+63.40% done; 3807.15s, 6005.09s estimated
+63.62% done; 3812.04s, 5992.21s estimated
+63.83% done; 3817.15s, 5979.77s estimated
+64.05% done; 3821.88s, 5966.81s estimated
+64.27% done; 3826.79s, 5954.22s estimated
+64.49% done; 3831.70s, 5941.72s estimated
+64.71% done; 3836.26s, 5928.76s estimated
+64.92% done; 3841.14s, 5916.39s estimated
+N = 10000, K = 2, c = 10, len = 10
+65.14% done; 3846.08s, 5904.19s estimated
+65.36% done; 3853.18s, 5895.37s estimated
+65.58% done; 3860.20s, 5886.48s estimated
+65.80% done; 3867.39s, 5877.93s estimated
+66.01% done; 3874.25s, 5868.91s estimated
+66.23% done; 3881.11s, 5859.97s estimated
+66.45% done; 3887.91s, 5850.99s estimated
+66.67% done; 3894.84s, 5842.25s estimated
+66.88% done; 3901.89s, 5833.77s estimated
+67.10% done; 3908.95s, 5825.35s estimated
+N = 10000, K = 2, c = 10, len = 20
+67.32% done; 3916.17s, 5817.23s estimated
+67.54% done; 3927.57s, 5815.33s estimated
+67.76% done; 3938.83s, 5813.26s estimated
+67.97% done; 3950.34s, 5811.56s estimated
+68.19% done; 3961.66s, 5809.60s estimated
+68.41% done; 3973.24s, 5808.02s estimated
+68.63% done; 3984.86s, 5806.52s estimated
+68.85% done; 3996.35s, 5804.83s estimated
+69.06% done; 4007.64s, 5802.85s estimated
+69.28% done; 4018.98s, 5800.97s estimated
+N = 10000, K = 2, c = 12, len = 5
+69.54% done; 4032.78s, 5799.02s estimated
+69.80% done; 4037.49s, 5784.05s estimated
+70.07% done; 4042.16s, 5769.13s estimated
+70.33% done; 4046.85s, 5754.35s estimated
+70.59% done; 4051.81s, 5740.06s estimated
+70.85% done; 4056.51s, 5725.51s estimated
+71.11% done; 4061.01s, 5710.80s estimated
+71.37% done; 4065.89s, 5696.72s estimated
+71.63% done; 4070.69s, 5682.63s estimated
+71.90% done; 4075.56s, 5668.73s estimated
+N = 10000, K = 2, c = 12, len = 10
+72.16% done; 4080.26s, 5654.71s estimated
+72.42% done; 4087.43s, 5644.19s estimated
+72.68% done; 4094.24s, 5633.26s estimated
+72.94% done; 4101.11s, 5622.49s estimated
+73.20% done; 4108.17s, 5612.05s estimated
+73.46% done; 4114.98s, 5601.35s estimated
+73.73% done; 4121.80s, 5590.74s estimated
+73.99% done; 4128.76s, 5580.39s estimated
+74.25% done; 4135.56s, 5569.90s estimated
+74.51% done; 4142.68s, 5559.91s estimated
+N = 10000, K = 2, c = 12, len = 20
+74.77% done; 4149.63s, 5549.76s estimated
+75.03% done; 4160.82s, 5545.35s estimated
+75.29% done; 4172.04s, 5540.99s estimated
+75.56% done; 4183.19s, 5536.58s estimated
+75.82% done; 4194.71s, 5532.68s estimated
+76.08% done; 4206.08s, 5528.61s estimated
+76.34% done; 4217.57s, 5524.72s estimated
+76.60% done; 4228.89s, 5520.65s estimated
+76.86% done; 4240.03s, 5516.37s estimated
+77.12% done; 4251.46s, 5512.48s estimated
+N = 10000, K = 2, c = 15, len = 5
+77.45% done; 4264.94s, 5506.63s estimated
+77.78% done; 4269.67s, 5489.58s estimated
+78.10% done; 4274.28s, 5472.51s estimated
+78.43% done; 4278.84s, 5455.52s estimated
+78.76% done; 4283.63s, 5438.96s estimated
+79.08% done; 4288.25s, 5422.34s estimated
+79.41% done; 4292.80s, 5405.75s estimated
+79.74% done; 4297.43s, 5389.40s estimated
+80.07% done; 4302.11s, 5373.25s estimated
+80.39% done; 4306.81s, 5357.25s estimated
+N = 10000, K = 2, c = 15, len = 10
+80.72% done; 4311.49s, 5341.36s estimated
+81.05% done; 4318.47s, 5328.44s estimated
+81.37% done; 4325.50s, 5315.67s estimated
+81.70% done; 4332.38s, 5302.83s estimated
+82.03% done; 4339.28s, 5290.12s estimated
+82.35% done; 4346.22s, 5277.55s estimated
+82.68% done; 4353.47s, 5265.46s estimated
+83.01% done; 4360.19s, 5252.83s estimated
+83.33% done; 4367.14s, 5240.57s estimated
+83.66% done; 4374.21s, 5228.55s estimated
+N = 10000, K = 2, c = 15, len = 20
+83.99% done; 4381.19s, 5216.51s estimated
+84.31% done; 4392.37s, 5209.55s estimated
+84.64% done; 4403.74s, 5202.88s estimated
+84.97% done; 4414.77s, 5195.84s estimated
+85.29% done; 4425.15s, 5188.10s estimated
+85.62% done; 4435.62s, 5180.53s estimated
+85.95% done; 4446.02s, 5172.94s estimated
+86.27% done; 4456.68s, 5165.69s estimated
+86.60% done; 4467.24s, 5158.40s estimated
+86.93% done; 4477.95s, 5151.33s estimated
+N = 10000, K = 2, c = 20, len = 5
+87.36% done; 4490.54s, 5140.05s estimated
+87.80% done; 4494.97s, 5119.58s estimated
+88.24% done; 4499.27s, 5099.17s estimated
+88.67% done; 4503.82s, 5079.25s estimated
+89.11% done; 4508.14s, 5059.26s estimated
+89.54% done; 4512.45s, 5039.46s estimated
+89.98% done; 4516.97s, 5020.07s estimated
+90.41% done; 4521.32s, 5000.69s estimated
+90.85% done; 4525.70s, 4981.53s estimated
+91.29% done; 4530.15s, 4962.62s estimated
+N = 10000, K = 2, c = 20, len = 10
+91.72% done; 4534.62s, 4943.92s estimated
+92.16% done; 4540.99s, 4927.46s estimated
+92.59% done; 4547.37s, 4911.16s estimated
+93.03% done; 4553.77s, 4895.03s estimated
+93.46% done; 4560.08s, 4878.97s estimated
+93.90% done; 4566.67s, 4863.34s estimated
+94.34% done; 4573.14s, 4847.74s estimated
+94.77% done; 4579.66s, 4832.33s estimated
+95.21% done; 4587.15s, 4818.09s estimated
+95.64% done; 4594.56s, 4803.88s estimated
+N = 10000, K = 2, c = 20, len = 20
+96.08% done; 4602.42s, 4790.28s estimated
+96.51% done; 4613.97s, 4780.62s estimated
+96.95% done; 4625.83s, 4771.36s estimated
+97.39% done; 4637.83s, 4762.33s estimated
+97.82% done; 4649.61s, 4753.16s estimated
+98.26% done; 4661.46s, 4744.15s estimated
+98.69% done; 4673.07s, 4734.96s estimated
+99.13% done; 4684.91s, 4726.10s estimated
+99.56% done; 4696.79s, 4717.35s estimated
+100.00% done; 4708.42s, 4708.42s estimated
+[Warning:
+Connection to the X11 Display Server (localhost:10.0) has been lost.
+No more graphics windows can no longer be displayed in this session.
+Graphics Objects can still be printed, and all commands should still work.
+We recommend that you try to save your current session and exit.] 
+>> 
