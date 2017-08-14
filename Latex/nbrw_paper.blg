@@ -1,15 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'nbrw_paper.blg'
-[38] biber:303> INFO - === Thu Aug  3, 2017, 16:33:43
-[55] Biber.pm:359> INFO - Reading 'nbrw_paper.bcf'
-[129] Biber.pm:835> INFO - Found 5 citekeys in bib section 0
-[141] Biber.pm:3670> INFO - Processing section 0
+[30] biber:303> INFO - === Wed Aug  9, 2017, 13:48:33
+[48] Biber.pm:359> INFO - Reading 'nbrw_paper.bcf'
+[127] Biber.pm:835> INFO - Found 5 citekeys in bib section 0
+[140] Biber.pm:3670> INFO - Processing section 0
 [152] Biber.pm:3840> INFO - Looking for bibtex format file 'biblio.bib' for section 0
 [153] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[158] bibtex.pm:1292> INFO - Found BibTeX data source 'biblio.bib'
-[201] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[201] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[201] Biber.pm:3499> INFO - Sorting list 'ynt/global/' of type 'entry' with scheme 'ynt' and locale 'en-US'
-[201] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[206] bbl.pm:608> INFO - Writing 'nbrw_paper.bbl' with encoding 'UTF-8'
-[208] bbl.pm:712> INFO - Output to nbrw_paper.bbl
+[159] bibtex.pm:1292> INFO - Found BibTeX data source 'biblio.bib'
+[206] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[206] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[206] Biber.pm:3499> INFO - Sorting list 'ynt/global/' of type 'entry' with scheme 'ynt' and locale 'en-US'
+[206] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[212] bbl.pm:608> INFO - Writing 'nbrw_paper.bbl' with encoding 'UTF-8'
+[213] bbl.pm:712> INFO - Output to nbrw_paper.bbl

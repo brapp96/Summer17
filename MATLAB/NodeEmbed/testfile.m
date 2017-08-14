@@ -26,16 +26,16 @@ for i = 1:numel(N)
                     fprintf('N = %d, K = %d, c = %d, len = %d\n',N(i),K(k),c(j),len(l));
                 end
                 for rep = 1:num_reps
-                    curr_time = curr_time+N(i)*c(j)*K(k);
-                    fprintf('%4.2f%% done; %4.2fs, %4.2fs estimated\n',100*curr_time/total_time,toc,toc/curr_time*total_time);
                     [~,ccr_bt(i,j,k,l,rep),nmi_bt(i,j,k,l,rep)] = node_embed_file(G,L,0,len(l));
                     [~,ccr_nbt(i,j,k,l,rep),nmi_nbt(i,j,k,l,rep)] = node_embed_file(G,L,1,len(l));
+                    curr_time = curr_time+N(i)*c(j)*K(k);
+                    fprintf('%4.2f%% done; %4.2fs, %4.2fs estimated\n',100*curr_time/total_time,toc,toc/curr_time*total_time);
                 end
             end
         end
     end
 end
-save(['figs/nmi_ccr_' datestr(clock,'mm-dd-yy_HH:MM:SS') '.mat'],'nmi_bt','nmi_nbt','ccr_bt','ccr_nbt','N','K','c','len');
+save(['runs/nmi_ccr_' datestr(clock,'mm-dd-yy_HH:MM:SS') '.mat'],'nmi_bt','nmi_nbt','ccr_bt','ccr_nbt','N','K','c','len');
 % for nn = 1:numel(N)
 %     figure;
 %     hold on

@@ -1,0 +1,258 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{ynt/global/}
+    \entry{Luxburg}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ac79a77fb25c9772df7beafd742aaa14}{%
+           family={Luxburg},
+           familyi={L\bibinitperiod},
+           given={Ulrike\bibnamedelima Von},
+           giveni={U\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac79a77fb25c9772df7beafd742aaa14}
+      \strng{fullhash}{ac79a77fb25c9772df7beafd742aaa14}
+      \strng{authornamehash}{ac79a77fb25c9772df7beafd742aaa14}
+      \strng{authorfullhash}{ac79a77fb25c9772df7beafd742aaa14}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{August}
+      \field{title}{{A Tutorial on Spectral Clustering}}
+      \field{year}{2006}
+    \endentry
+    \entry{DSD}{article}{}
+      \name{author}{7}{}{%
+        {{hash=bae52f66e883450522e110438c494784}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Mengfei},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3dc455f892e823d50606b6e7f20e6790}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jisoo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5941a0ec77767c9b1a5787e790daf29e}{%
+           family={Daniels},
+           familyi={D\bibinitperiod},
+           given={Noah\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1f0a2792f551652107764714fba40747}{%
+           family={Crovella},
+           familyi={C\bibinitperiod},
+           given={Mark\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=fc0e73692b80cd3193bc9479b250ac7e}{%
+           family={Cowen},
+           familyi={C\bibinitperiod},
+           given={Lenore\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3d0895e1463121e94bb76222a6e3bd24}{%
+           family={Hescott},
+           familyi={H\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd969236bf16b869ecef2a52eb9a9e3b}
+      \strng{fullhash}{ebc7cfa7e4e62d4a8236968936d288cd}
+      \strng{authornamehash}{dd969236bf16b869ecef2a52eb9a9e3b}
+      \strng{authorfullhash}{ebc7cfa7e4e62d4a8236968936d288cd}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In protein-protein interaction (PPI) networks, functional similarity is often inferred based on the function of directly interacting proteins, or more generally, some notion of interaction network proximity among proteins in a local neighborhood. Prior methods typically measure proximity as the shortest-path distance in the network, but this has only a limited ability to capture fine-grained neighborhood distinctions, because most proteins are close to each other, and there are many ties in proximity. We introduce diffusion state distance (DSD), a new metric based on a graph diffusion property, designed to capture finer-grained distinctions in proximity for transfer of functional annotation in PPI networks. We present a tool that, when input a PPI network, will output the DSD distances between every pair of proteins. We show that replacing the shortest-path metric by DSD improves the performance of classical function prediction methods across the board.}
+      \field{issn}{19326203}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{10}
+      \field{title}{{Going the Distance for Protein Function Prediction: A New Distance Metric for Protein Interaction Networks}}
+      \field{volume}{8}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0076339
+      \endverb
+    \endentry
+    \entry{word2vec}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a2d359b12ca2fadf0b40136a73f021bb}{%
+           family={Mikolov},
+           familyi={M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ee3f7d7b96add98106db907e189d6c13}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3d11e6f2a0d0a1183b2cf62996525afc}{%
+           family={Corrado},
+           familyi={C\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{fullhash}{de32714a52f717caeb5f99165092caf6}
+      \strng{authornamehash}{d4849f6d57e38d9b9846cfb360e45131}
+      \strng{authorfullhash}{de32714a52f717caeb5f99165092caf6}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The recently introduced continuous Skip-gram model is an efficient method for learning high-quality distributed vector representations that capture a large number of precise syntactic and semantic word relationships. In this paper we present several extensions that improve both the quality of the vectors and the training speed. By subsampling of the frequent words we obtain significant speedup and also learn more regular word representations. We also describe a simple alternative to the hierarchical softmax called negative sampling. An inherent limitation of word representations is their indifference to word order and their inability to represent idiomatic phrases. For example, the meanings of "Canada" and "Air" cannot be easily combined to obtain "Air Canada". Motivated by this example, we present a simple method for finding phrases in text, and show that learning good vector representations for millions of phrases is possible.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{10495258}
+      \field{journaltitle}{CoRR}
+      \field{title}{{Distributed Representations of Words and Phrases and their Compositionality}}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1162/jmlr.2003.3.4-5.951
+      \endverb
+      \verb{eprint}
+      \verb 1310.4546
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1310.4546
+      \endverb
+    \endentry
+    \entry{LevyGoldberg}{article}{}
+      \name{author}{2}{}{%
+        {{hash=038965e189161e03f6255a4278c280a1}{%
+           family={Levy},
+           familyi={L\bibinitperiod},
+           given={Omer},
+           giveni={O\bibinitperiod}}}%
+        {{hash=33b00f3e2f4f1bb310f1cf8d4a4c500a}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bf468a98835606e27b3dbe9b0e22ae8}
+      \strng{fullhash}{4bf468a98835606e27b3dbe9b0e22ae8}
+      \strng{authornamehash}{4bf468a98835606e27b3dbe9b0e22ae8}
+      \strng{authorfullhash}{4bf468a98835606e27b3dbe9b0e22ae8}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We analyze skip-gram with negative-sampling (SGNS), a word embedding method introduced by Mikolov et al., and show that it is implicitly factorizing a word-context matrix, whose cells are the pointwise mutual information (PMI) of the respective word and context pairs, shifted by a global constant. We find that another embedding method, NCE, is implicitly factorizing a similar matrix, where each cell is the (shifted) log conditional probability of a word given its context. We show that using a sparse Shifted Positive PMI word-context matrix to represent words improves results on two word similarity tasks and one of two analogy tasks. When dense low-dimensional vectors are preferred, exact factorization with SVD can achieve solutions that are at least as good as SGNS's solutions for word simi-larity tasks. On analogy questions SGNS remains superior to SVD. We conjecture that this stems from the weighted nature of SGNS's factorization.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{9781634393973}
+      \field{issn}{10495258}
+      \field{journaltitle}{Advances in Neural Information Processing Systems (NIPS)}
+      \field{title}{{Neural Word Embedding as Implicit Matrix Factorization}}
+      \field{year}{2014}
+      \field{pages}{2177\bibrangedash 2185}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1162/153244303322533223
+      \endverb
+      \verb{eprint}
+      \verb 1405.4053
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper/5477-neural-word-embedding-as-implicit-matrix-factorization
+      \endverb
+    \endentry
+    \entry{NodeEmbed}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5952c8aa62f7d671059e8e6d34d9783c}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Weicong},
+           giveni={W\bibinitperiod}}}%
+        {{hash=aa7d28c115aa545e7d888d6879b372b5}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Christy},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b75ef449cbd388819e6389563635001e}{%
+           family={Ishwar},
+           familyi={I\bibinitperiod},
+           given={Prakash},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{78c7979063b6010c619ea80605614f7e}
+      \strng{fullhash}{78c7979063b6010c619ea80605614f7e}
+      \strng{authornamehash}{78c7979063b6010c619ea80605614f7e}
+      \strng{authorfullhash}{78c7979063b6010c619ea80605614f7e}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Neural node embeddings have recently emerged as a powerful representation for supervised learning tasks involving graph-structured data. We leverage this recent advance to develop a novel algorithm for unsupervised community discovery in graphs. Through extensive experimental studies on simulated and real-world data, we demonstrate that the proposed approach consistently improves over the current state-of-the-art. Specifically, our approach empirically attains the information-theoretic limits for community recovery under the benchmark Stochastic Block Models for graph generation and exhibits better stability and accuracy over both Spectral Clustering and Acyclic Belief Propagation in the community recovery limits.}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{{Node Embedding via Word Embedding for Network Community Discovery}}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{eprint}
+      \verb 1611.03028
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1611.03028
+      \endverb
+    \endentry
+    \entry{Bailey}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=5326a14388b63587dc158aad69248254}{%
+           family={Bailey},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{5326a14388b63587dc158aad69248254}
+      \strng{fullhash}{5326a14388b63587dc158aad69248254}
+      \strng{authornamehash}{5326a14388b63587dc158aad69248254}
+      \strng{authorfullhash}{5326a14388b63587dc158aad69248254}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Master's Thesis: Capturing and evaluating higher order relations in word embeddings using tensor factorization}}
+      \field{year}{2017}
+    \endentry
+  \endsortlist
+  \missing{xx}
+\endrefsection
+\endinput
+
