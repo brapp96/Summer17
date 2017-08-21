@@ -128,19 +128,19 @@ SBM builds off of the classical Erdos-Renyi $G(n,p)$ random graph model, where e
 
 \textcolor{red}{Can we summarize this in an algorithmic format - See the algorithmic package in LateX} -- To generate a Euclidean embedding of the nodes of the graph, VEC performs $r = 10$ random walks per node, each with length $l = 60$. Since the graphs are unweighted, each neighbor is equally likely to be chosen. Each random walk is converted into a sentence by counting the number of pairwise co-occurrences for all node pairs: for the co-occurrence matrix $W$, $W_{i,j}$ is the total number of times node $j$ occurs within $w=8$ places of node $i$ in all random walks (this defines a skip-gram with window size 8). Note that an isolated node (a node with a degree of 0) will not be part of any sentence, since the random walk will not reach it and random walks starting there will not be included in the corpus. This observation makes logical sense because a node with no connections cannot be said to be in any cluster, since there is no information about the node at all.
 
-\textcolor{red}{Is it easy to show the following? One can use some \emph{closed form} statistical measure of how many times a node $v$ is visited when starting from node $u$ for $k$ steps of a uniform RW and vice versa. Given this symmetric similarity measure one can run a word2vec on this. After all, word2vec only works on co-occurances or similarity measures.}
+\textcolor{red}{Is it easy to show the following? One can use some \emph{closed form} statistical measure of how many times a node $v$ is visited when starting from node $u$ for $k$ steps of a uniform RW and vice versa. Given this symmetric similarity measure one can run a word2vec on this. After all, word2vec only works on co-occurances or similarity measures. One such measure is DSD - right? Shall we consider including the DSD experiments with this paper?}
 
 Once the sentences have been formed, an existing implementation of \textcolor{blue}{a popular word embedding algorithm namely}, word2vec \cite{word2vec}, is used to convert the sentences into vectors. word2vec takes the corpus of random walks and embeds them into $d$-dimensional space by means of a stochastic gradient descent algorithm. An embedding dimension of $d=50$ is used in our tests to correspond to the original parameters used for VEC. Finally, the embeddings are clustered using a standard k-means clustering scheme.
 
 VEC is shown to have consistently performed better than standard community detection methods, such as spectral clustering and acyclic belief propagation, both in accuracy and robustness to random initialization of the graph \cite{NodeEmbed}. However, accuracy is still lower than desirable for very sparse graphs. In addition, although 60 is not an excessively long random walk, reducing it would speed up the algorithm.
 
-We propose replacing the simple random walk in VEC with a begrudgingly-backtracking random walk, through which we find that both the accuracy and the runtime of VEC can be improved while using shorter random walks. By removing the possibility of revisiting an already encountered node, the begrudgingly-backtracking random walk diffuses over the nodes of the graph faster than a backtracking random walk due to its faster mixing rate \cite{Alon,NBT-Ihara}. Thus, a shorter begrudgingly-backtracking random walk can identify the community structure of sparse graphs better than a simple random walk of greater length.
+We propose replacing the simple random walk in VEC with a begrudgingly-backtracking random walk, through which we find that both the accuracy and the runtime of VEC can be improved while using shorter random walks. By removing the possibility of revisiting an already encountered node, the begrudgingly-backtracking random walk diffuses over the nodes of the graph faster than a backtracking random walk due to its faster mixing rate \cite{Alon,NBT-Ihara}. Thus, a shorter begrudgingly-backtracking random walk can identify the community structure of sparse graphs better than a simple random walk of greater length. \textcolor{blue}{This is a classic example of exploration Vs exploitation in machine learning and statistics}.
 
 \section{Theory}
 
 VEC-NBT produces significantly better clustering than VEC consistently across a range of graph sparsity levels and number of nodes. This improvement in performance can be attributed to the faster mixing rate of a begrudgingly-backtracking random walk compared to a simple random walk.
 
-Consider a simple random walk on a non-bipartite graph $G$ where each node $u$ has degree $d_u$. This is a first-order Markov chain with a transition probability matrix $P$ as follows \cite{Lovasz}.
+Consider a simple random walk on a non-bipartite graph $G$ \textcolor{red}{Can we handle bi-partite graphs using mixture of lazy + NBRW? - see the DSD paper that uses lazy RW for bi-partite case} where each node $u$ has degree $d_u$. This is a first-order Markov chain with a transition probability matrix $P$ as follows \cite{Lovasz}.
 \[
     P(u,v) = 
     \begin{cases} 
@@ -161,9 +161,9 @@ Note that $\tilde P$ is doubly stochastic. It is proven in \cite{NBT-Ihara} that
 $$\tilde \pi = \frac{\mathds{1}}{vol(G)}$$
 where $\mathds{1}$ is the unit vector of length $2m$.
 
-As discussed in \cite{NBT-Ihara}, the mixing rate of the backtracking and the non-backtracking random walk is equal to the second largest eigenvalues of their respective transition probability matrices, $P$ and $\tilde P$. Thus, if $\rho$ and $\tilde \rho$ are the mixing times of the backtracking and non-backtracking random walks respectively and $\lambda_2$ is the second largest eigenvalue of the adjacency matrix of a $d$-regular graph $G$, we have 
+As discussed in \cite{NBT-Ihara}, the mixing rate of the backtracking and the non-backtracking random walk is equal to the second largest eigenvalues of their respective transition probability matrices, $P$ and $\tilde P$.  \textcolor{red}{ARE these results in \cite{NBT-Ihara}? If yes then perhaps state it as a theorem and cite that paper in the theorem $\rightarrow$} Thus, if $\rho$ and $\tilde \rho$ are the mixing times of the backtracking and non-backtracking random walks respectively and $\lambda_2$ is the second largest eigenvalue of the adjacency matrix of a $d$-regular graph $G$, we have 
 $$\rho = \frac{\lambda_2}{d}$$
-$$\tilde \rho = \frac{\lambda_2 + \sqrt{\lambda_2^2 - 4(d-1)}}{2(d-1)}$$.
+$$\tilde \rho = \frac{\lambda_2 + \sqrt{\lambda_2^2 - 4(d-1)}}{2(d-1)}.$$
 
 Furthermore, \cite{NBT-Ihara, Alon} prove that the non-backtracking random walk has a faster mixing rate than a backtracking random walk, yielding the following bounds:
 
@@ -218,28 +218,28 @@ Unless otherwise specified, the x-axis is the sparsity of the graph, varied from
 
 \begin{figure}[h] %% Figure 1
     \centering
-        \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{fig1/N1000K2len10} 
+        \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=1.22\linewidth]{fig1/N1000K2len10.pdf} 
         \caption{1000 nodes}
         \label{fig:subim11}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{fig1/N2000K2len10}
+        \includegraphics[width=\linewidth]{fig1/N2000K2len10.pdf}
         \caption{2000 nodes}
         \label{fig:subim12}
     \end{subfigure}
     \vskip \baselineskip
     \begin{subfigure}{0.48\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{fig1/N5000K2len10}
+        \includegraphics[width=\linewidth]{fig1/N5000K2len10.pdf}
         \caption{5000 nodes}
         \label{fig:subim13}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{fig1/N10000K2len10}
+        \includegraphics[width=\linewidth]{fig1/N10000K2len10.pdf}
         \caption{10000 nodes}
         \label{fig:subim14}
     \end{subfigure}
