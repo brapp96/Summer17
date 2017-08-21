@@ -63,7 +63,7 @@ Tufts University\\
 This paper presents VEC-NBT, a variation of the unsupervised graph clustering technique VEC introduced by Ding et al. \cite{NodeEmbed} which improves upon the performance of the original algorithm significantly for sparse graphs. VEC employs a novel application of the state-of-the-art word2vec model \cite{word2vec} to embed a graph in Euclidean space via random walks on the nodes of the graph. In VEC-NBT, we modify the original algorithm to use a non-backtracking random walk instead of the normal backtracking random walk used in VEC. We introduce a modification to a non-backtracking random walk, which we call a begrudgingly-backtracking random walk, and show empirically that using this model of random walks for VEC-NBT requires shorter walks on the graph to obtain results with comparable or greater accuracy than VEC, especially for sparser graphs.
 \end{abstract}
 
-\textcolor{red}{Things to do: (a) Bolster the references to include other papers on clustering using non-backtracking random walks; (b) Can we show that begrudgingly NBRW has similar spectra?}
+\textcolor{red}{Things to do: (a) Bolster the references to include other papers on clustering using non-backtracking random walks;}
 
 \section{Introduction}
 
@@ -128,7 +128,7 @@ SBM builds off of the classical Erdos-Renyi $G(n,p)$ random graph model, where e
 
 \textcolor{red}{Can we summarize this in an algorithmic format - See the algorithmic package in LateX} -- To generate a Euclidean embedding of the nodes of the graph, VEC performs $r = 10$ random walks per node, each with length $l = 60$. Since the graphs are unweighted, each neighbor is equally likely to be chosen. Each random walk is converted into a sentence by counting the number of pairwise co-occurrences for all node pairs: for the co-occurrence matrix $W$, $W_{i,j}$ is the total number of times node $j$ occurs within $w=8$ places of node $i$ in all random walks (this defines a skip-gram with window size 8). Note that an isolated node (a node with a degree of 0) will not be part of any sentence, since the random walk will not reach it and random walks starting there will not be included in the corpus. This observation makes logical sense because a node with no connections cannot be said to be in any cluster, since there is no information about the node at all.
 
-\textcolor{red}{Is it easy to show the following? One can use some \emph{closed form} statistical measure of how many times a node $v$ is visited when starting from node $u$ for $k$ steps of a uniform RW and vice versa. Given this symmetric similarity measure one can run a word2vec on this. After all, word2vec only works on co-occurances or similarity measures. One such measure is DSD - right? Shall we consider including the DSD experiments with this paper?}
+%\textcolor{red}{Is it easy to show the following? One can use some \emph{closed form} statistical measure of how many times a node $v$ is visited when starting from node $u$ for $k$ steps of a uniform RW and vice versa. Given this symmetric similarity measure one can run a word2vec on this. After all, word2vec only works on co-occurances or similarity measures. One such measure is DSD - right? Shall we consider including the DSD experiments with this paper?}
 
 Once the sentences have been formed, an existing implementation of \textcolor{blue}{a popular word embedding algorithm namely}, word2vec \cite{word2vec}, is used to convert the sentences into vectors. word2vec takes the corpus of random walks and embeds them into $d$-dimensional space by means of a stochastic gradient descent algorithm. An embedding dimension of $d=50$ is used in our tests to correspond to the original parameters used for VEC. Finally, the embeddings are clustered using a standard k-means clustering scheme.
 
@@ -139,8 +139,8 @@ We propose replacing the simple random walk in VEC with a begrudgingly-backtrack
 \section{Theory}
 
 VEC-NBT produces significantly better clustering than VEC consistently across a range of graph sparsity levels and number of nodes. This improvement in performance can be attributed to the faster mixing rate of a begrudgingly-backtracking random walk compared to a simple random walk.
-
-Consider a simple random walk on a non-bipartite graph $G$ \textcolor{red}{Can we handle bi-partite graphs using mixture of lazy + NBRW? - see the DSD paper that uses lazy RW for bi-partite case} where each node $u$ has degree $d_u$. This is a first-order Markov chain with a transition probability matrix $P$ as follows \cite{Lovasz}.
+%\textcolor{red}{Can we handle bi-partite graphs using mixture of lazy + NBRW? - see the DSD paper that uses lazy RW for bi-partite case}
+Consider a simple random walk on a non-bipartite graph $G$  where each node $u$ has degree $d_u$. This is a first-order Markov chain with a transition probability matrix $P$ as follows \cite{Lovasz}.
 \[
     P(u,v) = 
     \begin{cases} 
@@ -194,6 +194,8 @@ $\hat P$ is doubly stochastic.
 Since $\tilde P$ has been shown to be doubly stochastic, we only need consider those elements that would change from $\tilde P$ to $\hat P$, and these are exactly the rows and columns corresponding to any dangling nodes. Let $x$ be a node of $G$ with degree 1, connected only to node $y$; then the single row going to $x$, $(y,x)$, has only the element returning to $y$, $(x,y)$, which has a weight of 1; similarly, the single column coming from $x$ has only the element that sent it there. 
 \end{proof}
 
+\textcolor{red}{Add spectral scatter plots perhaps.}
+
 Hence, $\tilde P$ is the same as $\hat P$, except in the rows and columns of degree-1 nodes: where $\tilde P$ has rows and columns of zeros, $\hat P$ has a 1 where the edge can be included. Since $\tilde P$ is only defined on graphs where the minimal degree is greater than 1, $\tilde P$ is still doubly stochastic, and $\hat P$ extends the definition to graphs with singlet connectivity. In this way we can relax the requirement that all elements of $G$ have minimal degree 2.
 
 We can also show that $\hat P$ is also irreducible and aperiodic, provided $\hat P$ has a single connected component and at least one element with degree greater than 1: clearly if $\tilde P$ is irreducible, extending the graph to include single edges that can be traveled down and back will not make the chain reducible; and it can be shown that an irreducible Markov chain with at least one aperiodic node is aperiodic and $\tilde P$ is aperiodic, so adding more nodes will not change that result. Therefore, by the same argument made for $\tilde \pi$, we can see that the stationary distribution for the begrudgingly-backtracking random walk is
@@ -203,6 +205,7 @@ Thus, we can think of the begrudgingly-backtracking random walk as a variant of 
 
 
 \section{Numerical Results}
+\textcolor{red}{Add experiments with real-world data? Which ones? Karate Network}
 
 We compare the performance of VEC and VEC-NBT on SBM graphs generated using the parameters given through two metrics: Correct Classification Rate (CCR) and Normalized Mutual Information (NMI). For random walks and embedding, VEC-NBT uses the same parameters used by VEC with the exception of the length of the random walk ($l=5, 10$) and the window size ($w=5$) and twice the number of random walks ($r=20$). Here, we show empirically that VEC-NBT consistently achieves better accuracy than VEC for sparser graphs (low values of $c$) and comparable accuracy to VEC at higher sparsity levels.
 
