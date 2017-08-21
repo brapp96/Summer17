@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.aux
+The style file: apalike.bst
+Database file #1: ../biblio.bib.bib
+Warning--entry type for "Luxburg" isn't style-file defined
+--line 3 of file ../biblio.bib.bib
+You've used 7 entries,
+            1935 wiz_defined-function locations,
+            519 strings with 4857 characters,
+and the built_in function-call counts, 2899 in all, are:
+= -- 296
+> -- 103
+< -- 7
++ -- 34
+- -- 34
+* -- 229
+:= -- 493
+add.period$ -- 20
+call.type$ -- 7
+change.case$ -- 52
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 115
+empty$ -- 199
+format.name$ -- 43
+if$ -- 578
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 37
+num.names$ -- 21
+pop$ -- 41
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 100
+stack$ -- 0
+substring$ -- 225
+swap$ -- 27
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 42
+warning$ -- 0
+while$ -- 29
+width$ -- 0
+write$ -- 90
+(There was 1 warning)

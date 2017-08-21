@@ -1,0 +1,15 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is '/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/.texpadtmp/final_paper.blg'
+[35] biber-darwin:276> INFO - === Sun Aug 20, 2017, 15:41:56
+[35] Biber.pm:333> INFO - Reading '/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/.texpadtmp/final_paper.bcf'
+[129] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
+[145] Biber.pm:2977> INFO - Processing section 0
+[161] Biber.pm:3115> INFO - Looking for bibtex format file '/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/biblio.bib' for section 0
+[164] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[167] bibtex.pm:895> INFO - Found BibTeX data source '/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/biblio.bib'
+[241] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[241] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[241] Biber.pm:2854> INFO - Sorting list 'ynt' of type 'entry' with scheme 'ynt' and locale 'en-US'
+[241] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[249] bbl.pm:505> INFO - Writing '/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/.texpadtmp/final_paper.bbl' with encoding 'UTF-8'
+[250] bbl.pm:596> INFO - Output to /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/.texpadtmp/final_paper.bbl

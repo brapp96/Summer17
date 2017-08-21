@@ -1,0 +1,39 @@
+\begin{thebibliography}{}
+
+\bibitem[Alon et~al., 2007]{Alon}
+Alon, N., BENJAMINI, I., LUBETZKY, E., and SODIN, S. (2007).
+\newblock {Non-Backtracking Random Walks Mix Faster}.
+\newblock {\em Communications in Contemporary Mathematics}, 09(04):585--603.
+
+\bibitem[Ding et~al., 2016]{NodeEmbed}
+Ding, W., Lin, C., and Ishwar, P. (2016).
+\newblock {Node Embedding via Word Embedding for Network Community Discovery}.
+\newblock {\em CoRR}, pages 1--10.
+
+\bibitem[Kempton, 2016]{NBT-Ihara}
+Kempton, M. (2016).
+\newblock {Non-Backtracking Random Walks and a Weighted Ihara's Theorem}.
+\newblock {\em Open Journal of Discrete Mathematics}, 6:207--226.
+
+\bibitem[Levy and Goldberg, 2014]{LevyGoldberg}
+Levy, O. and Goldberg, Y. (2014).
+\newblock {Neural Word Embedding as Implicit Matrix Factorization}.
+\newblock {\em Advances in Neural Information Processing Systems (NIPS)}, pages
+  2177--2185.
+
+\bibitem[Lov{\'{a}}sz, 1993]{Lovasz}
+Lov{\'{a}}sz, L. (1993).
+\newblock {Random walks on graphs: A survey}.
+\newblock {\em Combinatorics: Paul Erdos is Eighty}, 2(Volume 2):1--46.
+
+\bibitem[Luxburg, 2006]{Luxburg}
+Luxburg, U.~V. (2006).
+\newblock {A Tutorial on Spectral Clustering}.
+
+\bibitem[Mikolov et~al., 2013]{word2vec}
+Mikolov, T., Sutskever, I., Chen, K., Corrado, G., and Dean, J. (2013).
+\newblock {Distributed Representations of Words and Phrases and their
+  Compositionality}.
+\newblock {\em CoRR}, pages 1--9.
+
+\end{thebibliography}
