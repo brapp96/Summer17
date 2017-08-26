@@ -1,14 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.aux
+The top-level auxiliary file: /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/nips2013.aux
 The style file: apalike.bst
-Database file #1: ../biblio.bib.bib
+Database file #1: biblio.bib.bib
 Warning--empty journal in Redemption
 Warning--empty journal in Luxburg
 Warning--there's a number but no volume in Luxburg
 You've used 8 entries,
             1935 wiz_defined-function locations,
-            524 strings with 5064 characters,
+            524 strings with 5039 characters,
 and the built_in function-call counts, 3519 in all, are:
 = -- 351
 > -- 141

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 AUG 2017 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 AUG 2017 09:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,64 +267,114 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@postskip=\skip48
 \thm@headsep=\skip49
 \dth@everypar=\toks25
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/dsfont.sty
+) (./dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+) (./float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count118
 \float@exts=\toks26
 \float@box=\box30
 \@float@everytoks=\toks27
 \@floatcapt=\box31
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count119
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
 )
-\c@prop=\count119
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip50
+\skiplinenumber=\skip51
+\skiprule=\skip52
+\skiphlne=\skip53
+\skiptext=\skip54
+\skiplength=\skip55
+\algomargin=\skip56
+\skipalgocfslide=\skip57
+\algowidth=\dimen128
+\inoutsize=\dimen129
+\inoutindent=\dimen130
+\interspacetitleruled=\dimen131
+\interspacealgoruled=\dimen132
+\interspacetitleboxruled=\dimen133
+\algocf@inoutbox=\box32
+\algocf@inputbox=\box33
+\AlCapSkip=\skip58
+\AlCapHSkip=\skip59
+\algoskipindent=\skip60
+\algocf@nlbox=\box34
+\algocf@hangingbox=\box35
+\algocf@untilbox=\box36
+\algocf@skipuntil=\skip61
+\algocf@capbox=\box37
+\algoheightruledefault=\skip62
+\algoheightrule=\skip63
+\algotitleheightruledefault=\skip64
+\algotitleheightrule=\skip65
+\c@algocfline=\count120
+\c@algocfproc=\count121
+\c@algocf=\count122
+\algocf@algoframe=\box38
+\algocf@algobox=\box39
+)
+\c@prop=\count123
  (/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.aux)
 \openout1 = `nips2013.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 52.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box32
+\AtBeginShipoutBox=\box40
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen128
-\scratchbox=\box33
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\scratchcounter=\count124
+\scratchdimen=\dimen134
+\scratchbox=\box41
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen129
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen135
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks29
 )
-Package hyperref Info: Link coloring OFF on input line 58.
+Package hyperref Info: Link coloring OFF on input line 52.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
  (/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.out) (/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.out)
 \@outlinefile=\write3
 \openout3 = `nips2013.out'.
@@ -344,120 +394,124 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 55.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
  [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 161.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-[4] [5] <figures/fig1/N1000K2len10.pdf, id=96, 614.295pt x 794.97pt>
-File: figures/fig1/N1000K2len10.pdf Graphic file (type pdf)
- <use figures/fig1/N1000K2len10.pdf>
-Package pdftex.def Info: figures/fig1/N1000K2len10.pdf used on input line 225.
-(pdftex.def)             Requested size: 242.46608pt x 313.7853pt.
-
-Overfull \hbox (43.72359pt too wide) in paragraph at lines 225--226
-[][] 
- []
-
-<figures/fig1/N2000K2len10.pdf, id=97, 464.4552pt x 349.305pt>
-File: figures/fig1/N2000K2len10.pdf Graphic file (type pdf)
- <use figures/fig1/N2000K2len10.pdf>
-Package pdftex.def Info: figures/fig1/N2000K2len10.pdf used on input line 231.
+[4] [5] <figures/fig1/N1000K2len10.png, id=98, 464.4552pt x 349.305pt>
+File: figures/fig1/N1000K2len10.png Graphic file (type png)
+ <use figures/fig1/N1000K2len10.png>
+Package pdftex.def Info: figures/fig1/N1000K2len10.png used on input line 222.
 (pdftex.def)             Requested size: 190.79109pt x 143.4878pt.
- <figures/fig1/N5000K2len10.pdf, id=98, 464.4552pt x 349.305pt>
-File: figures/fig1/N5000K2len10.pdf Graphic file (type pdf)
- <use figures/fig1/N5000K2len10.pdf>
-Package pdftex.def Info: figures/fig1/N5000K2len10.pdf used on input line 238.
+ <figures/fig1/N2000K2len10.png, id=99, 464.4552pt x 349.305pt>
+File: figures/fig1/N2000K2len10.png Graphic file (type png)
+ <use figures/fig1/N2000K2len10.png>
+Package pdftex.def Info: figures/fig1/N2000K2len10.png used on input line 228.
 (pdftex.def)             Requested size: 190.79109pt x 143.4878pt.
- <figures/fig1/N10000K2len10.pdf, id=99, 464.4552pt x 349.305pt>
-File: figures/fig1/N10000K2len10.pdf Graphic file (type pdf)
- <use figures/fig1/N10000K2len10.pdf>
-Package pdftex.def Info: figures/fig1/N10000K2len10.pdf used on input line 245.
+ <figures/fig1/N5000K2len10.png, id=100, 464.4552pt x 349.305pt>
+File: figures/fig1/N5000K2len10.png Graphic file (type png)
+ <use figures/fig1/N5000K2len10.png>
+Package pdftex.def Info: figures/fig1/N5000K2len10.png used on input line 235.
 (pdftex.def)             Requested size: 190.79109pt x 143.4878pt.
- <figures/fig2/C5K2len10.png, id=100, 464.4552pt x 349.305pt>
+ <figures/fig1/N10000K2len10.png, id=101, 464.4552pt x 349.305pt>
+File: figures/fig1/N10000K2len10.png Graphic file (type png)
+ <use figures/fig1/N10000K2len10.png>
+Package pdftex.def Info: figures/fig1/N10000K2len10.png used on input line 242.
+(pdftex.def)             Requested size: 190.79109pt x 143.4878pt.
+ <figures/fig2/C5K2len10.png, id=102, 464.4552pt x 349.305pt>
 File: figures/fig2/C5K2len10.png Graphic file (type png)
  <use figures/fig2/C5K2len10.png>
-Package pdftex.def Info: figures/fig2/C5K2len10.png used on input line 255.
+Package pdftex.def Info: figures/fig2/C5K2len10.png used on input line 252.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig2/C10K2len10.png, id=101, 464.4552pt x 349.305pt>
+ <figures/fig2/C10K2len10.png, id=103, 464.4552pt x 349.305pt>
 File: figures/fig2/C10K2len10.png Graphic file (type png)
  <use figures/fig2/C10K2len10.png>
-Package pdftex.def Info: figures/fig2/C10K2len10.png used on input line 260.
+Package pdftex.def Info: figures/fig2/C10K2len10.png used on input line 257.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig2/C15K2len10.png, id=102, 464.4552pt x 349.305pt>
+ <figures/fig2/C15K2len10.png, id=104, 464.4552pt x 349.305pt>
 File: figures/fig2/C15K2len10.png Graphic file (type png)
  <use figures/fig2/C15K2len10.png>
-Package pdftex.def Info: figures/fig2/C15K2len10.png used on input line 266.
+Package pdftex.def Info: figures/fig2/C15K2len10.png used on input line 263.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- [6 <./figures/fig1/N1000K2len10.pdf> <./figures/fig1/N2000K2len10.pdf> <./figures/fig1/N5000K2len10.pdf> <./figures/fig1/N10000K2len10.pdf>] <figures/fig3/N10000K2len5.png, id=150, 464.4552pt x 349.305pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./figures/fig1/N1000K2len10.png (PNG copy)> <./figures/fig1/N2000K2len10.png (PNG copy)> <./figures/fig1/N5000K2len10.png (PNG copy)> <./figures/fig1/N10000K2len10.png (PNG copy)>] <figures/fig3/N10000K2len5.png, id=110, 464.4552pt x 349.305pt>
 File: figures/fig3/N10000K2len5.png Graphic file (type png)
  <use figures/fig3/N10000K2len5.png>
 Package pdftex.def Info: figures/fig3/N10000K2len5.png used on input line 276.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig3/N10000K2len10.png, id=151, 464.4552pt x 349.305pt>
+ <figures/fig3/N10000K2len10.png, id=111, 464.4552pt x 349.305pt>
 File: figures/fig3/N10000K2len10.png Graphic file (type png)
  <use figures/fig3/N10000K2len10.png>
 Package pdftex.def Info: figures/fig3/N10000K2len10.png used on input line 281.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig3/N10000K2len20.png, id=152, 464.4552pt x 349.305pt>
+ <figures/fig3/N10000K2len20.png, id=112, 464.4552pt x 349.305pt>
 File: figures/fig3/N10000K2len20.png Graphic file (type png)
  <use figures/fig3/N10000K2len20.png>
 Package pdftex.def Info: figures/fig3/N10000K2len20.png used on input line 286.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig4/N10000K2len10.png, id=153, 464.4552pt x 349.305pt>
+ <figures/fig4/N10000K2len10.png, id=113, 464.4552pt x 349.305pt>
 File: figures/fig4/N10000K2len10.png Graphic file (type png)
  <use figures/fig4/N10000K2len10.png>
-Package pdftex.def Info: figures/fig4/N10000K2len10.png used on input line 296.
+Package pdftex.def Info: figures/fig4/N10000K2len10.png used on input line 299.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig4/N10000K3len10.png, id=154, 464.4552pt x 349.305pt>
+ <figures/fig4/N10000K3len10.png, id=114, 464.4552pt x 349.305pt>
 File: figures/fig4/N10000K3len10.png Graphic file (type png)
  <use figures/fig4/N10000K3len10.png>
-Package pdftex.def Info: figures/fig4/N10000K3len10.png used on input line 301.
+Package pdftex.def Info: figures/fig4/N10000K3len10.png used on input line 304.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
- <figures/fig4/N10000K5len10.png, id=155, 464.4552pt x 349.305pt>
+ <figures/fig4/N10000K5len10.png, id=115, 464.4552pt x 349.305pt>
 File: figures/fig4/N10000K5len10.png Graphic file (type png)
  <use figures/fig4/N10000K5len10.png>
-Package pdftex.def Info: figures/fig4/N10000K5len10.png used on input line 306.
+Package pdftex.def Info: figures/fig4/N10000K5len10.png used on input line 309.
 (pdftex.def)             Requested size: 131.17076pt x 98.64685pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [7 <./figures/fig2/C5K2len10.png (PNG copy)> <./figures/fig2/C10K2len10.png (PNG copy)> <./figures/fig2/C15K2len10.png (PNG copy)> <./figures/fig3/N10000K2len5.png (PNG copy)> <./figures/fig3/N10000K2len10.png (PNG copy)> <./figures/fig3/N10000K2len20.png (PNG copy)> <./figures/fig4/N10000K2len10.png (PNG copy)> <./figures/fig4/N10000K3len10.png (PNG copy)> <./figures/fig4/N10000K5len10.png (PNG copy)>] (/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
  (/Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 326.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
 Package rerunfilecheck Info: File `nips2013.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
  ) 
 Here is how much of TeX's memory you used:
- 7635 strings out of 493089
- 115771 string characters out of 6134842
- 210073 words of memory out of 5000000
- 10973 multiletter control sequences out of 15000+600000
+ 9038 strings out of 493089
+ 135318 string characters out of 6134842
+ 254717 words of memory out of 5000000
+ 12360 multiletter control sequences out of 15000+600000
  19483 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,40p,1275b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,40p,1299b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.pdf (8 pages, 872342 bytes).
+Output written on /Users/shuchin/Documents/Summer17_Brian_Anu/Latex/Final/NIPS_format/.texpadtmp/nips2013.pdf (8 pages, 831304 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
  122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
