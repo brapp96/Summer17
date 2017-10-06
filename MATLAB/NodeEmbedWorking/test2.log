@@ -1,0 +1,29 @@
+Logging MATLAB script, starting Fri Oct 6 14:22:30 EDT 2017
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+length: 5, run: 1
+Starting parallel pool (parpool) using the 'local' profile ... 
+Starting parallel pool (parpool) using the 'local' profile ... connected to 56 workers.
+length: 5, run: 2
+length: 5, run: 3
+length: 5, run: 4
+length: 5, run: 5
+length: 10, run: 1
+length: 10, run: 2
+length: 10, run: 3
+length: 10, run: 4
+length: 10, run: 5
+length: 20, run: 1
+length: 20, run: 2
+length: 20, run: 3
+length: 20, run: 4
+length: 20, run: 5

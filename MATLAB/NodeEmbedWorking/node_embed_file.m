@@ -1,4 +1,4 @@
-function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT,len)
+function [U,ccr,nmi] = node_embed_file(G,L,doNBT,len) %TODO change back to "Em_true"
 % Implements the node embeddings 'vec' algorithm of Ding et al. including a
 % non-backtracking random walks option. This version works with file I/O
 % and the use of the compiled "word2vec" code of Mikolov et al. 
@@ -17,8 +17,8 @@ function [Em_true,ccr,nmi] = node_embed_file(G,L,doNBT,len)
 % Brian Rappaport, 7/24/17
 
 % set vars
-if size(L,2) ~= 1, L = L'; end % ensure L is a column vector
-k = max(L); % number of communities
+%if size(L,2) ~= 1, L = L'; end % ensure L is a column vector
+%k = max(L); % number of communities
 %len = 5; % length of random walk (BECAME PARAMETER)
 rw_reps = 20; % number of random walks per data point
 dim = 50; % embedded dimension
@@ -36,12 +36,12 @@ command = ['./word2vec -train ' read_fp ' -output ' write_fp ...
 system(command);
 % get embeddings from word2vec
 [U,labels] = file2embs(write_fp);
-L = L(labels);
+%L = L(labels);
 % run kmeans
-Em = kmeans(U,k);
-Em_true = get_true_emb(Em,L);
-ccr = sum(Em_true == L)*100/numel(L);
-nmi = get_nmi(Em_true, L);
+%Em = kmeans(U,k);
+%Em_true = get_true_emb(Em,L);
+ccr = 4;%sum(Em_true == L)*100/numel(L);
+nmi = 4;%get_nmi(Em_true, L);
 end
 
 function [U,labels] = file2embs(filename)
@@ -57,7 +57,7 @@ function nodes2file(G,filename,rw_reps,len,doNBT)
 % errors.
 n = size(G,1);
 rw = zeros(len,rw_reps,n);
-parfor i = 1:n
+parfor i = 1:n 
     if isempty(find(G(i,:),1))
         continue
     end
