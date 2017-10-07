@@ -24,9 +24,9 @@ k = 43;
 Lbt = BT;
 Lnbt = BT;
 inter = names;
-for i = 11:15
+for i = 1:numel(BT)
     Lbt{i} = kmeans(BT{i},k);
     Lnbt{i} = kmeans(NBT{i},k);
-    [~,ind] = sort(hist(Lbt{i},1:k));
-    inter = intersect(inter,names(Lbt{i}==ind(end)));
+    inter = intersect(inter, [~,ind] = sort(hist(Lbt{i},1:k));
+    names(Lbt{i}==ind(end))
 end
