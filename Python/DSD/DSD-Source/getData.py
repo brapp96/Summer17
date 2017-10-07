@@ -33,10 +33,14 @@ print(np.sort(totals))
 
 max_size = np.max(totals)
 max_cluster = np.where(totals == max_size)
+max_cluster_label = max_cluster[0][0]
 
-
-
+proteinNames = np.loadtxt('proteinNames_DSD.txt', dtype='S6')
+in_LC = np.where(labels == max_cluster_label) 
 pdb.set_trace()
+proteins_in_LC = proteinNames[in_LC]
+np.savetxt('largestCluster2.txt', proteins_in_LC, fmt='%s')
+#pdb.set_trace()
 #pdb.set_trace()
 #Conf = metrics.confusion_matrix(true_labels, labels)
 #row, col = scipy.optimize.linear_sum_assignment(-1*Conf)
