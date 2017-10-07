@@ -35,7 +35,7 @@ max_size = np.max(totals)
 max_cluster = np.where(totals == max_size)
 max_cluster_label = max_cluster[0][0]
 
-proteinNames = np.loadtxt('proteinNames_DSD.txt', dtype='S6')
+proteinNames = np.loadtxt('proteinNames_DSD.txt', dtype='S20')
 in_LC = np.where(labels == max_cluster_label) 
 pdb.set_trace()
 proteins_in_LC = proteinNames[in_LC]
