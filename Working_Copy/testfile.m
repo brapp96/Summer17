@@ -1,11 +1,12 @@
-N = 100;%[100,200,500,1000,2000,5000,10000];
-K = 2;%[2,3];
-c = 20;%[2,3,4,5,6,8,10,12,15,20];
-num_reps = 1;%20;
+N = [100,200,500,1000,2000,5000,10000];
+K = [2,3,5];
+c = [2,3,4,5,6,8,10,12,15,20];
+lambda = .9;
+num_reps = 20;
 quiet = 0;
-len = 5;%[5,10,20];
+len = [5,10,20];
 seed = 44;
-% profile on
+
 total_time = sum(N)*sum(K)*sum(c)*num_reps*numel(len);
 curr_time = 0;
 tic;
@@ -17,8 +18,8 @@ for i = 1:numel(N)
     for j = 1:numel(c)
         for k = 1:numel(K)
             seed = seed+1;
-            %[G,L] = import_graph_by_edges(N(i),K(k),c(j));
-            [G,L] = sbm_gen(N(i),K(k),c(j),c(j)/10,seed);
+            %[G,L] = import_graph_by_edges(N(i),K(k),c(j)); for reproducibility
+            [G,L] = sbm_gen(N(i),K(k),c(j),c(j)*(1-lambda),seed);
             filename = sprintf('more_graphs/N%d-K%d-c%.1f.txt',N(i),K(k),c(j));
             write_graph_adjlist(G,L,filename);
             for l = 1:numel(len)
@@ -29,7 +30,9 @@ for i = 1:numel(N)
                     [~,ccr_bt(i,j,k,l,rep),nmi_bt(i,j,k,l,rep)] = node_embed_file(G,L,0,len(l));
                     [~,ccr_nbt(i,j,k,l,rep),nmi_nbt(i,j,k,l,rep)] = node_embed_file(G,L,1,len(l));
                     curr_time = curr_time+N(i)*c(j)*K(k);
-                    fprintf('%4.2f%% done; %4.2fs, %4.2fs estimated\n',100*curr_time/total_time,toc,toc/curr_time*total_time);
+                    if ~quiet
+                        fprintf('%4.2f%% done; %4.2fs, %4.2fs estimated\n',100*curr_time/total_time,toc,toc/curr_time*total_time);
+                    end
                 end
             end
         end
@@ -52,4 +55,3 @@ save(['runs/nmi_ccr_' datestr(clock,'mm-dd-yy_HH:MM:SS') '.mat'],'nmi_bt','nmi_n
 %     saveas(gcf,sprintf('N%dvariedc.fig',N(nn)));
 %     saveas(gcf,sprintf('N%dvariedc.png',N(nn)));
 % end
-% profile viewer
