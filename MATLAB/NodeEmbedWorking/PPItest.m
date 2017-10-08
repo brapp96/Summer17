@@ -13,14 +13,14 @@
 % save(['runs/PPI.mat'],'BT','NBT','len');
 
 %%
-fp = fopen('../../Python/DSD/DSD-Source/proteinNames_DSD.txt','r');
+fp = fopen('../../Python/DSD/DSD-Source/proteinNames.txt','r');
 names = {};
 while ~feof(fp)
     names{end+1} = fgetl(fp);
 end
 fclose(fp);
 %%
-fp = fopen('../../Python/DSD/DSD-Source/largestCluster2.txt','r');
+fp = fopen('../../Python/DSD/DSD-Source/largestCluster.txt','r');
 largeclusternames = {};
 while ~feof(fp)
     largeclusternames{end+1} = fgetl(fp); %#ok<*SAGROW>
@@ -32,15 +32,15 @@ k = 18;
 Lbt = BT;
 Lnbt = BT;
 inter = names;
-for i = 6%:15
+for i = 11%:15
     Lbt{i} = kmeans(BT{i},k);
     Lnbt{i} = kmeans(NBT{i},k);
-    [~,ind] = sort(hist(Lbt{i},1:k));
+    [~,ind] = sort(hist(Lnbt{i},1:k));
     fp = fopen('VEClargestCluster1.txt','w');
-    words=join(names(Lbt{i}==ind(end)),' ');
+    words=join(names(Lnbt{i}==ind(end)),' ');
     fprintf(fp,'%s\n',words{:});
-    unix('sed -e "s/\s\+/\n/g" VEClargestCluster1.txt > VEClargestCluster.txt');
-    inter = intersect(inter,names(Lbt{i}==ind(end)));
+    unix('sed -e "s/\s\+/\n/g" VEClargestCluster1.txt > VEClargestClusterNBT.txt');
+    inter = intersect(inter,names(Lnbt{i}==ind(end)));
 end
 
 
