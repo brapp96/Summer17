@@ -15,7 +15,7 @@ import sklearn.cluster as sc
 #nx.write_adjlist(graph, 'PPIadj.txt')
 
 N = 5885
-DSD = np.loadtxt('results.DSD1', skiprows=1, usecols=range(1,N));
+DSD = np.loadtxt('results_converged.DSD1', skiprows=1, usecols=range(1,N));
 #pdb.set_trace()
 DSD_sim = 1/(DSD + np.eye(DSD.shape[0]))
 #pdb.set_trace()
@@ -24,7 +24,7 @@ k = 18;
 # Apply spectral clustering and reorder labels using Hungarian algorithm
 print('Applying spectral clustering...')
 labels = sc.spectral_clustering(DSD_sim, n_clusters=k)
-np.savetxt('results_DSDk18.txt', labels, fmt='%d')
+np.savetxt('results_DSDk18_converged.txt', labels, fmt='%d')
 
 totals = np.zeros(k)
 for i in range(0,k):
@@ -38,9 +38,9 @@ max_cluster_label = max_cluster[0][0]
 
 proteinNames = np.loadtxt('proteinNames.txt', dtype='S20')
 in_LC = np.where(labels == max_cluster_label) 
-pdb.set_trace()
+#pdb.set_trace()
 proteins_in_LC = proteinNames[in_LC]
-np.savetxt('largestCluster.txt', proteins_in_LC, fmt='%s')
+np.savetxt('largestCluster_converged.txt', proteins_in_LC, fmt='%s')
 #pdb.set_trace()
 #pdb.set_trace()
 #Conf = metrics.confusion_matrix(true_labels, labels)
