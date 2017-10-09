@@ -20,11 +20,11 @@ DSD = np.loadtxt('results_converged.DSD1', skiprows=1, usecols=range(1,N));
 DSD_sim = 1/(DSD + np.eye(DSD.shape[0]))
 #pdb.set_trace()
             
-k = 18;
+k = 3;
 # Apply spectral clustering and reorder labels using Hungarian algorithm
 print('Applying spectral clustering...')
 labels = sc.spectral_clustering(DSD_sim, n_clusters=k)
-np.savetxt('results_DSDk18_converged.txt', labels, fmt='%d')
+np.savetxt('results_DSDk3_converged.txt', labels, fmt='%d')
 
 totals = np.zeros(k)
 for i in range(0,k):
@@ -32,23 +32,20 @@ for i in range(0,k):
 
 print(np.sort(totals))
 
-max_size = np.max(totals)
-max_cluster = np.where(totals == max_size)
-max_cluster_label = max_cluster[0][0]
-
-proteinNames = np.loadtxt('proteinNames.txt', dtype='S20')
-in_LC = np.where(labels == max_cluster_label) 
-#pdb.set_trace()
-proteins_in_LC = proteinNames[in_LC]
-np.savetxt('largestCluster_converged.txt', proteins_in_LC, fmt='%s')
-#pdb.set_trace()
-#pdb.set_trace()
-#Conf = metrics.confusion_matrix(true_labels, labels)
-#row, col = scipy.optimize.linear_sum_assignment(-1*Conf)
+#max_size = np.max(totals)
+#max_cluster = np.where(totals == max_size)
+#max_cluster_label = max_cluster[0][0]
 #
-## Get metrics
-#print('Calculating metrics...')
-#acc_nmi[i] = metrics.normalized_mutual_info_score(true_labels,labels)
-#acc_ccr[i] = float(Conf[row, col].sum())/float(N)
-            
+proteinNames = np.loadtxt('proteinNames.txt', dtype='S20')
+#in_LC = np.where(labels == max_cluster_label) 
+##pdb.set_trace()
+#proteins_in_LC = proteinNames[in_LC]
+#np.savetxt('largestCluster_convergedk3.txt', proteins_in_LC, fmt='%s')
+#pdb.set_trace()
+
+for i in range(0,k):
+    in_kclus = np.where(labels == i)
+    proteins_in_kclus = proteinNames[in_kclus]
+    fname = 'Cluster' + str(i) + '.txt'
+    np.savetxt(fname, proteins_in_kclus, fmt='%s')
 
