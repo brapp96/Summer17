@@ -21,7 +21,7 @@ function [U,ccr,nmi] = node_embed_file(G,L,doNBT,len) %TODO change back to "Em_t
 %k = max(L); % number of communities
 %len = 5; % length of random walk (BECAME PARAMETER)
 rw_reps = 20; % number of random walks per data point
-dim = 50; % embedded dimension
+dim = 12; % embedded dimension TODO: 50
 winsize = 5; % window size
 read_fp = 'sentences.txt';
 write_fp = 'embeddings.txt';
@@ -57,7 +57,7 @@ function nodes2file(G,filename,rw_reps,len,doNBT)
 % errors.
 n = size(G,1);
 rw = zeros(len,rw_reps,n);
-parfor i = 1:n 
+for i = 1:n %TODO: parfor
     if isempty(find(G(i,:),1))
         continue
     end
