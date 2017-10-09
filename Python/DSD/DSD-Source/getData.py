@@ -43,7 +43,7 @@ proteinNames = np.loadtxt('proteinNames.txt', dtype='S20')
 #np.savetxt('largestCluster_convergedk3.txt', proteins_in_LC, fmt='%s')
 #pdb.set_trace()
 
-for i in range(1,k+1):
+for i in range(0,k):
     in_kclus = np.where(labels == i)
     proteins_in_kclus = proteinNames[in_kclus]
     fname = 'Cluster' + str(i) + '.txt'
