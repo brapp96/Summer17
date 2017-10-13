@@ -112,11 +112,13 @@ Let $G = (V,E)$ be a graph with vertex set $V$ and edge set $E$, and $|V| = n, |
 %$$\rho = \limsup_{t\rightarrow\infty}\max_{u,v}\left|P^{t}(u,v)-\pi(v)\right|^{1/t},$$ 
 %defines how quickly a Markov chain with transition probabilities $P$ reduces to the stationary distribution $\pi(v)$, where a lower mixing rate indicates a faster mixing time. The mixing rate is intimately connected to the second eigenvalue of the graph Laplacian, as detailed in \cite{Lovasz}. A Markov chain is \emph{irreducible} if every node can be accessed from every other node; it is \emph{aperiodic} if every node can have a cycle of any length (for instance, a bipartite graph is not aperiodic since all cycles for any node will have even length). A Markov chain is \emph{ergodic} if it is aperiodic and irreducible. 
 
-A \emph{non-backtracking random walk} is defined as a random walk that chooses its next step from all neighbors except the one it visited in the previous step. For really sparse graphs with dangling trees and nodes a simple modification, namely that if the only choice of edge is the one visited previously, then one resorts to backtracking for that edge ensures faster mixing and avoid absorbing condition. 
+A \emph{non-backtracking random walk} is defined as a random walk that chooses its next step from all neighbors except the one it visited in the previous step. For really sparse graphs with dangling trees and nodes a simple modification, namely that if the only choice of edge is the one visited previously, then one resorts to backtracking for that edge ensures faster mixing and avoid absorbing condition.  
 
 %Begrudgingly-backtracking random walks handle several problems caused by non-backtracking random walks especially on sparse graphs: in a non-backtracking random walk, walking to a dangling node (a node with only one connecting edge) forces the walk to end there, resulting in an artificially decreased length of the random walk. In addition, the dangling nodes will be weighted less heavily than they should be, since they will only ever be visited once per walk. 
 
 It is well-known that random walks converge \cite{Lovasz}. Also in \cite{NBT-Ihara,Alon} it is shown that NBT also converges but at a faster rate compared to random walks. 
+
+\textcolor{red}{Add references to Hashimoto's papers on how word embeddings reveal the manifold}.
 
 \subsection{Algorithm}
 \textcolor{red}{One para- 5-6 lines for the algo}
