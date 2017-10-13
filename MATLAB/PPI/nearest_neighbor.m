@@ -1,41 +1,32 @@
-function accuracy = nearest_neighbor(graph,protein_names,annos,annos_names,num2remove,t,is_weighted)
+function accuracy = nearest_neighbor(graph,annos,protein_inds,num2remove,t,is_weighted)
     alpha = 3;
-    num_annos = numel(annos_names);
-    test_set = cell(1,num2remove);
-    i = num2remove;
+    n = numel(protein_inds);
     numCorrect = 0;
-    while i > 0
-        name = annos_names(randi(num_annos,1));
-        if any(strcmp(name,protein_names))
-            test_set(i) = name;
-            i = i-1;
+    for ii = 1:num2remove
+        selectedElement = randi(n,1);
+        if is_weighted
+            [mvals,minds] = sort(graph(selectedElement,:));
+        else
+            [~,minds] = sort(graph(selectedElement,:));
         end
-    end
-    for i = 1:num2remove
-        [mvals,minds] = sort(graph(strcmp(protein_names,test_set(i)),:));
-        t_nearest = protein_names(minds(2:t+1)); % strip out first element - always 0
-        vals_nearest = mvals(2:t+1);
         if ~is_weighted
-            vals_nearest = ones(1,t);
-        end
+            invmvals = ones(1,t+1);
+        else
+            invmvals = 1./mvals(1:t+1);
+        end        
         votes = zeros(1,43);
-        for j = 1:t
-            temp = strcmp(annos_names,t_nearest(j));
-            if ~any(temp)
-                continue;
-            end
-            thisVote = annos{temp};
-            votes(thisVote) = votes(thisVote) + 1/vals_nearest(j);
+        for jj = 2:t+1 % strip out first element - always 0
+            thisVote = annos{minds(jj)};
+            votes(thisVote) = votes(thisVote) + invmvals(jj);
         end
+       % votes = hist(vertcat(annos{minds(2:t+1)}),1:43); a little too hacky
         [~,voteinds] = sort(votes);
         max_GOs = voteinds(end:-1:end-(alpha-1));
-        orig_GOs = annos{strcmp(annos_names,test_set(i))};
-        M1 = repmat(max_GOs,numel(orig_GOs),1);
-        M2 = repmat(orig_GOs,1,alpha);
-        if isempty(M2)
+        orig_GOs = annos{selectedElement};
+        if isempty(orig_GOs)
             continue;
         end
-        accuracy_matrix = M1==M2;
+        accuracy_matrix = max_GOs==orig_GOs;
         if any(accuracy_matrix(:))
             numCorrect = numCorrect+1;
         end
