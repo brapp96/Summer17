@@ -2,23 +2,21 @@
 % Anuththari Gamage, 10/9/2017
 
 
-filename = 'dsd.txt';
+filename = '../../Python/DSD/DSD-Source/DSD_Matrix/dsd.txt';
 fid = fopen(filename);
 
-sigma = 1e2;
-proteinNames = strsplit(fgetl(fid));
+%proteinNames = strsplit(fgetl(fid));
 
-N = length(proteinNames)-1;
+%N = length(proteinNames)-1;
 
-DSD = zeros(N,N);
+DSD = zeros(5884);
 n = 0;
 while ~feof(fid)
     n = n+1;
-    fscanf(fid, '%s', 1);
+%    fscanf(fid, '%s', 1);
     line = fscanf(fid, '%f');
     DSD(n, :) = line';
 end
 max_val = max(DSD(:));
-DSD = DSD./max_val;
+DSDNorm = DSD./max_val;
 fclose(fid);
-fclose(fout);

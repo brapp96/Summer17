@@ -46,3 +46,12 @@ for i = 5
     inter = intersect(inter,thisCluster);
 end
 
+%%
+if 0 
+    %fp = fopen('VEClargestCluster1.txt','w');
+    %thisCluster = names(Lnbt{i}==ind(1));
+    words = join(FLnames,' ');
+    fp = fopen('fewer_names1.txt','w');
+    fprintf(fp,'%s\n',words{:});
+    unix('sed -e "s/\s\+/\n/g" fewer_names1.txt > fewer_names.txt');    
+end
