@@ -1,0 +1,126 @@
+@article{Luxburg,
+    author = {Luxburg, Ulrike Von},
+    number = {August},
+    title = {{A Tutorial on Spectral Clustering}},
+    year = {2006}
+}
+
+@article{NodeEmbed,
+    abstract = {Neural node embeddings have recently emerged as a powerful representation for supervised learning tasks involving graph-structured data. We leverage this recent advance to develop a novel algorithm for unsupervised community discovery in graphs. Through extensive experimental studies on simulated and real-world data, we demonstrate that the proposed approach consistently improves over the current state-of-the-art. Specifically, our approach empirically attains the information-theoretic limits for community recovery under the benchmark Stochastic Block Models for graph generation and exhibits better stability and accuracy over both Spectral Clustering and Acyclic Belief Propagation in the community recovery limits.},
+    archivePrefix = {arXiv},
+    arxivId = {1611.03028},
+    author = {Ding, Weicong and Lin, Christy and Ishwar, Prakash},
+    eprint = {1611.03028},
+    pages = {1--10},
+    title = {{Node Embedding via Word Embedding for Network Community Discovery}},
+    journal   = {CoRR},
+    url = {http://arxiv.org/abs/1611.03028},
+    year = {2016}
+}
+
+@article{LevyGoldberg,
+    abstract = {We analyze skip-gram with negative-sampling (SGNS), a word embedding method introduced by Mikolov et al., and show that it is implicitly factorizing a word-context matrix, whose cells are the pointwise mutual information (PMI) of the respective word and context pairs, shifted by a global constant. We find that another embedding method, NCE, is implicitly factorizing a similar matrix, where each cell is the (shifted) log conditional probability of a word given its context. We show that using a sparse Shifted Positive PMI word-context matrix to represent words improves results on two word similarity tasks and one of two analogy tasks. When dense low-dimensional vectors are preferred, exact factorization with SVD can achieve solutions that are at least as good as SGNS's solutions for word similarity tasks. On analogy questions SGNS remains superior to SVD. We conjecture that this stems from the weighted nature of SGNS's factorization.},
+    archivePrefix = {arXiv},
+    arxivId = {1405.4053},
+    author = {Levy, Omer and Goldberg, Yoav},
+    doi = {10.1162/153244303322533223},
+    eprint = {1405.4053},
+    isbn = {9781634393973},
+    issn = {10495258},
+    journal = {Advances in Neural Information Processing Systems (NIPS)},
+    pages = {2177--2185},
+    pmid = {1710995},
+    title = {{Neural Word Embedding as Implicit Matrix Factorization}},
+    url = {http://papers.nips.cc/paper/5477-neural-word-embedding-as-implicit-matrix-factorization},
+    year = {2014}
+}
+
+@article{word2vec,
+    abstract = {The recently introduced continuous Skip-gram model is an efficient method for learning high-quality distributed vector representations that capture a large number of precise syntactic and semantic word relationships. In this paper we present several extensions that improve both the quality of the vectors and the training speed. By subsampling of the frequent words we obtain significant speedup and also learn more regular word representations. We also describe a simple alternative to the hierarchical softmax called negative sampling. An inherent limitation of word representations is their indifference to word order and their inability to represent idiomatic phrases. For example, the meanings of "Canada" and "Air" cannot be easily combined to obtain "Air Canada". Motivated by this example, we present a simple method for finding phrases in text, and show that learning good vector representations for millions of phrases is possible.},
+    journal = {CoRR},
+    archivePrefix = {arXiv},
+    arxivId = {1310.4546},
+    author = {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+    doi = {10.1162/jmlr.2003.3.4-5.951},
+    eprint = {1310.4546},
+    issn = {10495258},
+    pages = {1--9},
+    pmid = {903},
+    title = {{Distributed Representations of Words and Phrases and their Compositionality}},
+    url = {http://arxiv.org/abs/1310.4546},
+    year = {2013}
+}
+
+@article{Bailey,
+    author = {Bailey, Eric},
+    title = {{Master's Thesis: Capturing and evaluating higher order relations in word embeddings using tensor factorization}},
+    year = {2017}
+}
+
+@article{NBT-Ihara,
+    abstract = {We study the mixing rate of non-backtracking random walks on graphs by looking at non-backtracking walks as walks on the directed edges of a graph. A result known as Ihara's Theorem relates the adjacency matrix of a graph to a matrix related to non-backtracking walks on the directed edges. We prove a weighted version of Iha-ra's Theorem which relates the transition probability matrix of a non-backtracking walk to the transition matrix for the usual random walk. This allows us to determine the spectrum of the transition probability matrix of a non-backtracking random walk in the case of regular graphs and biregular graphs. As a corollary, we obtain a result of Alon et al. in [1] that in most cases, a non-backtracking random walk on a regular graph has a faster mixing rate than the usual random walk. In addition, we obtain an analogous result for biregular graphs.},
+    archivePrefix = {arXiv},
+    arxivId = {1603.05553},
+    author = {Kempton, Mark},
+    doi = {10.4236/ojdm.2016.64018},
+    eprint = {1603.05553},
+    issn = {2161-7635},
+    journal = {Open Journal of Discrete Mathematics},
+    keywords = {Graph,Ihara Zeta Identity,Mixing Rate,Non-Backtracking Random Walk,Random Walk},
+    pages = {207--226},
+    title = {{Non-Backtracking Random Walks and a Weighted Ihara's Theorem}},
+    url = {http://www.scirp.org/journal/ojdm{\%}0Ahttp://dx.doi.org/10.4236/ojdm.2016.64018{\%}0Ahttp://creativecommons.org/licenses/by/4.0/},
+    volume = {6},
+    year = {2016}
+}
+
+@article{Alon,
+abstract = {We compute the mixing rate of a non-backtracking random walk on a regular expander. Using some properties of Chebyshev polynomials of the second kind, we show that this rate may be up to twice as fast as the mixing rate of the simple random walk. The closer the expander is to a Ramanujan graph, the higher the ratio between the above two mixing rates is. As an application, we show that if G is a high-girth regular expander on n vertices, then a typical non-backtracking random walk of length n on G does not visit a vertex more than {\$}(1 + o(1))\backslashfrac{\{}\backslashlog n{\}}{\{}\backslashlog\backslash,\backslashlog n{\}}{\$} times, and this result is tight. In this sense, the multi-set of visited vertices is analogous to the result of throwing n balls to n bins uniformly, in contrast to the simple random walk on G, which almost surely visits some vertex $\Omega$(log n) times.},
+archivePrefix = {arXiv},
+arxivId = {math/0610550},
+author = {Alon, Noga and Benjamini, Itai and Lbetzsky, Eyal and Sodin, Sasha},
+doi = {10.1142/S0219199707002551},
+eprint = {0610550},
+issn = {0219-1997},
+journal = {Communications in Contemporary Mathematics},
+keywords = {Non-backtracking random walks,balls and bins,expanders,girth,mixing rate},
+number = {04},
+pages = {585--603},
+primaryClass = {math},
+title = {{Non-Backtracking Random Walks Mix Faster}},
+url = {http://www.worldscientific.com/doi/abs/10.1142/S0219199707002551},
+volume = {09},
+year = {2007}
+}
+
+@article{Lovasz,
+abstract = {Various aspects of the theory of random walks on graphs are surveyed. In particular, estimates on the important parameters of access time, commute time, cover time and mixing time are discussed. Connections with the eigenvalues of graphs and with electrical networks, and the use of these connections in the study of random walks is described. We also sketch recent algorithmic applications of random walks, in particular to the problem of sampling.},
+author = {Lov{\'{a}}sz, L{\'{a}}szl{\'{o}}},
+doi = {10.1.1.39.2847},
+isbn = {9789638022738},
+issn = {03044149},
+journal = {Combinatorics: Paul Erdos is Eighty},
+number = {Volume 2},
+pages = {1--46},
+title = {{Random walks on graphs: A survey}},
+url = {http://www.cs.yale.edu/publications/techreports/tr1029.pdf},
+volume = {2},
+year = {1993}
+}
+
+
+@article{Redemption,
+abstract = {Spectral algorithms are classic approaches to clustering and community detection in networks. However, for sparse networks the standard versions of these algorithms are suboptimal, in some cases completely failing to detect communities even when other algorithms such as belief propagation can do so. Here we introduce a new class of spectral algorithms based on a non-backtracking walk on the directed edges of the graph. The spectrum of this operator is much better-behaved than that of the adjacency matrix or other commonly used matrices, maintaining a strong separation between the bulk eigenvalues and the eigenvalues relevant to community structure even in the sparse case. We show that our algorithm is optimal for graphs generated by the stochastic block model, detecting communities all the way down to the theoretical limit. We also show the spectrum of the non-backtracking operator for some real-world networks, illustrating its advantages over traditional spectral clustering.},
+archivePrefix = {arXiv},
+arxivId = {1306.5550},
+author = {Krzakala, Florent and Moore, Cristopher and Mossel, Elchanan and Neeman, Joe and Sly, Allan and Zdeborov{\'{a}}, Lenka and Zhang, Pan},
+doi = {10.1073/pnas.1312486110},
+eprint = {1306.5550},
+isbn = {0027-8424, 1091-6490},
+issn = {0027-8424},
+pages = {1--11},
+pmid = {24277835},
+title = {{Spectral redemption: clustering sparse networks}},
+url = {http://arxiv.org/abs/1306.5550{\%}0Ahttp://dx.doi.org/10.1073/pnas.1312486110},
+year = {2013}
+}
