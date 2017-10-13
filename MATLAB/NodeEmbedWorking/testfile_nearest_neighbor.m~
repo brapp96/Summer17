@@ -3,8 +3,7 @@ remove = 50;
 neighbors = 10;
 weighted = 1;
 load('runs/PPI.mat');
-VEC = NBT{6};
-
+VEC = NBT{6
 protein_names = get_protein_names('MIPS_data/proteinNames.txt');
 [annos,annos_names] = read_first_level('MIPS_data/MIPSFirstLevel.list');
 

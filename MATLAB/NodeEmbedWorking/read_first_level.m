@@ -1,5 +1,4 @@
-function [names,data] = read_first_level()
-    filename = 'FirstLevelDataMIPS/MIPSFirstLevel.list';
+function [names,data] = read_first_level(filename)
     fp = fopen(filename,'r');
     names = {};
     data = {};

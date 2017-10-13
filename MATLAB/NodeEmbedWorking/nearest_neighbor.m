@@ -1,9 +1,8 @@
-function [accuracy,exactAccuracy] = nearest_neighbor(graph,protein_names,annos,annos_names,num2remove,t,unweighted)
+function accuracy = nearest_neighbor(graph,protein_names,annos,annos_names,num2remove,t,is_weighted)
     alpha = 3;
     num_annos = numel(annos_names);
     test_set = cell(1,num2remove);
     i = num2remove;
-    exactNumCorrect = 0;
     numCorrect = 0;
     while i > 0
         name = annos_names(randi(num_annos,1));
@@ -14,9 +13,9 @@ function [accuracy,exactAccuracy] = nearest_neighbor(graph,protein_names,annos,a
     end
     for i = 1:num2remove
         [mvals,minds] = sort(graph(strcmp(protein_names,test_set(i)),:));
-        t_nearest = protein_names(minds(1:t));
-        vals_nearest = mvals(1:t);
-        if unweighted
+        t_nearest = protein_names(minds(2:t+1)); % strip out first element - always 0
+        vals_nearest = mvals(2:t+1);
+        if ~is_weighted
             vals_nearest = ones(1,t);
         end
         votes = zeros(1,43);
@@ -37,13 +36,9 @@ function [accuracy,exactAccuracy] = nearest_neighbor(graph,protein_names,annos,a
             continue;
         end
         accuracy_matrix = M1==M2;
-        if sum(accuracy_matrix)>=min(alpha,numel(orig_GOs))
-            exactNumCorrect = exactNumCorrect + 1;
-        end
-        if any(accuracy_matrix)
+        if any(accuracy_matrix(:))
             numCorrect = numCorrect+1;
         end
     end
-    exactAccuracy = exactNumCorrect/num2remove;
     accuracy = numCorrect/num2remove;
 end
