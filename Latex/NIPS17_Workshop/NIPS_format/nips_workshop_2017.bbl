@@ -1,0 +1,88 @@
+\begin{thebibliography}{}
+
+\bibitem[Alon et~al., 2007]{Alon}
+Alon, N., Benjamini, I., Lbetzsky, E., and Sodin, S. (2007).
+\newblock {Non-Backtracking Random Walks Mix Faster}.
+\newblock {\em Communications in Contemporary Mathematics}, 09(04):585--603.
+
+\bibitem[Belkin and Niyogi, 2001]{Belkin:2001wy}
+Belkin, M. and Niyogi, P. (2001).
+\newblock {Laplacian Eigenmaps and Spectral Techniques for Embedding and
+  Clustering.}
+\newblock {\em NIPS}.
+
+\bibitem[Cao et~al., 2013]{2013PLoSO...876339C}
+Cao, M., Zhang, H., Park, J., Daniels, N.~M., Crovella, M.~E., Cowen, L.~J.,
+  and Hescott, B. (2013).
+\newblock {Going the Distance for Protein Function Prediction: A New Distance
+  Metric for Protein Interaction Networks}.
+\newblock {\em PLoS One}, 8(10):e76339--.
+
+\bibitem[Ding et~al., 2016]{NodeEmbed}
+Ding, W., Lin, C., and Ishwar, P. (2016).
+\newblock {Node Embedding via Word Embedding for Network Community Discovery}.
+\newblock {\em CoRR}, pages 1--10.
+
+\bibitem[Grover and Leskovec, 2016]{Grover:2016ex}
+Grover, A. and Leskovec, J. (2016).
+\newblock {node2vec}.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining - KDD '16}, pages 855--864, New York,
+  New York, USA. ACM Press.
+
+\bibitem[Hashimoto et~al., 2015]{2015arXiv150905808H}
+Hashimoto, T.~B., Alvarez-Melis, D., and Jaakkola, T.~S. (2015).
+\newblock {Word, graph and manifold embedding from Markov processes}.
+\newblock {\em arXiv.org}, page arXiv:1509.05808.
+
+\bibitem[Kempton, 2016]{NBT-Ihara}
+Kempton, M. (2016).
+\newblock {Non-Backtracking Random Walks and a Weighted Ihara's Theorem}.
+\newblock {\em Open Journal of Discrete Mathematics}, 6:207--226.
+
+\bibitem[Krzakala et~al., 2013]{Redemption}
+Krzakala, F., Moore, C., Mossel, E., Neeman, J., Sly, A., Zdeborov{\'{a}}, L.,
+  and Zhang, P. (2013).
+\newblock {Spectral redemption: clustering sparse networks}.
+\newblock pages 1--11.
+
+\bibitem[Lawrence, 2012]{Lawrence:2012tj}
+Lawrence, N.~D. (2012).
+\newblock {A Unifying Probabilistic Perspective for Spectral Dimensionality
+  Reduction - Insights and New Models.}
+\newblock {\em Journal of Machine Learning Research}.
+
+\bibitem[Levy and Goldberg, 2014]{Levy:2014vd}
+Levy, O. and Goldberg, Y. (2014).
+\newblock {Neural Word Embedding as Implicit Matrix Factorization}.
+\newblock {\em Advances in neural information processing {\ldots}}, pages
+  2177--2185.
+
+\bibitem[Lov{\'{a}}sz, 1993]{Lovasz}
+Lov{\'{a}}sz, L. (1993).
+\newblock {Random walks on graphs: A survey}.
+\newblock {\em Combinatorics: Paul Erdos is Eighty}, 2(Volume 2):1--46.
+
+\bibitem[Mikolov et~al., 2013]{word2vec}
+Mikolov, T., Sutskever, I., Chen, K., Corrado, G., and Dean, J. (2013).
+\newblock {Distributed Representations of Words and Phrases and their
+  Compositionality}.
+\newblock {\em CoRR}, pages 1--9.
+
+\bibitem[Perozzi et~al., 2014]{2014arXiv1403.6652P}
+Perozzi, B., Al-Rfou, R., and Skiena, S. (2014).
+\newblock {DeepWalk: Online Learning of Social Representations}.
+\newblock {\em arXiv.org}, pages arXiv:1403.6652--710.
+
+\bibitem[Singer and Wu, 2012]{Singer:2012tf}
+Singer, A. and Wu, H.~T. (2012).
+\newblock {Vector diffusion maps and the connection Laplacian}.
+\newblock {\em Communications on pure and applied {\ldots}}.
+
+\bibitem[Talmon et~al., 2013]{Talmon:2013ko}
+Talmon, R., Cohen, I., Gannot, S., and Coifman, R.~R. (2013).
+\newblock {Diffusion Maps for Signal Processing: A Deeper Look at
+  Manifold-Learning Techniques Based on Kernels and Graphs}.
+\newblock {\em IEEE Signal Processing Magazine}, 30(4):75--86.
+
+\end{thebibliography}

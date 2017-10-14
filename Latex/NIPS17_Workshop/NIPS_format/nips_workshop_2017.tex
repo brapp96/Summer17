@@ -2,8 +2,6 @@
 \usepackage{nips13submit_e,times}
 \usepackage{hyperref}
 \usepackage{url}
-%\usepackage[utf8]{inputenc}
-%\usepackage[style=apa]{biblatex}
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{amsmath}
@@ -13,36 +11,27 @@
 \usepackage[ruled]{algorithm2e}
 \renewcommand{\thealgocf}{}
 \graphicspath{{figures/}}
-%\addbibresource{biblio.bib}
 
 \newtheorem{prop}{Proposition}
 
 \title{Computationally efficient protein functionality prediction via node embeddings}
 
 \author{
-Brian Rappaport\thanks{First and second authors contributed equally. Research supported by the National Science Foundation Research Experience for Undergraduates (NSF-REU).} \\
-Department of ECE\\
-Tufts University\\
-\texttt{brian.rappaport@tufts.edu} \\
-\And
 Anuththari Gamage$^*$ \\
 Department of ECE\\
 Tufts University\\
 \texttt{anuththari.gamarallage@tufts.edu} \\
+\And
+Brian Rappaport\thanks{First and second authors contributed equally. Research supported by the National Science Foundation Research Experience for Undergraduates (NSF-REU).} \\
+Department of ECE\\
+Tufts University\\
+\texttt{brian.rappaport@tufts.edu} \\
 \AND
 Shuchin Aeron \\
 Department of ECE\\
 Tufts University\\
 \texttt{shuchin@ece.tufts.edu} 
 }
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to \LaTeX{} to determine where to break
-% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
-% puts 3 of 4 authors names on the first line, and the last on the second
-% line, try using \AND instead of \And before the third author name.
 
 \newcommand{\fix}{\marginpar{FIX}}
 \newcommand{\new}{\marginpar{NEW}}
@@ -54,12 +43,16 @@ Tufts University\\
 \maketitle
 
 \begin{abstract}
-In this paper we present a novel and computationally efficient method for predicting protein functionality in large-scale Protein-Protein Interaction (PPI) networks. The main idea is to exploit recent advances in graph embedding by means of random walks, specifically non-backtracking random walks, followed by using the sample paths as inputs to a popular word embedding method namely word2vec. For the network of yeast (which one?) it is shown that our method is competitive with the state-of-art method based on computing Diffusion State Distance (DSD) between nodes (proteins) while offering significant advantages in computational speed. This preliminary results open up new ways to fill in missing protein functionality.... 
+In this paper we present a novel and computationally efficient method for predicting protein functionality in large-scale Protein-Protein Interaction (PPI) networks. The main idea is to exploit recent advances in graph embedding by means of random walks, specifically non-backtracking random walks, on the nodes of the graph followed by using the sample paths as inputs to a popular word embedding method namely word2vec. For a yeast PPI network, it is shown that our method is competitive in predicting protein functionality with the current state-of-art method while offering significant advantages in computational speed. This preliminary results open up new ways to fill in missing protein functionality by way of edge prediction via embeddings. 
 \end{abstract}
 
 \section{Introduction}
 
-\textcolor{red}{Need a paragraph on PPI networks and literature, specifically on DSD. Why word2vec? }
+Vector space embeddings of the nodes of a graph play an important role in dimensionality reduced representation of the data. Several methods based on stochastic flows, primarily random walks on the graphs, have been used for finding good embeddings  \cite{Belkin:2001wy,Lawrence:2012tj,Talmon:2013ko,Singer:2012tf}. However these approaches do not scale well with the number of nodes and with the number of edges in the graph due to severe computational requirements of computing a spectral factorization of the adjacency matrix or of the graph Laplacian. Motivated by advances in neural word embeddings for natural language data \cite{Levy:2014vd,word2vec}, several authors have proposed to use sample paths from stochastic processes on the nodes of the graph as sentences and subsequently using the word embedding algorithm for embedding the nodes \cite{2014arXiv1403.6652P,Grover:2016ex,2015arXiv150905808H,NodeEmbed}. 
+
+The choice of the stochastic process used to generate the sample path turns out to be a critical choice that dictates the quality of the embedding while also affecting the computational speed. In this work we employ a variation of random walks on graphs, namely the non-backtracking (NBT) random walks, to generate sample paths from the given graph. NBT walks mix faster compared to backtracking (BT) random walks \cite{Alon} and one can reduce the length of the sample paths. Further, the NBT operator has better spectral properties for sparser graphs compared to the BT operator \cite{Redemption} and this is reflected in superior performance on clustering under the Stochastic Block Model (SBM) as shown in our numerical results section.
+
+Besides showing the improvements on clustering under SBM, we show that this approach is very effective in predicting the protein functionality from incomplete protein-protein interaction networks. In particular we show that this approach has significant computational advantage over the recently proposed prediction method based on Diffusion State Distances (DSD) \cite{2013PLoSO...876339C} computed from random walks over graphs. 
 
 %The word2vec algorithm \cite{word2vec} has become one of the most commonly used models for natural language processing, being both faster and more accurate than most other choices for embedding words into Euclidean space. In the word2vec model, an input corpus of sentences is used to create a co-occurrence matrix of words in the vocabulary, and the word vectors are optimized using a cost function related to the adjacencies of words to one another, a process known as Skip-Gram with Negative Sampling (SGNS). The resulting vectors can be used to perform various natural language processing tasks such as analogy prediction and sentiment analysis.
 %
@@ -69,40 +62,8 @@ In this paper we present a novel and computationally efficient method for predic
 %
 %We attempt to address these problems with the novel concept of using non-backtracking random walks to form the sentences, which encourages more homogeneous clusters. A non-backtracking random walk is a random walk which does not return to the node which it visited in the previous step. Intuitively, this idea is logical: backtracking does not add any new information to the algorithm, so reducing the number of repeated edges should produce better embeddings, which in turn give better clusters. Several groups have conducted theoretical explorations of non-backtracking random walks, which give a more formal justification to this claim \cite{Redemption, Alon, NBT-Ihara}. We discuss some of the key ideas of these papers as well as show experimentally the clear improvement in performance which results from using non-backtracking random walks.
 
-%% \subsection{Double-blind reviewing}
 
-%% This year we are doing double-blind reviewing: the reviewers will not know 
-%% who the authors of the paper are. For submission, the NIPS style file will 
-%% automatically anonymize the author list at the beginning of the paper.
-
-%% Please write your paper in such a way to preserve anonymity. Refer to
-%% previous work by the author(s) in the third person, rather than first
-%% person. Do not provide Web links to supporting material at an identifiable
-%% web site.
-
-%%\subsection{Electronic submission}
-%%
-%% \textbf{THE SUBMISSION DEADLINE IS MAY 31st, 2013. SUBMISSIONS MUST BE LOGGED BY
-%% 23:00, MAY 31st, 2013, UNIVERSAL TIME}
-
-%% You must enter your submission in the electronic submission form available at
-%% the NIPS website listed above. You will be asked to enter paper title, name of
-%% all authors, keyword(s), and data about the contact
-%% author (name, full address, telephone, fax, and email). You will need to
-%% upload an electronic (postscript or pdf) version of your paper.
-
-%% You can upload more than one version of your paper, until the
-%% submission deadline. We strongly recommended uploading your paper in
-%% advance of the deadline, so you can avoid last-minute server congestion.
-%%
-%% Note that your submission is only valid if you get an e-mail
-%% confirmation from the server. If you do not get such an e-mail, please
-%% try uploading again. 
-
-
-\section{Method}
-
-\subsection{Notation and background}
+\section{Notation and background}
 
 Let $G = (V,E)$ be a graph with vertex set $V$ and edge set $E$, and $|V| = n, |E| = m$. The \emph{adjacency matrix} $A$ of $G$ is defined as the $n\times n$ matrix with $a_{u,v} = 1$ if and only if $(u,v)\in E$, and the \emph{degree matrix} $D$ of $G$ is the $n \times n$ diagonal matrix indexed by $v$ with each diagonal element equal to the degree of vertex $v$. A \emph{random walk} on $G$ is defined as a sequence of vertices $(v_0,v_1,...,v_k)$, each connected by an edge in $E$, where at each step the next vertex is chosen randomly from those neighboring the current step with equal probability. 
 
@@ -118,10 +79,8 @@ A \emph{non-backtracking random walk} is defined as a random walk that chooses i
 
 It is well-known that random walks converge \cite{Lovasz}. Also in \cite{NBT-Ihara,Alon} it is shown that NBT also converges but at a faster rate compared to random walks. 
 
-\textcolor{red}{Add references to Hashimoto's papers on how word embeddings reveal the manifold}.
-
-\subsection{Algorithm}
-\textcolor{red}{One para- 5-6 lines for the algo}
+\section{Algorithm}
+The algorithm takes as input the graph and outputs the embedding. The embeddings are computed using the now widely used word embedding algorithm \cite{word2vec} applied to the sample paths generated from a variation of the NBT random walk.
 %To generate a Euclidean embedding of the nodes of the graph, VEC performs $r = 10$ random walks per node, each with length $l = 60$. Since the graphs are unweighted, each neighbor is equally likely to be chosen. Each random walk is converted into a sentence by counting the number of pairwise co-occurrences for all node pairs: for the co-occurrence matrix $W$, $W_{i,j}$ is the total number of times node $j$ occurs within $w=8$ places of node $i$ in all random walks (this defines a skip-gram with window size 8). Note that an isolated node (a node with a degree of 0) will not be part of any sentence, since the random walk will not reach it and random walks starting there will not be included in the corpus. This observation makes logical sense because a node with no connections cannot be said to be in any cluster, since there is no information about the node at all.
 %
 %Once the sentences have been formed, an existing implementation of a popular word embedding algorithm, namely, word2vec \cite{word2vec}, is used to convert the sentences into vectors. word2vec takes the corpus of random walks and embeds them into $d$-dimensional space by means of a stochastic gradient descent algorithm. An embedding dimension of $d=50$ is used in our tests to correspond to the original parameters used for VEC. Finally, the embeddings are clustered using a standard k-means clustering scheme.
@@ -138,7 +97,7 @@ It is well-known that random walks converge \cite{Lovasz}. Also in \cite{NBT-Iha
 %    $y := $ clusters given by K-Means on rows of $U$
 \end{algorithm}
 
-VEC-NBT is built upon the idea in \cite{NodeEmbed} that is shown to have consistently performed better than standard community detection methods, such as spectral clustering and acyclic belief propagation, both in accuracy and robustness to random initialization of the graph \cite{NodeEmbed}. However, accuracy is still lower than desirable for very sparse graphs. VEC-NBT uses the NBT-RW which, in addition to offering a faster mixing rate \cite{Alon} has also shown to be useful for spectral clustering \cite{Redemption}.
+We note that VEC-NBT Embedding is built upon the idea in \cite{NodeEmbed} that is shown to have consistently performed better than standard community detection methods, such as spectral clustering and acyclic belief propagation, both in accuracy and robustness to random initialization of the graph \cite{NodeEmbed}. However, accuracy is still lower than desirable for very sparse graphs. VEC-NBT uses the NBT-RW which, in addition to offering a faster mixing rate \cite{Alon} has also shown to be useful for spectral clustering \cite{Redemption}.
 
 %In addition, although 60 is not an excessively long random walk, reducing it would speed up the algorithm.
 
@@ -211,17 +170,20 @@ VEC-NBT is built upon the idea in \cite{NodeEmbed} that is shown to have consist
 %Thus, we can think of the begrudgingly-backtracking random walk as a variant of the non-backtracking random walk which only requires the graph $G$ to have $d_u \geq 1$ for each node $u$. Given the similarities between the two random walks, we hypothesize that the begrudgingly-backtracking random walk has a mixing rate that is equal or similar to that of the non-backtracking random walk, which explains the fast convergence and greater accuracy observed in our experiments. Furthermore, we suspect that even though the faster mixing rate of the non-backtracking random walk is proven only for a $d$-regular graph, it seems to hold in our experiments since the parameter $c$ used to generate the SBM graphs ensures that each node has a constant average degree. These two points are yet to be fully explored and formalized. 
 
 \section{Numerical Results}
-\subsection{Clustering on Stochastic Block Models (SBM)}
+\subsection{Clustering using k-means on embedded vectors for Stochastic Block Models (SBM)}
 
-\textcolor{red}{Compress this para}The graphs used to measure the performance of VEC-NBT are synthesized using the Stochastic Block Model (SBM), a canonical graph model used for community detection. SBM builds off of the classical Erdos-Renyi $G(n,p)$ random graph model, where each edge of a graph with $n$ nodes is formed with probability $p$. In SBM, specifically the planted partition model, $G(n,p)$ is additionally given $k$ clusters and each node is added to one of the clusters with equal probability. Edges are formed within the cluster with probability $a$ while inter-cluster edges are formed with probability $b$, with $b$ lower than $a$ in order to form an assortative graph. We have elected to use graphs with constant scaling, $b = \lambda a$. In our model, the probability of an intra-cluster edge being formed is $Q_n(k,k) = a = \frac{c}{n}$ while that of an inter-cluster edge being formed is $Q_n(k,k^\prime) = b = \frac{c(1-\lambda)}{n}$. $c$ is the average degree of nodes within the cluster and determines the sparsity of the graph. $\lambda$ determines how connected the various clusters are: $\lambda=1$ would imply completely disjoint clusters, while $\lambda=0$ draws no distinction between clusters.  Thus, our model can be represented as $G(n,k,c,\lambda)$, which fully determines the graph.
+\textcolor{red}{Compress this para}The graphs used to measure the performance of VEC-NBT are synthesized using the Stochastic Block Model (SBM). SBM builds off of the classical Erdos-Renyi $G(n,p)$ random graph model, where each edge of a graph with $n$ nodes is formed with probability $p$. In SBM, specifically the planted partition model, $G(n,p)$ is additionally given $k$ clusters and each node is added to one of the clusters with equal probability. Edges are formed within the cluster with probability $a$ while inter-cluster edges are formed with probability $b$, with $b$ lower than $a$ in order to form an assortative graph. We have elected to use graphs with constant scaling, $b = \lambda a$. In our model, the probability of an intra-cluster edge being formed is $Q_n(k,k) = a = \frac{c}{n}$ while that of an inter-cluster edge being formed is $Q_n(k,k^\prime) = b = \frac{c(1-\lambda)}{n}$. $c$ is the average degree of nodes within the cluster and determines the sparsity of the graph. $\lambda$ determines how connected the various clusters are: $\lambda=1$ would imply completely disjoint clusters, while $\lambda=0$ draws no distinction between clusters.  Thus, our model can be represented as $G(n,k,c,\lambda)$, which fully determines the graph.
 
-We compare the performance of VEC and VEC-NBT on SBM graphs generated using the parameters given through two metrics: Correct Classification Rate (CCR) and Normalized Mutual Information (NMI). For random walks and embedding, VEC-NBT uses the same parameters used by VEC with the exception of the length of the random walk ($l=5, 10$) and the window size ($w=5$) and twice the number of random walks ($r=20$). Here, we show empirically that VEC-NBT consistently achieves better accuracy than VEC for sparser graphs (low values of $c$) and comparable accuracy to VEC at higher sparsity levels.
+We compare the performance of VEC and VEC-NBT on SBM graphs generated using the parameters given through two metrics: Correct Classification Rate (CCR) and Normalized Mutual Information (NMI). CCR is defined as the number of correctly classified points divided by the total number of nodes and NMI measures the statistical independence of the clusters, see \cite{}.
 
-CCR is defined as the number of correctly classified points divided by the total number of nodes. To ensure the calculated clustering matches the ground truth, we use a linear sum assignment to match the cluster assignments to the original labels. Because of this, CCR is defined (at least for 2 clusters) only between 0.5 and 1, since a measured CCR of 0 would indicate that every 1 was labeled as a 2 and vice versa - which is in fact a perfect clustering. In our graphs we have plotted CCR as a percentage between $1/K$ and 1 where $K$ is the number of clusters.
 
-NMI is defined as the mutual information $I(X;Y)$ normalized by the square root of the entropies $H(X)$ and $H(Y)$:
-$$NMI(X,Y) := \frac{I(X;Y)}{\sqrt{H(X)H(Y)}} = \frac{H(X)+H(Y)-H(X,Y)}{\sqrt{H(X)H(Y)}},$$
-a more technical metric measuring the information content of the resulting labels.
+For random walks and embedding, VEC-NBT uses the same parameters used by VEC with the exception of the length of the random walk ($l=5, 10$) and the window size ($w=5$) and twice the number of random walks ($r=20$). Here, we show empirically that VEC-NBT consistently achieves better accuracy than VEC for sparser graphs (low values of $c$) and comparable accuracy to VEC at higher sparsity levels.
+
+%CCR is defined as the number of correctly classified points divided by the total number of nodes. To ensure the calculated clustering matches the ground truth, we use a linear sum assignment to match the cluster assignments to the original labels. Because of this, CCR is defined (at least for 2 clusters) only between 0.5 and 1, since a measured CCR of 0 would indicate that every 1 was labeled as a 2 and vice versa - which is in fact a perfect clustering. In our graphs we have plotted CCR as a percentage between $1/K$ and 1 where $K$ is the number of clusters.
+%
+%NMI is defined as the mutual information $I(X;Y)$ normalized by the square root of the entropies $H(X)$ and $H(Y)$:
+%$$NMI(X,Y) := \frac{I(X;Y)}{\sqrt{H(X)H(Y)}} = \frac{H(X)+H(Y)-H(X,Y)}{\sqrt{H(X)H(Y)}},$$
+%a more technical metric measuring the information content of the resulting labels.
 
 Figures are shown with the original VEC algorithm (``BT") with solid lines and our new algorithm (``NBT") with dashed lines. CCR and NMI are shown for each algorithm on each plot. Note that red points correspond to CCR measurements, on a 50-100\% scale, and blue points correspond to NMI measurements, between 0 and 1. NMI tends to be a more accurate indicator of performance.
 
@@ -332,7 +294,7 @@ Unless otherwise specified, the x-axis is the sparsity of the graph, varying fro
 %In this paper, we presented VEC-NBT, which is a modification of VEC \cite{NodeEmbed} using non-backtracking random walks instead of simple random walks. We show experimentally that VEC-NBT outperforms VEC for SBM model graphs across all ranges of parameters such as the number of nodes, number of clusters, and the length of the random walk, especially for sparser graphs. We discuss the theoretical basis for these results - the faster mixing rate of non-backtracking random walks compared to backtracking random walks. Finally, we analyze the connection between the begrudgingly-backtracking random walk we used and the non-backtracking random walk on which it was based. Future work will focus on formalizing our hypotheses about the behaviour of these two random walks, as well as exploring performance with other graph models which might better relate to real data.
 \subsection{Performance on PPI networks}
 \newpage
+\bibliography{biblio}
 \bibliographystyle{apalike}
-\bibliography{biblio.bib}
 
 \end{document}
