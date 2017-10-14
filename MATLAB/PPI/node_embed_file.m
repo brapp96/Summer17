@@ -1,4 +1,4 @@
-function [U,ccr,nmi] = node_embed_file(G,L,doNBT,len) %TODO change back to "Em_true"
+function [U,varargout] = node_embed_file(G,L,doNBT,len) %TODO change back to "Em_true"
 % Implements the node embeddings 'vec' algorithm of Ding et al. including a
 % non-backtracking random walks option. This version works with file I/O
 % and the use of the compiled "word2vec" code of Mikolov et al. 
@@ -42,6 +42,10 @@ system(command);
 %Em_true = get_true_emb(Em,L);
 ccr = 4;%sum(Em_true == L)*100/numel(L);
 nmi = 4;%get_nmi(Em_true, L);
+if nargout > 1
+    varargout{1} = ccr;
+    varargout{2} = nmi;
+end
 end
 
 function [U,labels] = file2embs(filename)

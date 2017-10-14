@@ -1,10 +1,8 @@
-function [G,L] = import_graph_by_edges(N,K,c)
-%filename = sprintf('more_graphs/N%d-K%d-c%.1f.txt',N,K,c);
-filename = 'graphs/PPIadj.txt';
+function G = import_graph_by_edges(filename)
 fp = fopen(filename,'rb');
- for i = 1:3 % strip comments
-     fgets(fp);
- end
+for i = 1:3 % strip comments
+    fgets(fp);
+end
 indi = [];
 indj = [];
 N = 0;
@@ -17,7 +15,5 @@ while (~feof(fp))
 end
 G = sparse(indi+1,indj+1,1,N,N);
 G = G + G';
-L = 0;
-%L = eval(fgets(fp))+1;
 fclose(fp);
 end
